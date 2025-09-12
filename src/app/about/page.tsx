@@ -42,7 +42,7 @@ export default function AboutPage() {
                       携程的使命是不断超越自我，为亿万用户提供最优质的旅行体验。我们通过技术创新，保障服务安全，致力于提供高质量、可信赖的一站式解决方案，以满足客户的全方位需求。
                   </p>
               </div>
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button asChild size="lg" variant="outline" className="bg-card hover:bg-muted text-card-foreground">
                   <Link href="/jobs">查看所有岗位</Link>
               </Button>
           </div>

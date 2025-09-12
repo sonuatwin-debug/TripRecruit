@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-home",
-      "description": "一个多元化的专业团队在现代化的办公室里协作。",
-      "imageUrl": "https://picsum.photos/seed/1/1200/800",
-      "imageHint": "团队 办公室"
+      "description": "一场在现代化办公室进行的招聘面试。",
+      "imageUrl": "https://picsum.photos/seed/200/1200/800",
+      "imageHint": "recruitment job"
     },
     {
       "id": "news-1",

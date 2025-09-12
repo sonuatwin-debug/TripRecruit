@@ -26,9 +26,10 @@ const locations = [
 
 const applicationSchema = z.object({
   fullName: z.string().min(1, '姓名为必填项'),
-  telegram: z.string().min(1, 'Telegram 为必填项'),
+  telegram: z.string().optional(),
   wechat: z.string().optional(),
   qq: z.string().optional(),
+  email: z.string().optional(),
   jobId: z.string({ required_error: '请选择一个意向岗位' }).min(1, '请选择一个意向岗位'),
   expectedSalary: z.string().min(1, '期望薪资为必填项'),
   resume: z.any().refine(files => files?.length > 0, '简历为必填项。'),
@@ -36,6 +37,12 @@ const applicationSchema = z.object({
     message: '至少选择一个工作地点',
   }),
   notes: z.string().optional(),
+}).refine(data => {
+    const filledFields = [data.telegram, data.wechat, data.qq, data.email].filter(Boolean);
+    return filledFields.length >= 2;
+}, {
+    message: '至少填写两个联系方式 (Telegram, 微信, QQ, 邮箱)',
+    path: ['telegram'], // Show error on one of the fields
 });
 
 type ApplicationFormValues = z.infer<typeof applicationSchema>;
@@ -52,6 +59,7 @@ export default function ApplicationForm() {
       telegram: '',
       wechat: '',
       qq: '',
+      email: '',
       jobId: initialJobId || undefined,
       expectedSalary: '',
       notes: '',
@@ -94,7 +102,7 @@ export default function ApplicationForm() {
               </FormItem>
             )}
           />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <FormField
             control={form.control}
             name="telegram"
@@ -130,6 +138,19 @@ export default function ApplicationForm() {
                 <FormLabel>QQ (可选)</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的QQ号" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>邮箱 (可选)</FormLabel>
+                <FormControl>
+                  <Input placeholder="请输入您的邮箱" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

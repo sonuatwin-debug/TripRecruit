@@ -40,7 +40,6 @@ export default function Header() {
             <span className="font-bold font-headline text-lg">携程集团</span>
           </Link>
           <nav className="hidden space-x-6 md:flex">
-            {renderNavLinks(false)}
           </nav>
         </div>
 

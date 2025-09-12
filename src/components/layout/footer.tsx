@@ -9,9 +9,6 @@ export default function Footer() {
             <span className="font-bold font-headline text-lg">携程集团</span>
           </div>
           <div className="flex space-x-6 text-sm">
-            <Link href="/about" className="hover:text-primary transition-colors">关于</Link>
-            <Link href="/jobs" className="hover:text-primary transition-colors">职位</Link>
-            <Link href="/contact" className="hover:text-primary transition-colors">联系我们</Link>
           </div>
         </div>
         

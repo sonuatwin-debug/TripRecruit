@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Facebook, Send } from 'lucide-react';
+import { ArrowRight, Facebook, Mail, Send } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -91,7 +91,7 @@ export default function Home() {
           <p className="text-lg md:text-xl max-w-3xl mb-8">
             在携程集团探索激动人心的职业机会，成为塑造旅游未来的全球团队的一员。
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap justify-center">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors">
               <Facebook className="h-6 w-6" />
             </a>
@@ -117,6 +117,9 @@ export default function Home() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12s12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2zm-1.5 5l-4 3 4 3V10zm3 0v6l4-3-4-3z"/>
               </svg>
+            </a>
+            <a href="mailto:recruitment@trip.com" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors">
+              <Mail className="h-6 w-6" />
             </a>
           </div>
         </div>

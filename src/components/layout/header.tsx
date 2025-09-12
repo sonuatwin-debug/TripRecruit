@@ -46,7 +46,7 @@ export default function Header() {
         </div>
 
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="hidden md:flex bg-card hover:bg-muted text-card-foreground">
+          <Button asChild className="hidden md:flex bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
             <Link href="/jobs">寻找职位</Link>
           </Button>
 
@@ -63,7 +63,7 @@ export default function Header() {
                   <span className="font-bold font-headline text-lg">携程集团</span>
                 </Link>
                 {renderNavLinks(true)}
-                 <Button asChild className="bg-card hover:bg-muted text-card-foreground mt-4">
+                 <Button asChild className="bg-card hover:bg-muted text-card-foreground mt-4 animate-pulse-glow">
                     <Link href="/jobs">寻找职位</Link>
                 </Button>
               </div>

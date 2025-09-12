@@ -33,7 +33,7 @@ const JobCard = ({ job }: { job: Job }) => (
         <div className="flex-grow">
             <h3 className="font-headline text-xl font-semibold mb-1">{job.title}</h3>
         </div>
-        <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white">
+        <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white animate-pulse-glow">
             <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
               {job.location === '迪拜' && <span className="mr-2">🇦🇪</span>}
               {job.location === '香港' && <span className="mr-2">🇭🇰</span>}

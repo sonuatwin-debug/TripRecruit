@@ -64,7 +64,7 @@ export default function ContactPage() {
                                     <Input placeholder="您的姓名" />
                                     <Input type="email" placeholder="您的邮箱" />
                                     <Textarea placeholder="您的留言" rows={5} />
-                                    <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">发送留言</Button>
+                                    <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground animate-pulse-glow">发送留言</Button>
                                 </form>
                             </CardContent>
                         </Card>

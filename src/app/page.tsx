@@ -132,7 +132,7 @@ export default function Home() {
                   <div className="text-4xl">{region.logo}</div>
                   <h3 className="font-semibold mt-2 text-foreground">{region.name}</h3>
                 </div>
-                <Button asChild variant="outline" className="relative w-full bg-card/80 hover:bg-card text-card-foreground">
+                <Button asChild variant="outline" className="relative w-full bg-card/80 hover:bg-card text-card-foreground animate-pulse-glow">
                   <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                 </Button>
               </div>

@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 type Job = typeof MOCK_JOBS[0];
 
 const jobCategories = {
-  tech: ['工程部', '设计部', '数据科学', '产品部'],
+  tech: ['工程部', '产品部'],
   performance: ['市场部'],
   functional: ['职能部'],
 };
@@ -35,6 +35,7 @@ const JobCard = ({ job }: { job: Job }) => (
         <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
               {job.location === '迪拜' && <span className="mr-2">🇦🇪</span>}
+              {job.location === '香港' && <span className="mr-2">🇭🇰</span>}
               查看简章
             </Link>
         </Button>
@@ -120,7 +121,12 @@ export default function JobsPage() {
               {locations.map(loc => <SelectItem key={loc} value={loc}>{loc === 'all' ? '所有地点' : loc}</SelectItem>)}
             </SelectContent>
           </Select>
-          <Select value={department} onValueChange={setDepartment}>
+          <Select value={department} onValueChange={(value) => {
+            setDepartment(value);
+            if (value !== 'all') {
+              setActiveTab(getCategoryFromDepartment(MOCK_JOBS.find(j => j.department === value)?.department || 'tech'));
+            }
+          }}>
             <SelectTrigger>
               <SelectValue placeholder="部门" />
             </SelectTrigger>

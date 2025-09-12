@@ -102,6 +102,11 @@ export default function ApplicationForm() {
               </FormItem>
             )}
           />
+
+        <FormItem>
+          <FormLabel>联系方式 (最少填两项)</FormLabel>
+        </FormItem>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <FormField
             control={form.control}

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Building, MapPin, Newspaper, Users } from 'lucide-react';
+import { ArrowRight, Building, MapPin, Newspaper, Users, Globe } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -56,6 +56,17 @@ async function EmployeeStories() {
     </Card>
   );
 }
+
+const popularRegions = [
+    { name: '菲律宾', color: 'bg-blue-500', logo: <div className="h-4 w-6 rounded-sm bg-white flex flex-col justify-between"><div className="h-[2px] bg-red-500"></div><div className="h-[2px] bg-red-500"></div></div> },
+    { name: '迪拜', color: 'bg-green-500', logo: <div className="h-4 w-6 rounded-sm bg-white border border-gray-300"></div> },
+    { name: '泰国', color: 'bg-red-500', logo: <div className="h-4 w-6 rounded-sm bg-white flex flex-col justify-around"><div className="h-1 bg-blue-800"></div><div className="h-1 bg-red-600"></div></div> },
+    { name: '柬埔寨', color: 'bg-indigo-500', logo: <div className="h-4 w-6 rounded-sm bg-blue-600 flex items-center justify-center"><div className="h-2 w-2 bg-white"></div></div> },
+    { name: '日本', color: 'bg-gray-200', logo: <div className="h-4 w-6 rounded-full bg-red-600"></div> },
+    { name: '马来西亚', color: 'bg-yellow-500', logo: <div className="h-4 w-6 rounded-sm bg-red-600"></div> },
+    { name: '香港', color: 'bg-red-600', logo: <div className="h-4 w-6 rounded-sm bg-white flex items-center justify-center"><div className="h-2 w-2 text-red-600">🌸</div></div> },
+    { name: '斯里兰卡', color: 'bg-orange-500', logo: <div className="h-4 w-6 rounded-sm bg-green-800"></div> },
+];
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
@@ -116,6 +127,21 @@ export default function Home() {
             <Button asChild variant="outline">
               <Link href="/jobs">查看所有职位</Link>
             </Button>
+          </div>
+        </section>
+
+        {/* Popular Regions Section */}
+        <section>
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">热门地区</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            {popularRegions.map((region) => (
+              <Button key={region.name} variant="outline" className={`flex flex-col items-center justify-center h-24 gap-2 text-center ${region.color} bg-opacity-20 hover:bg-opacity-30`}>
+                <div className="flex items-center justify-center h-8 w-8 rounded-full bg-white">
+                  {region.logo}
+                </div>
+                <span className="font-semibold text-sm">{region.name}</span>
+              </Button>
+            ))}
           </div>
         </section>
 

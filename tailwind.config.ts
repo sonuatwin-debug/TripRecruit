@@ -91,18 +91,18 @@ export default {
         'pulse-glow': {
           '0%, 100%': {
             opacity: '1',
-            'box-shadow': '0 0 0 0 hsl(var(--accent) / 0.7)',
+            'box-shadow': '0 0 0 0 hsl(var(--accent) / 0.8)',
           },
           '50%': {
-            opacity: '0.85',
-            'box-shadow': '0 0 0 10px hsl(var(--accent) / 0)',
+            opacity: '0.9',
+            'box-shadow': '0 0 0 14px hsl(var(--accent) / 0)',
            },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse-glow': 'pulse-glow 2s infinite',
+        'pulse-glow': 'pulse-glow 1.5s infinite',
       },
     },
   },

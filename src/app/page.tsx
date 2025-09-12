@@ -167,17 +167,9 @@ export default function Home() {
                   <div className="text-4xl">{region.logo}</div>
                   <h3 className="font-semibold mt-2 text-foreground">{region.name}</h3>
                 </div>
-                <div className="w-full space-y-1 mt-2">
-                  <Button asChild variant="outline" size="sm" className="w-full bg-card/80 hover:bg-card/100 text-card-foreground text-xs">
-                    <Link href={`/jobs?location=${region.name}&department=tech`}>技术岗位</Link>
-                  </Button>
-                   <Button asChild variant="outline" size="sm" className="w-full bg-card/80 hover:bg-card/100 text-card-foreground text-xs">
-                    <Link href={`/jobs?location=${region.name}&department=performance`}>业绩岗位</Link>
-                  </Button>
-                   <Button asChild variant="outline" size="sm" className="w-full bg-card/80 hover:bg-card/100 text-card-foreground text-xs">
-                    <Link href={`/jobs?location=${region.name}&department=functional`}>职能岗位</Link>
-                  </Button>
-                </div>
+                <Button asChild variant="outline" className="w-full bg-card/80 hover:bg-card/100 text-card-foreground">
+                  <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
+                </Button>
               </div>
             ))}
           </div>

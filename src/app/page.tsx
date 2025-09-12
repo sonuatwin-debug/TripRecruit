@@ -120,6 +120,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Floating Telegram Buttons */}
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col space-y-4">
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
+          <Send className="h-6 w-6" />
+        </a>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
+          <Send className="h-6 w-6" />
+        </a>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
+          <Send className="h-6 w-6" />
+        </a>
+      </div>
+
       <main className="container py-12 md:py-20 space-y-16">
         {/* Popular Regions Section */}
         <section>

@@ -124,7 +124,7 @@ export default function JobsPage() {
           </div>
           <Select value={location} onValueChange={setLocation}>
             <SelectTrigger>
-              <SelectValue placeholder="地点" />
+              <SelectValue placeholder="所有地点" />
             </SelectTrigger>
             <SelectContent>
               {locations.map(loc => <SelectItem key={loc} value={loc}>{loc === 'all' ? '所有地点' : loc}</SelectItem>)}
@@ -140,7 +140,7 @@ export default function JobsPage() {
             }
           }}>
             <SelectTrigger>
-              <SelectValue placeholder="部门" />
+              <SelectValue placeholder="所有部门" />
             </SelectTrigger>
             <SelectContent>
               {departments.map(dep => <SelectItem key={dep} value={dep}>{dep === 'all' ? '所有部门' : dep}</SelectItem>)}

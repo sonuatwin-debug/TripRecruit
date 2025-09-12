@@ -162,14 +162,22 @@ export default function Home() {
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门地区</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {popularRegions.map((region) => (
-              <div key={region.name} className={`relative p-4 rounded-lg flex flex-col items-center justify-between h-40 ${region.color} bg-opacity-20`}>
+              <div key={region.name} className={`relative p-4 rounded-lg flex flex-col items-center justify-between h-48 ${region.color} bg-opacity-20`}>
                 <div className="text-center">
                   <div className="text-4xl">{region.logo}</div>
                   <h3 className="font-semibold mt-2 text-foreground">{region.name}</h3>
                 </div>
-                <Button asChild variant="outline" className="w-full bg-card hover:bg-card/80 text-card-foreground">
-                  <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
-                </Button>
+                <div className="w-full space-y-1 mt-2">
+                  <Button asChild variant="outline" size="sm" className="w-full bg-card/80 hover:bg-card/100 text-card-foreground text-xs">
+                    <Link href={`/jobs?location=${region.name}&department=tech`}>技术岗位</Link>
+                  </Button>
+                   <Button asChild variant="outline" size="sm" className="w-full bg-card/80 hover:bg-card/100 text-card-foreground text-xs">
+                    <Link href={`/jobs?location=${region.name}&department=performance`}>业绩岗位</Link>
+                  </Button>
+                   <Button asChild variant="outline" size="sm" className="w-full bg-card/80 hover:bg-card/100 text-card-foreground text-xs">
+                    <Link href={`/jobs?location=${region.name}&department=functional`}>职能岗位</Link>
+                  </Button>
+                </div>
               </div>
             ))}
           </div>

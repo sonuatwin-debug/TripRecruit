@@ -5,19 +5,34 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { useToast } from '@/hooks/use-toast';
+import { Checkbox } from '@/components/ui/checkbox';
+
+const locations = [
+    { id: 'philippines', label: '菲律宾 🇵🇭' },
+    { id: 'dubai', label: '迪拜 🇦🇪' },
+    { id: 'thailand', label: '泰国 🇹🇭' },
+    { id: 'cambodia', label: '柬埔寨 🇰🇭' },
+    { id: 'japan', label: '日本 🇯🇵' },
+    { id: 'malaysia', label: '马来西亚 🇲🇾' },
+    { id: 'hongkong', label: '香港 🇭🇰' },
+    { id: 'srilanka', label: '斯里兰卡 🇱🇰' },
+];
 
 const applicationSchema = z.object({
-  fullName: z.string().min(2, '姓名为必填项'),
-  contact: z.string().min(5, '联系方式为必填项'),
-  jobId: z.string({ required_error: '请选择一个意向岗位' }),
-  expectedSalary: z.string().min(2, '期望薪资为必填项'),
+  fullName: z.string().min(1, '姓名为必填项'),
+  contact: z.string().min(1, '联系方式为必填项'),
+  jobId: z.string({ required_error: '请选择一个意向岗位' }).min(1, '请选择一个意向岗位'),
+  expectedSalary: z.string().min(1, '期望薪资为必填项'),
   resume: z.any().refine(files => files?.length > 0, '简历为必填项。'),
+  workLocations: z.array(z.string()).refine(value => value.some(item => item), {
+    message: '至少选择一个工作地点',
+  }),
   notes: z.string().optional(),
 });
 
@@ -37,6 +52,7 @@ export default function ApplicationForm() {
       expectedSalary: '',
       notes: '',
       resume: undefined,
+      workLocations: [],
     },
   });
 
@@ -141,6 +157,58 @@ export default function ApplicationForm() {
             </FormItem>
           )}
         />
+
+        <FormField
+          control={form.control}
+          name="workLocations"
+          render={() => (
+            <FormItem>
+              <div className="mb-4">
+                <FormLabel className="text-base">工作地点</FormLabel>
+                <FormDescription>
+                  请选择您感兴趣的工作地点
+                </FormDescription>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {locations.map((item) => (
+                <FormField
+                  key={item.id}
+                  control={form.control}
+                  name="workLocations"
+                  render={({ field }) => {
+                    return (
+                      <FormItem
+                        key={item.id}
+                        className="flex flex-row items-start space-x-3 space-y-0"
+                      >
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value?.includes(item.id)}
+                            onCheckedChange={(checked) => {
+                              return checked
+                                ? field.onChange([...field.value, item.id])
+                                : field.onChange(
+                                    field.value?.filter(
+                                      (value) => value !== item.id
+                                    )
+                                  )
+                            }}
+                          />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          {item.label}
+                        </FormLabel>
+                      </FormItem>
+                    )
+                  }}
+                />
+              ))}
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
 
         <FormField
           control={form.control}

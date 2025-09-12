@@ -15,7 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 type Job = typeof MOCK_JOBS[0];
 
 const jobCategories = {
-  tech: ['工程部', '产品部', '设计部'],
+  tech: ['工程部', '产品部', '设计部', '数据科学'],
   performance: ['市场部'],
   functional: ['职能部'],
 };
@@ -40,6 +40,7 @@ const JobCard = ({ job }: { job: Job }) => (
               {job.location === '日本' && <span className="mr-2">🇯🇵</span>}
               {job.location === '柬埔寨' && <span className="mr-2">🇰🇭</span>}
               {job.location === '马来西亚' && <span className="mr-2">🇲🇾</span>}
+              {job.location === '斯里兰卡' && <span className="mr-2">🇱🇰</span>}
               查看简章
             </Link>
         </Button>

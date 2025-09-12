@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-home",
+      "description": "A diverse team of professionals collaborating in a modern office.",
+      "imageUrl": "https://picsum.photos/seed/1/1200/800",
+      "imageHint": "team office"
+    },
+    {
+      "id": "news-1",
+      "description": "A futuristic depiction of an AI assistant on a smartphone screen.",
+      "imageUrl": "https://picsum.photos/seed/2/200/120",
+      "imageHint": "AI assistant"
+    },
+    {
+      "id": "news-2",
+      "description": "A beautiful natural landscape with mountains and a lake, representing sustainability.",
+      "imageUrl": "https://picsum.photos/seed/3/200/120",
+      "imageHint": "nature landscape"
+    },
+    {
+      "id": "about-hero",
+      "description": "The modern architecture of a Trip.com Group office building.",
+      "imageUrl": "https://picsum.photos/seed/4/1200/600",
+      "imageHint": "office building"
+    },
+    {
+      "id": "contact-hero",
+      "description": "A person on the phone providing customer support in a call center.",
+      "imageUrl": "https://picsum.photos/seed/5/1200/600",
+      "imageHint": "customer support"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Facebook } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -91,11 +91,9 @@ export default function Home() {
           <p className="text-lg md:text-xl max-w-3xl mb-8">
             在携程集团探索激动人心的职业机会，成为塑造旅游未来的全球团队的一员。
           </p>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/jobs">
-              探索职位 <ArrowRight className="ml-2" />
-            </Link>
-          </Button>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-accent text-accent-foreground hover:bg-accent/90 transition-colors">
+            <Facebook className="h-6 w-6" />
+          </a>
         </div>
       </section>
 

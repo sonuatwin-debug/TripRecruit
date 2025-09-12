@@ -127,7 +127,7 @@ export default function ApplicationForm() {
             name="wechat"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>微信 (可选)</FormLabel>
+                <FormLabel>微信</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的微信号" {...field} />
                 </FormControl>
@@ -140,7 +140,7 @@ export default function ApplicationForm() {
             name="qq"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>QQ (可选)</FormLabel>
+                <FormLabel>QQ</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的QQ号" {...field} />
                 </FormControl>
@@ -153,7 +153,7 @@ export default function ApplicationForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>邮箱 (可选)</FormLabel>
+                <FormLabel>邮箱</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的邮箱" {...field} />
                 </FormControl>

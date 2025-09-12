@@ -44,6 +44,12 @@ export const MOCK_JOBS = [
   { id: '13', title: '运维域名工程师', department: '工程部', location: '迪拜', keywords: '运维, 域名, dns' },
   { id: '14', title: '桌面运维', department: '工程部', location: '迪拜', keywords: '桌面支持, it支持' },
   { id: '15', title: '中高级产品经理（体育）', department: '产品部', location: '迪拜', keywords: '产品经理, 体育, 游戏' },
+  { id: '16', title: '招商专员', department: '市场部', location: '迪拜', keywords: '招商, 销售' },
+  { id: '17', title: '招商组长', department: '市场部', location: '迪拜', keywords: '招商, 管理' },
+  { id: '18', title: '代理发展专员', department: '市场部', location: '迪拜', keywords: '代理, 发展' },
+  { id: '19', title: '代理发展组长', department: '市场部', location: '迪拜', keywords: '代理, 管理' },
+  { id: '20', title: '代理部高管', department: '市场部', location: '迪拜', keywords: '代理, 高管' },
+  { id: '21', title: '业务专员（推广）', department: '市场部', location: '迪拜', keywords: '业务, 推广' },
 ];
 
 export const MOCK_STORIES = [

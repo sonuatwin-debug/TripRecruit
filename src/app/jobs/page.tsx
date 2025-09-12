@@ -116,7 +116,7 @@ export default function JobsPage() {
           <div className="relative md:col-span-2">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input 
-              placeholder="按职位或关键词搜索..."
+              placeholder="按职位关键词搜索"
               className="pl-10"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}

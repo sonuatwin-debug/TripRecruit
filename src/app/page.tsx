@@ -212,7 +212,7 @@ export default function Home() {
                           </li>
                         ))}
                       </ul>
-                      <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground animate-pulse-glow">
+                      <Button asChild size="lg" variant="outline" className="bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
                         <Link href="/jobs">查看更多 <ArrowRight className="ml-2" /></Link>
                       </Button>
                     </div>

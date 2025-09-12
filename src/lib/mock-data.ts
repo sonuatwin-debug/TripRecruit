@@ -62,7 +62,8 @@ export const MOCK_JOBS = [
   { id: '31', title: '财务主管', department: '职能部', location: '迪拜', keywords: '财务, 主管' },
   { id: '32', title: '会计组长', department: '职能部', location: '迪拜', keywords: '会计, 组长' },
   { id: '33', title: '资金专员', department: '职能部', location: '迪拜', keywords: '资金' },
-  { id: '34', title: '客服专员', department: '职能部', location: '迪拜', keywords: '客服' }
+  { id: '34', title: '客服专员', department: '职能部', location: '迪拜', keywords: '客服' },
+  { id: '35', title: '总监助理', department: '职能部', location: '香港', keywords: '助理, 行政' }
 ];
 
 export const MOCK_STORIES = [

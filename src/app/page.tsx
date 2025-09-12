@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ArrowRight, Building, Globe, MapPin, Newspaper, Users } from 'lucide-react';
+import { ArrowRight, Building, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -27,7 +27,7 @@ async function EmployeeStories() {
     <Card className="bg-primary text-primary-foreground">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 font-headline">
-          <Users /> 员工故事
+          我们的团队怎么说
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -160,23 +160,19 @@ export default function Home() {
         {/* Popular Regions Section */}
         <section>
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门地区</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-x-4 gap-y-6">
             {popularRegions.map((region) => (
               <div key={region.name} className="flex flex-col items-center gap-2">
                 <Button
                   variant="outline"
-                  className={`flex flex-col items-center justify-center h-24 w-full gap-2 text-center ${region.color} bg-opacity-20 hover:bg-opacity-30`}
+                  className={`flex items-center justify-center h-20 w-full gap-2 text-center ${region.color} bg-opacity-20 hover:bg-opacity-30 flex-col py-2 px-4 rounded-lg`}
                 >
-                  <div className="flex items-center justify-center h-8 w-8 rounded-full text-2xl">
-                    {region.logo}
-                  </div>
+                  <div className="text-3xl">{region.logo}</div>
                   <span className="font-semibold text-sm">{region.name}</span>
                 </Button>
-                {region.name === '迪拜' && (
-                  <Button asChild variant="link" className="p-0 h-auto">
-                    <Link href="/jobs?location=迪拜">查看岗位</Link>
-                  </Button>
-                )}
+                <Button asChild variant="link" className="p-0 h-auto text-sm">
+                  <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
+                </Button>
               </div>
             ))}
           </div>

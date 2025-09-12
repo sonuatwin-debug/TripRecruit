@@ -105,9 +105,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门地区</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {popularRegions.map((region) => (
-              <div key={region.name} className="relative p-4 rounded-lg flex flex-col items-center justify-between h-48">
+              <div key={region.name} className="relative p-4 rounded-lg flex flex-col justify-between h-48">
                 <div className={'absolute inset-0 rounded-lg ' + region.color + ' opacity-20'}></div>
-                <div className="relative text-center">
+                <div className="relative text-center w-full">
                   <div className="text-4xl">{region.logo}</div>
                   <h3 className="font-semibold mt-2 text-foreground">{region.name}</h3>
                 </div>

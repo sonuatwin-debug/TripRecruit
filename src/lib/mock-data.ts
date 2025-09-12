@@ -97,7 +97,9 @@ export const MOCK_JOBS = [
   { id: '66', title: '渠道开发专员', department: '市场部', location: '柬埔寨', keywords: '渠道开发' },
   { id: '67', title: '推广组长', department: '市场部', location: '柬埔寨', keywords: '推广, 组长' },
   { id: '68', title: '招商专员', department: '市场部', location: '柬埔寨', keywords: '招商' },
-  { id: '69', title: '代理发展专员', department: '市场部', location: '柬埔寨', keywords: '代理发展' }
+  { id: '69', title: '代理发展专员', department: '市场部', location: '柬埔寨', keywords: '代理发展' },
+  { id: '70', title: '转化专员', department: '市场部', location: '马来西亚', keywords: '转化, 运营' },
+  { id: '71', title: '自媒体运营', department: '市场部', location: '马来西亚', keywords: '自媒体, 运营' }
 ];
 
 export const MOCK_STORIES = [

@@ -39,6 +39,7 @@ const JobCard = ({ job }: { job: Job }) => (
               {job.location === '香港' && <span className="mr-2">🇭🇰</span>}
               {job.location === '日本' && <span className="mr-2">🇯🇵</span>}
               {job.location === '柬埔寨' && <span className="mr-2">🇰🇭</span>}
+              {job.location === '马来西亚' && <span className="mr-2">🇲🇾</span>}
               查看简章
             </Link>
         </Button>
@@ -64,7 +65,7 @@ export default function JobsPage() {
     }
     if (departmentParam) {
       setDepartment(departmentParam);
-      setActiveTab(getCategoryFromDepartment(departmentParam));
+      setActiveTab(getCategoryFromDepartment(MOCK_JOBS.find(j => j.department === departmentParam)?.department || 'tech'));
     }
   }, [searchParams]);
 

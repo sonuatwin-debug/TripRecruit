@@ -1,6 +1,5 @@
 
 export const MOCK_JOBS = [
-  { id: '5', title: '市场专员，EMEA', department: '市场部', location: '英国伦敦', keywords: '数字营销, seo, 市场活动' },
   { 
     id: '7', 
     title: '网络运维专员', 

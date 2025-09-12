@@ -53,6 +53,7 @@ export default function JobsPage() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState('tech');
   const [searchTerm, setSearchTerm] = useState('');
+  const locationParam = searchParams.get('location');
 
   useEffect(() => {
     const departmentParam = searchParams.get('department');
@@ -69,9 +70,12 @@ export default function JobsPage() {
       const matchesSearch = searchTerm === '' || 
         job.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
         job.keywords.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesSearch;
+      
+      const matchesLocation = !locationParam || job.location === locationParam;
+
+      return matchesSearch && matchesLocation;
     });
-  }, [searchTerm]);
+  }, [searchTerm, locationParam]);
   
   const jobsByTab = useMemo(() => ({
       tech: filteredJobs.filter(job => jobCategories.tech.includes(job.department)),
@@ -86,7 +90,7 @@ export default function JobsPage() {
       ) : (
         <div className="text-center py-16">
           <h3 className="text-xl font-semibold">未找到职位</h3>
-          <p className="text-muted-foreground mt-2">请尝试调整您的搜索过滤器。</p>
+          <p className="text-muted-foreground mt-2">请尝试调整您的搜索或筛选条件。</p>
         </div>
       )}
     </div>
@@ -95,7 +99,9 @@ export default function JobsPage() {
   return (
     <div className="container py-12 md:py-20">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold font-headline mb-2">探索机会</h1>
+        <h1 className="text-4xl font-bold font-headline mb-2">
+          {locationParam ? `${locationParam} 职位` : '探索机会'}
+        </h1>
         <p className="text-lg text-muted-foreground">找到适合您的角色。</p>
       </div>
 

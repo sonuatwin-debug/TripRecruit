@@ -160,17 +160,14 @@ export default function Home() {
         {/* Popular Regions Section */}
         <section>
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门地区</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-x-4 gap-y-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {popularRegions.map((region) => (
-              <div key={region.name} className="flex flex-col items-center gap-2">
-                <Button
-                  variant="outline"
-                  className={`flex items-center justify-center h-20 w-full gap-2 text-center ${region.color} bg-opacity-20 hover:bg-opacity-30 flex-col py-2 px-4 rounded-lg`}
-                >
-                  <div className="text-3xl">{region.logo}</div>
-                  <span className="font-semibold text-sm">{region.name}</span>
-                </Button>
-                <Button asChild variant="link" className="p-0 h-auto text-sm">
+              <div key={region.name} className={`relative p-4 rounded-lg flex flex-col items-center justify-between h-40 ${region.color} bg-opacity-20`}>
+                <div className="text-center">
+                  <div className="text-4xl">{region.logo}</div>
+                  <h3 className="font-semibold mt-2 text-foreground">{region.name}</h3>
+                </div>
+                <Button asChild variant="outline" className="w-full bg-card hover:bg-card/80 text-card-foreground">
                   <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                 </Button>
               </div>

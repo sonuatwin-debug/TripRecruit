@@ -162,12 +162,22 @@ export default function Home() {
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门地区</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {popularRegions.map((region) => (
-              <Button key={region.name} variant="outline" className={`flex flex-col items-center justify-center h-24 gap-2 text-center ${region.color} bg-opacity-20 hover:bg-opacity-30`}>
-                <div className="flex items-center justify-center h-8 w-8 rounded-full text-2xl">
-                  {region.logo}
-                </div>
-                <span className="font-semibold text-sm">{region.name}</span>
-              </Button>
+              <div key={region.name} className="flex flex-col items-center gap-2">
+                <Button
+                  variant="outline"
+                  className={`flex flex-col items-center justify-center h-24 w-full gap-2 text-center ${region.color} bg-opacity-20 hover:bg-opacity-30`}
+                >
+                  <div className="flex items-center justify-center h-8 w-8 rounded-full text-2xl">
+                    {region.logo}
+                  </div>
+                  <span className="font-semibold text-sm">{region.name}</span>
+                </Button>
+                {region.name === '迪拜' && (
+                  <Button asChild variant="link" className="p-0 h-auto">
+                    <Link href="/jobs?location=迪拜">查看岗位</Link>
+                  </Button>
+                )}
+              </div>
             ))}
           </div>
         </section>
@@ -216,4 +226,3 @@ export default function Home() {
     </div>
   );
 }
-

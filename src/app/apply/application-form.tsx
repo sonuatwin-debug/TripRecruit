@@ -26,7 +26,9 @@ const locations = [
 
 const applicationSchema = z.object({
   fullName: z.string().min(1, '姓名为必填项'),
-  contact: z.string().min(1, '联系方式为必填项'),
+  telegram: z.string().min(1, 'Telegram 为必填项'),
+  wechat: z.string().optional(),
+  qq: z.string().optional(),
   jobId: z.string({ required_error: '请选择一个意向岗位' }).min(1, '请选择一个意向岗位'),
   expectedSalary: z.string().min(1, '期望薪资为必填项'),
   resume: z.any().refine(files => files?.length > 0, '简历为必填项。'),
@@ -47,7 +49,9 @@ export default function ApplicationForm() {
     resolver: zodResolver(applicationSchema),
     defaultValues: {
       fullName: '',
-      contact: '',
+      telegram: '',
+      wechat: '',
+      qq: '',
       jobId: initialJobId || undefined,
       expectedSalary: '',
       notes: '',
@@ -77,8 +81,7 @@ export default function ApplicationForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <FormField
+        <FormField
             control={form.control}
             name="fullName"
             render={({ field }) => (
@@ -91,15 +94,42 @@ export default function ApplicationForm() {
               </FormItem>
             )}
           />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <FormField
+            control={form.control}
+            name="telegram"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Telegram</FormLabel>
+                <FormControl>
+                  <Input placeholder="请输入您的 Telegram" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           <FormField
             control={form.control}
-            name="contact"
+            name="wechat"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>联系方式 (手机/微信/邮箱)</FormLabel>
+                <FormLabel>微信 (可选)</FormLabel>
                 <FormControl>
-                  <Input placeholder="请输入您的联系方式" {...field} />
+                  <Input placeholder="请输入您的微信号" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="qq"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>QQ (可选)</FormLabel>
+                <FormControl>
+                  <Input placeholder="请输入您的QQ号" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

@@ -1,11 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ArrowRight, Building, MapPin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
-import { MOCK_JOBS, MOCK_NEWS, MOCK_STORIES } from '@/lib/mock-data';
+import { MOCK_STORIES, MOCK_NEWS } from '@/lib/mock-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
@@ -71,31 +70,7 @@ const popularRegions = [
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
-  const jobCategories = {
-    tech: MOCK_JOBS.filter(job => ['工程部', '设计部', '数据科学'].includes(job.department)),
-    performance: MOCK_JOBS.filter(job => ['市场部'].includes(job.department)),
-    functional: MOCK_JOBS.filter(job => ['产品部'].includes(job.department)),
-  }
-
-  const JobCard = ({ job }: { job: typeof MOCK_JOBS[0] }) => (
-    <Card className="hover:shadow-lg transition-shadow">
-      <CardHeader>
-        <CardTitle className="font-headline text-xl">{job.title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2"><Building /> {job.department}</div>
-          <div className="flex items-center gap-2"><MapPin /> {job.location}</div>
-        </div>
-        <Button asChild variant="link" className="px-0 mt-4">
-          <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
-            了解更多 <ArrowRight className="ml-2" />
-          </Link>
-        </Button>
-      </CardContent>
-    </Card>
-  );
-
+  
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -125,38 +100,6 @@ export default function Home() {
       </section>
 
       <main className="container py-12 md:py-20 space-y-16">
-        {/* Featured Jobs Section */}
-        <section>
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">精选职位</h2>
-          <Tabs defaultValue="tech" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6">
-              <TabsTrigger value="tech">技术岗位</TabsTrigger>
-              <TabsTrigger value="performance">业绩岗位</TabsTrigger>
-              <TabsTrigger value="functional">职能岗位</TabsTrigger>
-            </TabsList>
-            <TabsContent value="tech">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {jobCategories.tech.map(job => <JobCard key={job.id} job={job} />)}
-              </div>
-            </TabsContent>
-            <TabsContent value="performance">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {jobCategories.performance.map(job => <JobCard key={job.id} job={job} />)}
-              </div>
-            </TabsContent>
-            <TabsContent value="functional">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {jobCategories.functional.map(job => <JobCard key={job.id} job={job} />)}
-              </div>
-            </TabsContent>
-          </Tabs>
-          <div className="text-center mt-8">
-            <Button asChild variant="outline">
-              <Link href="/jobs">查看所有职位</Link>
-            </Button>
-          </div>
-        </section>
-
         {/* Popular Regions Section */}
         <section>
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门地区</h2>

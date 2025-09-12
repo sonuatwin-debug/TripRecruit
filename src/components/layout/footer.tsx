@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Briefcase } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -7,8 +6,7 @@ export default function Footer() {
       <div className="container py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <Briefcase className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline text-lg">程聘</span>
+            <span className="font-bold font-headline text-lg">携程集团</span>
           </div>
           <div className="flex space-x-6 text-sm">
             <Link href="/about" className="hover:text-primary transition-colors">关于</Link>

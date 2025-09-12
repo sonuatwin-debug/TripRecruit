@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Briefcase } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
@@ -37,8 +37,7 @@ export default function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Briefcase className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline text-lg">程聘</span>
+            <span className="font-bold font-headline text-lg">携程集团</span>
           </Link>
           <nav className="hidden space-x-6 md:flex">
             {renderNavLinks(false)}
@@ -60,8 +59,7 @@ export default function Header() {
             <SheetContent side="right">
               <div className="flex flex-col space-y-4 p-6">
                 <Link href="/" className="mr-6 flex items-center space-x-2 mb-4">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                  <span className="font-bold font-headline text-lg">程聘</span>
+                  <span className="font-bold font-headline text-lg">携程集团</span>
                 </Link>
                 {renderNavLinks(true)}
                  <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4">

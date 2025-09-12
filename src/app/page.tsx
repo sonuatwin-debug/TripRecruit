@@ -102,14 +102,14 @@ const advantages = [
 ];
 
 const partners = [
-  { name: '携程旅行' },
-  { name: '去哪儿网' },
-  { name: '天巡' },
-  { name: 'Trip.com' },
-  { name: '携程金融' },
-  { name: '途家' },
-  { name: '同程旅行' },
-  { name: 'Skyscanner' },
+  { name: '牛牛体育' },
+  { name: '摩根体育' },
+  { name: '开云体育' },
+  { name: '华体会' },
+  { name: '乐鱼体育' },
+  { name: 'AG体育' },
+  { name: '博冠体育' },
+  { name: '雷速体育' },
 ];
 
 export default function Home() {

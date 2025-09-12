@@ -63,7 +63,9 @@ export const MOCK_JOBS = [
   { id: '32', title: '会计组长', department: '职能部', location: '迪拜', keywords: '会计, 组长' },
   { id: '33', title: '资金专员', department: '职能部', location: '迪拜', keywords: '资金' },
   { id: '34', title: '客服专员', department: '职能部', location: '迪拜', keywords: '客服' },
-  { id: '35', title: '总监助理', department: '职能部', location: '香港', keywords: '助理, 行政' }
+  { id: '35', title: '总监助理', department: '职能部', location: '香港', keywords: '助理, 行政' },
+  { id: '36', title: '行政总务', department: '职能部', location: '日本', keywords: '行政, 总务' },
+  { id: '37', title: '中高级产品经理（体育）', department: '产品部', location: '日本', keywords: '产品经理, 体育, 游戏' }
 ];
 
 export const MOCK_STORIES = [

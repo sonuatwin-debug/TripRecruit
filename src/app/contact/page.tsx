@@ -1,10 +1,7 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import ApplicationForm from '../apply/application-form';
 
 export default function ContactPage() {
     const contactHeroImage = PlaceHolderImages.find(p => p.id === 'contact-hero');
@@ -23,52 +20,26 @@ export default function ContactPage() {
                 )}
                 <div className="absolute inset-0 bg-primary/70" />
                 <div className="relative container h-full flex flex-col justify-center">
-                <h1 className="text-4xl md:text-5xl font-bold font-headline">联系我们</h1>
-                <p className="mt-4 text-lg md:text-xl max-w-3xl">我们在这里帮助您并回答您可能有的任何问题。</p>
+                    <h1 className="text-4xl md:text-5xl font-bold font-headline">在线申请</h1>
+                    <p className="mt-4 text-lg md:text-xl max-w-3xl">我们期待您的加入，请填写下面的表格进行申请。</p>
                 </div>
             </section>
             
             <div className="container py-12 md:py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                        <h2 className="text-3xl font-bold font-headline mb-6">联系信息</h2>
-                        <div className="space-y-6">
-                             <div className="flex items-start gap-4">
-                                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                                <div>
-                                    <h3 className="font-semibold">招聘邮箱</h3>
-                                    <p className="text-muted-foreground">xiechengjituan@gmail.com</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-4">
-                                <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                                <div>
-                                    <h3 className="font-semibold">招聘热线 / 微信号</h3>
-                                    <p className="text-muted-foreground">+86 138 1234 5678</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-4">
-                                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                                <div>
-                                    <h3 className="font-semibold">公司办公地点</h3>
-                                    <p className="text-muted-foreground">中国上海市金钟路968号</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <Card>
-                            <CardContent className="p-6">
-                                <h2 className="text-2xl font-bold font-headline mb-6 text-center">给我们留言</h2>
-                                <form className="space-y-4">
-                                    <Input placeholder="您的姓名" />
-                                    <Input type="email" placeholder="您的邮箱" />
-                                    <Textarea placeholder="您的留言" rows={5} />
-                                    <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground animate-pulse-glow">发送留言</Button>
-                                </form>
-                            </CardContent>
-                        </Card>
-                    </div>
+                <div className="max-w-4xl mx-auto">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="text-3xl font-bold font-headline">
+                                职位申请
+                            </CardTitle>
+                            <CardDescription>
+                                请填写下面的表格提交您的申请。
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <ApplicationForm />
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </div>

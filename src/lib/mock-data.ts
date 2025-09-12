@@ -5,6 +5,7 @@ export const MOCK_JOBS = [
   { id: '4', title: '数据科学家', department: '数据科学', location: '中国上海', keywords: '机器学习, python, sql' },
   { id: '5', title: '市场专员，EMEA', department: '市场部', location: '英国伦敦', keywords: '数字营销, seo, 市场活动' },
   { id: '6', title: '前端工程师', department: '工程部', location: '新加坡', keywords: 'react, typescript, javascript' },
+  { id: '7', title: '网络运维专员', department: '工程部', location: '迪拜', keywords: '网络, 运维' },
 ];
 
 export const MOCK_STORIES = [

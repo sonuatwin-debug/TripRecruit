@@ -122,7 +122,7 @@ export default function JobsPage() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <Select value={location} onValuechange={setLocation}>
+          <Select value={location} onValueChange={setLocation}>
             <SelectTrigger>
               <SelectValue placeholder="地点" />
             </SelectTrigger>

@@ -165,13 +165,13 @@ export default function JobsPage() {
               </TabsTrigger>
           </TabsList>
           <TabsContent value="tech">
-              <JobsList jobs={jobsByTab.tech} />
+              <JobsList key="tech" jobs={jobsByTab.tech} />
           </TabsContent>
           <TabsContent value="performance">
-              <JobsList jobs={jobsByTab.performance} />
+              <JobsList key="performance" jobs={jobsByTab.performance} />
           </TabsContent>
           <TabsContent value="functional">
-              <JobsList jobs={jobsByTab.functional} />
+              <JobsList key="functional" jobs={jobsByTab.functional} />
           </TabsContent>
       </Tabs>
     </div>

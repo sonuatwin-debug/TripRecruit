@@ -59,14 +59,14 @@ async function EmployeeStories() {
 }
 
 const popularRegions = [
-    { name: '菲律宾', color: 'bg-blue-500', logo: '🇵🇭' },
-    { name: '迪拜', color: 'bg-green-500', logo: '🇦🇪' },
-    { name: '泰国', color: 'bg-red-500', logo: '🇹🇭' },
-    { name: '柬埔寨', color: 'bg-indigo-500', logo: '🇰🇭' },
-    { name: '日本', color: 'bg-gray-200', logo: '🇯🇵' },
-    { name: '马来西亚', color: 'bg-yellow-500', logo: '🇲🇾' },
-    { name: '香港', color: 'bg-red-600', logo: '🇭🇰' },
-    { name: '斯里兰卡', color: 'bg-orange-500', logo: '🇱🇰' },
+    { name: '菲律宾', color: 'bg-philippines', logo: '🇵🇭' },
+    { name: '迪拜', color: 'bg-dubai', logo: '🇦🇪' },
+    { name: '泰国', color: 'bg-thailand', logo: '🇹🇭' },
+    { name: '柬埔寨', color: 'bg-cambodia', logo: '🇰🇭' },
+    { name: '日本', color: 'bg-japan', logo: '🇯🇵' },
+    { name: '马来西亚', color: 'bg-malaysia', logo: '🇲🇾' },
+    { name: '香港', color: 'bg-hongkong', logo: '🇭🇰' },
+    { name: '斯里兰卡', color: 'bg-srilanka', logo: '🇱🇰' },
 ];
 
 export default function Home() {
@@ -186,7 +186,7 @@ export default function Home() {
         {/* Company News Section */}
         <section>
           <h2 className="text-3xl font-bold font-headline text-center mb-8">公司新闻</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {MOCK_NEWS.map((item, index) => {
               const newsImage = PlaceHolderImages.find(p => p.id === `news-${index + 1}`);
               return (

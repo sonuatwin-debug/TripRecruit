@@ -50,6 +50,19 @@ export const MOCK_JOBS = [
   { id: '19', title: '代理发展组长', department: '市场部', location: '迪拜', keywords: '代理, 管理' },
   { id: '20', title: '代理部高管', department: '市场部', location: '迪拜', keywords: '代理, 高管' },
   { id: '21', title: '业务专员（推广）', department: '市场部', location: '迪拜', keywords: '业务, 推广' },
+  { id: '22', title: '后台专员', department: '职能部', location: '迪拜', keywords: '后台' },
+  { id: '23', title: '新媒体运营专员', department: '职能部', location: '迪拜', keywords: '新媒体, 运营' },
+  { id: '24', title: '新媒体运营专家', department: '职能部', location: '迪拜', keywords: '新媒体, 运营, 专家' },
+  { id: '25', title: '公关专员', department: '职能部', location: '迪拜', keywords: '公关' },
+  { id: '26', title: '媒体公关专家', department: '职能部', location: '迪拜', keywords: '媒体, 公关, 专家' },
+  { id: '27', title: '活动执行专员', department: '职能部', location: '迪拜', keywords: '活动, 执行' },
+  { id: '28', title: '行政专员', department: '职能部', location: '迪拜', keywords: '行政' },
+  { id: '29', title: '运维助理', department: '职能部', location: '迪拜', keywords: '运维, 助理' },
+  { id: '30', title: '会计专员', department: '职能部', location: '迪拜', keywords: '会计' },
+  { id: '31', title: '财务主管', department: '职能部', location: '迪拜', keywords: '财务, 主管' },
+  { id: '32', title: '会计组长', department: '职能部', location: '迪拜', keywords: '会计, 组长' },
+  { id: '33', title: '资金专员', department: '职能部', location: '迪拜', keywords: '资金' },
+  { id: '34', title: '客服专员', department: '职能部', location: '迪拜', keywords: '客服' }
 ];
 
 export const MOCK_STORIES = [

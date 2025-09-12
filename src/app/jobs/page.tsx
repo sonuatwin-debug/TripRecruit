@@ -16,7 +16,7 @@ type Job = typeof MOCK_JOBS[0];
 const jobCategories = {
   tech: ['工程部', '设计部', '数据科学', '产品部'],
   performance: ['市场部'],
-  functional: [],
+  functional: ['职能部'],
 };
 
 const getCategoryFromDepartment = (department: string) => {

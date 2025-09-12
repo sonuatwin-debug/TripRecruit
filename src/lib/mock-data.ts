@@ -1,11 +1,6 @@
 
 export const MOCK_JOBS = [
-  { id: '1', title: '高级软件工程师，机票业务', department: '工程部', location: '中国上海', keywords: '后端, java, 微服务' },
-  { id: '2', title: '产品经理，酒店业务', department: '产品部', location: '新加坡', keywords: '产品, 酒店, 移动端' },
-  { id: '3', title: 'UX/UI 设计师', department: '设计部', location: '美国山景城', keywords: '用户体验, 用户界面, figma' },
-  { id: '4', title: '数据科学家', department: '数据科学', location: '中国上海', keywords: '机器学习, python, sql' },
   { id: '5', title: '市场专员，EMEA', department: '市场部', location: '英国伦敦', keywords: '数字营销, seo, 市场活动' },
-  { id: '6', title: '前端工程师', department: '工程部', location: '新加坡', keywords: 'react, typescript, javascript' },
   { 
     id: '7', 
     title: '网络运维专员', 

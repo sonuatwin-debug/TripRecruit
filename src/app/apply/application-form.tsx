@@ -14,11 +14,11 @@ import { Loader2, Wand2 } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 const applicationSchema = z.object({
-  fullName: z.string().min(2, 'Full name is required'),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().min(10, 'Phone number is required'),
-  resume: z.any().refine(files => files?.length > 0, 'Resume is required.'),
-  coverLetter: z.string().min(50, 'Please write a short cover letter (min 50 characters).'),
+  fullName: z.string().min(2, '姓名是必填项'),
+  email: z.string().email('无效的电子邮件地址'),
+  phone: z.string().min(10, '电话号码是必填项'),
+  resume: z.any().refine(files => files?.length > 0, '简历是必填项。'),
+  coverLetter: z.string().min(50, '请写一封简短的求职信（最少50个字符）。'),
 });
 
 type ApplicationFormValues = z.infer<typeof applicationSchema>;
@@ -42,7 +42,7 @@ export default function ApplicationForm() {
   async function onSubmit(data: ApplicationFormValues) {
     // In a real app, you would handle file upload and form submission here.
     console.log(data);
-    alert('Application submitted successfully! (Check console for data)');
+    alert('申请已成功提交！ （请检查控制台以获取数据）');
     form.reset();
   }
   
@@ -63,8 +63,8 @@ export default function ApplicationForm() {
         setSuggestions({}); // No suggestions
       }
     } catch (error) {
-      console.error('Error getting AI suggestions:', error);
-      setSuggestions({ general: 'Could not get AI suggestions at this time.' });
+      console.error('获取AI建议时出错：', error);
+      setSuggestions({ general: '目前无法获取AI建议。' });
     } finally {
       setIsLoading(false);
     }
@@ -84,16 +84,16 @@ export default function ApplicationForm() {
           ) : (
             <Wand2 className="mr-2 h-4 w-4" />
           )}
-          AI Assist
+          AI 助手
         </Button>
       </div>
 
       {suggestions && Object.keys(suggestions).length === 0 && !isLoading && (
         <Alert className="mb-4 border-green-500 text-green-700">
             <Wand2 className="h-4 w-4 !text-green-700" />
-            <AlertTitle>Looking Good!</AlertTitle>
+            <AlertTitle>看起来不错！</AlertTitle>
             <AlertDescription>
-                Our AI assistant reviewed your application and has no suggestions. You're ready to submit!
+                我们的AI助手审核了您的申请，没有提出任何建议。您可以提交了！
             </AlertDescription>
         </Alert>
       )}
@@ -105,9 +105,9 @@ export default function ApplicationForm() {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel>全名</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input placeholder="张三" {...field} />
                 </FormControl>
                 {renderSuggestion('fullName')}
                 <FormMessage />
@@ -121,9 +121,9 @@ export default function ApplicationForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email Address</FormLabel>
+                  <FormLabel>电子邮件地址</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="john.doe@example.com" {...field} />
+                    <Input type="email" placeholder="zhang.san@example.com" {...field} />
                   </FormControl>
                   {renderSuggestion('email')}
                   <FormMessage />
@@ -135,9 +135,9 @@ export default function ApplicationForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>电话号码</FormLabel>
                   <FormControl>
-                    <Input type="tel" placeholder="+1 (555) 123-4567" {...field} />
+                    <Input type="tel" placeholder="+86 138 1234 5678" {...field} />
                   </FormControl>
                   {renderSuggestion('phone')}
                   <FormMessage />
@@ -151,7 +151,7 @@ export default function ApplicationForm() {
             name="resume"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Resume/CV</FormLabel>
+                <FormLabel>简历</FormLabel>
                 <FormControl>
                   <Input type="file" {...form.register('resume')} />
                 </FormControl>
@@ -166,10 +166,10 @@ export default function ApplicationForm() {
             name="coverLetter"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Cover Letter</FormLabel>
+                <FormLabel>求职信</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Tell us a little bit about yourself and why you're a good fit for this role."
+                    placeholder="请介绍一下您自己，以及为什么您是这个职位的合适人选。"
                     rows={8}
                     {...field}
                   />
@@ -180,7 +180,7 @@ export default function ApplicationForm() {
             )}
           />
 
-          <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">Submit Application</Button>
+          <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">提交申请</Button>
         </form>
       </Form>
     </>

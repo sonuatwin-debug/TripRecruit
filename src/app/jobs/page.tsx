@@ -34,8 +34,8 @@ export default function JobsPage() {
   return (
     <div className="container py-12 md:py-20">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold font-headline mb-2">Explore Opportunities</h1>
-        <p className="text-lg text-muted-foreground">Find the role that's right for you.</p>
+        <h1 className="text-4xl font-bold font-headline mb-2">探索机会</h1>
+        <p className="text-lg text-muted-foreground">找到适合您的角色。</p>
       </div>
 
       <Card className="mb-8 p-4">
@@ -43,7 +43,7 @@ export default function JobsPage() {
           <div className="relative md:col-span-2">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input 
-              placeholder="Search by title or keyword..."
+              placeholder="按职位或关键词搜索..."
               className="pl-10"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -51,18 +51,18 @@ export default function JobsPage() {
           </div>
           <Select value={location} onValueChange={setLocation}>
             <SelectTrigger>
-              <SelectValue placeholder="Location" />
+              <SelectValue placeholder="地点" />
             </SelectTrigger>
             <SelectContent>
-              {locations.map(loc => <SelectItem key={loc} value={loc}>{loc === 'all' ? 'All Locations' : loc}</SelectItem>)}
+              {locations.map(loc => <SelectItem key={loc} value={loc}>{loc === 'all' ? '所有地点' : loc}</SelectItem>)}
             </SelectContent>
           </Select>
           <Select value={department} onValueChange={setDepartment}>
             <SelectTrigger>
-              <SelectValue placeholder="Department" />
+              <SelectValue placeholder="部门" />
             </SelectTrigger>
             <SelectContent>
-              {departments.map(dep => <SelectItem key={dep} value={dep}>{dep === 'all' ? 'All Departments' : dep}</SelectItem>)}
+              {departments.map(dep => <SelectItem key={dep} value={dep}>{dep === 'all' ? '所有部门' : dep}</SelectItem>)}
             </SelectContent>
           </Select>
         </div>
@@ -81,15 +81,15 @@ export default function JobsPage() {
                   </div>
                 </div>
                 <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link href={`/apply?jobId=${job.id}`}>Apply Now</Link>
+                  <Link href={`/apply?jobId=${job.id}`}>立即申请</Link>
                 </Button>
               </CardContent>
             </Card>
           ))
         ) : (
           <div className="text-center py-16">
-            <h3 className="text-xl font-semibold">No jobs found</h3>
-            <p className="text-muted-foreground mt-2">Try adjusting your search filters.</p>
+            <h3 className="text-xl font-semibold">未找到职位</h3>
+            <p className="text-muted-foreground mt-2">请尝试调整您的搜索过滤器。</p>
           </div>
         )}
       </div>

@@ -16,10 +16,10 @@ export default function ApplyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-3xl font-bold font-headline">
-              {job ? `Apply for ${job.title}` : 'Online Application'}
+              {job ? `申请 ${job.title}` : '在线申请'}
             </CardTitle>
             <CardDescription>
-              {job ? `${job.department} • ${job.location}` : 'Please fill out the form below to apply.'}
+              {job ? `${job.department} • ${job.location}` : '请填写下面的表格进行申请。'}
             </CardDescription>
           </CardHeader>
           <CardContent>

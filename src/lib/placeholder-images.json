@@ -2,33 +2,33 @@
   "placeholderImages": [
     {
       "id": "hero-home",
-      "description": "A diverse team of professionals collaborating in a modern office.",
+      "description": "一个多元化的专业团队在现代化的办公室里协作。",
       "imageUrl": "https://picsum.photos/seed/1/1200/800",
-      "imageHint": "team office"
+      "imageHint": "团队 办公室"
     },
     {
       "id": "news-1",
-      "description": "A futuristic depiction of an AI assistant on a smartphone screen.",
+      "description": "智能手机屏幕上AI助手的未来主义描绘。",
       "imageUrl": "https://picsum.photos/seed/2/200/120",
-      "imageHint": "AI assistant"
+      "imageHint": "AI 助手"
     },
     {
       "id": "news-2",
-      "description": "A beautiful natural landscape with mountains and a lake, representing sustainability.",
+      "description": "一个拥有山脉和湖泊的美丽自然景观，代表可持续性。",
       "imageUrl": "https://picsum.photos/seed/3/200/120",
-      "imageHint": "nature landscape"
+      "imageHint": "自然 景观"
     },
     {
       "id": "about-hero",
-      "description": "The modern architecture of a Trip.com Group office building.",
+      "description": "携程集团办公楼的现代建筑。",
       "imageUrl": "https://picsum.photos/seed/4/1200/600",
-      "imageHint": "office building"
+      "imageHint": "办公楼"
     },
     {
       "id": "contact-hero",
-      "description": "A person on the phone providing customer support in a call center.",
+      "description": "一个人在呼叫中心通过电话提供客户支持。",
       "imageUrl": "https://picsum.photos/seed/5/1200/600",
-      "imageHint": "customer support"
+      "imageHint": "客户 支持"
     }
   ]
 }

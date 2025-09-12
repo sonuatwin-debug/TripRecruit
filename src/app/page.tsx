@@ -10,13 +10,15 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 async function EmployeeStories() {
   let summary;
-  try {
-    const storiesText = MOCK_STORIES.map(s => `${s.name}, ${s.role}: "${s.story}"`).join('\n\n');
-    const result = await summarizeEmployeeStories({ employeeStories: storiesText });
-    summary = result.summary;
-  } catch (error) {
-    console.error('Error summarizing employee stories:', error);
-    // Fallback to showing raw stories if AI summarization fails
+  if (process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY !== 'YOUR_API_KEY') {
+    try {
+      const storiesText = MOCK_STORIES.map(s => `${s.name}, ${s.role}: "${s.story}"`).join('\n\n');
+      const result = await summarizeEmployeeStories({ employeeStories: storiesText });
+      summary = result.summary;
+    } catch (error) {
+      console.error('Error summarizing employee stories:', error);
+      // Fallback to showing raw stories if AI summarization fails
+    }
   }
 
 
@@ -24,14 +26,14 @@ async function EmployeeStories() {
     <Card className="bg-primary text-primary-foreground">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 font-headline">
-          <Users /> Employee Stories
+          <Users /> 员工故事
         </CardTitle>
       </CardHeader>
       <CardContent>
         {summary ? (
           <>
             <p className="text-lg italic">&ldquo;{summary}&rdquo;</p>
-            <p className="text-right mt-4 text-sm opacity-80">- The Trip.com Group Team</p>
+            <p className="text-right mt-4 text-sm opacity-80">- 携程集团团队</p>
           </>
         ) : (
           <div className="space-y-4">
@@ -74,13 +76,13 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative container h-full flex flex-col justify-center text-center items-center">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4">Find Your Next Journey with Us</h1>
+          <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4">与我们一起寻找您的下一段旅程</h1>
           <p className="text-lg md:text-xl max-w-3xl mb-8">
-            Explore exciting career opportunities at Trip.com Group and be part of a global team shaping the future of travel.
+            在携程集团探索激动人心的职业机会，成为塑造旅游未来的全球团队的一员。
           </p>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/jobs">
-              Explore Open Roles <ArrowRight className="ml-2" />
+              探索职位 <ArrowRight className="ml-2" />
             </Link>
           </Button>
         </div>
@@ -89,7 +91,7 @@ export default function Home() {
       <main className="container py-12 md:py-20 space-y-16">
         {/* Featured Jobs Section */}
         <section>
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">Featured Jobs</h2>
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">精选职位</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {MOCK_JOBS.slice(0, 3).map((job) => (
               <Card key={job.id} className="hover:shadow-lg transition-shadow">
@@ -103,7 +105,7 @@ export default function Home() {
                   </div>
                   <Button asChild variant="link" className="px-0 mt-4">
                     <Link href={`/jobs`}>
-                      Learn More <ArrowRight className="ml-2" />
+                      了解更多 <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -112,14 +114,14 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <Button asChild variant="outline">
-              <Link href="/jobs">View All Jobs</Link>
+              <Link href="/jobs">查看所有职位</Link>
             </Button>
           </div>
         </section>
 
         {/* Employee Stories Section */}
         <section>
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">What Our Team Says</h2>
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">我们的团队怎么说</h2>
           <div className="max-w-4xl mx-auto">
             <EmployeeStories />
           </div>
@@ -127,7 +129,7 @@ export default function Home() {
 
         {/* Company News Section */}
         <section>
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">Company News</h2>
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">公司新闻</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {MOCK_NEWS.map((item, index) => {
               const newsImage = PlaceHolderImages.find(p => p.id === `news-${index + 1}`);
@@ -149,7 +151,7 @@ export default function Home() {
                   <p className="text-sm">{item.excerpt}</p>
                    <Button asChild variant="link" className="px-0 mt-2">
                     <Link href="#">
-                      Read More <ArrowRight className="ml-2" />
+                      阅读更多 <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
                 </div>

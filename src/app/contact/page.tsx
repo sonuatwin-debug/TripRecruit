@@ -37,7 +37,7 @@ export default function ContactPage() {
                                 <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                                 <div>
                                     <h3 className="font-semibold">招聘邮箱</h3>
-                                    <p className="text-muted-foreground">recruitment@trip.com</p>
+                                    <p className="text-muted-foreground">xiechengjituan@gmail.com</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">

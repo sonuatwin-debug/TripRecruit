@@ -41,6 +41,7 @@ const JobCard = ({ job }: { job: Job }) => (
               {job.location === '柬埔寨' && <span className="mr-2">🇰🇭</span>}
               {job.location === '马来西亚' && <span className="mr-2">🇲🇾</span>}
               {job.location === '斯里兰卡' && <span className="mr-2">🇱🇰</span>}
+              {job.location === '泰国' && <span className="mr-2">🇹🇭</span>}
               查看简章
             </Link>
         </Button>

@@ -134,7 +134,7 @@ export default function Home() {
             {MOCK_NEWS.map((item, index) => {
               const newsImage = PlaceHolderImages.find(p => p.id === `news-${index + 1}`);
               return (
-              <div key={index} className="flex flex-col md:flex-row items-start gap-4">
+              <div key={index} className="flex flex-col gap-4">
                 {newsImage && (
                   <Image
                     src={newsImage.imageUrl}
@@ -142,7 +142,7 @@ export default function Home() {
                     data-ai-hint={newsImage.imageHint}
                     width={200}
                     height={120}
-                    className="rounded-lg object-cover w-full md:w-48"
+                    className="rounded-lg object-cover w-full h-48"
                   />
                 )}
                 <div>

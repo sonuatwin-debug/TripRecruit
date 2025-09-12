@@ -231,39 +231,6 @@ export default function Home() {
                 ))}
             </div>
         </section>
-
-        {/* Company News Section */}
-        <section>
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">公司新闻</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            {MOCK_NEWS.map((item, index) => {
-              const newsImage = PlaceHolderImages.find(p => p.id === `news-${index + 1}`);
-              return (
-              <div key={index} className="flex flex-col gap-4">
-                {newsImage && (
-                  <Image
-                    src={newsImage.imageUrl}
-                    alt={newsImage.description}
-                    data-ai-hint={newsImage.imageHint}
-                    width={200}
-                    height={120}
-                    className="rounded-lg object-cover w-full h-48"
-                  />
-                )}
-                <div>
-                  <h3 className="font-bold font-headline text-lg mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-2">{item.date}</p>
-                  <p className="text-sm">{item.excerpt}</p>
-                   <Button asChild variant="link" className="px-0 mt-2">
-                    <Link href="#">
-                      阅读更多 <ArrowRight className="ml-2" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            )})}
-          </div>
-        </section>
       </main>
     </div>
   );

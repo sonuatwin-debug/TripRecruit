@@ -5,7 +5,6 @@ import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Search, Code, TrendingUp, Briefcase } from 'lucide-react';
@@ -53,20 +52,10 @@ export default function JobsPage() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState('tech');
   const [searchTerm, setSearchTerm] = useState('');
-  const [location, setLocation] = useState('all');
-  const [department, setDepartment] = useState('all');
-
-  const locations = useMemo(() => ['all', ...Array.from(new Set(MOCK_JOBS.map(job => job.location)))], []);
-  const departments = useMemo(() => ['all', ...Array.from(new Set(MOCK_JOBS.map(job => job.department)))], []);
 
   useEffect(() => {
-    const locationParam = searchParams.get('location');
     const departmentParam = searchParams.get('department');
-    if (locationParam) {
-      setLocation(locationParam);
-    }
     if (departmentParam) {
-      setDepartment(departmentParam);
       const job = MOCK_JOBS.find(j => j.department === departmentParam);
       if (job) {
         setActiveTab(getCategoryFromDepartment(job.department));
@@ -79,11 +68,9 @@ export default function JobsPage() {
       const matchesSearch = searchTerm === '' || 
         job.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
         job.keywords.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesLocation = location === 'all' || job.location === location;
-      const matchesDepartment = department === 'all' || job.department === department;
-      return matchesSearch && matchesLocation && matchesDepartment;
+      return matchesSearch;
     });
-  }, [searchTerm, location, department]);
+  }, [searchTerm]);
   
   const jobsByTab = useMemo(() => ({
       tech: filteredJobs.filter(job => jobCategories.tech.includes(job.department)),
@@ -112,40 +99,14 @@ export default function JobsPage() {
       </div>
 
       <Card className="mb-8 p-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
-          <div className="relative md:col-span-2">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <Input 
-              placeholder="按职位关键词搜索"
-              className="pl-10"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
-          <Select value={location} onValueChange={setLocation}>
-            <SelectTrigger>
-              <SelectValue placeholder="所有地点" />
-            </SelectTrigger>
-            <SelectContent>
-              {locations.map(loc => <SelectItem key={loc} value={loc}>{loc === 'all' ? '所有地点' : loc}</SelectItem>)}
-            </SelectContent>
-          </Select>
-          <Select value={department} onValueChange={(value) => {
-            setDepartment(value);
-            if (value !== 'all') {
-              const job = MOCK_JOBS.find(j => j.department === value);
-              if (job) {
-                setActiveTab(getCategoryFromDepartment(job.department));
-              }
-            }
-          }}>
-            <SelectTrigger>
-              <SelectValue placeholder="所有部门" />
-            </SelectTrigger>
-            <SelectContent>
-              {departments.map(dep => <SelectItem key={dep} value={dep}>{dep === 'all' ? '所有部门' : dep}</SelectItem>)}
-            </SelectContent>
-          </Select>
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <Input 
+            placeholder="按职位关键词搜索"
+            className="pl-10"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
         </div>
       </Card>
       

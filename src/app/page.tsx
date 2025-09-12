@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Building, MapPin, Newspaper, Users, Globe } from 'lucide-react';
+import { ArrowRight, Building, MapPin, Newspaper, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -58,14 +58,14 @@ async function EmployeeStories() {
 }
 
 const popularRegions = [
-    { name: '菲律宾', color: 'bg-blue-500', logo: <Globe className="h-6 w-6" /> },
-    { name: '迪拜', color: 'bg-green-500', logo: <Globe className="h-6 w-6" /> },
-    { name: '泰国', color: 'bg-red-500', logo: <Globe className="h-6 w-6" /> },
-    { name: '柬埔寨', color: 'bg-indigo-500', logo: <Globe className="h-6 w-6" /> },
-    { name: '日本', color: 'bg-gray-200', logo: <Globe className="h-6 w-6" /> },
-    { name: '马来西亚', color: 'bg-yellow-500', logo: <Globe className="h-6 w-6" /> },
-    { name: '香港', color: 'bg-red-600', logo: <Globe className="h-6 w-6" /> },
-    { name: '斯里兰卡', color: 'bg-orange-500', logo: <Globe className="h-6 w-6" /> },
+    { name: '菲律宾', color: 'bg-blue-500', logo: <span className="text-2xl">🇵🇭</span> },
+    { name: '迪拜', color: 'bg-green-500', logo: <span className="text-2xl">🇦🇪</span> },
+    { name: '泰国', color: 'bg-red-500', logo: <span className="text-2xl">🇹🇭</span> },
+    { name: '柬埔寨', color: 'bg-indigo-500', logo: <span className="text-2xl">🇰🇭</span> },
+    { name: '日本', color: 'bg-gray-200', logo: <span className="text-2xl">🇯🇵</span> },
+    { name: '马来西亚', color: 'bg-yellow-500', logo: <span className="text-2xl">🇲🇾</span> },
+    { name: '香港', color: 'bg-red-600', logo: <span className="text-2xl">🇭🇰</span> },
+    { name: '斯里兰卡', color: 'bg-orange-500', logo: <span className="text-2xl">🇱🇰</span> },
 ];
 
 export default function Home() {

@@ -33,7 +33,7 @@ const JobCard = ({ job }: { job: Job }) => (
         <div className="flex-grow">
             <h3 className="font-headline text-xl font-semibold mb-1">{job.title}</h3>
         </div>
-        <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground">
+        <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white">
             <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
               {job.location === '迪拜' && <span className="mr-2">🇦🇪</span>}
               {job.location === '香港' && <span className="mr-2">🇭🇰</span>}
@@ -67,7 +67,10 @@ export default function JobsPage() {
     }
     if (departmentParam) {
       setDepartment(departmentParam);
-      setActiveTab(getCategoryFromDepartment(MOCK_JOBS.find(j => j.department === departmentParam)?.department || 'tech'));
+      const job = MOCK_JOBS.find(j => j.department === departmentParam);
+      if (job) {
+        setActiveTab(getCategoryFromDepartment(job.department));
+      }
     }
   }, [searchParams]);
 
@@ -119,7 +122,7 @@ export default function JobsPage() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <Select value={location} onValueChange={setLocation}>
+          <Select value={location} onValuechange={setLocation}>
             <SelectTrigger>
               <SelectValue placeholder="地点" />
             </SelectTrigger>
@@ -130,7 +133,10 @@ export default function JobsPage() {
           <Select value={department} onValueChange={(value) => {
             setDepartment(value);
             if (value !== 'all') {
-              setActiveTab(getCategoryFromDepartment(MOCK_JOBS.find(j => j.department === value)?.department || 'tech'));
+              const job = MOCK_JOBS.find(j => j.department === value);
+              if (job) {
+                setActiveTab(getCategoryFromDepartment(job.department));
+              }
             }
           }}>
             <SelectTrigger>

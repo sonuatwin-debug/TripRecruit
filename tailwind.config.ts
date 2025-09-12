@@ -98,11 +98,20 @@ export default {
             'box-shadow': '0 0 0 14px hsl(var(--primary) / 0)',
            },
         },
+        'bounce-text': {
+          '0%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '50%': {
+            transform: 'translateY(-2px)',
+          },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse-glow': 'pulse-glow 1.5s infinite',
+        'pulse-glow': 'pulse-glow 2.5s infinite',
+        'bounce-text': 'bounce-text 1.5s infinite',
       },
     },
   },

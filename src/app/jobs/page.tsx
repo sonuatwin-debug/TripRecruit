@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
@@ -80,15 +81,15 @@ export default function JobsPage() {
 
   const JobsList = ({ jobs }: { jobs: Job[] }) => (
     <div className="space-y-6">
-        {jobs.length > 0 ? (
-          jobs.map(job => <JobCard key={job.id} job={job} />)
-        ) : (
-          <div className="text-center py-16">
-            <h3 className="text-xl font-semibold">未找到职位</h3>
-            <p className="text-muted-foreground mt-2">请尝试调整您的搜索过滤器。</p>
-          </div>
-        )}
-      </div>
+      {jobs.length > 0 ? (
+        jobs.map(job => <JobCard key={job.id} job={job} />)
+      ) : (
+        <div className="text-center py-16">
+          <h3 className="text-xl font-semibold">未找到职位</h3>
+          <p className="text-muted-foreground mt-2">请尝试调整您的搜索过滤器。</p>
+        </div>
+      )}
+    </div>
   );
 
   return (

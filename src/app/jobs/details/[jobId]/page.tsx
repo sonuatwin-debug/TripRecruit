@@ -25,9 +25,9 @@ export default function JobDetailsPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-3xl font-bold font-headline">{job.title}</CardTitle>
-            <CardDescription className="flex flex-wrap gap-x-4 gap-y-2 text-base">
-              <span className="flex items-center gap-2"><Briefcase /> {job.department}</span>
-              <span className="flex items-center gap-2"><MapPin /> {job.location}</span>
+            <CardDescription className="flex flex-wrap gap-x-4 gap-y-2 text-base pt-2">
+              <span className="flex items-center gap-2"><Briefcase className="h-5 w-5" /> {job.department}</span>
+              <span className="flex items-center gap-2"><MapPin className="h-5 w-5" /> {job.location}</span>
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-8">
@@ -67,4 +67,3 @@ export default function JobDetailsPage() {
     </div>
   );
 }
-

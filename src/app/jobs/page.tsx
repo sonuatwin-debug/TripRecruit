@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
@@ -36,6 +37,7 @@ const JobCard = ({ job }: { job: Job }) => (
             <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
               {job.location === '迪拜' && <span className="mr-2">🇦🇪</span>}
               {job.location === '香港' && <span className="mr-2">🇭🇰</span>}
+              {job.location === '日本' && <span className="mr-2">🇯🇵</span>}
               查看简章
             </Link>
         </Button>

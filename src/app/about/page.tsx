@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Award, Globe, Heart, Lightbulb } from 'lucide-react';
+import { Award, Globe, Heart, Lightbulb, Users, Rocket, Smile, Star } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
   const aboutHeroImage = PlaceHolderImages.find(p => p.id === 'about-hero');
@@ -26,6 +28,56 @@ export default function AboutPage() {
       </section>
 
       <div className="container py-12 md:py-20 space-y-16">
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+              <div>
+                  <h2 className="text-3xl font-bold font-headline mb-4">携程简介</h2>
+                  <p className="text-muted-foreground">
+                      携程集团秉持『成就完美旅程』的品牌精神，致力打造业界顶尖的在线旅游服务。我们专精于酒店预订、交通票务、旅游度假和商旅管理等领域，以专业、安全和卓越的服务赢得全球用户的信赖。
+                  </p>
+              </div>
+              <div>
+                  <h3 className="text-2xl font-bold font-headline mb-4">我们的项目</h3>
+                  <p className="text-muted-foreground">
+                      携程的使命是不断超越自我，为亿万用户提供最优质的旅行体验。我们通过技术创新，保障服务安全，致力于提供高质量、可信赖的一站式解决方案，以满足客户的全方位需求。
+                  </p>
+              </div>
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Link href="/jobs">查看所有岗位</Link>
+              </Button>
+          </div>
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <Card className="text-center bg-accent/10 border-accent/30">
+                  <CardContent className="p-6">
+                      <Rocket className="h-10 w-10 text-accent mx-auto mb-2" />
+                      <p className="text-3xl font-bold">200+</p>
+                      <p className="text-sm text-muted-foreground">业务覆盖国家</p>
+                  </CardContent>
+              </Card>
+              <Card className="text-center bg-primary/10 border-primary/30">
+                  <CardContent className="p-6">
+                      <Star className="h-10 w-10 text-primary mx-auto mb-2" />
+                      <p className="text-3xl font-bold">25年</p>
+                      <p className="text-sm text-muted-foreground">行业经验</p>
+                  </CardContent>
+              </Card>
+              <Card className="text-center bg-primary/10 border-primary/30">
+                  <CardContent className="p-6">
+                       <Smile className="h-10 w-10 text-primary mx-auto mb-2" />
+                      <p className="text-3xl font-bold">95%</p>
+                      <p className="text-sm text-muted-foreground">用户满意度</p>
+                  </CardContent>
+              </Card>
+              <Card className="text-center bg-accent/10 border-accent/30">
+                  <CardContent className="p-6">
+                      <Users className="h-10 w-10 text-accent mx-auto mb-2" />
+                      <p className="text-3xl font-bold">45,000+</p>
+                      <p className="text-sm text-muted-foreground">全球员工</p>
+                  </CardContent>
+              </Card>
+          </div>
+        </section>
+
         <section className="text-center max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold font-headline mb-4">我们的使命</h2>
           <p className="text-lg text-muted-foreground">

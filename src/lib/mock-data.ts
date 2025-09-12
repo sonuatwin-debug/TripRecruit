@@ -1,3 +1,4 @@
+
 export const MOCK_JOBS = [
   { id: '1', title: '高级软件工程师，机票业务', department: '工程部', location: '中国上海', keywords: '后端, java, 微服务' },
   { id: '2', title: '产品经理，酒店业务', department: '产品部', location: '新加坡', keywords: '产品, 酒店, 移动端' },
@@ -5,7 +6,36 @@ export const MOCK_JOBS = [
   { id: '4', title: '数据科学家', department: '数据科学', location: '中国上海', keywords: '机器学习, python, sql' },
   { id: '5', title: '市场专员，EMEA', department: '市场部', location: '英国伦敦', keywords: '数字营销, seo, 市场活动' },
   { id: '6', title: '前端工程师', department: '工程部', location: '新加坡', keywords: 'react, typescript, javascript' },
-  { id: '7', title: '网络运维专员', department: '工程部', location: '迪拜', keywords: '网络, 运维' },
+  { 
+    id: '7', 
+    title: '网络运维专员', 
+    department: '工程部', 
+    location: '迪拜', 
+    keywords: '网络, 运维',
+    details: {
+      gender: '男',
+      age: '20-30',
+      nationality: '东南亚国家，华人 (暂不考虑中国、印尼、斯坦籍、俄罗斯、越南)',
+      languages: '中文，英文',
+      salary: '薪资待遇：12K 转 14K（试用期2个月）+转正后绩效【转正后有绩效评定，绩效范围0-3k】',
+      hours: '9休4（09:00-18:00）（会有加班情况）',
+      location: 'DB',
+      requirements: [
+        '计算机相关专业；',
+        '熟悉路由器，交换机、防火墙、服务器等设备的设置与管理；熟悉SVN的配置及管理；熟悉 linux 系统，较强的解决问题的能力。；熟悉WIFI相关协议标准和性能标准，有丰富的无线协议类问题分析调试经验；',
+        '熟悉三层转发；静态路由、OSPF、BGP等路由协议；熟练使用各类网络抓包工具，针对数据；',
+        '具有亲和力，较强的责任感与敬业精神；思维敏捷、具有较强的沟通，协调能力及解决问题的能力；具备业务系统搭建及运维服务经验；',
+        '无bc经验'
+      ],
+      responsibilities: [
+        '负责公司电脑及电脑周边设备的日常管理及维护；日常运维支持和优化，保证各个系统稳定/高效运行，支持业务发展需要；',
+        '负责公司服务器、交换机、路由器、电脑等网络设备的日常管理及维护；',
+        '负责部门工作流程的建立和优化，负责监控/配置/性能容量等流程和管理平台的建设与维护；',
+        '负责维护公司的网络安全/权限管理和电子文件的保密管理；',
+        '完成上级安排的其他工作'
+      ]
+    }
+  },
 ];
 
 export const MOCK_STORIES = [

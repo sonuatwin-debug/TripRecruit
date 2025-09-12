@@ -88,7 +88,7 @@ export default function Home() {
           <div className="flex items-center gap-2"><MapPin /> {job.location}</div>
         </div>
         <Button asChild variant="link" className="px-0 mt-4">
-          <Link href={`/apply?jobId=${job.id}`}>
+          <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
             了解更多 <ArrowRight className="ml-2" />
           </Link>
         </Button>
@@ -216,3 +216,4 @@ export default function Home() {
     </div>
   );
 }
+

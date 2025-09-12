@@ -12,7 +12,6 @@ const navLinks = [
   { href: '/jobs', label: '职位' },
   { href: '/about', label: '关于我们' },
   { href: '/faq', label: '常见问题' },
-  { href: '/contact', label: '联系我们' },
 ];
 
 export default function Header() {

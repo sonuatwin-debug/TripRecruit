@@ -33,7 +33,10 @@ const JobCard = ({ job }: { job: Job }) => (
             <h3 className="font-headline text-xl font-semibold mb-1">{job.title}</h3>
         </div>
         <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>立即申请</Link>
+            <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
+              {job.location === '迪拜' && <span className="mr-2">🇦🇪</span>}
+              查看简章
+            </Link>
         </Button>
         </CardContent>
     </Card>

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Facebook, Mail, Send } from 'lucide-react';
+import { ArrowRight, Facebook, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -66,6 +66,39 @@ const popularRegions = [
     { name: '马来西亚', color: 'bg-malaysia', logo: '🇲🇾' },
     { name: '香港', color: 'bg-hongkong', logo: '🇭🇰' },
     { name: '斯里兰卡', color: 'bg-srilanka', logo: '🇱🇰' },
+];
+
+const advantages = [
+    {
+        icon: Globe,
+        title: "全球化平台",
+        description: "加入全球领先的旅游集团，在国际化的舞台上施展才华，接触多元文化，拓展全球视野。"
+    },
+    {
+        icon: TrendingUp,
+        title: "广阔发展空间",
+        description: "我们提供清晰的职业路径和丰富的晋升机会，无论您是技术专家还是管理人才，都能找到自己的发展方向。"
+    },
+    {
+        icon: Award,
+        title: "有竞争力的薪酬",
+        description: "提供行业内富有竞争力的薪资和福利待遇，确保您的付出获得应有的回报。"
+    },
+    {
+        icon: Users,
+        title: "优秀团队文化",
+        description: "与顶尖人才共事，在开放、协作的氛围中共同成长，我们鼓励创新，拥抱变化。"
+    },
+    {
+        icon: Handshake,
+        title: "完善的员工培训",
+        description: "我们拥有健全的培训体系，从入职引导到专业技能提升，全方位支持您的个人成长和职业发展。"
+    },
+    {
+        icon: ShieldCheck,
+        title: "全方位员工关怀",
+        description: "我们关注每一位员工的福祉，提供全面的健康保障、舒适的工作环境和丰富的员工活动。"
+    }
 ];
 
 export default function Home() {
@@ -151,6 +184,27 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <EmployeeStories />
           </div>
+        </section>
+
+        {/* Advantages Section */}
+        <section>
+            <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold font-headline">我们的优势</h2>
+                <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {advantages.map((advantage, index) => (
+                    <Card key={index} className="text-center p-6">
+                        <div className="flex justify-center mb-4">
+                            <div className="bg-primary/10 text-primary p-4 rounded-full">
+                                <advantage.icon className="h-8 w-8" />
+                            </div>
+                        </div>
+                        <h3 className="font-headline text-xl font-semibold mb-2">{advantage.title}</h3>
+                        <p className="text-muted-foreground">{advantage.description}</p>
+                    </Card>
+                ))}
+            </div>
         </section>
 
         {/* Company News Section */}

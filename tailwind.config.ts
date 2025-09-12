@@ -91,11 +91,11 @@ export default {
         'pulse-glow': {
           '0%, 100%': {
             opacity: '1',
-            'box-shadow': '0 0 0 0 hsl(var(--accent) / 0.8)',
+            'box-shadow': '0 0 0 0 hsl(var(--primary) / 0.7)',
           },
           '50%': {
             opacity: '0.9',
-            'box-shadow': '0 0 0 14px hsl(var(--accent) / 0)',
+            'box-shadow': '0 0 0 14px hsl(var(--primary) / 0)',
            },
         },
       },

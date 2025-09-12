@@ -160,7 +160,7 @@ export default function ApplicationForm() {
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">提交申请</Button>
+        <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground animate-pulse-glow">提交申请</Button>
       </form>
     </Form>
   );

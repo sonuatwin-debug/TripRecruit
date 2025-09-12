@@ -102,14 +102,14 @@ const advantages = [
 ];
 
 const partners = [
-  { name: 'British Airways', imageUrl: 'https://picsum.photos/seed/p1/140/40' },
-  { name: 'Marriott', imageUrl: 'https://picsum.photos/seed/p2/140/40' },
-  { name: 'Hilton', imageUrl: 'https://picsum.photos/seed/p3/140/40' },
-  { name: 'Emirates', imageUrl: 'https://picsum.photos/seed/p4/140/40' },
-  { name: 'Singapore Airlines', imageUrl: 'https://picsum.photos/seed/p5/140/40' },
-  { name: 'Hyatt', imageUrl: 'https://picsum.photos/seed/p6/140/40' },
-  { name: 'Google', imageUrl: 'https://picsum.photos/seed/p7/140/40' },
-  { name: 'Amadeus', imageUrl: 'https://picsum.photos/seed/p8/140/40' },
+  { name: '携程旅行' },
+  { name: '去哪儿网' },
+  { name: '天巡' },
+  { name: 'Trip.com' },
+  { name: '携程金融' },
+  { name: '途家' },
+  { name: '同程旅行' },
+  { name: 'Skyscanner' },
 ];
 
 export default function Home() {
@@ -193,10 +193,10 @@ export default function Home() {
         <section>
           <h2 className="text-3xl font-bold font-headline text-center mb-8">我们的合作伙伴</h2>
           <div className="bg-card p-8 rounded-lg">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center text-center">
               {partners.map((partner) => (
                 <div key={partner.name} className="flex justify-center">
-                  <Image src={partner.imageUrl} alt={partner.name} width={140} height={40} className="object-contain grayscale hover:grayscale-0 transition-all" />
+                  <span className="text-xl font-semibold text-muted-foreground hover:text-foreground transition-colors">{partner.name}</span>
                 </div>
               ))}
             </div>

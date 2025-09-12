@@ -105,7 +105,7 @@ const partners = [
   { name: '牛牛体育' },
   { name: '摩根体育' },
   { name: '开云体育' },
-  { name: '华体会' },
+  { name: '华体会体育' },
   { name: '乐鱼体育' },
   { name: 'AG体育' },
   { name: '博冠体育' },

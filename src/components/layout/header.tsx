@@ -10,7 +10,8 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/', label: '首页' },
   { href: '/jobs', label: '职位' },
-  { href: '/about', label: '公司' },
+  { href: '/about', label: '关于我们' },
+  { href: '/faq', label: '常见问题' },
   { href: '/contact', label: '联系我们' },
 ];
 
@@ -40,6 +41,7 @@ export default function Header() {
             <span className="font-bold font-headline text-lg">携程集团</span>
           </Link>
           <nav className="hidden space-x-6 md:flex">
+            {renderNavLinks(false)}
           </nav>
         </div>
 

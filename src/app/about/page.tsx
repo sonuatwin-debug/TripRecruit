@@ -7,6 +7,10 @@ import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
   const aboutHeroImage = PlaceHolderImages.find(p => p.id === 'about-hero');
+  const officeImage1 = { id: 'office-1', imageUrl: 'https://picsum.photos/seed/101/600/400', description: '现代化办公区', imageHint: 'office space' };
+  const officeImage2 = { id: 'office-2', imageUrl: 'https://picsum.photos/seed/102/600/400', description: '员工协作区', imageHint: 'team collaboration' };
+  const officeImage3 = { id: 'office-3', imageUrl: 'https://picsum.photos/seed/103/600/400', description: '休闲区', imageHint: 'office lounge' };
+
 
   return (
     <div>
@@ -27,7 +31,88 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="container py-12 md:py-20 space-y-16">
+      <div className="container py-12 md:py-20 space-y-20">
+
+        <section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-4">
+                <h2 className="text-3xl font-bold font-headline">我们的愿景与使命</h2>
+                <p className="text-muted-foreground text-lg">通过提供一个无缝、一站式的旅行平台，提供丰富的产品和服务选择，让人们轻松愉快地探索世界。</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card className="text-center">
+                <CardHeader>
+                    <div className="mx-auto bg-accent/20 p-3 rounded-full w-fit">
+                    <Lightbulb className="h-8 w-8 text-accent" />
+                    </div>
+                    <CardTitle className="font-headline pt-2">愿景</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>成为全球最值得信赖和最具创新精神的旅行平台。</p>
+                </CardContent>
+                </Card>
+                <Card className="text-center">
+                <CardHeader>
+                    <div className="mx-auto bg-primary/20 p-3 rounded-full w-fit">
+                    <Heart className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline pt-2">使命</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>让每一次旅行都成为完美的旅程，连接全球旅行者。</p>
+                </CardContent>
+                </Card>
+            </div>
+          </div>
+        </section>
+
+        <section>
+            <h2 className="text-3xl font-bold font-headline text-center mb-8">企业文化</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <Card className="text-center">
+                <CardHeader>
+                    <CardTitle className="font-headline pt-2">客户中心</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>我们所有工作的核心都以客户为中心，致力于超越客户期望。</p>
+                </CardContent>
+                </Card>
+                <Card className="text-center">
+                <CardHeader>
+                    <CardTitle className="font-headline pt-2">团队合作</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>我们营造一个多元、包容和充满活力的工作环境，鼓励合作与成长。</p>
+                </CardContent>
+                </Card>
+                <Card className="text-center">
+                <CardHeader>
+                    <CardTitle className="font-headline pt-2">诚信正直</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>我们坚持最高的道德标准，对客户、合作伙伴和员工负责。</p>
+                </CardContent>
+                </Card>
+                <Card className="text-center">
+                <CardHeader>
+                    <CardTitle className="font-headline pt-2">创新精神</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p>我们拥抱变化，不断探索新技术和新思路，推动行业发展。</p>
+                </CardContent>
+                </Card>
+            </div>
+        </section>
+
+        <section>
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">办公环境</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Image src={officeImage1.imageUrl} alt={officeImage1.description} data-ai-hint={officeImage1.imageHint} width={600} height={400} className="rounded-lg object-cover w-full h-full" />
+              <Image src={officeImage2.imageUrl} alt={officeImage2.description} data-ai-hint={officeImage2.imageHint} width={600} height={400} className="rounded-lg object-cover w-full h-full" />
+              <Image src={officeImage3.imageUrl} alt={officeImage3.description} data-ai-hint={officeImage3.imageHint} width={600} height={400} className="rounded-lg object-cover w-full h-full" />
+          </div>
+        </section>
+
         <section className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
               <div>
@@ -75,62 +160,6 @@ export default function AboutPage() {
                       <p className="text-sm text-muted-foreground">全球员工</p>
                   </CardContent>
               </Card>
-          </div>
-        </section>
-
-        <section className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold font-headline mb-4">我们的使命</h2>
-          <p className="text-lg text-muted-foreground">
-            通过提供一个无缝、一站式的旅行平台，提供丰富的产品和服务选择，让人们轻松愉快地探索世界。
-          </p>
-        </section>
-
-        <section>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto bg-accent/20 p-3 rounded-full w-fit">
-                  <Lightbulb className="h-8 w-8 text-accent" />
-                </div>
-                <CardTitle className="font-headline pt-2">愿景</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>成为全球最值得信赖和最具创新精神的旅行平台。</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto bg-primary/20 p-3 rounded-full w-fit">
-                  <Heart className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="font-headline pt-2">价值观</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>以客户为中心、团队合作、诚信和创新是我们一切工作的核心。</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto bg-accent/20 p-3 rounded-full w-fit">
-                  <Globe className="h-8 w-8 text-accent" />
-                </div>
-                <CardTitle className="font-headline pt-2">文化</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>我们营造一个多元、包容和充满活力的工作环境，鼓励成长和学习。</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto bg-primary/20 p-3 rounded-full w-fit">
-                  <Award className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="font-headline pt-2">影响</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>连接全球数百万旅行者，为他们创造难忘的体验。</p>
-              </CardContent>
-            </Card>
           </div>
         </section>
       </div>

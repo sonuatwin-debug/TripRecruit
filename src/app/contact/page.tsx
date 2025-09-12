@@ -33,25 +33,25 @@ export default function ContactPage() {
                     <div>
                         <h2 className="text-3xl font-bold font-headline mb-6">联系信息</h2>
                         <div className="space-y-6">
-                            <div className="flex items-start gap-4">
-                                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                             <div className="flex items-start gap-4">
+                                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                                 <div>
-                                    <h3 className="font-semibold">我们的总部</h3>
-                                    <p className="text-muted-foreground">中国上海市金钟路968号</p>
+                                    <h3 className="font-semibold">招聘邮箱</h3>
+                                    <p className="text-muted-foreground">recruitment@trip.com</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
                                 <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                                 <div>
-                                    <h3 className="font-semibold">致电我们</h3>
-                                    <p className="text-muted-foreground">+86 21 3406 4880</p>
+                                    <h3 className="font-semibold">招聘热线 / 微信号</h3>
+                                    <p className="text-muted-foreground">+86 138 1234 5678</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
-                                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                                 <div>
-                                    <h3 className="font-semibold">给我们发邮件</h3>
-                                    <p className="text-muted-foreground">recruitment@trip.com</p>
+                                    <h3 className="font-semibold">公司办公地点</h3>
+                                    <p className="text-muted-foreground">中国上海市金钟路968号</p>
                                 </div>
                             </div>
                         </div>

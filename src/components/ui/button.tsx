@@ -47,16 +47,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, className }), isGlowAnimated ? 'animate-bounce-text' : '')}
         ref={ref}
         {...props}
-      >
-        {isGlowAnimated ? (
-          <span className="animate-bounce-text">{props.children}</span>
-        ) : (
-          props.children
-        )}
-      </Comp>
+      />
     )
   }
 )

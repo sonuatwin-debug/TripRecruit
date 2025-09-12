@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Building, MapPin, Newspaper, Users } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ArrowRight, Building, Globe, MapPin, Newspaper, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -58,18 +59,42 @@ async function EmployeeStories() {
 }
 
 const popularRegions = [
-    { name: '菲律宾', color: 'bg-blue-500', logo: <span className="text-2xl">🇵🇭</span> },
-    { name: '迪拜', color: 'bg-green-500', logo: <span className="text-2xl">🇦🇪</span> },
-    { name: '泰国', color: 'bg-red-500', logo: <span className="text-2xl">🇹🇭</span> },
-    { name: '柬埔寨', color: 'bg-indigo-500', logo: <span className="text-2xl">🇰🇭</span> },
-    { name: '日本', color: 'bg-gray-200', logo: <span className="text-2xl">🇯🇵</span> },
-    { name: '马来西亚', color: 'bg-yellow-500', logo: <span className="text-2xl">🇲🇾</span> },
-    { name: '香港', color: 'bg-red-600', logo: <span className="text-2xl">🇭🇰</span> },
-    { name: '斯里兰卡', color: 'bg-orange-500', logo: <span className="text-2xl">🇱🇰</span> },
+    { name: '菲律宾', color: 'bg-blue-500', logo: '🇵🇭' },
+    { name: '迪拜', color: 'bg-green-500', logo: '🇦🇪' },
+    { name: '泰国', color: 'bg-red-500', logo: '🇹🇭' },
+    { name: '柬埔寨', color: 'bg-indigo-500', logo: '🇰🇭' },
+    { name: '日本', color: 'bg-gray-200', logo: '🇯🇵' },
+    { name: '马来西亚', color: 'bg-yellow-500', logo: '🇲🇾' },
+    { name: '香港', color: 'bg-red-600', logo: '🇭🇰' },
+    { name: '斯里兰卡', color: 'bg-orange-500', logo: '🇱🇰' },
 ];
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
+  const jobCategories = {
+    tech: MOCK_JOBS.filter(job => ['工程部', '设计部', '数据科学'].includes(job.department)),
+    performance: MOCK_JOBS.filter(job => ['市场部'].includes(job.department)),
+    functional: MOCK_JOBS.filter(job => ['产品部'].includes(job.department)),
+  }
+
+  const JobCard = ({ job }: { job: typeof MOCK_JOBS[0] }) => (
+    <Card className="hover:shadow-lg transition-shadow">
+      <CardHeader>
+        <CardTitle className="font-headline text-xl">{job.title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2"><Building /> {job.department}</div>
+          <div className="flex items-center gap-2"><MapPin /> {job.location}</div>
+        </div>
+        <Button asChild variant="link" className="px-0 mt-4">
+          <Link href={`/apply?jobId=${job.id}`}>
+            了解更多 <ArrowRight className="ml-2" />
+          </Link>
+        </Button>
+      </CardContent>
+    </Card>
+  );
 
   return (
     <div className="flex flex-col">
@@ -103,26 +128,28 @@ export default function Home() {
         {/* Featured Jobs Section */}
         <section>
           <h2 className="text-3xl font-bold font-headline text-center mb-8">精选职位</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {MOCK_JOBS.slice(0, 3).map((job) => (
-              <Card key={job.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">{job.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2"><Building /> {job.department}</div>
-                    <div className="flex items-center gap-2"><MapPin /> {job.location}</div>
-                  </div>
-                  <Button asChild variant="link" className="px-0 mt-4">
-                    <Link href={`/jobs`}>
-                      了解更多 <ArrowRight className="ml-2" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Tabs defaultValue="tech" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-6">
+              <TabsTrigger value="tech">技术岗位</TabsTrigger>
+              <TabsTrigger value="performance">业绩岗位</TabsTrigger>
+              <TabsTrigger value="functional">职能岗位</TabsTrigger>
+            </TabsList>
+            <TabsContent value="tech">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {jobCategories.tech.map(job => <JobCard key={job.id} job={job} />)}
+              </div>
+            </TabsContent>
+            <TabsContent value="performance">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {jobCategories.performance.map(job => <JobCard key={job.id} job={job} />)}
+              </div>
+            </TabsContent>
+            <TabsContent value="functional">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {jobCategories.functional.map(job => <JobCard key={job.id} job={job} />)}
+              </div>
+            </TabsContent>
+          </Tabs>
           <div className="text-center mt-8">
             <Button asChild variant="outline">
               <Link href="/jobs">查看所有职位</Link>
@@ -136,7 +163,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {popularRegions.map((region) => (
               <Button key={region.name} variant="outline" className={`flex flex-col items-center justify-center h-24 gap-2 text-center ${region.color} bg-opacity-20 hover:bg-opacity-30`}>
-                <div className="flex items-center justify-center h-8 w-8 rounded-full">
+                <div className="flex items-center justify-center h-8 w-8 rounded-full text-2xl">
                   {region.logo}
                 </div>
                 <span className="font-semibold text-sm">{region.name}</span>

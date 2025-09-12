@@ -1,12 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Facebook, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award } from 'lucide-react';
+import { ArrowRight, Facebook, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
 import { MOCK_STORIES, MOCK_NEWS } from '@/lib/mock-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const popularRegions = [
     { name: '菲律宾', color: 'bg-philippines', logo: '🇵🇭' },
@@ -61,6 +62,36 @@ const partners = [
   { name: 'AG体育' },
   { name: '博冠体育' },
   { name: '雷速体育' },
+];
+
+const jobCategories = [
+  {
+    value: 'tech',
+    label: '技术岗',
+    icon: Code,
+    title: '技术岗',
+    description: '我们正在寻找顶尖的技术人才，共同打造业界领先的旅游科技平台。在这里，你将有机会接触到大数据、人工智能、云计算等前沿技术，参与核心产品的研发，用代码改变世界。',
+    features: ['前沿技术挑战', '海量数据处理', '分布式系统架构', '敏捷开发流程', '快速职业成长'],
+    image: 'tech-jobs-showcase'
+  },
+  {
+    value: 'performance',
+    label: '业绩岗',
+    icon: TrendingUpIcon,
+    title: '业绩岗',
+    description: '如果你对市场充满热情，渴望通过策略和执行力驱动业务增长，那么业绩岗就是你的舞台。我们提供广阔的平台和资源，让你在市场推广、渠道拓展、销售管理等领域大展拳脚。',
+    features: ['目标驱动文化', '丰厚业绩奖励', '全面市场策略', '精英销售团队', '广阔客户资源'],
+    image: 'performance-jobs-showcase'
+  },
+  {
+    value: 'functional',
+    label: '职能岗',
+    icon: Briefcase,
+    title: '职能岗',
+    description: '作为公司的坚实后盾，职能部门在人力资源、财务、法务、行政等领域为业务发展提供全方位支持。我们欢迎专业、高效、富有责任感的你加入，共同保障公司的稳健运营。',
+    features: ['专业化分工', '跨部门协作', '完善支持体系', '多样化发展路径', '人性化管理'],
+    image: 'functional-jobs-showcase'
+  }
 ];
 
 export default function Home() {
@@ -151,6 +182,56 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Job Categories Section */}
+        <section className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
+          <Tabs defaultValue="tech" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-10 bg-muted">
+              {jobCategories.map(cat => (
+                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
+                  <cat.icon className="h-5 w-5 mr-2" />
+                  {cat.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {jobCategories.map(cat => {
+              const image = PlaceHolderImages.find(p => p.id === cat.image);
+              return (
+                <TabsContent key={cat.value} value={cat.value}>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold font-headline text-primary">{cat.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{cat.description}</p>
+                      <ul className="space-y-3">
+                        {cat.features.map(feature => (
+                          <li key={feature} className="flex items-center">
+                            <ShieldCheck className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                            <span className="text-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground animate-pulse-glow">
+                        <Link href="/jobs">查看更多 <ArrowRight className="ml-2" /></Link>
+                      </Button>
+                    </div>
+                    <div className="relative h-80 rounded-lg overflow-hidden">
+                      {image && (
+                        <Image 
+                          src={image.imageUrl}
+                          alt={image.description}
+                          data-ai-hint={image.imageHint}
+                          fill
+                          className="object-cover"
+                        />
+                      )}
+                    </div>
+                  </div>
+                </TabsContent>
+              );
+            })}
+          </Tabs>
         </section>
 
         {/* Partners Section */}

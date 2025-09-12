@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -29,6 +30,24 @@
       "description": "一个人在呼叫中心通过电话提供客户支持。",
       "imageUrl": "https://picsum.photos/seed/5/1200/600",
       "imageHint": "客户 支持"
+    },
+    {
+      "id": "tech-jobs-showcase",
+      "description": "一个团队的软件工程师在办公室协作开发项目。",
+      "imageUrl": "https://picsum.photos/seed/201/600/400",
+      "imageHint": "software engineers"
+    },
+    {
+      "id": "performance-jobs-showcase",
+      "description": "市场团队在会议室讨论业务增长策略和图表。",
+      "imageUrl": "https://picsum.photos/seed/202/600/400",
+      "imageHint": "marketing team"
+    },
+    {
+      "id": "functional-jobs-showcase",
+      "description": "人力资源专家在友好的环境中进行面试。",
+      "imageUrl": "https://picsum.photos/seed/203/600/400",
+      "imageHint": "HR interview"
     }
   ]
 }

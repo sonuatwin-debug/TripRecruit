@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Building, MapPin, Search } from 'lucide-react';
+import { Search, Code, TrendingUp, Briefcase } from 'lucide-react';
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -133,9 +133,18 @@ export default function JobsPage() {
       
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-6">
-              <TabsTrigger value="tech">技术岗位</TabsTrigger>
-              <TabsTrigger value="performance">业绩岗位</TabsTrigger>
-              <TabsTrigger value="functional">职能岗位</TabsTrigger>
+              <TabsTrigger value="tech" className="flex items-center gap-2">
+                  <Code className="h-4 w-4" />
+                  技术岗位
+              </TabsTrigger>
+              <TabsTrigger value="performance" className="flex items-center gap-2">
+                  <TrendingUp className="h-4 w-4" />
+                  业绩岗位
+              </TabsTrigger>
+              <TabsTrigger value="functional" className="flex items-center gap-2">
+                  <Briefcase className="h-4 w-4" />
+                  职能岗位
+              </TabsTrigger>
           </TabsList>
           <TabsContent value="tech">
               <JobsList jobs={jobsByTab.tech} />

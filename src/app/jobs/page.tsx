@@ -31,10 +31,6 @@ const JobCard = ({ job }: { job: Job }) => (
         <CardContent className="p-4 flex flex-col md:flex-row justify-between items-start md:items-center">
         <div className="flex-grow">
             <h3 className="font-headline text-xl font-semibold mb-1">{job.title}</h3>
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2"><Building /> {job.department}</div>
-            <div className="flex items-center gap-2"><MapPin /> {job.location}</div>
-            </div>
         </div>
         <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>立即申请</Link>

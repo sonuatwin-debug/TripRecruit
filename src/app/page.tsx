@@ -36,14 +36,14 @@ async function EmployeeStories() {
             <p className="text-right mt-4 text-sm opacity-80">- 携程集团团队</p>
           </>
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-6">
             {MOCK_STORIES.map((s, i) => (
               <div key={i} className="flex items-start gap-4">
                 <Avatar>
                   <AvatarFallback>{s.name.charAt(0)}</AvatarFallback>
                 </Avatar>
-                <div className="flex-1">
-                  <blockquote className="italic border-l-2 border-accent pl-4">
+                <div className="border-l-2 border-accent pl-4">
+                  <blockquote className="italic">
                     <p>&ldquo;{s.story}&rdquo;</p>
                   </blockquote>
                   <p className="text-right mt-2 text-sm font-semibold">{s.name}, <span className="font-normal opacity-80">{s.role}</span></p>

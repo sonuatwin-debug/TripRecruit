@@ -125,10 +125,8 @@ export default function Home() {
         <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
           <Send className="h-6 w-6" />
         </a>
-        <a href="https://im.qq.com" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.0001 2.02344C5.37313 2.02344 0 5.86431 0 11.216C0 14.8802 2.4532 18.0688 5.89945 19.8188C5.81163 21.1439 5.02123 22.9546 4.96395 23.1078C4.8569 23.4005 5.17641 23.6334 5.43754 23.4735C5.69866 23.3136 8.35515 21.6152 9.47543 20.898C10.2869 21.0366 11.1278 21.1086 12.0001 21.1086C18.627 21.1086 24 16.7909 24 11.216C24 5.86431 18.627 2.02344 12.0001 2.02344ZM9.11717 14.1562C8.52187 14.1562 7.96404 13.5938 7.96404 12.8672C7.96404 12.1406 8.52187 11.5781 9.11717 11.5781C9.71247 11.5781 10.2703 12.1406 10.2703 12.8672C10.2703 13.5938 9.71247 14.1562 9.11717 14.1562ZM13.8437 14.1562C13.8437 13.5938 14.4016 13.125 15 13.125C15.5984 13.125 16.1562 13.5938 16.1562 14.1562V14.1562C16.1562 14.7188 15.5984 15.1875 15 15.1875C14.4016 15.1875 13.8437 14.7188 13.8437 14.1562Z"/>
-            </svg>
+        <a href="https://im.qq.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow text-2xl">
+          🐧
         </a>
         <a href="https://www.wechat.com" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
@@ -180,10 +178,8 @@ export default function Home() {
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.41 14.59L12 13.17l-3.41 3.42-1.42-1.42L10.59 12 7.17 8.59l1.42-1.42L12 10.83l3.41-3.42 1.42 1.42L13.41 12l3.42 3.41-1.42 1.42z"/>
                 </svg>
             </a>
-            <a href="https://im.qq.com" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.0001 2.02344C5.37313 2.02344 0 5.86431 0 11.216C0 14.8802 2.4532 18.0688 5.89945 19.8188C5.81163 21.1439 5.02123 22.9546 4.96395 23.1078C4.8569 23.4005 5.17641 23.6334 5.43754 23.4735C5.69866 23.3136 8.35515 21.6152 9.47543 20.898C10.2869 21.0366 11.1278 21.1086 12.0001 21.1086C18.627 21.1086 24 16.7909 24 11.216C24 5.86431 18.627 2.02344 12.0001 2.02344ZM9.11717 14.1562C8.52187 14.1562 7.96404 13.5938 7.96404 12.8672C7.96404 12.1406 8.52187 11.5781 9.11717 11.5781C9.71247 11.5781 10.2703 12.1406 10.2703 12.8672C10.2703 13.5938 9.71247 14.1562 9.11717 14.1562ZM13.8437 14.1562C13.8437 13.5938 14.4016 13.125 15 13.125C15.5984 13.125 16.1562 13.5938 16.1562 14.1562V14.1562C16.1562 14.7188 15.5984 15.1875 15 15.1875C14.4016 15.1875 13.8437 14.7188 13.8437 14.1562Z"/>
-                </svg>
+            <a href="https://im.qq.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg text-2xl">
+              🐧
             </a>
           </div>
 

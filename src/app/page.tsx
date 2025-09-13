@@ -94,11 +94,11 @@ const benefits = [
     { icon: Plane, text: "满1年享15天带薪年假及机票报销，半年不休假补贴10500RMB" },
     { icon: Users, text: "每月各部门组织团建活动" },
     { icon: Award, text: "年终13-17薪 + 春节红包" },
-    { icon: Handshake, text: "入职满2年忠诚奖20000RMB，5年忠诚奖50000RMB" },
+    { icon: Handshake, text: "入职满2年忠诚奖金20000RMB，5年忠诚奖金50000RMB" },
     { icon: GraduationCap, text: "完善的培训体系(新人岗前培训，岗中晋升培训)" }
 ];
 
-export default function Home() {
+export default function HomePage() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
   
   return (
@@ -176,7 +176,7 @@ export default function Home() {
             </a>
             <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.015 2.5l-8.015 3.5v8l8.015 7.5 8-7.5v-8l-8-3.5zM8.31 9.94l3.705 2.56 3.66-2.54-3.66-2.46-3.705 2.44zm.015 4.56l3.69 2.25v-4.59l-3.69-2.55v4.89z"/>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M12.015 2.5l-8.015 3.5v8l8.015 7.5 8-7.5v-8l-8-3.5zM8.31 9.94l3.705 2.56 3.66-2.54-3.66-2.46-3.705 2.44zm.015 4.56l3.69 2.25v-4.59l-3.69-2.55v4.89z"/>
                 </svg>
             </a>
             <a href="https://www.lita.gg/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">

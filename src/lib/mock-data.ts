@@ -182,7 +182,7 @@ export const MOCK_JOBS = [
   { id: '159', title: '商推专员', department: '市场部', location: '泰国', keywords: '商推' },
   { id: '160', title: '转化专员', department: '市场部', location: '泰国', keywords: '转化' },
   { id: '161', title: '推广专员', department: '市场部', location: '泰国', keywords: '推广' },
-  { id_content: '162', title: 'SEO专员', department: '市场部', location: '泰国', keywords: 'seo' },
+  { id: '162', title: 'SEO专员', department: '市场部', location: '泰国', keywords: 'seo' },
   { id: '163', title: '渗透劫持', department: '市场部', location: '泰国', keywords: '渗透, 劫持' },
   { id: '164', title: '推广维护专员', department: '市场部', location: '泰国', keywords: '推广, 维护' },
   { id: '165', title: '推广组长', department: '市场部', location: '泰国', keywords: '推广, 组长' },
@@ -197,7 +197,34 @@ export const MOCK_JOBS = [
   { id: '174', title: '网站站长/网站运营', department: '市场部', location: '泰国', keywords: '站长, 运营' },
   { id: '175', title: '引流专员', department: '市场部', location: '泰国', keywords: '引流' },
   { id: '176', title: '自媒体渠道专员', department: '市场部', location: '泰国', keywords: '自媒体, 渠道' },
-  { id: '177', title: 'RZ 账目', department: '职能部', location: '菲律宾', keywords: 'rz, 账目' },
+  { 
+    id: '177', 
+    title: 'RZ 账目', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: 'rz, 账目',
+    details: {
+      gender: '不限',
+      age: '21-30岁',
+      nationality: '马来、越南、缅甸',
+      languages: '中文沟通顺畅，懂英语者优先',
+      salary: '10k 转 12k',
+      hours: '9小时工作制，月休4天',
+      location: '菲律宾',
+      requirements: [
+        '中文沟通无障碍，普通话流利，英语能力好者优先；',
+        '理解能力强，对数字敏感；',
+        '具备良好的沟通表达能力、情绪管理能力和抗压能力，团队协作能力强；',
+        '有会计经验者优先；',
+        '具备服务意识和服务精神，执行力强，稳定性高。'
+      ],
+      responsibilities: [
+        '负责核实员工入职、签证费用账单；',
+        '对接财务，处理相关款项问题；',
+        '记录和核对账本，确保数据准确。'
+      ]
+    }
+  },
   { id: '178', title: '接机专员', department: '职能部', location: '菲律宾', keywords: '接机' },
   { id: '179', title: '数据分析专员', department: '职能部', location: '菲律宾', keywords: '数据分析' },
   { id: '180', title: '劳动关系专员', department: '职能部', location: '菲律宾', keywords: '劳动关系' },

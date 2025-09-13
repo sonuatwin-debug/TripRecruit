@@ -184,7 +184,7 @@ export default function HomePage() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
   
   return (
-    <div className="flex flex-col">
+    <>
       {/* Hero Section */}
       <section className="relative h-[60vh] text-white">
         {heroImage && (
@@ -226,7 +226,7 @@ export default function HomePage() {
           </a>
       </div>
 
-      <main className="container py-12 md:py-20 space-y-24">
+      <div className="container py-12 md:py-20 space-y-24">
 
         {/* Quick Contact Section */}
         <section>
@@ -358,9 +358,7 @@ export default function HomePage() {
                 ))}
             </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
-
-    

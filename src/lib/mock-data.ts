@@ -282,7 +282,36 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '180', title: '劳动关系专员', department: '职能部', location: '菲律宾', keywords: '劳动关系' },
+  { 
+    id: '180', 
+    title: '劳动关系专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '劳动关系',
+    details: {
+      gender: '女',
+      age: '21-30岁',
+      nationality: '外籍（缅甸 / 马来 / 印尼 / 越南）',
+      languages: '中文标准，无口音',
+      salary: '10k-12k',
+      hours: '9小时工作制，月休4天',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：本科及以上',
+        '头脑灵活，善于沟通，有耐心，能服从上级安排；',
+        '做事仔细、认真、有责任感；',
+        '熟练掌握 Excel 基础函数与数据整理（必须会：MID、LEFT、RIGHT、VLOOKUP、HLOOKUP、IF、COUNTIF、MATCH、INDEX、数据透视表等常用公式）；',
+        '中文标准，无口音；',
+        '能接受偶尔出差至第三国。'
+      ],
+      responsibilities: [
+        '对接部门及员工，处理入职、转岗、离职等手续相关工作；',
+        '审批入转离流程，跟进进度并汇总数据；',
+        '完成领导交办的其他工作；',
+        '具备良好的沟通与服务意识。'
+      ]
+    }
+  },
   { id: '181', title: '医生', department: '职能部', location: '菲律宾', keywords: '医生' },
   { id: '182', title: '护士', department: '职能部', location: '菲律宾', keywords: '护士' },
   { id: '183', title: '综管专员', department: '职能部', location: '菲律宾', keywords: '综管' },
@@ -429,3 +458,4 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+

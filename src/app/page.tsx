@@ -155,17 +155,17 @@ export default function Home() {
             </a>
             <a href="https://www.messenger.com" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.031c-5.523 0-10 4.02-10 8.985 0 2.45.96 4.695 2.578 6.363V22l3.414-2.063c1.32.555 2.78.875 4.32.875 5.523 0 10-4.02 10-8.984C22 6.05 17.523 2.03 12 2.03zm-1.285 11.332l-2.012-2.824-4.418 2.824 5.08-5.32 2.012 2.824 4.418-2.824-5.08 5.32z"/>
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 4.97 3.66 9.13 8.44 10.32v-7.4h-2.5v-2.92h2.5V9.4c0-2.48 1.48-3.86 3.75-3.86 1.09 0 2.22.19 2.22.19v2.48h-1.29c-1.22 0-1.61.76-1.61 1.55v1.85h2.78l-.44 2.92h-2.34v7.4C20.34 21.13 24 16.97 24 12c0-6.63-5.37-12-12-12z" transform="scale(1.2) translate(-2, -2)"/>
                 </svg>
             </a>
             <a href="https://line.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M22.65 5.62c-1.4-1.92-3.48-3.41-5.91-4.25-1.39-.48-2.86-.74-4.36-.74-5.37 0-9.84 3.73-10.87 8.52-.33 1.53-.33 3.12 0 4.65.98 4.58 4.93 8.1 9.94 8.5.38.03.76.05 1.14.05 4.07 0 7.68-2.02 9.71-5.14 1.3-2.01 2.05-4.38 2.05-6.95 0-1.3-.23-2.55-.66-3.72zm-12.28 9.53h-1.89V10.1h1.89v5.05zm-3.64 0H4.84V10.1h1.89v5.05zm10.7-3.21c0 .5-.13.93-.39 1.3-.26.37-.62.66-1.08.87-.46.2-1.01.3-1.65.3h-1.12V10.1h1.19c.61 0 1.13.1 1.57.3.44.2.78.49 1.03.87.25.37.38.81.38 1.32v.49zm-1.89-1.63h-.9v3.25h.9c.77 0 1.28-.21 1.52-.64.24-.42.24-.98.24-1.67v-.31c0-.68-.2-1.19-.6-1.52-.4-.32-1.02-.48-1.86-.48z"/>
+                    <path d="M21.22,6.54a10.83,10.83,0,0,0-15.39,0,10.91,10.91,0,0,0,0,15.28l.11.11,2.2,1.65A10.84,10.84,0,0,0,12,24a10.74,10.74,0,0,0,5.77-1.78l2.36-1.77.11-.11a10.88,10.88,0,0,0,0-13.8Zm-7.46,8.4H11.53V10.15h2.23Zm-4.47,0H7.06V10.15H9.29Zm8.22-3.11a2.82,2.82,0,0,1-1.46,2.15,4.6,4.6,0,0,1-2.29.56H11.53V10.15h1.61a4.2,4.2,0,0,1,2.1.5,2.72,2.72,0,0,1,1.4,2.23v.68Z"/>
                 </svg>
             </a>
             <a href="https://zalo.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.003C6.477 2.003 2 6.48 2 12.003c0 4.143 2.545 7.697 6.142 9.245l.235.099-.44 2.156 2.73-1.638a11.13 11.13 0 0 0 1.333.14c5.523 0 10-4.477 10-10S17.523 2.003 12 2.003zM8.5 12.503a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm2.5-5a1 1 0 0 1-1 1h-10a1 1 0 1 1 0-2h10a1 1 0 0 1 1 1z"/>
+                  <path d="M12 2.003C6.477 2.003 2 6.48 2 12.003c0 4.143 2.545 7.697 6.142 9.245l.235.099-.44 2.156 2.73-1.638a11.13 11.13 0 0 0 1.333.14c5.523 0 10-4.477 10-10S17.523 2.003 12 2.003zM8.5 12.503a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm2.5-5a1 1 0 0 1-1 1h-10a1 1 0 1 1 0-2h10a1 1 0 0 1 1 1z"/>
                 </svg>
             </a>
             <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Facebook, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase } from 'lucide-react';
+import { ArrowRight, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -51,17 +51,6 @@ const advantages = [
         title: "全方位员工关怀",
         description: "我们关注每一位员工的福祉，提供全面的健康保障、舒适的工作环境和丰富的员工活动。"
     }
-];
-
-const partners = [
-  { name: '牛牛体育' },
-  { name: '摩根体育' },
-  { name: '开云体育' },
-  { name: '华体会体育' },
-  { name: '乐鱼体育' },
-  { name: 'AG体育' },
-  { name: '博冠体育' },
-  { name: '雷速体育' },
 ];
 
 const jobCategories = [
@@ -250,20 +239,6 @@ export default function Home() {
               );
             })}
           </Tabs>
-        </section>
-
-        {/* Partners Section */}
-        <section>
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">我们的合作伙伴</h2>
-          <div className="bg-card p-8 rounded-lg">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center text-center">
-              {partners.map((partner) => (
-                <div key={partner.name} className="flex justify-center">
-                  <span className="text-xl font-semibold text-muted-foreground hover:text-foreground transition-colors">{partner.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </section>
 
         {/* Advantages Section */}

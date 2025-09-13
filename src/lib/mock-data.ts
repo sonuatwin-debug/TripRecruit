@@ -226,7 +226,7 @@ export const MOCK_JOBS = [
   { id: '203', title: '招聘主管', department: '职能部', location: '菲律宾', keywords: '招聘, 主管' },
   { id: '204', title: 'HRBP', department: '职能部', location: '菲律宾', keywords: 'hrbp, 人力资源' },
   { id: '205', title: '菲华行政', department: '职能部', location: '菲律宾', keywords: '行政' },
-  { id: '206', title: '数据分析师', department: '职能部', location: '菲律宾', keywords: '数据分析' },
+  { id: '206', title: '数据分析师', department: '数据科学', location: '菲律宾', keywords: '数据分析' },
   { id: '207', title: '三方专员/出入款专员', department: '职能部', location: '菲律宾', keywords: '三方, 出入款' },
   { id: '208', title: '极速专员', department: '职能部', location: '菲律宾', keywords: '极速' },
   { id: '209', title: '客服专员', department: '职能部', location: '菲律宾', keywords: '客服' },
@@ -247,7 +247,27 @@ export const MOCK_JOBS = [
   { id: '224', title: '公关经理', department: '职能部', location: '菲律宾', keywords: '公关, 经理' },
   { id: '225', title: '财务主管', department: '职能部', location: '菲律宾', keywords: '财务, 主管' },
   { id: '226', title: '财务主管/经理', department: '职能部', location: '菲律宾', keywords: '财务, 主管, 经理' },
-  { id: '227', title: '财务专员', department: '职能部', location: '菲律宾', keywords: '财务' }
+  { id: '227', title: '财务专员', department: '职能部', location: '菲律宾', keywords: '财务' },
+  { id: '228', title: '大数据工程师', department: '工程部', location: '菲律宾', keywords: '大数据, hadoop, spark' },
+  { id: '229', title: 'DBA工程师', department: '工程部', location: '菲律宾', keywords: 'dba, mysql, oracle' },
+  { id: '230', title: '运维工程师', department: '工程部', location: '菲律宾', keywords: '运维, linux' },
+  { id: '231', title: '高级网络工程师', department: '工程部', location: '菲律宾', keywords: '网络, ccnp, ccie' },
+  { id: '232', title: '运维域名工程师', department: '工程部', location: '菲律宾', keywords: '运维, 域名' },
+  { id: '233', title: '桌面运维', department: '工程部', location: '菲律宾', keywords: '桌面, it' },
+  { id: '234', title: '安全工程师', department: '工程部', location: '菲律宾', keywords: '安全, 网络' },
+  { id: '235', title: '高级java开发', department: '工程部', location: '菲律宾', keywords: 'java, spring' },
+  { id: '236', title: '高级系统工程师', department: '工程部', location: '菲律宾', keywords: '系统, linux' },
+  { id: '237', title: '技术总监', department: '工程部', location: '菲律宾', keywords: '技术, 管理, 总监' },
+  { id: '238', title: '自动化/功能测试工程师', department: '工程部', location: '菲律宾', keywords: '测试, 自动化' },
+  { id: '239', title: '高级产品经理', department: '产品部', location: '菲律宾', keywords: '产品, 经理' },
+  { id: '240', title: '技术支持', department: '工程部', location: '菲律宾', keywords: '技术, 支持' },
+  { id: '241', title: '运维总监', department: '工程部', location: '菲律宾', keywords: '运维, 管理, 总监' },
+  { id: '242', title: '高级业务运维工程师', department: '工程部', location: '菲律宾', keywords: '运维, 业务' },
+  { id: '243', title: '高级DBA运维工程师', department: '工程部', location: '菲律宾', keywords: 'dba, 运维' },
+  { id: '244', title: '中级DBA运维工程师', department: '工程部', location: '菲律宾', keywords: 'dba, 运维' },
+  { id: '245', title: '高级技术运维工程师', department: '工程部', location: '菲律宾', keywords: '运维, 技术' },
+  { id: '246', title: '信息安全工程师', department: '工程部', location: '菲律宾', keywords: '信息安全, 网络安全' },
+  { id: '247', title: '项目经理', department: '工程部', location: '菲律宾', keywords: '项目, 管理, pmp' }
 ];
 
 export const MOCK_STORIES = [

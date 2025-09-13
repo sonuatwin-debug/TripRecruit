@@ -168,7 +168,7 @@ export default function Home() {
                     <path d="M12 2.003C6.477 2.003 2 6.48 2 12.003c0 4.143 2.545 7.697 6.142 9.245l.235.099-.44 2.156 2.73-1.638a11.13 11.13 0 0 0 1.333.14c5.523 0 10-4.477 10-10S17.523 2.003 12 2.003zM8.5 12.503a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm2.5-5a1 1 0 0 1-1 1h-10a1 1 0 1 1 0-2h10a1 1 0 0 1 1 1z"/>
                 </svg>
             </a>
-            <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors animate-pulse-glow shadow-lg">
+            <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.435 6.074l-6.38 4.254-2.58-1.72-4.14 4.142 4.14 4.14 4.14-4.14-1.56-1.04 2.58-1.72 6.38-4.254-6.52-3.4zm2.14 8.566c.2-.2.3-.4.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3l-2.78 2.78-2.78-2.78c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7s.1.5.3.7l2.78 2.78-2.78 2.78c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.78-2.78 2.78 2.78c.2.2.4.3.7.3s.5-.1.7-.3c.2-.2.3-.4.3-.7s-.1-.5-.3-.7l-2.78-2.78 2.78-2.78z" transform="translate(-1.5 -1.5) scale(1.25)"/>
                 </svg>

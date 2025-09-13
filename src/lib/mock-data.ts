@@ -210,7 +210,6 @@ export const MOCK_JOBS = [
       languages: '中文沟通顺畅，懂英语者优先',
       salary: '10k 转 12k',
       hours: '9小时工作制，月休4天',
-      location: '菲律宾',
       requirements: [
         '学历要求：中学及以上',
         '中文沟通无障碍，普通话流利，英语能力好者优先；',
@@ -239,7 +238,6 @@ export const MOCK_JOBS = [
       languages: '中英文流利',
       salary: 'RMB：10K 转 12K\nUSD：1390U 转 1670U',
       hours: '9小时（弹性，根据行程安排）',
-      location: '菲律宾',
       requirements: [
         '学历要求：不限',
         '工作态度积极，能额外加班完成接机任务；',
@@ -269,7 +267,6 @@ export const MOCK_JOBS = [
       languages: '中文流利，汉语熟练',
       salary: '10k-12k',
       hours: '9小时工作制，月休4天',
-      location: '菲律宾',
       requirements: [
         '学历要求：大专及以上',
         '技能要求：熟练运用 Excel 表格'
@@ -295,7 +292,6 @@ export const MOCK_JOBS = [
       languages: '中文标准，无口音',
       salary: '10k-12k',
       hours: '9小时工作制，月休4天',
-      location: '菲律宾',
       requirements: [
         '学历要求：本科及以上',
         '头脑灵活，善于沟通，有耐心，能服从上级安排；',
@@ -325,7 +321,6 @@ export const MOCK_JOBS = [
       languages: '中文流利，母语级',
       salary: '2w 起，具体面议',
       hours: '面议',
-      location: '菲律宾',
       requirements: [
         '学历要求：医学相关专业本科及以上学历；',
         '执业资格：具有有效的《医师执业证书》及《医师资格证书》；',
@@ -355,7 +350,6 @@ export const MOCK_JOBS = [
       languages: '中文流利，母语级',
       salary: '14k-15k，具体面议',
       hours: '面议',
-      location: '菲律宾',
       requirements: [
         '学历要求：护理相关专业中专及以上学历；',
         '资格证书：持有有效的《护士执业证书》；',
@@ -386,7 +380,6 @@ export const MOCK_JOBS = [
       languages: '中文 / 英文流利',
       salary: '按照公司制度',
       hours: '9小时工作制，月休4天',
-      location: '菲律宾',
       requirements: [
         '学历要求：不限',
         '不要返聘人员；',
@@ -416,7 +409,6 @@ export const MOCK_JOBS = [
       languages: '中文',
       salary: '2000-4000U',
       hours: '9小时工作制，月休4天',
-      location: '菲律宾',
       requirements: [
         '学历要求：不限',
         '具备 SQL 和 Python 基础；',
@@ -441,7 +433,6 @@ export const MOCK_JOBS = [
       languages: '中英文流利',
       salary: '15K-17K',
       hours: '9小时工作制，月休4天',
-      location: '菲律宾',
       requirements: [
         '学历背景：大专及以上学历；',
         '工作经验：有部门助理相关工作经验；',
@@ -473,7 +464,6 @@ export const MOCK_JOBS = [
       languages: '中文流利',
       salary: '试用期 10,000+，转正后享绩效提成',
       hours: '9小时工作制，月休4天（倒班制）',
-      location: '菲律宾',
       requirements: [
         '学历要求：不限',
         '中文沟通无障碍，普通话流利，理解能力强；',
@@ -505,7 +495,6 @@ export const MOCK_JOBS = [
       languages: '中文',
       salary: '1390U-1940U',
       hours: '9小时工作制，月休4天（三班倒）',
-      location: '菲律宾',
       requirements: [
         '学历要求：大专及以上',
         '不接受小白，有运营岗位经验者优先；',
@@ -540,7 +529,6 @@ export const MOCK_JOBS = [
       languages: '中文',
       salary: '1390U-1670U',
       hours: '9小时工作制，月休4天（三班倒）',
-      location: '菲律宾',
       requirements: [
         '学历要求：大专及以上',
         '不接受小白，中文可流利表达及正常读写；',
@@ -568,7 +556,6 @@ export const MOCK_JOBS = [
       languages: '中文读、听、写佳',
       salary: '1390U-1950U',
       hours: '9小时工作制，月休4天（三班倒）',
-      location: '菲律宾',
       requirements: [
         '学历要求：本科及以上',
         '中文打字速度 ≥ 50字/分钟，能快速响应客户；',
@@ -597,7 +584,6 @@ export const MOCK_JOBS = [
       languages: '中英文流利（中文 HSK5 及以上，英语雅思 6.5 及以上）',
       salary: '面议',
       hours: '9小时工作制，周休一天',
-      location: '菲律宾',
       requirements: [
         '学历要求：大专及以上学历',
         '熟悉使用各类办公软件（Excel、Word 等），并能熟练使用各种函数；',
@@ -626,7 +612,6 @@ export const MOCK_JOBS = [
       languages: '中英文流利（中文 HSK5 及以上，英语雅思 6.5 及以上）',
       salary: '面议',
       hours: '9小时工作制，周休一天（三班倒，需接受夜班）',
-      location: '菲律宾',
       requirements: [
         '学历要求：大专及以上学历',
         '英语口语流利，可无障碍进行中英文沟通；',
@@ -641,7 +626,35 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '192', title: '运维助理', department: '职能部', location: '菲律宾', keywords: '运维, 助理' },
+  { 
+    id: '192', title: '运维助理', department: '职能部', location: '菲律宾', keywords: '运维, 助理',
+    details: {
+      gender: '女',
+      age: '21-30岁',
+      nationality: '不限',
+      languages: '中文流利',
+      salary: '面议',
+      hours: '9小时工作制，周休一天',
+      requirements: [
+        '大专及以上学历，专业不限，欢迎应届毕业生；',
+        '工作认真负责，抗压能力强，具备良好的沟通与执行能力；',
+        '熟练使用 Excel、Word、PPT 等办公软件；',
+        '具备较强的文档编写和事务处理能力，有项目助理或团队助理经验优先；',
+        '对移动应用、互联网行业有一定兴趣，愿意在团队中长期成长。',
+        '加分项：',
+        '熟悉 Jira、Confluence 等协作工具；',
+        '有技术团队助理或研发支持经验；',
+        '英文读写能力良好，可处理英文文档。'
+      ],
+      responsibilities: [
+        '协助团队进行日常事务处理，包括会议安排、资料整理、任务跟进、物料准备等；',
+        '整理并维护需求列表、开发进度表、测试记录等内部文档；',
+        '协助处理跨部门沟通事项，如需求对接、问题反馈、协作协调等；',
+        '跟进版本发布流程，记录版本信息、上线状态和问题汇总；',
+        '支持团队人力、考勤、资产、出差等事务性工作，确保团队高效运行。'
+      ]
+    }
+  },
   { id: '193', title: '会计专员', department: '职能部', location: '菲律宾', keywords: '会计' },
   { id: '194', title: '会计组长', department: '职能部', location: '菲律宾', keywords: '会计, 组长' },
   { id: '195', title: '出纳专员', department: '职能部', location: '菲律宾', keywords: '出纳' },
@@ -776,6 +789,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

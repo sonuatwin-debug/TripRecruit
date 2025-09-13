@@ -85,12 +85,6 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-  .bg-philippines { background-color: #0038A8; }
-  .bg-dubai { background-color: #00732F; }
-  .bg-thailand { background-color: #A51931; }
-  .bg-cambodia { background-color: #032EA1; }
-  .bg-japan { background-color: #BC002D; }
-  .bg-malaysia { background-color: #003566; }
-  .bg-hongkong { background-color: #DE2910; }
-  .bg-srilanka { background-color: #FFB81C; }
 }
+
+    

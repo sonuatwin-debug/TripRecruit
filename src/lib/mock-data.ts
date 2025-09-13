@@ -375,8 +375,7 @@ export const MOCK_JOBS = [
     }
   },
   { 
-    id: '183', 
-    title: '综管专员', 
+    id: '183', title: '综管专员', 
     department: '职能部', 
     location: '菲律宾', 
     keywords: '综管',
@@ -614,7 +613,34 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '191', title: '行政专员', department: '职能部', location: '菲律宾', keywords: '行政' },
+  { 
+    id: '191', 
+    title: '行政专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '行政',
+    details: {
+      gender: '不限',
+      age: '21-30岁',
+      nationality: '不限',
+      languages: '中英文流利（中文 HSK5 及以上，英语雅思 6.5 及以上）',
+      salary: '面议',
+      hours: '9小时工作制，周休一天（三班倒，需接受夜班）',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：大专及以上学历',
+        '英语口语流利，可无障碍进行中英文沟通；',
+        '态度端正，责任心强；',
+        '有行政相关经验者优先。'
+      ],
+      responsibilities: [
+        '负责公司行政管理服务，主要为办公室管理及车辆管理；',
+        '负责公司办公室设备维护、物资采购、车辆调度，以及菲籍保姆、保安的日常管理；',
+        '行政工作实行三班倒，需服从公司安排；',
+        '保持良好的沟通意愿与服务意识。'
+      ]
+    }
+  },
   { id: '192', title: '运维助理', department: '职能部', location: '菲律宾', keywords: '运维, 助理' },
   { id: '193', title: '会计专员', department: '职能部', location: '菲律宾', keywords: '会计' },
   { id: '194', title: '会计组长', department: '职能部', location: '菲律宾', keywords: '会计, 组长' },
@@ -750,6 +776,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

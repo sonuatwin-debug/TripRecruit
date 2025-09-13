@@ -1,4 +1,5 @@
 
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase, Gift, Utensils, Plane, Home as HomeIcon, GraduationCap, DollarSign } from 'lucide-react';
@@ -131,6 +132,54 @@ const benefits = [
     { icon: GraduationCap, text: "完善的培训体系(新人岗前培训，岗中晋升培训)" }
 ];
 
+const contactMethods = [
+  { 
+    name: 'Telegram', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13 2 9l-1.5 9 9.5-4 9-6.5L22 2zM2 9l9 4"/></svg>, 
+    href: 'https://t.me/' 
+  },
+  { 
+    name: 'WeChat', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 4.86 0 10.842c0 4.234 2.823 7.84 6.75 9.473V24l3.14-1.764a13.32 13.32 0 0 0 2.11.206c6.627 0 12-4.86 12-10.842S18.627 0 12 0zM8.5 13.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>, 
+    href: 'https://www.wechat.com' 
+  },
+  { 
+    name: 'WhatsApp', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.052 24l1.688-6.164a11.565 11.565 0 0 1-1.688-5.82C.052 5.41 5.462 0 12.016 0c6.554 0 11.964 5.41 11.964 12.016 0 6.606-5.41 11.964-11.964 11.964a11.85 11.85 0 0 1-5.94-1.616L.052 24zm6.413-3.48a9.888 9.888 0 0 0 5.55 1.54c5.448 0 9.888-4.44 9.888-9.888 0-5.448-4.44-9.888-9.888-9.888-5.448 0-9.888 4.44-9.888 9.888a9.888 9.888 0 0 0 1.54 5.55l-1.024 3.744 3.82-1.024zm4.187-2.688c-.288-.144-.432-.216-1.7-.84-.288-.144-.432-.216-.6-.216-.144 0-.312.024-.48.264-.144.24-.552.696-.672.84-.12.144-.24.168-.432.072-.216-.096-.864-.312-1.632-.984-.6-.504-.984-1.128-1.104-1.32-.12-.192-.012-.312.084-.408.072-.072.168-.192.24-.264.072-.072.12-.144.168-.24.048-.096.024-.192-.024-.264-.048-.072-.552-1.32-.768-1.8-.216-.48-.432-.408-.576-.408-.144 0-.312-.024-.48-.024s-.432.072-.648.336c-.216.264-.84.816-.84 1.968s.864 2.28 1 2.448c.12.144 1.68 2.592 4.08 3.576.576.24.984.36 1.32.456.552.144 1.056.12 1.44.072.432-.048 1.32-.528 1.512-.984.192-.48.192-.888.144-.984-.048-.12-.168-.192-.336-.264z"/></svg>, 
+    href: 'https://www.whatsapp.com' 
+  },
+  { 
+    name: 'Messenger', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/><path d="M8.216 17.472l2.883-2.882 2.146 2.146L17.784 8.2l-9.568 5.485z"/></svg>, 
+    href: 'https://www.messenger.com' 
+  },
+  { 
+    name: 'Line', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.333 4H5.667C4.746 4 4 4.746 4 5.667v10.666C4 17.254 4.746 18 5.667 18h5.45l.933 2.8s.267.733 1.067.733c.8 0 1.067-.733 1.067-.733L15.117 18H18.333c.921 0 1.667-.746 1.667-1.667V5.667C20 4.746 19.254 4 18.333 4zM7.833 11.5a.833.833 0 1 1 0-1.666.833.833 0 0 1 0 1.666zm4.167 0a.833.833 0 1 1 0-1.666.833.833 0 0 1 0 1.666zm4.167 0a.833.833 0 1 1 0-1.666.833.833 0 0 1 0 1.666z"/></svg>, 
+    href: 'https://line.me' 
+  },
+  { 
+    name: 'Zalo', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.5v11M9 17.5h6"/><path d="M7 22h10c.8 0 1.5-.7 1.5-1.5v-17C18.5 2.7 17.8 2 17 2H7c-.8 0-1.5.7-1.5 1.5v17C5.5 21.3 6.2 22 7 22z"/></svg>, 
+    href: 'https://zalo.me' 
+  },
+  { 
+    name: '钉钉', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16.035 7.643l-3.21-3.21a.9.9 0 0 0-1.272 0L8.342 7.643a.9.9 0 0 0 .636 1.536h1.714v5.714a.9.9 0 1 0 1.8 0V9.179h1.714a.9.9 0 0 0 .636-1.536zM3 13.5c0-4.965 4.035-9 9-9s9 4.035 9 9-4.035 9-9 9-9-4.035-9-9zm1.8 0c0 3.972 3.228 7.2 7.2 7.2s7.2-3.228 7.2-7.2-3.228-7.2-7.2-7.2-7.2 3.228-7.2 7.2z"/></svg>, 
+    href: 'https://www.dingtalk.com' 
+  },
+  { 
+    name: '丝瓜', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.8 3H5.2A2.2 2.2 0 0 0 3 5.2v13.6A2.2 2.2 0 0 0 5.2 21h13.6a2.2 2.2 0 0 0 2.2-2.2V5.2A2.2 2.2 0 0 0 18.8 3zM8.98 16.5H6.5V9h2.48v7.5zm-1.24-8.48a1.44 1.44 0 1 1 0-2.88 1.44 1.44 0 0 1 0 2.88zm8.76 8.48h-2.48v-3.6c0-.86-.02-1.96-.86-1.96s-1 .93-1 1.9v3.66h-2.48V9h2.38v1.1h.03c.34-.64 1.16-1.32 2.35-1.32 2.51 0 2.98 1.65 2.98 3.8v4.4z"/></svg>, 
+    href: 'https://www.siguazhibo.com' 
+  },
+  { 
+    name: 'QQ', 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z"/></svg>, 
+    href: 'https://im.qq.com' 
+  },
+];
+
 export default function HomePage() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
   
@@ -178,6 +227,22 @@ export default function HomePage() {
       </div>
 
       <main className="container py-12 md:py-20 space-y-24">
+
+        {/* Quick Contact Section */}
+        <section>
+            <h2 className="text-3xl font-bold font-headline text-center mb-8">快捷联系方式</h2>
+            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
+                {contactMethods.map((method) => (
+                    <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center space-y-2 text-center group">
+                        <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                            <div className="w-8 h-8">{method.icon}</div>
+                        </div>
+                        <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
+                    </a>
+                ))}
+            </div>
+        </section>
+
 
         {/* Popular Regions Section */}
         <section id="popular-regions" className="scroll-mt-20">

@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/', label: '首页' },
   { href: '/#popular-regions', label: '热门招聘地点' },
+  { href: '/benefits', label: '公司福利' },
   { href: '/apply', label: '在线申请' },
   { href: '/about', label: '关于我们' },
   { href: '/faq', label: '常见问题' },

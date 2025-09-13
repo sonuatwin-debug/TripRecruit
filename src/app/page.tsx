@@ -211,7 +211,7 @@ export default function Home() {
         </section>
 
         {/* Benefits Section */}
-        <section>
+        <section id="benefits" className="scroll-mt-20">
           <div className="text-center mb-12">
               <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
               <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>

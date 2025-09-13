@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Flag } from '../page';
 
 const locations = [
     { id: 'philippines', label: '菲律宾' },
@@ -234,7 +235,7 @@ export default function ApplicationForm() {
                   render={({ field }) => {
                     return (
                       <FormItem
-                        className="flex flex-row items-start space-x-3 space-y-0"
+                        className="flex flex-row items-center space-x-3 space-y-0"
                       >
                         <FormControl>
                           <Checkbox
@@ -250,7 +251,8 @@ export default function ApplicationForm() {
                             }}
                           />
                         </FormControl>
-                        <FormLabel className="font-normal">
+                        <FormLabel className="font-normal flex items-center">
+                          <Flag country={item.label} className="h-4 w-6 mr-2" />
                           {item.label}
                         </FormLabel>
                       </FormItem>

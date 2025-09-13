@@ -461,7 +461,38 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '186', title: '客服维护', department: '职能部', location: '菲律宾', keywords: '客服, 维护' },
+  { 
+    id: '186', 
+    title: '客服维护', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '客服, 维护',
+    details: {
+      gender: '不限',
+      age: '18-33岁',
+      nationality: '不限',
+      languages: '中文流利',
+      salary: '试用期 10,000+，转正后享绩效提成',
+      hours: '9小时工作制，月休4天（倒班制）',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：不限',
+        '中文沟通无障碍，普通话流利，理解能力强；',
+        '具备良好的沟通表达能力、情绪管理能力和抗压能力，团队协作能力强；',
+        '热爱游戏，能快速了解客户心理和游戏需求；',
+        '能接受轮休与排班；',
+        '电脑操作及打字熟练，掌握基础办公软件；',
+        '不接受推广类岗位经验；',
+        '有维护经验者优先（如电销、电维、客户维护、客服等）。'
+      ],
+      responsibilities: [
+        '负责平台客户的常规业务问题解决与回复；',
+        '提供优质服务，具备服务意识和服务精神，执行力强，团队协作良好；',
+        '挖掘并分析客户需求，将客户意见与建议进行整理反馈并及时跟进；',
+        '快速理解客户心理和游戏需求，做好日常客户关系维护。'
+      ]
+    }
+  },
   { id: '187', title: '运营专员', department: '职能部', location: '菲律宾', keywords: '运营' },
   { id: '188', title: '红利专员', department: '职能部', location: '菲律宾', keywords: '红利' },
   { id: '189', title: '敏感信息专员', department: '职能部', location: '菲律宾', keywords: '敏感信息' },
@@ -602,6 +633,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

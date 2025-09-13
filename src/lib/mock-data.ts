@@ -583,6 +583,7 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '9小时工作制，周休一天',
       requirements: [
+        '学历要求：大专及以上学历',
         '熟悉使用各类办公软件（Excel、Word 等），并能熟练使用各种函数；',
         '能够长期稳定任职，心态平和稳重，对数字敏感；',
         '具备良好的表达与思维能力，能独立判断并处理部分问题；',
@@ -610,6 +611,7 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '9小时工作制，周休一天（三班倒，需接受夜班）',
       requirements: [
+        '学历要求：大专及以上学历',
         '英语口语流利，可无障碍进行中英文沟通；',
         '态度端正，责任心强；',
         '有行政相关经验者优先。'
@@ -815,7 +817,33 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '199', title: '帐目专员', department: '职能部', location: '菲律宾', keywords: '帐目' },
+  { 
+    id: '199', 
+    title: '帐目专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '帐目',
+    details: {
+      gender: '不限',
+      age: '21-33岁',
+      nationality: '外籍',
+      languages: '中文听说读写流利',
+      salary: '10k-15k + 绩效 1k-5k + 全勤 500',
+      hours: '9小时工作制，月休4天',
+      requirements: [
+        '具备一定的帐目相关工作经验；',
+        '熟悉帐务流程，能够独立处理相关事务；',
+        '工作细心，责任心强，具备良好的沟通与协调能力；',
+        '熟练使用办公软件，具备基础数据处理能力。'
+      ],
+      responsibilities: [
+        '负责日常帐目的处理与核对；',
+        '对接帐务相关工作，确保数据准确无误；',
+        '协助上级完成帐务报表的整理与分析；',
+        '完成其他与帐目相关的工作任务。'
+      ]
+    }
+  },
   { id: '200', title: 'OA审核/数据专员', department: '职能部', location: '菲律宾', keywords: 'oa, 审核, 数据' },
   { id: '201', title: '薪酬主管', department: '职能部', location: '菲律宾', keywords: '薪酬, 主管' },
   { id: '202', title: '薪酬组长', department: '职能部', location: '菲律宾', keywords: '薪酬, 组长' },
@@ -943,6 +971,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

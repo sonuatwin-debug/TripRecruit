@@ -14,14 +14,14 @@ import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
 
 const locations = [
-    { id: 'philippines', label: '菲律宾 🇵🇭' },
-    { id: 'dubai', label: '迪拜 🇦🇪' },
-    { id: 'thailand', label: '泰国 🇹🇭' },
-    { id: 'cambodia', label: '柬埔寨 🇰🇭' },
-    { id: 'japan', label: '日本 🇯🇵' },
-    { id: 'malaysia', label: '马来西亚 🇲🇾' },
-    { id: 'hongkong', label: '香港 🇭🇰' },
-    { id: 'srilanka', label: '斯里兰卡 🇱🇰' },
+    { id: 'philippines', label: '菲律宾' },
+    { id: 'dubai', label: '迪拜' },
+    { id: 'thailand', label: '泰国' },
+    { id: 'cambodia', label: '柬埔寨' },
+    { id: 'japan', label: '日本' },
+    { id: 'malaysia', label: '马来西亚' },
+    { id: 'hongkong', label: '香港' },
+    { id: 'srilanka', label: '斯里兰卡' },
 ];
 
 const applicationSchema = z.object({

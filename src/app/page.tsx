@@ -155,7 +155,7 @@ export default function Home() {
             </a>
             <a href="https://www.messenger.com" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 4.97 3.66 9.13 8.44 10.32v-7.4h-2.5v-2.92h2.5V9.4c0-2.48 1.48-3.86 3.75-3.86 1.09 0 2.22.19 2.22.19v2.48h-1.29c-1.22 0-1.61.76-1.61 1.55v1.85h2.78l-.44 2.92h-2.34v7.4C20.34 21.13 24 16.97 24 12c0-6.63-5.37-12-12-12z" transform="scale(1.2) translate(-2, -2)"/>
+                  <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.14 15.34c-.25.13-.53.2-.82.2-.42 0-.83-.14-1.17-.42L12 12.44l-3.15 2.68c-.68.58-1.7.5-2.28-.18-.58-.68-.5-1.7.18-2.28L9.44 12 6.75 9.42c-.68-.58-.76-1.6-.18-2.28.58-.68 1.6-.76 2.28-.18L12 9.56l3.15-2.68c.68-.58 1.7-.5 2.28.18.58.68.5 1.7-.18 2.28L14.56 12l2.69 2.58c.68.58.76 1.6.19 2.28z"/>
                 </svg>
             </a>
             <a href="https://line.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
@@ -165,12 +165,12 @@ export default function Home() {
             </a>
             <a href="https://zalo.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.003C6.477 2.003 2 6.48 2 12.003c0 4.143 2.545 7.697 6.142 9.245l.235.099-.44 2.156 2.73-1.638a11.13 11.13 0 0 0 1.333.14c5.523 0 10-4.477 10-10S17.523 2.003 12 2.003zM8.5 12.503a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm2.5-5a1 1 0 0 1-1 1h-10a1 1 0 1 1 0-2h10a1 1 0 0 1 1 1z"/>
+                    <path d="M12 2.003C6.477 2.003 2 6.48 2 12.003c0 4.143 2.545 7.697 6.142 9.245l.235.099-.44 2.156 2.73-1.638a11.13 11.13 0 0 0 1.333.14c5.523 0 10-4.477 10-10S17.523 2.003 12 2.003zM8.5 12.503a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm4 0a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 1 1zm2.5-5a1 1 0 0 1-1 1h-10a1 1 0 1 1 0-2h10a1 1 0 0 1 1 1z"/>
                 </svg>
             </a>
-            <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
+            <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.94 3.65c-2.39.4-4.22 1.34-5.74 2.88-2.62 2.67-4.22 6-4.52 9.87-.08 1.02.11 2.04.42 3.01.46 1.45 1.28 2.73 2.37 3.82 2.65 2.65 6.2 4.2 10.07 4.54 1.18.1 2.37-.02 3.54-.25 3.6-1.07 6.4-3.8 7.5-7.38.74-2.42.74-5.04 0-7.46-1.12-3.66-3.88-6.4-7.58-7.53-1.63-.5-3.32-.73-5.06-.8zm.53 3.63l4.5 4.5-4.5 4.5-4.5-4.5 4.5-4.5z"/>
+                    <path d="M17.435 6.074l-6.38 4.254-2.58-1.72-4.14 4.142 4.14 4.14 4.14-4.14-1.56-1.04 2.58-1.72 6.38-4.254-6.52-3.4zm2.14 8.566c.2-.2.3-.4.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3l-2.78 2.78-2.78-2.78c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7s.1.5.3.7l2.78 2.78-2.78 2.78c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.78-2.78 2.78 2.78c.2.2.4.3.7.3s.5-.1.7-.3c.2-.2.3-.4.3-.7s-.1-.5-.3-.7l-2.78-2.78 2.78-2.78z" transform="translate(-1.5 -1.5) scale(1.25)"/>
                 </svg>
             </a>
             <a href="https://www.lita.gg/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">

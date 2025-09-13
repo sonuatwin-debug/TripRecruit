@@ -11,14 +11,14 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const popularRegions = [
-    { name: '菲律宾', color: 'bg-philippines', logo: '🇵🇭' },
-    { name: '迪拜', color: 'bg-dubai', logo: '🇦🇪' },
-    { name: '泰国', color: 'bg-thailand', logo: '🇹🇭' },
-    { name: '柬埔寨', color: 'bg-cambodia', logo: '🇰🇭' },
-    { name: '日本', color: 'bg-japan', logo: '🇯🇵' },
-    { name: '马来西亚', color: 'bg-malaysia', logo: '🇲🇾' },
-    { name: '香港', color: 'bg-hongkong', logo: '🇭🇰' },
-    { name: '斯里兰卡', color: 'bg-srilanka', logo: '🇱🇰' },
+    { name: '菲律宾', color: 'bg-philippines' },
+    { name: '迪拜', color: 'bg-dubai' },
+    { name: '泰国', color: 'bg-thailand' },
+    { name: '柬埔寨', color: 'bg-cambodia' },
+    { name: '日本', color: 'bg-japan' },
+    { name: '马来西亚', color: 'bg-malaysia' },
+    { name: '香港', color: 'bg-hongkong' },
+    { name: '斯里兰卡', color: 'bg-srilanka' },
 ];
 
 const advantages = [
@@ -151,11 +151,10 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {popularRegions.map((region) => (
-              <div key={region.name} className="relative p-4 rounded-lg flex flex-col justify-between h-48">
+              <div key={region.name} className="relative p-4 rounded-lg flex flex-col justify-end h-40">
                 <div className={'absolute inset-0 rounded-lg ' + region.color + ' opacity-20'}></div>
-                <div className="relative text-center w-full">
-                  <div className="text-4xl font-bold text-foreground/80">{region.logo}</div>
-                  <h3 className="font-semibold mt-2 text-foreground">{region.name}</h3>
+                <div className="relative text-center w-full mb-4">
+                  <h3 className="font-semibold text-lg text-foreground">{region.name}</h3>
                 </div>
                 <Button asChild variant="outline" className="relative w-full bg-card/80 hover:bg-card text-card-foreground animate-pulse-glow">
                   <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>

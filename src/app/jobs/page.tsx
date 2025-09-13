@@ -20,17 +20,6 @@ const jobCategories = {
   functional: ['职能部'],
 };
 
-const countryLogos: { [key: string]: string } = {
-  '迪拜': '🇦🇪',
-  '香港': '🇭🇰',
-  '日本': '🇯🇵',
-  '柬埔寨': '🇰🇭',
-  '马来西亚': '🇲🇾',
-  '菲律宾': '🇵🇭',
-  '斯里兰卡': '🇱🇰',
-  '泰国': '🇹🇭',
-};
-
 const getCategoryFromDepartment = (department: string) => {
   if (jobCategories.tech.includes(department)) return 'tech';
   if (jobCategories.performance.includes(department)) return 'performance';
@@ -39,17 +28,15 @@ const getCategoryFromDepartment = (department: string) => {
 };
 
 const JobCard = ({ job }: { job: Job }) => {
-  const logo = countryLogos[job.location] || '';
-
   return (
     <Card className="hover:shadow-lg transition-shadow">
         <CardContent className="p-4 flex flex-col md:flex-row justify-between items-start md:items-center">
         <div className="flex-grow">
             <h3 className="font-headline text-xl font-semibold mb-1">{job.title}</h3>
+            <p className="text-muted-foreground">{job.location}</p>
         </div>
         <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white animate-pulse-glow">
             <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
-              {logo && <span className="mr-2">{logo}</span>}
               查看简章
             </Link>
         </Button>

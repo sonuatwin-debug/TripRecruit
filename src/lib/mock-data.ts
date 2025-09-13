@@ -493,7 +493,41 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '187', title: '运营专员', department: '职能部', location: '菲律宾', keywords: '运营' },
+  { 
+    id: '187', 
+    title: '运营专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '运营',
+    details: {
+      gender: '不限',
+      age: '20-33岁',
+      nationality: '中国 / 台湾 / 马来西亚 / 缅甸 / 越南\n特别说明：福建、山东、河南籍不接受',
+      languages: '中文',
+      salary: '1390U-1940U',
+      hours: '9小时工作制，月休4天（三班倒）',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：大专及以上',
+        '不接受小白，有运营岗位经验者优先；',
+        '了解运营工作，熟悉 B 端对接、平台运营、内容配置、后台操作使用等业务者优先；',
+        '有与市场或职能部门对接运营工作事项经验者优先；',
+        '具备上进心和积极的工作态度，责任感强，认真踏实；',
+        '具备基本电脑操作常识，打字速度 ≥ 60 字/分钟；',
+        '熟悉 Excel、PPT 等办公软件；',
+        '必须接受跟随至第三国。'
+      ],
+      responsibilities: [
+        '对接公司各部门，协助处理并跟踪线上反馈问题；',
+        '负责三方场馆日常事务对接，建立及维护关系，处理并跟进场馆问题与维护事宜；',
+        '负责平台广告图、游戏上下线、公告、站内信、域名、返水等配置及跟踪；',
+        '对平台场馆、子游戏及相关运营策略进行调研与分析；',
+        '监控平台异常情况，配合测试团队保障站点正常运作；',
+        '监控运营数据及用户行为，进行统计、汇总、分析，挖掘异常原因，定期提交分析报告；',
+        '完成日常班次交接工作。'
+      ]
+    }
+  },
   { id: '188', title: '红利专员', department: '职能部', location: '菲律宾', keywords: '红利' },
   { id: '189', title: '敏感信息专员', department: '职能部', location: '菲律宾', keywords: '敏感信息' },
   { id: '190', title: '薪酬专员', department: '职能部', location: '菲律宾', keywords: '薪酬' },
@@ -633,6 +667,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

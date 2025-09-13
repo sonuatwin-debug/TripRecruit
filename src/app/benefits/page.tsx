@@ -61,7 +61,7 @@ export default function BenefitsPage() {
         />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative container h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">公司福利</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline">福利待遇</h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl">我们关心每一位员工，并提供全方位的福利保障。</p>
         </div>
       </section>

@@ -165,7 +165,7 @@ export default function Home() {
             </a>
              <a href="https://zalo.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M14.36 15.35h-3.49v-1.88h3.49v1.88zm-5.23 0H5.64v-1.88h3.49v1.88zm8.72 0h-3.49v-1.88h3.49v1.88zm-5.23 3.76h-3.49v-1.88h3.49v1.88zm-5.24 0H2.17v-1.88h3.49v1.88zM21.83.02C17.3-.48 12.8.27 9.17 2.3c-3.78 2.1-6.4 5.7-7 9.98-.38 2.76.04 5.57 1.18 8.13 1.25 2.8 3.5 5.08 6.3 6.55 3.32 1.76 7.1 2.08 10.66.92 3.9-1.28 6.9-4.33 8.16-8.23.9-2.8.9-5.83-.02-8.68C27.55 7.15 25.12 3.8 21.83.02zM9.13 8.6h3.49v1.88H9.13V8.6zm5.24 0h3.49v1.88h-3.49V8.6z"/>
+                  <path d="M22.06 9.38H17.2V5.06h-4.85v4.32H7.5v4.9h4.85v4.58h4.85v-4.58h4.87v-4.9zM4.58 4.2H2.3v15.6h19.4V17.5h-2.3V4.2z"/>
                 </svg>
             </a>
             <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">

@@ -312,7 +312,36 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '181', title: '医生', department: '职能部', location: '菲律宾', keywords: '医生' },
+  { 
+    id: '181', 
+    title: '医生', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '医生',
+    details: {
+      gender: '不限',
+      age: '不超过45岁（特殊人才可适当放宽）',
+      nationality: '中籍优先，其余国籍需中文流利，中文母语级',
+      languages: '中文流利，母语级',
+      salary: '2w 起，具体面议',
+      hours: '面议',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：医学相关专业本科及以上学历；',
+        '执业资格：具有有效的《医师执业证书》及《医师资格证书》；',
+        '专业方向：全科等（根据岗位实际需求）；',
+        '工作经验：具备 1 年以上临床工作经验，有二级及以上医院工作经验者优先；',
+        '专业能力：',
+        '熟悉常见疾病的诊断与治疗；',
+        '能独立完成线上 / 线下门诊工作；',
+        '综合素质：',
+        '具备良好的沟通能力和团队合作精神；',
+        '工作责任心强，遵守职业道德；',
+        '有服务意识，具备较强的应急处理能力。'
+      ],
+      responsibilities: []
+    }
+  },
   { id: '182', title: '护士', department: '职能部', location: '菲律宾', keywords: '护士' },
   { id: '183', title: '综管专员', department: '职能部', location: '菲律宾', keywords: '综管' },
   { id: '184', title: '数据开发专员', department: '职能部', location: '菲律宾', keywords: '数据开发' },
@@ -458,4 +487,3 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
-

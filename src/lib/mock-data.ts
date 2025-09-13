@@ -585,7 +585,35 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '190', title: '薪酬专员', department: '职能部', location: '菲律宾', keywords: '薪酬' },
+  { 
+    id: '190', 
+    title: '薪酬专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '薪酬',
+    details: {
+      gender: '女',
+      age: '21-35岁',
+      nationality: '不限',
+      languages: '中英文流利（中文 HSK5 及以上，英语雅思 6.5 及以上）',
+      salary: '面议',
+      hours: '9小时工作制，周休一天',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：大专及以上学历',
+        '熟悉使用各类办公软件（Excel、Word 等），并能熟练使用各种函数；',
+        '能够长期稳定任职，心态平和稳重，对数字敏感；',
+        '具备良好的表达与思维能力，能独立判断并处理部分问题；',
+        '对接外部人员较多，需具备良好的沟通协调能力；',
+        '在职期间如遇问题，需及时向部门反馈，不得先斩后奏。'
+      ],
+      responsibilities: [
+        '对接各部门，核算薪资数据；',
+        '整理与分析薪酬数据；',
+        '制定并完善薪酬相关操作流程与制度。'
+      ]
+    }
+  },
   { id: '191', title: '行政专员', department: '职能部', location: '菲律宾', keywords: '行政' },
   { id: '192', title: '运维助理', department: '职能部', location: '菲律宾', keywords: '运维, 助理' },
   { id: '193', title: '会计专员', department: '职能部', location: '菲律宾', keywords: '会计' },
@@ -722,6 +750,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

@@ -171,9 +171,9 @@ export default function HomePage() {
               <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
               <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
           </div>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 gap-y-8">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 gap-y-8 justify-items-center">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4">
+              <div key={index} className="flex items-center space-x-4 w-full max-w-2xl">
                 <div className="bg-primary/10 text-primary p-3 rounded-full">
                   <benefit.icon className="h-6 w-6" />
                 </div>

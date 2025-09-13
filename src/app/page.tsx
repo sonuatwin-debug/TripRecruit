@@ -23,13 +23,13 @@ export const Flag = ({ country, className }: { country: string, className?: stri
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" className={className}><path fill="#A51931" d="M0 0h1200v600H0z"/><path fill="#fff" d="M0 100h1200v400H0z"/><path fill="#2D2A4A" d="M0 200h1200v200H0z"/></svg>
     ),
     柬埔寨: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" className={className}><path fill="#032ea1" d="M0 0h900v600H0z"/><path fill="#e00025" d="M0 150h900v300H0z"/><path fill="#fff" d="m450 216-90 60v48h180v-48zm-150-12h300v12H300zm-30 132h360v12H270z" stroke="#000" strokeWidth="3"/><path fill="#fff" d="m390 276 30 24v12h-30zm-90 0h30v24h-30zm45 30h30v12h-30zm-30-48h90v12h-90z"/></svg>
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" className={className}><path fill="#032ea1" d="M0 0h900v600H0z"/><path fill="#e00025" d="M0 150h900v300H0z"/><path fill="#fff" d="m450 216-90 60v48h180v-48zm-150-12h300v12H300zm-30 132h360v12H270z" stroke="#000" strokeWidth="3"/><path fill="#fff" d="m390 276 30 24v12h-30zm-90 0h30v24h-30zm45 30h30v12h-30zm-30-48h90v12h-90z"/></svg>
     ),
     日本: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" className={className}><path fill="#fff" d="M0 0h900v600H0z"/><circle cx="450" cy="300" r="180" fill="#bc002d"/></svg>
     ),
     马来西亚: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" className={className}><path fill="#fff" d="M0 0h1200v600H0z"/><path stroke="#c00" strokeWidth="43" d="M0 64.5h1200M0 150.5h1200M0 236.5h1200M0 322.5h1200M0 408.5h1200M0 494.5h1200M0 580.5h1200"/><path fill="#003566" d="M0 0h600v387H0z"/><path fill="#fecb00" d="M420 193.5a133 133 0 1 0-262-52 159 159 0 1 1 200 200 133 133 0 0 0 62-148z"/><path fill="#fecb00" d="m287 40 10 65 59-32-32 59 65 10-54 40 40 54-65-10-10 65-40-54-54 40 10-65-59 32 32-59-65-10 54-40-40-54 65 10z"/></svg>
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" className={className}><path fill="#fff" d="M0 0h1200v600H0z"/><path stroke="#c00" strokeWidth="43" d="M0 64.5h1200M0 150.5h1200M0 236.5h1200M0 322.5h1200M0 408.5h1200M0 494.5h1200M0 580.5h1200"/><path fill="#003566" d="M0 0h600v387H0z"/><path fill="#fecb00" d="M420 193.5a133 133 0 1 0-262-52 159 159 0 1 1 200 200 133 133 0 0 0 62-148z"/><path fill="#fecb00" d="m287 40 10 65 59-32-32 59 65 10-54 40 40 54-65-10-10 65-40-54-54 40 10-65-59 32 32-59-65-10 54-40-40-54 65 10z"/></svg>
     ),
     香港: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" className={className}><path fill="#de2910" d="M0 0h900v600H0z"/><path fill="#fff" d="m450 300-112-35 83 91-91 83 35-112-70 100 100-70-35 112 91-83-83-91 112 35-100 70z"/><circle cx="450" cy="300" r="60" fill="#de2910"/><path fill="#fff" d="m450 300-37-12 28 30-30 28 12-37-23 33 33-23-12 37 30-28-28-30 37 12-33 23z"/></svg>
@@ -135,7 +135,7 @@ const benefits = [
 const contactMethods = [
   { 
     name: 'Telegram', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13 2 9l-1.5 9 9.5-4 9-6.5L22 2zM2 9l9 4"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13 2 9l-1.5 9 9.5-4 9-6.5L22 2zM2 9l9 4"/></svg>,
     href: 'https://t.me/' 
   },
   { 
@@ -160,7 +160,7 @@ const contactMethods = [
   },
   { 
     name: 'Zalo', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.5v11M9 17.5h6"/><path d="M7 22h10c.8 0 1.5-.7 1.5-1.5v-17C18.5 2.7 17.8 2 17 2H7c-.8 0-1.5.7-1.5 1.5v17C5.5 21.3 6.2 22 7 22z"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.5v11M9 17.5h6"/><path d="M7 22h10c.8 0 1.5-.7 1.5-1.5v-17C18.5 2.7 17.8 2 17 2H7c-.8 0-1.5.7-1.5 1.5v17C5.5 21.3 6.2 22 7 22z"/></svg>,
     href: 'https://zalo.me' 
   },
   { 
@@ -175,7 +175,7 @@ const contactMethods = [
   },
   { 
     name: 'QQ', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z"/></svg>,
     href: 'https://im.qq.com' 
   },
 ];

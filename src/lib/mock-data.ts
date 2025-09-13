@@ -429,7 +429,38 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '185', title: '部门助理', department: '职能部', location: '菲律宾', keywords: '助理' },
+  { 
+    id: '185', 
+    title: '部门助理', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '助理',
+    details: {
+      gender: '女生优先',
+      age: '35岁以内',
+      nationality: '外籍',
+      languages: '中英文流利',
+      salary: '15K-17K',
+      hours: '9小时工作制，月休4天',
+      location: '菲律宾',
+      requirements: [
+        '学历背景：大专及以上学历；',
+        '工作经验：有部门助理相关工作经验；',
+        '技能要求：熟练使用各类办公软件，掌握表格制作及文书处理技能；',
+        '个人素质：',
+        '善于沟通，具备一定的语言逻辑；',
+        '服从管理，执行力强；',
+        '工作热情，细心耐心，踏实稳重。'
+      ],
+      responsibilities: [
+        '处理部门日常后勤相关工作；',
+        '与各部门沟通并跟进处理需求；',
+        '负责部门员工入职、离职跟进；',
+        '负责部门考勤管理；',
+        '完成上级领导交办的其他工作。'
+      ]
+    }
+  },
   { id: '186', title: '客服维护', department: '职能部', location: '菲律宾', keywords: '客服, 维护' },
   { id: '187', title: '运营专员', department: '职能部', location: '菲律宾', keywords: '运营' },
   { id: '188', title: '红利专员', department: '职能部', location: '菲律宾', keywords: '红利' },
@@ -571,6 +602,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

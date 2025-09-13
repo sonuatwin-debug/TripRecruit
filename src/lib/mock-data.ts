@@ -225,7 +225,35 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '178', title: '接机专员', department: '职能部', location: '菲律宾', keywords: '接机' },
+  { 
+    id: '178', 
+    title: '接机专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '接机',
+    details: {
+      gender: '男',
+      age: '21-35岁',
+      nationality: '马来西亚、印尼、缅甸\n特别说明：\n不要人在菲律宾的；\n若在菲律宾有 POGO 记录 / 黑名单 / 13A 签证，一律不考虑；\n仅限“小白”。',
+      languages: '中英文流利',
+      salary: 'RMB：10K 转 12K\nUSD：1390U 转 1670U',
+      hours: '9小时（弹性，根据行程安排）',
+      location: '菲律宾',
+      requirements: [
+        '工作态度积极，能额外加班完成接机任务；',
+        '不晕车，时间观念强；',
+        '协助搬运行李及重物；',
+        '精通中英文口语和书面表达；',
+        '面对面沟通自然大方，不害羞；',
+        '服从上级安排的工作。'
+      ],
+      responsibilities: [
+        '负责机场接送机；',
+        '随时对接接机群，确保信息准确及时；',
+        '完成领导交办的其他任务。'
+      ]
+    }
+  },
   { id: '179', title: '数据分析专员', department: '职能部', location: '菲律宾', keywords: '数据分析' },
   { id: '180', title: '劳动关系专员', department: '职能部', location: '菲律宾', keywords: '劳动关系' },
   { id: '181', title: '医生', department: '职能部', location: '菲律宾', keywords: '医生' },

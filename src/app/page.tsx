@@ -233,7 +233,7 @@ export default function HomePage() {
             <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
                 {contactMethods.map((method) => (
                     <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center space-y-2 text-center group">
-                        <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow">
                             <div className="w-8 h-8">{method.icon}</div>
                         </div>
                         <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>

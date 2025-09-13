@@ -166,7 +166,7 @@ export default function Home() {
 
       <main className="container py-12 md:py-20 space-y-16">
         {/* Popular Regions Section */}
-        <section>
+        <section id="popular-regions" className="scroll-mt-20">
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {popularRegions.map((region) => (

@@ -734,7 +734,33 @@ export const MOCK_JOBS = [
         ]
     }
   },
-  { id: '196', title: '信息管理专员', department: '职能部', location: '菲律宾', keywords: '信息管理' },
+  { 
+    id: '196', 
+    title: '信息管理专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '信息管理',
+    details: {
+      gender: '不限',
+      age: '21-32岁',
+      nationality: '不限',
+      languages: '中文听说读写流利',
+      salary: '10k-15k + 绩效 1k-5k + 全勤 500',
+      hours: '9小时工作制，月休4天',
+      requirements: [
+        '具备基础办公软件使用能力，熟练操作 Excel；',
+        '态度亲和，有耐心，服从上级安排与工作调配；',
+        '工作细心，责任心强，能按要求完成任务；',
+        '有签证相关经验者优先。'
+      ],
+      responsibilities: [
+        '负责护照管理，包括收取护照、编辑护照页码、归类签证类型及签证时间；',
+        '协助员工续签及签证办理，负责递交材料；',
+        '及时维护各场地人事信息、数据和档案，确保信息有效、数据准确、档案健全；',
+        '协助上级跟进并完成其他工作事项。'
+      ]
+    } 
+  },
   { id: '197', title: '换汇专员', department: '职能部', location: '菲律宾', keywords: '换汇' },
   { id: '198', title: '员工关系', department: '职能部', location: '菲律宾', keywords: '员工关系' },
   { id: '199', title: '帐目专员', department: '职能部', location: '菲律宾', keywords: '帐目' },
@@ -865,6 +891,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

@@ -374,7 +374,35 @@ export const MOCK_JOBS = [
       responsibilities: []
     }
   },
-  { id: '183', title: '综管专员', department: '职能部', location: '菲律宾', keywords: '综管' },
+  { 
+    id: '183', 
+    title: '综管专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '综管',
+    details: {
+      gender: '不限',
+      age: '35岁以下',
+      nationality: '不限（不要台湾籍）',
+      languages: '中文 / 英文流利',
+      salary: '按照公司制度',
+      hours: '9小时工作制，月休4天',
+      location: '菲律宾',
+      requirements: [
+        '不要返聘人员；',
+        '头脑灵活，思维清晰；',
+        '有后勤 / 行政经验者优先；',
+        '中文 / 英文沟通无障碍。'
+      ],
+      responsibilities: [
+        '处理部门日常相关工作；',
+        '与部门沟通并跟进落实部门提出的需求；',
+        '接受部门临时安排与调动，服从管理；',
+        '具备良好的沟通意愿与服务意识；',
+        '能够接受三班倒。'
+      ]
+    }
+  },
   { id: '184', title: '数据开发专员', department: '职能部', location: '菲律宾', keywords: '数据开发' },
   { id: '185', title: '部门助理', department: '职能部', location: '菲律宾', keywords: '助理' },
   { id: '186', title: '客服维护', department: '职能部', location: '菲律宾', keywords: '客服, 维护' },
@@ -518,4 +546,5 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 

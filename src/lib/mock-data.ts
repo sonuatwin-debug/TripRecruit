@@ -682,7 +682,34 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '194', title: '会计组长', department: '职能部', location: '菲律宾', keywords: '会计, 组长' },
+  { 
+    id: '194', 
+    title: '会计组长', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '会计, 组长',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '外籍（除泰籍）',
+      languages: '中文流利',
+      salary: '1700U-2300U + 绩效 560U-840U + 全勤 70U（外宿有房补）',
+      hours: '9小时工作制，长白班',
+      requirements: [
+        '熟练使用各类办公软件及财务 ERP 系统；',
+        '具备一定的财务知识基础，具有全面的会计核算经验；',
+        '具备 2 年以上财务工作经验；',
+        '有相关工作经历者优先。'
+      ],
+      responsibilities: [
+        '协助财务主管做好公司财务管理工作；',
+        '配合完成公司部门预算的编制与汇总；',
+        '定期检查部门预算执行情况，跟进解决执行中的问题，并与相关部门协作配合；',
+        '负责日常费用审批工作；',
+        '监督和培养所管辖会计的日常工作。'
+      ]
+    }
+  },
   { id: '195', title: '出纳专员', department: '职能部', location: '菲律宾', keywords: '出纳' },
   { id: '196', title: '信息管理专员', department: '职能部', location: '菲律宾', keywords: '信息管理' },
   { id: '197', title: '换汇专员', department: '职能部', location: '菲律宾', keywords: '换汇' },
@@ -815,6 +842,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

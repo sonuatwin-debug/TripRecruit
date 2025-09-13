@@ -389,6 +389,7 @@ export const MOCK_JOBS = [
       hours: '9小时工作制，月休4天',
       location: '菲律宾',
       requirements: [
+        '学历要求：不限',
         '不要返聘人员；',
         '头脑灵活，思维清晰；',
         '有后勤 / 行政经验者优先；',
@@ -403,7 +404,31 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '184', title: '数据开发专员', department: '职能部', location: '菲律宾', keywords: '数据开发' },
+  { 
+    id: '184', 
+    title: '数据开发专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '数据开发',
+    details: {
+      gender: '不限',
+      age: '35岁以内',
+      nationality: '不限（中国大陆籍需在菲律宾本地，不要第三国人员；中国籍不要福建籍）',
+      languages: '中文',
+      salary: '2000-4000U',
+      hours: '9小时工作制，月休4天',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：不限',
+        '具备 SQL 和 Python 基础；',
+        '逻辑思维能力强，责任心强；',
+        '在菲律宾本地工作。'
+      ],
+      responsibilities: [
+        '按要求提取数据。'
+      ]
+    }
+  },
   { id: '185', title: '部门助理', department: '职能部', location: '菲律宾', keywords: '助理' },
   { id: '186', title: '客服维护', department: '职能部', location: '菲律宾', keywords: '客服, 维护' },
   { id: '187', title: '运营专员', department: '职能部', location: '菲律宾', keywords: '运营' },
@@ -546,5 +571,6 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 

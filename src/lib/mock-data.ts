@@ -583,6 +583,7 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '9小时工作制，周休一天',
       requirements: [
+        '学历要求：大专及以上学历',
         '熟悉使用各类办公软件（Excel、Word 等），并能熟练使用各种函数；',
         '能够长期稳定任职，心态平和稳重，对数字敏感；',
         '具备良好的表达与思维能力，能独立判断并处理部分问题；',
@@ -721,6 +722,7 @@ export const MOCK_JOBS = [
         salary: '10k—12k',
         hours: '9小时工作制，月休4天（12:00-21:00）',
         requirements: [
+            '学历要求：大专及以上（经验丰富者可放宽至高中或中专）',
             '具备财务或会计相关专业背景；',
             '具备良好的数字敏感度和精确性，能够准确处理财务数据；',
             '能熟练操作 Excel 部分函数（如 VLOOKUP）、Word 等办公软件；',
@@ -748,6 +750,7 @@ export const MOCK_JOBS = [
       salary: '10k-15k + 绩效 1k-5k + 全勤 500',
       hours: '9小时工作制，月休4天',
       requirements: [
+        '学历要求：大专及以上',
         '具备基础办公软件使用能力，熟练操作 Excel；',
         '态度亲和，有耐心，服从上级安排与工作调配；',
         '工作细心，责任心强，能按要求完成任务；',
@@ -761,7 +764,30 @@ export const MOCK_JOBS = [
       ]
     } 
   },
-  { id: '197', title: '换汇专员', department: '职能部', location: '菲律宾', keywords: '换汇' },
+  { 
+    id: '197', 
+    title: '换汇专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '换汇',
+    details: {
+      salary: '试用期：1390U + 490U（加班补贴）+ 全勤 70U\n转正：1530U + 490U（加班补贴）+ 全勤 70U + 绩效（700U / 420U / 140U）',
+      hours: '9小时工作制（业绩需要时可调整为12小时，另有加班补贴）',
+      nationality: '外籍',
+      languages: '中文流利',
+      requirements: [
+        '有出入款经验，熟悉报表及值班流程者优先；',
+        '具备良好的中文表达能力及逻辑思维能力；',
+        '熟悉办公软件操作，能高效完成日常工作。'
+      ],
+      responsibilities: [
+        '负责日常出入款操作，确保准确无误；',
+        '负责相关报表制作与数据统计；',
+        '参与值班，确保换汇业务顺利进行；',
+        '按照上级安排完成其他相关工作。'
+      ]
+    }
+  },
   { id: '198', title: '员工关系', department: '职能部', location: '菲律宾', keywords: '员工关系' },
   { id: '199', title: '帐目专员', department: '职能部', location: '菲律宾', keywords: '帐目' },
   { id: '200', title: 'OA审核/数据专员', department: '职能部', location: '菲律宾', keywords: 'oa, 审核, 数据' },
@@ -891,6 +917,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

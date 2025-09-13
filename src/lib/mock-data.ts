@@ -342,7 +342,38 @@ export const MOCK_JOBS = [
       responsibilities: []
     }
   },
-  { id: '182', title: '护士', department: '职能部', location: '菲律宾', keywords: '护士' },
+  { 
+    id: '182', 
+    title: '护士', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '护士',
+    details: {
+      gender: '女',
+      age: '35岁以下',
+      nationality: '中籍优先，其余国籍需中文流利，中文母语级',
+      languages: '中文流利，母语级',
+      salary: '14k-15k，具体面议',
+      hours: '面议',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：护理相关专业中专及以上学历；',
+        '资格证书：持有有效的《护士执业证书》；',
+        '工作经验：',
+        '有临床护理工作经验者优先；',
+        '专业毕业生表现优秀也可考虑；',
+        '专业能力：',
+        '掌握基础护理知识和操作技能；',
+        '能熟练进行生命体征测量、输液、注射、换药、采血等操作；',
+        '能识别和处理常见突发状况或及时上报；',
+        '综合素质：',
+        '工作认真细致，责任心强；',
+        '具备良好的沟通能力、服务意识和团队协作精神；',
+        '仪表端庄，语言表达清晰，态度亲和。'
+      ],
+      responsibilities: []
+    }
+  },
   { id: '183', title: '综管专员', department: '职能部', location: '菲律宾', keywords: '综管' },
   { id: '184', title: '数据开发专员', department: '职能部', location: '菲律宾', keywords: '数据开发' },
   { id: '185', title: '部门助理', department: '职能部', location: '菲律宾', keywords: '助理' },
@@ -487,3 +518,4 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+

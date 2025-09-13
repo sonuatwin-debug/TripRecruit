@@ -212,6 +212,7 @@ export const MOCK_JOBS = [
       hours: '9小时工作制，月休4天',
       location: '菲律宾',
       requirements: [
+        '学历要求：中学及以上',
         '中文沟通无障碍，普通话流利，英语能力好者优先；',
         '理解能力强，对数字敏感；',
         '具备良好的沟通表达能力、情绪管理能力和抗压能力，团队协作能力强；',
@@ -240,6 +241,7 @@ export const MOCK_JOBS = [
       hours: '9小时（弹性，根据行程安排）',
       location: '菲律宾',
       requirements: [
+        '学历要求：不限',
         '工作态度积极，能额外加班完成接机任务；',
         '不晕车，时间观念强；',
         '协助搬运行李及重物；',
@@ -254,7 +256,32 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '179', title: '数据分析专员', department: '职能部', location: '菲律宾', keywords: '数据分析' },
+  { 
+    id: '179', 
+    title: '数据分析专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '数据分析',
+    details: {
+      gender: '不限',
+      age: '21-33岁',
+      nationality: '外籍',
+      languages: '中文流利，汉语熟练',
+      salary: '10k-12k',
+      hours: '9小时工作制，月休4天',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：大专及以上',
+        '技能要求：熟练运用 Excel 表格'
+      ],
+      responsibilities: [
+        '统计并整理业务部门的住宿费用；',
+        '核实住宿人员信息，并提出房间优化建议；',
+        '分析与统计内宿的空房率与空床率；',
+        '对接并解答有关费用计算方式的疑问。'
+      ]
+    }
+  },
   { id: '180', title: '劳动关系专员', department: '职能部', location: '菲律宾', keywords: '劳动关系' },
   { id: '181', title: '医生', department: '职能部', location: '菲律宾', keywords: '医生' },
   { id: '182', title: '护士', department: '职能部', location: '菲律宾', keywords: '护士' },

@@ -31,7 +31,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="container py-12 md:py-20 space-y-20">
+      <div className="py-12 md:py-20 space-y-20">
 
         <section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

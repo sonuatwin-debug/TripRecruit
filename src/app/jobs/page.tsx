@@ -93,7 +93,7 @@ export default function JobsPage() {
   );
 
   return (
-    <div className="container py-12 md:py-20">
+    <div className="py-12 md:py-20">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold font-headline mb-2">
           {locationParam ? `${locationParam} 职位` : '探索机会'}

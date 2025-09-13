@@ -186,7 +186,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[60vh] text-white">
+      <section className="relative h-[60vh] text-white -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -226,8 +226,7 @@ export default function HomePage() {
           </a>
       </div>
 
-      <div className="container py-12 md:py-20 space-y-24">
-
+      <div className="py-12 md:py-20 space-y-24">
         {/* Quick Contact Section */}
         <section>
             <h2 className="text-3xl font-bold font-headline text-center mb-8">快捷联系方式</h2>
@@ -242,7 +241,6 @@ export default function HomePage() {
                 ))}
             </div>
         </section>
-
 
         {/* Popular Regions Section */}
         <section id="popular-regions" className="scroll-mt-20">

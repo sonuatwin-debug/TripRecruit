@@ -20,7 +20,7 @@ export default function JobDetailsPage() {
   const { details } = job;
 
   return (
-    <div className="container py-12 md:py-20">
+    <div className="py-12 md:py-20">
       <div className="max-w-4xl mx-auto">
         <Card>
           <CardHeader>

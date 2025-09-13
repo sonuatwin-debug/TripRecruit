@@ -11,7 +11,7 @@ export default function ApplyPage() {
   const job = MOCK_JOBS.find(j => j.id === jobId);
 
   return (
-    <div className="container py-12 md:py-20">
+    <div className="py-12 md:py-20">
       <div className="max-w-4xl mx-auto">
         <Card>
           <CardHeader>

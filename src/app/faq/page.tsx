@@ -26,7 +26,7 @@ const faqItems = [
 
 export default function FaqPage() {
   return (
-    <div className="container py-12 md:py-20">
+    <div className="py-12 md:py-20">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold font-headline">常见问题</h1>

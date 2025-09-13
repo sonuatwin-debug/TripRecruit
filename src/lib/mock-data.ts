@@ -583,7 +583,6 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '9小时工作制，周休一天',
       requirements: [
-        '学历要求：大专及以上学历',
         '熟悉使用各类办公软件（Excel、Word 等），并能熟练使用各种函数；',
         '能够长期稳定任职，心态平和稳重，对数字敏感；',
         '具备良好的表达与思维能力，能独立判断并处理部分问题；',
@@ -611,7 +610,6 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '9小时工作制，周休一天（三班倒，需接受夜班）',
       requirements: [
-        '学历要求：大专及以上学历',
         '英语口语流利，可无障碍进行中英文沟通；',
         '态度端正，责任心强；',
         '有行政相关经验者优先。'
@@ -788,7 +786,35 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '198', title: '员工关系', department: '职能部', location: '菲律宾', keywords: '员工关系' },
+  { 
+    id: '198', 
+    title: '员工关系专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '员工关系',
+    details: {
+      gender: '不限',
+      age: '21-32岁',
+      nationality: '外籍',
+      languages: '中文听说读写流利',
+      salary: '10k-15k + 绩效 1k-5k + 全勤 500',
+      hours: '9小时工作制，月休4天',
+      requirements: [
+        '大专及以上学历，有人力资源相关经验；',
+        '熟悉 Excel 办公软件，会使用 Excel 公式者优先；',
+        '具备良好的沟通能力、理解能力和人际相处能力；',
+        '反应能力强，有耐心，能独立解决问题；',
+        '可接受学习部门其他板块工作及外场地调动。'
+      ],
+      responsibilities: [
+        '负责办理员工入职、离职、转正、岗位调动等手续；',
+        '制作并汇总人员调动变化的日、月度表格；',
+        '完成公司员工入离转调流程归档及报表统计上报；',
+        '熟悉部门其他板块工作，如新人对接、护照管理、档案信息及工作交接；',
+        '完成领导交办的其他事项。'
+      ]
+    }
+  },
   { id: '199', title: '帐目专员', department: '职能部', location: '菲律宾', keywords: '帐目' },
   { id: '200', title: 'OA审核/数据专员', department: '职能部', location: '菲律宾', keywords: 'oa, 审核, 数据' },
   { id: '201', title: '薪酬主管', department: '职能部', location: '菲律宾', keywords: '薪酬, 主管' },
@@ -917,6 +943,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

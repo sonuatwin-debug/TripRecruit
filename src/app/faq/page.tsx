@@ -26,23 +26,25 @@ const faqItems = [
 
 export default function FaqPage() {
   return (
-    <div className="py-12 md:py-20">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold font-headline">常见问题</h1>
-          <p className="text-lg text-muted-foreground mt-2">在这里找到您问题的答案。</p>
+    <div className="container">
+      <div className="py-12 md:py-20">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold font-headline">常见问题</h1>
+            <p className="text-lg text-muted-foreground mt-2">在这里找到您问题的答案。</p>
+          </div>
+          
+          <Accordion type="single" collapsible className="w-full">
+            {faqItems.map((item, index) => (
+              <AccordionItem key={item.question} value={`item-${index}`}>
+                <AccordionTrigger className="text-lg font-semibold">{item.question}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-base whitespace-pre-line">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
-        
-        <Accordion type="single" collapsible className="w-full">
-          {faqItems.map((item, index) => (
-            <AccordionItem key={item.question} value={`item-${index}`}>
-              <AccordionTrigger className="text-lg font-semibold">{item.question}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base whitespace-pre-line">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
       </div>
     </div>
   )

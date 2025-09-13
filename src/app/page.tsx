@@ -226,136 +226,138 @@ export default function HomePage() {
           </a>
       </div>
 
-      <div className="py-12 md:py-20 space-y-24">
-        {/* Quick Contact Section */}
-        <section>
-            <h2 className="text-3xl font-bold font-headline text-center mb-8">快捷联系方式</h2>
-            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
-                {contactMethods.map((method) => (
-                    <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center space-y-2 text-center group">
-                        <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow">
-                            <div className="w-8 h-8">{method.icon}</div>
-                        </div>
-                        <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
-                    </a>
-                ))}
-            </div>
-        </section>
-
-        {/* Popular Regions Section */}
-        <section id="popular-regions" className="scroll-mt-20">
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {popularRegions.map((region) => (
-              <Card key={region.name} className="overflow-hidden group hover:shadow-xl transition-all">
-                <CardContent className="p-0">
-                  <div className="p-6 pb-2 text-center">
-                    <h3 className="font-semibold text-xl text-foreground flex items-center justify-center">
-                      <Flag country={region.name} className="h-6 w-8 mr-3" />
-                      <span>{region.name}</span>
-                    </h3>
-                  </div>
-                  <div className="px-6 pb-6">
-                    <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
-                      <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-        
-        {/* Benefits Section */}
-        <section id="benefits" className="scroll-mt-20">
-          <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
-              <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
-          </div>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 gap-y-8 justify-items-center">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 w-full max-w-2xl">
-                <div className="bg-primary/10 text-primary p-3 rounded-full">
-                  <benefit.icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-foreground leading-relaxed">{benefit.text}</p>
-                </div>
+      <div className="container">
+        <div className="py-12 md:py-20 space-y-24">
+          {/* Quick Contact Section */}
+          <section>
+              <h2 className="text-3xl font-bold font-headline text-center mb-8">快捷联系方式</h2>
+              <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
+                  {contactMethods.map((method) => (
+                      <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center space-y-2 text-center group">
+                          <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow">
+                              <div className="w-8 h-8">{method.icon}</div>
+                          </div>
+                          <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
+                      </a>
+                  ))}
               </div>
-            ))}
-          </div>
-        </section>
+          </section>
 
-        {/* Job Categories Section */}
-        <section className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
-          <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
-          <Tabs defaultValue="tech" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-10 bg-muted">
-              {jobCategories.map(cat => (
-                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
-                  <cat.icon className="h-5 w-5 mr-2" />
-                  {cat.label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            {jobCategories.map(cat => {
-              const image = PlaceHolderImages.find(p => p.id === cat.image);
-              return (
-                <TabsContent key={cat.value} value={cat.value}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6">
-                      <h3 className="text-2xl font-bold font-headline text-primary">{cat.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{cat.description}</p>
-                      <ul className="space-y-3">
-                        {cat.features.map(feature => (
-                          <li key={feature} className="flex items-center">
-                            <ShieldCheck className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                            <span className="text-foreground">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Button asChild size="lg" variant="outline" className="bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
-                        <Link href="/jobs">查看更多 <ArrowRight className="ml-2" /></Link>
+          {/* Popular Regions Section */}
+          <section id="popular-regions" className="scroll-mt-20">
+            <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {popularRegions.map((region) => (
+                <Card key={region.name} className="overflow-hidden group hover:shadow-xl transition-all">
+                  <CardContent className="p-0">
+                    <div className="p-6 pb-2 text-center">
+                      <h3 className="font-semibold text-xl text-foreground flex items-center justify-center">
+                        <Flag country={region.name} className="h-6 w-8 mr-3" />
+                        <span>{region.name}</span>
+                      </h3>
+                    </div>
+                    <div className="px-6 pb-6">
+                      <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
+                        <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                       </Button>
                     </div>
-                    <div className="relative h-80 rounded-lg overflow-hidden">
-                      {image && (
-                        <Image 
-                          src={image.imageUrl}
-                          alt={image.description}
-                          data-ai-hint={image.imageHint}
-                          fill
-                          className="object-cover"
-                        />
-                      )}
-                    </div>
-                  </div>
-                </TabsContent>
-              );
-            })}
-          </Tabs>
-        </section>
-
-        {/* Advantages Section */}
-        <section>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+          
+          {/* Benefits Section */}
+          <section id="benefits" className="scroll-mt-20">
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold font-headline">我们的优势</h2>
+                <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
                 <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {advantages.map((advantage, index) => (
-                    <Card key={index} className="text-center p-6">
-                        <div className="flex justify-center mb-4">
-                            <div className="bg-primary/10 text-primary p-4 rounded-full">
-                                <advantage.icon className="h-8 w-8" />
-                            </div>
-                        </div>
-                        <h3 className="font-headline text-xl font-semibold mb-2">{advantage.title}</h3>
-                        <p className="text-muted-foreground">{advantage.description}</p>
-                    </Card>
-                ))}
+            <div className="max-w-4xl mx-auto grid grid-cols-1 gap-y-8 justify-items-center">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-4 w-full max-w-2xl">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full">
+                    <benefit.icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="text-foreground leading-relaxed">{benefit.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-        </section>
+          </section>
+
+          {/* Job Categories Section */}
+          <section className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
+            <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
+            <Tabs defaultValue="tech" className="w-full">
+              <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-10 bg-muted">
+                {jobCategories.map(cat => (
+                  <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
+                    <cat.icon className="h-5 w-5 mr-2" />
+                    {cat.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              {jobCategories.map(cat => {
+                const image = PlaceHolderImages.find(p => p.id === cat.image);
+                return (
+                  <TabsContent key={cat.value} value={cat.value}>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                      <div className="space-y-6">
+                        <h3 className="text-2xl font-bold font-headline text-primary">{cat.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{cat.description}</p>
+                        <ul className="space-y-3">
+                          {cat.features.map(feature => (
+                            <li key={feature} className="flex items-center">
+                              <ShieldCheck className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                              <span className="text-foreground">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <Button asChild size="lg" variant="outline" className="bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
+                          <Link href="/jobs">查看更多 <ArrowRight className="ml-2" /></Link>
+                        </Button>
+                      </div>
+                      <div className="relative h-80 rounded-lg overflow-hidden">
+                        {image && (
+                          <Image 
+                            src={image.imageUrl}
+                            alt={image.description}
+                            data-ai-hint={image.imageHint}
+                            fill
+                            className="object-cover"
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </TabsContent>
+                );
+              })}
+            </Tabs>
+          </section>
+
+          {/* Advantages Section */}
+          <section>
+              <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold font-headline">我们的优势</h2>
+                  <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {advantages.map((advantage, index) => (
+                      <Card key={index} className="text-center p-6">
+                          <div className="flex justify-center mb-4">
+                              <div className="bg-primary/10 text-primary p-4 rounded-full">
+                                  <advantage.icon className="h-8 w-8" />
+                              </div>
+                          </div>
+                          <h3 className="font-headline text-xl font-semibold mb-2">{advantage.title}</h3>
+                          <p className="text-muted-foreground">{advantage.description}</p>
+                      </Card>
+                  ))}
+              </div>
+          </section>
+        </div>
       </div>
     </>
   );

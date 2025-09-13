@@ -93,51 +93,53 @@ export default function JobsPage() {
   );
 
   return (
-    <div className="py-12 md:py-20">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold font-headline mb-2">
-          {locationParam ? `${locationParam} 职位` : '探索机会'}
-        </h1>
-        <p className="text-lg text-muted-foreground">找到适合您的角色。</p>
-      </div>
-
-      <Card className="mb-8 p-4">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-          <Input 
-            placeholder="按职位关键词搜索"
-            className="pl-10"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+    <div className="container">
+      <div className="py-12 md:py-20">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold font-headline mb-2">
+            {locationParam ? `${locationParam} 职位` : '探索机会'}
+          </h1>
+          <p className="text-lg text-muted-foreground">找到适合您的角色。</p>
         </div>
-      </Card>
-      
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-6">
-              <TabsTrigger value="tech" className="flex items-center gap-2">
-                  <Code className="h-4 w-4" />
-                  技术岗位
-              </TabsTrigger>
-              <TabsTrigger value="performance" className="flex items-center gap-2">
-                  <TrendingUp className="h-4 w-4" />
-                  业绩岗位
-              </TabsTrigger>
-              <TabsTrigger value="functional" className="flex items-center gap-2">
-                  <Briefcase className="h-4 w-4" />
-                  职能岗位
-              </TabsTrigger>
-          </TabsList>
-          <TabsContent value="tech">
-              <JobsList key="tech" jobs={jobsByTab.tech} />
-          </TabsContent>
-          <TabsContent value="performance">
-              <JobsList key="performance" jobs={jobsByTab.performance} />
-          </TabsContent>
-          <TabsContent value="functional">
-              <JobsList key="functional" jobs={jobsByTab.functional} />
-          </TabsContent>
-      </Tabs>
+
+        <Card className="mb-8 p-4">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+            <Input 
+              placeholder="按职位关键词搜索"
+              className="pl-10"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+        </Card>
+        
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-6">
+                <TabsTrigger value="tech" className="flex items-center gap-2">
+                    <Code className="h-4 w-4" />
+                    技术岗位
+                </TabsTrigger>
+                <TabsTrigger value="performance" className="flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4" />
+                    业绩岗位
+                </TabsTrigger>
+                <TabsTrigger value="functional" className="flex items-center gap-2">
+                    <Briefcase className="h-4 w-4" />
+                    职能岗位
+                </TabsTrigger>
+            </TabsList>
+            <TabsContent value="tech">
+                <JobsList key="tech" jobs={jobsByTab.tech} />
+            </TabsContent>
+            <TabsContent value="performance">
+                <JobsList key="performance" jobs={jobsByTab.performance} />
+            </TabsContent>
+            <TabsContent value="functional">
+                <JobsList key="functional" jobs={jobsByTab.functional} />
+            </TabsContent>
+        </Tabs>
+      </div>
     </div>
   );
 }

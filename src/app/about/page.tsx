@@ -13,8 +13,8 @@ export default function AboutPage() {
 
 
   return (
-    <div>
-      <section className="relative h-[50vh] text-white">
+    <div className="container">
+      <section className="relative h-[50vh] text-white -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24">
         {aboutHeroImage && (
           <Image
             src={aboutHeroImage.imageUrl}

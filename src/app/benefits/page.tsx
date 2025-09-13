@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
-import { Utensils, Home, Plane, Medkit, Gift, PartyPopper, GraduationCap, ShieldCheck } from 'lucide-react';
+import { Utensils, Home, Plane, HeartPulse, Gift, PartyPopper, GraduationCap, ShieldCheck } from 'lucide-react';
 
 const benefits = [
   {
@@ -20,7 +20,7 @@ const benefits = [
     description: '享有丰厚的带薪年假、病假及其他法定节假日，并提供回国往返机票，让您工作生活两不误。',
   },
   {
-    icon: Medkit,
+    icon: HeartPulse,
     title: '健康保障',
     description: '为员工提供全面的医疗保险和定期健康体检，并设有当地医疗团队，确保您的健康无忧。',
   },

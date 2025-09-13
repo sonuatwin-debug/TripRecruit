@@ -1,6 +1,7 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase } from 'lucide-react';
+import { ArrowRight, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase, Gift, Utensils, Plane, Home as HomeIcon, GraduationCap, DollarSign } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -83,6 +84,20 @@ const jobCategories = [
   }
 ];
 
+const benefits = [
+    { icon: TrendingUpIcon, text: "所有非业绩岗位转正后每月享有绩效，部门负责人和自评绩效等级SABC" },
+    { icon: DollarSign, text: "全勤奖500-1000RMB，餐补10-15U/天" },
+    { icon: TrendingUp, text: "根据工作表现，转正后每半年调薪一次，1-6000RMB (除销售市场岗位)" },
+    { icon: Gift, text: "生日礼金，端午、中秋、元旦、春节假日三倍工资" },
+    { icon: HomeIcon, text: "提供2-3人间高级公寓，家电WIFI齐全，不住宿舍可享房屋补助(300-800U)" },
+    { icon: Utensils, text: "公司自聘厨师，提供川湘粤菜四餐，水果饮品无限畅饮" },
+    { icon: Plane, text: "满1年享15天带薪年假及机票报销，半年不休假补贴10500RMB" },
+    { icon: Users, text: "每月各部门组织团建活动" },
+    { icon: Award, text: "年终13-17薪 + 春节红包" },
+    { icon: Handshake, text: "入职满2年忠诚奖20000RMB，5年忠诚奖50000RMB" },
+    { icon: GraduationCap, text: "完善的培训体系(新人岗前培训，岗中晋升培训)" }
+];
+
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
   
@@ -148,19 +163,13 @@ export default function Home() {
                 </svg>
             </a>
             <a href="https://line.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M21.22,6.54a10.83,10.83,0,0,0-15.39,0,10.91,10.91,0,0,0,0,15.28l.11.11,2.2,1.65A10.84,10.84,0,0,0,12,24a10.74,10.74,0,0,0,5.77-1.78l2.36-1.77.11-.11a10.88,10.88,0,0,0,0-13.8ZM9.29,14.94H7.06V10.15H9.29Zm4.47,0H11.53V10.15h2.23Zm4.46-3a2.81,2.81,0,0,1-1.46,2.15,4.6,4.6,0,0,1-2.29.56H11.53V10.15h1.61a4.2,4.2,0,0,1,2.1.5,2.72,2.72,0,0,1,1.4,2.23Z"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M21.22,6.54a10.83,10.83,0,0,0-15.39,0,10.91,10.91,0,0,0,0,15.28l.11.11,2.2,1.65A10.84,10.84,0,0,0,12,24a10.74,10.74,0,0,0,5.77-1.78l2.36-1.77.11-.11a10.88,10.88,0,0,0,0-13.8ZM9.29,14.94H7.06V10.15H9.29Zm4.47,0H11.53V10.15h2.23Zm4.46-3a2.81,2.81,0,0,1-1.46,2.15,4.6,4.6,0,0,1-2.29.56H11.53V10.15h1.61a4.2,4.2,0,0,1,2.1.5,2.72,2.72,0,0,1,1.4,2.23Z"/></svg>
             </a>
             <a href="https://zalo.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.003c0-1.107-.893-2-2-2s-2 .893-2 2v2c0 1.107.893 2 2 2s2-.893 2-2v-2zm-2 6h4v2h-4v-2zm-2 4h8v2h-8v-2zm2 4h4v2h-4v-2zM19.143 21.345c1.898-.79 3.357-2.31 4-4.148.643-1.838.45-3.854-.5-5.59-1.57-2.85-4.47-4.61-7.64-4.61-3.173 0-6.073 1.758-7.643 4.61-.95 1.736-1.144 3.752-.5 5.59.643 1.838 2.102 3.358 4 4.148l.235.099-.44 2.156 2.73-1.638a11.13 11.13 0 0 0 2.666 0l2.73 1.638-.44-2.156.235-.099z"/>
-                </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M2.003 12.003C2.003 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10-10-4.48-10-10zm5.997 0h2v-2h-2v2zm4 0h2v-2h-2v2zm4 0h2v-2h-2v2zM7 15h10v-2H7v2z"/></svg>
             </a>
             <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.435 6.074l-6.38 4.254-2.58-1.72-4.14 4.142 4.14 4.14 4.14-4.14-1.56-1.04 2.58-1.72 6.38-4.254-6.52-3.4zm2.14 8.566c.2-.2.3-.4.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3l-2.78 2.78-2.78-2.78c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7s.1.5.3.7l2.78 2.78-2.78 2.78c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.78-2.78 2.78 2.78c.2.2.4.3.7.3s.5-.1.7-.3c.2-.2.3-.4.3-.7s-.1-.5-.3-.7l-2.78-2.78 2.78-2.78z" transform="translate(-1.5 -1.5) scale(1.25)"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2.5 4,6 4,14 12,21.5 20,14 20,6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" /><path d="M12.5,12.5 L17,10" stroke="currentColor" stroke-width="1.5" /><path d="M12.5,12.5 L12.5,18" stroke="currentColor" stroke-width="1.5" /><path d="M12.5,12.5 L8,10" stroke="currentColor" stroke-width="1.5" /><path d="M8,14.5 L12,12.25" stroke="currentColor" stroke-width="1.5" /></svg>
             </a>
             <a href="https://www.lita.gg/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
@@ -186,6 +195,26 @@ export default function Home() {
                 <Button asChild variant="outline" className="relative w-full bg-card/80 hover:bg-card text-card-foreground animate-pulse-glow">
                   <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                 </Button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section>
+          <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
+              <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
+                  <benefit.icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-foreground leading-relaxed">{benefit.text}</p>
+                </div>
               </div>
             ))}
           </div>

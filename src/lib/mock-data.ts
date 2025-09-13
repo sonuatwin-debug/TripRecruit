@@ -655,7 +655,33 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '193', title: '会计专员', department: '职能部', location: '菲律宾', keywords: '会计' },
+  { 
+    id: '193', 
+    title: '会计专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '会计',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '缅甸、马来西亚、印尼',
+      languages: '中文流利',
+      salary: '1400U-1680U',
+      hours: '9小时工作制，月休4天',
+      requirements: [
+        '学历要求：不限',
+        '熟练使用各类办公软件及财务 ERP 系统；',
+        '具备一定的财务知识基础，具有全面的会计核算经验；',
+        '具有 2 年以上财务工作经验；',
+        '有相关行业经历者优先。'
+      ],
+      responsibilities: [
+        '负责与对应部门对接费用事宜；',
+        '负责日常费用录入 ERP 及初审工作；',
+        '跟进部门费用情况，并与相关部门协作配合。'
+      ]
+    }
+  },
   { id: '194', title: '会计组长', department: '职能部', location: '菲律宾', keywords: '会计, 组长' },
   { id: '195', title: '出纳专员', department: '职能部', location: '菲律宾', keywords: '出纳' },
   { id: '196', title: '信息管理专员', department: '职能部', location: '菲律宾', keywords: '信息管理' },
@@ -789,6 +815,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

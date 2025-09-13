@@ -556,7 +556,35 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '189', title: '敏感信息专员', department: '职能部', location: '菲律宾', keywords: '敏感信息' },
+  { 
+    id: '189', 
+    title: '敏感信息专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '敏感信息',
+    details: {
+      gender: '不限',
+      age: '35岁以下',
+      nationality: '不限',
+      languages: '中文读、听、写佳',
+      salary: '1390U-1950U',
+      hours: '9小时工作制，月休4天（三班倒）',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：本科及以上',
+        '中文打字速度 ≥ 50字/分钟，能快速响应客户；',
+        '熟悉客服系统操作（如 800、achat 等），能进行客户信息记录、问题跟踪与反馈；',
+        '中文电话沟通流利、顺畅；',
+        '具备优秀的沟通能力，语言表达清晰、温和、专业，能准确理解客户需求；',
+        '具备高度责任心，能主动跟进问题解决，不推诿、不拖延，严禁态度散漫或对客户使用不当言语。'
+      ],
+      responsibilities: [
+        '通过软件线上回复会员，收集会员信息并根据需求解决问题；',
+        '收集完会员信息后，主动致电会员进行核实，并提交上级修改会员问题；',
+        '接受部门临时安排与调动，服从管理。'
+      ]
+    }
+  },
   { id: '190', title: '薪酬专员', department: '职能部', location: '菲律宾', keywords: '薪酬' },
   { id: '191', title: '行政专员', department: '职能部', location: '菲律宾', keywords: '行政' },
   { id: '192', title: '运维助理', department: '职能部', location: '菲律宾', keywords: '运维, 助理' },
@@ -694,6 +722,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

@@ -186,7 +186,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[60vh] text-white -mx-4 sm:-mx-6 md:-mx-16 lg:-mx-24 xl:-mx-32">
+      <section className="relative h-[60vh] text-white -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}

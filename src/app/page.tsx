@@ -11,14 +11,14 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const popularRegions = [
-    { name: '菲律宾', color: 'bg-philippines', logo: 'PH' },
-    { name: '迪拜', color: 'bg-dubai', logo: 'AE' },
-    { name: '泰国', color: 'bg-thailand', logo: 'TH' },
-    { name: '柬埔寨', color: 'bg-cambodia', logo: 'KH' },
-    { name: '日本', color: 'bg-japan', logo: 'JP' },
-    { name: '马来西亚', color: 'bg-malaysia', logo: 'MY' },
-    { name: '香港', color: 'bg-hongkong', logo: 'HK' },
-    { name: '斯里兰卡', color: 'bg-srilanka', logo: 'LK' },
+    { name: '菲律宾', color: 'bg-philippines', logo: '🇵🇭' },
+    { name: '迪拜', color: 'bg-dubai', logo: '🇦🇪' },
+    { name: '泰国', color: 'bg-thailand', logo: '🇹🇭' },
+    { name: '柬埔寨', color: 'bg-cambodia', logo: '🇰🇭' },
+    { name: '日本', color: 'bg-japan', logo: '🇯🇵' },
+    { name: '马来西亚', color: 'bg-malaysia', logo: '🇲🇾' },
+    { name: '香港', color: 'bg-hongkong', logo: '🇭🇰' },
+    { name: '斯里兰卡', color: 'bg-srilanka', logo: '🇱🇰' },
 ];
 
 const advantages = [

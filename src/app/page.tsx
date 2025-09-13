@@ -85,7 +85,7 @@ const jobCategories = [
 ];
 
 const benefits = [
-    { icon: TrendingUpIcon, text: "所有非业绩岗位转正后每月享有绩效，部门负责人和自评绩效等级SABC" },
+    { icon: TrendingUpIcon, text: "所有岗位转正后每月享有绩效，部门负责人和自评绩效等级SABC" },
     { icon: DollarSign, text: "全勤奖500-1000RMB，餐补10-15U/天" },
     { icon: TrendingUp, text: "根据工作表现，转正后每半年调薪一次，1-6000RMB (除销售市场岗位)" },
     { icon: Gift, text: "生日礼金，端午、中秋、元旦、春节假日三倍工资" },

@@ -139,7 +139,7 @@ export default function Home() {
       </div>
 
       <main className="container py-12 md:py-20 space-y-16">
-        <div className="flex gap-4 flex-wrap justify-center -mt-20 mb-12">
+        <div className="flex gap-4 flex-wrap justify-center mt-8 mb-12">
             <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
               <Send className="h-6 w-6" />
             </a>
@@ -163,9 +163,10 @@ export default function Home() {
                     <path d="M22.65 5.62c-1.4-1.92-3.48-3.41-5.91-4.25-1.39-.48-2.86-.74-4.36-.74-5.37 0-9.84 3.73-10.87 8.52-.33 1.53-.33 3.12 0 4.65.98 4.58 4.93 8.1 9.94 8.5.38.03.76.05 1.14.05 4.07 0 7.68-2.02 9.71-5.14 1.3-2.01 2.05-4.38 2.05-6.95 0-1.3-.23-2.55-.66-3.72zm-12.28 9.53h-1.89V10.1h1.89v5.05zm-3.64 0H4.84V10.1h1.89v5.05zm10.7-3.21c0 .5-.13.93-.39 1.3-.26.37-.62.66-1.08.87-.46.2-1.01.3-1.65.3h-1.12V10.1h1.19c.61 0 1.13.1 1.57.3.44.2.78.49 1.03.87.25.37.38.81.38 1.32v.49zm-1.89-1.63h-.9v3.25h.9c.77 0 1.28-.21 1.52-.64.24-.42.24-.98.24-1.67v-.31c0-.68-.2-1.19-.6-1.52-.4-.32-1.02-.48-1.86-.48z"/>
                 </svg>
             </a>
-             <a href="https://zalo.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.06 9.38H17.2V5.06h-4.85v4.32H7.5v4.9h4.85v4.58h4.85v-4.58h4.87v-4.9zM4.58 4.2H2.3v15.6h19.4V17.5h-2.3V4.2z"/>
+            <a href="https://zalo.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">
+               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 256 256" fill="currentColor">
+                  <path d="M204.8,0H51.2C22.925,0,0,22.925,0,51.2v153.6C0,233.075,22.925,256,51.2,256h153.6c28.275,0,51.2-22.925,51.2-51.2V51.2C256,22.925,233.075,0,204.8,0z M128,153.6c-30.875,0-56.112-25.237-56.112-56.112c0-30.875,25.237-56.112,56.112-56.112s56.112,25.237,56.112,56.112C184.112,128.362,158.875,153.6,128,153.6z M192,192h-38.4v-38.4h38.4V192z"/>
+                  <path d="M128,53.888c-24.212,0-43.612,19.4-43.612,43.612c0,24.212,19.4,43.612,43.612,43.612c24.212,0,43.612-19.4,43.612-43.612C171.612,73.288,152.212,53.888,128,53.888z"/>
                 </svg>
             </a>
             <a href="https://www.dingtalk.com/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-card text-card-foreground hover:bg-muted transition-colors animate-pulse-glow shadow-lg">

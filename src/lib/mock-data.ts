@@ -625,7 +625,11 @@ export const MOCK_JOBS = [
     }
   },
   { 
-    id: '192', title: '运维助理', department: '职能部', location: '菲律宾', keywords: '运维, 助理',
+    id: '192', 
+    title: '运维助理', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '运维, 助理',
     details: {
       gender: '女',
       age: '21-30岁',
@@ -771,10 +775,12 @@ export const MOCK_JOBS = [
     location: '菲律宾', 
     keywords: '换汇',
     details: {
-      salary: '试用期：1390U + 490U（加班补贴）+ 全勤 70U\n转正：1530U + 490U（加班补贴）+ 全勤 70U + 绩效（700U / 420U / 140U）',
-      hours: '9小时工作制（业绩需要时可调整为12小时，另有加班补贴）',
+      gender: '不限',
+      age: '不限',
       nationality: '外籍',
       languages: '中文流利',
+      salary: '试用期：1390U + 490U（加班补贴）+ 全勤 70U\n转正：1530U + 490U（加班补贴）+ 全勤 70U + 绩效（700U / 420U / 140U）',
+      hours: '9小时工作制（业绩需要时可调整为12小时，另有加班补贴）',
       requirements: [
         '有出入款经验，熟悉报表及值班流程者优先；',
         '具备良好的中文表达能力及逻辑思维能力；',
@@ -844,7 +850,33 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '200', title: 'OA审核/数据专员', department: '职能部', location: '菲律宾', keywords: 'oa, 审核, 数据' },
+  { 
+    id: '200', 
+    title: 'OA审核/数据专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: 'oa, 审核, 数据',
+    details: {
+      gender: '不限',
+      age: '21-32岁',
+      nationality: '外籍',
+      languages: '中文听说读写流利',
+      salary: '10k-15k + 绩效 1k-5k + 全勤 500',
+      hours: '9小时工作制，月休4天',
+      requirements: [
+        '大专及以上学历，有人力资源工作经验（如员工关系、基础人事经验者优先）；',
+        '熟练使用 Excel、Word、PowerPoint 等办公软件；',
+        '做事认真细致，具备高度责任心；',
+        '具备良好的沟通能力，中文沟通无障碍。'
+      ],
+      responsibilities: [
+        '负责人员基础人事工作，包括入职、离职、调动、转正等手续办理及安排，并完成人事台账管理；',
+        '制定并统计相关数据报表；',
+        '负责公司政策的宣导与落地执行；',
+        '对接行政后勤，做好人员入离职相关事宜。'
+      ]
+    }
+  },
   { id: '201', title: '薪酬主管', department: '职能部', location: '菲律宾', keywords: '薪酬, 主管' },
   { id: '202', title: '薪酬组长', department: '职能部', location: '菲律宾', keywords: '薪酬, 组长' },
   { id: '203', title: '招聘主管', department: '职能部', location: '菲律宾', keywords: '招聘, 主管' },
@@ -971,6 +1003,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

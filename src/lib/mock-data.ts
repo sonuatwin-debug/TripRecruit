@@ -369,7 +369,8 @@ export const MOCK_JOBS = [
     }
   },
   { 
-    id: '183', title: '综管专员', 
+    id: '183', 
+    title: '综管专员', 
     department: '职能部', 
     location: '菲律宾', 
     keywords: '综管',
@@ -381,7 +382,6 @@ export const MOCK_JOBS = [
       salary: '按照公司制度',
       hours: '9小时工作制，月休4天',
       requirements: [
-        '学历要求：不限',
         '不要返聘人员；',
         '头脑灵活，思维清晰；',
         '有后勤 / 行政经验者优先；',
@@ -410,7 +410,6 @@ export const MOCK_JOBS = [
       salary: '2000-4000U',
       hours: '9小时工作制，月休4天',
       requirements: [
-        '学历要求：不限',
         '具备 SQL 和 Python 基础；',
         '逻辑思维能力强，责任心强；',
         '在菲律宾本地工作。'
@@ -465,7 +464,6 @@ export const MOCK_JOBS = [
       salary: '试用期 10,000+，转正后享绩效提成',
       hours: '9小时工作制，月休4天（倒班制）',
       requirements: [
-        '学历要求：不限',
         '中文沟通无障碍，普通话流利，理解能力强；',
         '具备良好的沟通表达能力、情绪管理能力和抗压能力，团队协作能力强；',
         '热爱游戏，能快速了解客户心理和游戏需求；',
@@ -585,7 +583,6 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '9小时工作制，周休一天',
       requirements: [
-        '学历要求：大专及以上学历',
         '熟悉使用各类办公软件（Excel、Word 等），并能熟练使用各种函数；',
         '能够长期稳定任职，心态平和稳重，对数字敏感；',
         '具备良好的表达与思维能力，能独立判断并处理部分问题；',
@@ -710,7 +707,33 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '195', title: '出纳专员', department: '职能部', location: '菲律宾', keywords: '出纳' },
+  { 
+    id: '195', 
+    title: '出纳专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '出纳',
+    details: {
+        gender: '不限',
+        age: '21-35岁',
+        nationality: '马来西亚 / 印尼 / 缅甸',
+        languages: '中文流利，会英语者优先',
+        salary: '10k—12k',
+        hours: '9小时工作制，月休4天（12:00-21:00）',
+        requirements: [
+            '具备财务或会计相关专业背景；',
+            '具备良好的数字敏感度和精确性，能够准确处理财务数据；',
+            '能熟练操作 Excel 部分函数（如 VLOOKUP）、Word 等办公软件；',
+            '具备良好的沟通协调能力及团队合作精神；',
+            '工作细心、耐心，责任心强。'
+        ],
+        responsibilities: [
+            '负责日常财务数据整理、核对和归档工作；',
+            '执行公司财务出纳制度，确保财务流程合规；',
+            '协助上级完成其他临时性工作。'
+        ]
+    }
+  },
   { id: '196', title: '信息管理专员', department: '职能部', location: '菲律宾', keywords: '信息管理' },
   { id: '197', title: '换汇专员', department: '职能部', location: '菲律宾', keywords: '换汇' },
   { id: '198', title: '员工关系', department: '职能部', location: '菲律宾', keywords: '员工关系' },
@@ -842,6 +865,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

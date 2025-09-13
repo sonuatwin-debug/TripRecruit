@@ -528,7 +528,34 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '188', title: '红利专员', department: '职能部', location: '菲律宾', keywords: '红利' },
+  { 
+    id: '188', 
+    title: '红利专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '红利',
+    details: {
+      gender: '不限',
+      age: '20-33岁',
+      nationality: '不限',
+      languages: '中文',
+      salary: '1390U-1670U',
+      hours: '9小时工作制，月休4天（三班倒）',
+      location: '菲律宾',
+      requirements: [
+        '学历要求：大专及以上',
+        '不接受小白，中文可流利表达及正常读写；',
+        '无红利经验者，必须具备相关行业经验（客服 / 数据 / 运营）；',
+        '具备体育相关知识背景，掌握表格基础函数；',
+        '行业经验丰富，且擅长使用表格公式进行数据统计者优先。'
+      ],
+      responsibilities: [
+        '审核优惠活动、礼品资格，派发彩金并跟进礼品派发前后问题；',
+        '追踪并跟进各部门反馈的问题，直至解决；',
+        '对接并及时回复、处理各部门反馈的问题。'
+      ]
+    }
+  },
   { id: '189', title: '敏感信息专员', department: '职能部', location: '菲律宾', keywords: '敏感信息' },
   { id: '190', title: '薪酬专员', department: '职能部', location: '菲律宾', keywords: '薪酬' },
   { id: '191', title: '行政专员', department: '职能部', location: '菲律宾', keywords: '行政' },
@@ -667,6 +694,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

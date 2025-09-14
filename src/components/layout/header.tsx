@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/#benefits', label: '福利待遇' },
   { href: '/apply', label: '在线申请' },
   { href: '/about', label: '关于我们' },
+  { href: '/contact', label: '联系我们' },
   { href: '/faq', label: '常见问题' },
 ];
 

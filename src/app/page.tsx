@@ -1,5 +1,4 @@
 
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase, Gift, Utensils, Plane, Home as HomeIcon, GraduationCap, DollarSign } from 'lucide-react';
@@ -135,27 +134,27 @@ const benefits = [
 const contactMethods = [
   { 
     name: 'Telegram', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13 2 9l-1.5 9 9.5-4 9-6.5L22 2zM2 9l9 4"/></svg>,
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>,
     href: 'https://t.me/' 
   },
   { 
     name: 'WeChat', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 4.86 0 10.842c0 4.234 2.823 7.84 6.75 9.473V24l3.14-1.764a13.32 13.32 0 0 0 2.11.206c6.627 0 12-4.86 12-10.842S18.627 0 12 0zM8.5 13.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.4 3.1c-4.3 0-7.8 2.9-7.8 6.5 0 2.4 1.5 4.5 3.9 5.6-1.3 1.9-3.2 3.2-5.4 3.9v.1c.1-.1.7-1.1 1.7-2.1.8.2 1.6.3 2.5.3 4.3 0 7.8-2.9 7.8-6.5s-3.5-6.6-7.7-6.6zM7.7 11.2c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2zm4.1 0c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2zm8.3-2.9c0 2.9-2.6 5.2-5.8 5.2.3 0 .7-.1 1-.2 2.2-1 3.8-2.9 4.8-5zm-2.9 1.7c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2z"/></svg>, 
     href: 'https://www.wechat.com' 
   },
   { 
     name: 'WhatsApp', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.052 24l1.688-6.164a11.565 11.565 0 0 1-1.688-5.82C.052 5.41 5.462 0 12.016 0c6.554 0 11.964 5.41 11.964 12.016 0 6.606-5.41 11.964-11.964 11.964a11.85 11.85 0 0 1-5.94-1.616L.052 24zm6.413-3.48a9.888 9.888 0 0 0 5.55 1.54c5.448 0 9.888-4.44 9.888-9.888 0-5.448-4.44-9.888-9.888-9.888-5.448 0-9.888 4.44-9.888 9.888a9.888 9.888 0 0 0 1.54 5.55l-1.024 3.744 3.82-1.024zm4.187-2.688c-.288-.144-.432-.216-1.7-.84-.288-.144-.432-.216-.6-.216-.144 0-.312.024-.48.264-.144.24-.552.696-.672.84-.12.144-.24.168-.432.072-.216-.096-.864-.312-1.632-.984-.6-.504-.984-1.128-1.104-1.32-.12-.192-.012-.312.084-.408.072-.072.168-.192.24-.264.072-.072.12-.144.168-.24.048-.096.024-.192-.024-.264-.048-.072-.552-1.32-.768-1.8-.216-.48-.432-.408-.576-.408-.144 0-.312-.024-.48-.024s-.432.072-.648.336c-.216.264-.84.816-.84 1.968s.864 2.28 1 2.448c.12.144 1.68 2.592 4.08 3.576.576.24.984.36 1.32.456.552.144 1.056.12 1.44.072.432-.048 1.32-.528 1.512-.984.192-.48.192-.888.144-.984-.048-.12-.168-.192-.336-.264z"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.94A9.96 9.96 0 0 0 12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h.01c5.52 0 10-4.48 10-10a9.94 9.94 0 0 0-2.95-7.06zM12 20.02c-1.67 0-3.24-.57-4.48-1.54l-4.54 1.22 1.24-4.42A7.95 7.95 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8.02-8 8.02z"/><path d="m15.33 14.15-1.42-.71c-.1-.05-.28-.05-.48.15l-.56.67c-.24.29-.53.37-.83.27-.6-.2-1.38-.64-2.14-1.4-.84-.84-1.39-1.8-1.5-2.07-.1-.28.02-.53.25-.7l.45-.51c.2-.23.23-.52.12-.76l-.71-1.7c-.12-.28-.35-.45-.63-.45h-.5c-.28 0-.55.12-.75.31-.2.19-.78.74-.78 1.85s.8 2.14.94 2.3s1.56 2.41 3.8 3.39c.6.25 1.1.4 1.5.5.5.11.9.1 1.2-.05.38-.15 1.18-.93 1.34-1.25s.16-.58.11-.63l-.33-.11c-.13-.05-.28-.02-.4.07z"/></svg>, 
     href: 'https://www.whatsapp.com' 
   },
   { 
     name: 'Messenger', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/><path d="M8.216 17.472l2.883-2.882 2.146 2.146L17.784 8.2l-9.568 5.485z"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="m9.22 10.22-3.88 1.94 3.88 1.94 1.94 3.88 1.94-3.88 3.88-1.94-3.88-1.94-1.94-3.88z"/></svg>, 
     href: 'https://www.messenger.com' 
   },
   { 
     name: 'Line', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.333 4H5.667C4.746 4 4 4.746 4 5.667v10.666C4 17.254 4.746 18 5.667 18h5.45l.933 2.8s.267.733 1.067.733c.8 0 1.067-.733 1.067-.733L15.117 18H18.333c.921 0 1.667-.746 1.667-1.667V5.667C20 4.746 19.254 4 18.333 4zM7.833 11.5a.833.833 0 1 1 0-1.666.833.833 0 0 1 0 1.666zm4.167 0a.833.833 0 1 1 0-1.666.833.833 0 0 1 0 1.666zm4.167 0a.833.833 0 1 1 0-1.666.833.833 0 0 1 0 1.666z"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3H3.5C3.2 3 3 3.2 3 3.5v12c0 .3.2.5.5.5h3.8l.5.8c.4.6 1.1 1.2 1.7 1.2s1.3-.6 1.7-1.2l.5-.8h5.3c.3 0 .5-.2.5-.5v-12c0-.3-.2-.5-.5-.5zM8.5 13c-.8 0-1.5-.7-1.5-1.5S7.7 10 8.5 10s1.5.7 1.5 1.5S9.3 13 8.5 13zm3.5 0c-.8 0-1.5-.7-1.5-1.5S11.2 10 12 10s1.5.7 1.5 1.5S12.8 13 12 13zm3.5 0c-.8 0-1.5-.7-1.5-1.5S14.7 10 15.5 10s1.5.7 1.5 1.5S16.3 13 15.5 13z"/></svg>, 
     href: 'https://line.me' 
   },
   { 
@@ -226,138 +225,136 @@ export default function HomePage() {
           </a>
       </div>
 
-      <div className="container">
-        <div className="py-12 md:py-20 space-y-24">
-          {/* Quick Contact Section */}
-          <section>
-              <h2 className="text-3xl font-bold font-headline text-center mb-8">快捷联系方式</h2>
-              <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
-                  {contactMethods.map((method) => (
-                      <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center space-y-2 text-center group">
-                          <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow">
-                              <div className="w-8 h-8">{method.icon}</div>
-                          </div>
-                          <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
-                      </a>
-                  ))}
-              </div>
-          </section>
+      <div className="container py-12 md:py-20 space-y-24">
+        {/* Quick Contact Section */}
+        <section>
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">快捷联系方式</h2>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
+            {contactMethods.map((method) => (
+              <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">
+                <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow">
+                  <div className="w-8 h-8">{method.icon}</div>
+                </div>
+                <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
+              </a>
+            ))}
+          </div>
+        </section>
 
-          {/* Popular Regions Section */}
-          <section id="popular-regions" className="scroll-mt-20">
-            <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {popularRegions.map((region) => (
-                <Card key={region.name} className="overflow-hidden group hover:shadow-xl transition-all">
-                  <CardContent className="p-0">
-                    <div className="p-6 pb-2 text-center">
-                      <h3 className="font-semibold text-xl text-foreground flex items-center justify-center">
-                        <Flag country={region.name} className="h-6 w-8 mr-3" />
-                        <span>{region.name}</span>
-                      </h3>
-                    </div>
-                    <div className="px-6 pb-6">
-                      <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
-                        <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
+        {/* Popular Regions Section */}
+        <section id="popular-regions" className="scroll-mt-20">
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {popularRegions.map((region) => (
+              <Card key={region.name} className="overflow-hidden group hover:shadow-xl transition-all">
+                <CardContent className="p-0">
+                  <div className="p-6 pb-2 text-center">
+                    <h3 className="font-semibold text-xl text-foreground flex items-center justify-center">
+                      <Flag country={region.name} className="h-6 w-8 mr-3" />
+                      <span>{region.name}</span>
+                    </h3>
+                  </div>
+                  <div className="px-6 pb-6">
+                    <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
+                      <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+        
+        {/* Benefits Section */}
+        <section id="benefits" className="scroll-mt-20">
+          <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
+              <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
+          </div>
+          <div className="max-w-4xl mx-auto grid grid-cols-1 gap-y-8 justify-items-center">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-4 w-full max-w-2xl">
+                <div className="bg-primary/10 text-primary p-3 rounded-full">
+                  <benefit.icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-foreground leading-relaxed">{benefit.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Job Categories Section */}
+        <section className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
+          <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
+          <Tabs defaultValue="tech" className="w-full">
+            <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-10 bg-muted">
+              {jobCategories.map(cat => (
+                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
+                  <cat.icon className="h-5 w-5 mr-2" />
+                  {cat.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {jobCategories.map(cat => {
+              const image = PlaceHolderImages.find(p => p.id === cat.image);
+              return (
+                <TabsContent key={cat.value} value={cat.value}>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold font-headline text-primary">{cat.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{cat.description}</p>
+                      <ul className="space-y-3">
+                        {cat.features.map(feature => (
+                          <li key={feature} className="flex items-center">
+                            <ShieldCheck className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                            <span className="text-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Button asChild size="lg" variant="outline" className="bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
+                        <Link href="/jobs">查看更多 <ArrowRight className="ml-2" /></Link>
                       </Button>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
-          
-          {/* Benefits Section */}
-          <section id="benefits" className="scroll-mt-20">
+                    <div className="relative h-80 rounded-lg overflow-hidden">
+                      {image && (
+                        <Image 
+                          src={image.imageUrl}
+                          alt={image.description}
+                          data-ai-hint={image.imageHint}
+                          fill
+                          className="object-cover"
+                        />
+                      )}
+                    </div>
+                  </div>
+                </TabsContent>
+              );
+            })}
+          </Tabs>
+        </section>
+
+        {/* Advantages Section */}
+        <section>
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
+                <h2 className="text-3xl font-bold font-headline">我们的优势</h2>
                 <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
             </div>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 gap-y-8 justify-items-center">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4 w-full max-w-2xl">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full">
-                    <benefit.icon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="text-foreground leading-relaxed">{benefit.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Job Categories Section */}
-          <section className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
-            <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
-            <Tabs defaultValue="tech" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-10 bg-muted">
-                {jobCategories.map(cat => (
-                  <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
-                    <cat.icon className="h-5 w-5 mr-2" />
-                    {cat.label}
-                  </TabsTrigger>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {advantages.map((advantage, index) => (
+                    <Card key={index} className="text-center p-6">
+                        <div className="flex justify-center mb-4">
+                            <div className="bg-primary/10 text-primary p-4 rounded-full">
+                                <advantage.icon className="h-8 w-8" />
+                            </div>
+                        </div>
+                        <h3 className="font-headline text-xl font-semibold mb-2">{advantage.title}</h3>
+                        <p className="text-muted-foreground">{advantage.description}</p>
+                    </Card>
                 ))}
-              </TabsList>
-              {jobCategories.map(cat => {
-                const image = PlaceHolderImages.find(p => p.id === cat.image);
-                return (
-                  <TabsContent key={cat.value} value={cat.value}>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                      <div className="space-y-6">
-                        <h3 className="text-2xl font-bold font-headline text-primary">{cat.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{cat.description}</p>
-                        <ul className="space-y-3">
-                          {cat.features.map(feature => (
-                            <li key={feature} className="flex items-center">
-                              <ShieldCheck className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                              <span className="text-foreground">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <Button asChild size="lg" variant="outline" className="bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
-                          <Link href="/jobs">查看更多 <ArrowRight className="ml-2" /></Link>
-                        </Button>
-                      </div>
-                      <div className="relative h-80 rounded-lg overflow-hidden">
-                        {image && (
-                          <Image 
-                            src={image.imageUrl}
-                            alt={image.description}
-                            data-ai-hint={image.imageHint}
-                            fill
-                            className="object-cover"
-                          />
-                        )}
-                      </div>
-                    </div>
-                  </TabsContent>
-                );
-              })}
-            </Tabs>
-          </section>
-
-          {/* Advantages Section */}
-          <section>
-              <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold font-headline">我们的优势</h2>
-                  <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {advantages.map((advantage, index) => (
-                      <Card key={index} className="text-center p-6">
-                          <div className="flex justify-center mb-4">
-                              <div className="bg-primary/10 text-primary p-4 rounded-full">
-                                  <advantage.icon className="h-8 w-8" />
-                              </div>
-                          </div>
-                          <h3 className="font-headline text-xl font-semibold mb-2">{advantage.title}</h3>
-                          <p className="text-muted-foreground">{advantage.description}</p>
-                      </Card>
-                  ))}
-              </div>
-          </section>
-        </div>
+            </div>
+        </section>
       </div>
     </>
   );

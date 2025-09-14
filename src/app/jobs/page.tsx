@@ -27,7 +27,10 @@ const getCategoryFromDepartment = (department: string) => {
   return 'tech';
 };
 
-const JobCard = ({ job }: { job: Job }) => {
+const JobCard = ({ job, activeTab }: { job: Job, activeTab: string }) => {
+  const detailUrl = job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`;
+  const urlWithTab = `${detailUrl}${detailUrl.includes('?') ? '&' : '?'}fromTab=${activeTab}`;
+  
   return (
     <Card className="hover:shadow-lg transition-shadow">
         <CardContent className="p-4 flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -36,7 +39,7 @@ const JobCard = ({ job }: { job: Job }) => {
             <p className="text-muted-foreground">{job.location}</p>
         </div>
         <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white animate-pulse-glow">
-            <Link href={job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`}>
+            <Link href={urlWithTab}>
               查看简章
             </Link>
         </Button>
@@ -47,13 +50,18 @@ const JobCard = ({ job }: { job: Job }) => {
 
 export default function JobsPage() {
   const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState('tech');
+  const fromTab = searchParams.get('fromTab');
+  const [activeTab, setActiveTab] = useState(fromTab || 'tech');
   const [searchTerm, setSearchTerm] = useState('');
   const locationParam = searchParams.get('location');
 
   useEffect(() => {
     const departmentParam = searchParams.get('department');
-    if (departmentParam) {
+    const tabParam = searchParams.get('fromTab');
+
+    if (tabParam && ['tech', 'performance', 'functional'].includes(tabParam)) {
+        setActiveTab(tabParam);
+    } else if (departmentParam) {
       const job = MOCK_JOBS.find(j => j.department === departmentParam);
       if (job) {
         setActiveTab(getCategoryFromDepartment(job.department));
@@ -79,10 +87,10 @@ export default function JobsPage() {
       functional: filteredJobs.filter(job => jobCategories.functional.includes(job.department)),
   }), [filteredJobs]);
 
-  const JobsList = ({ jobs }: { jobs: Job[] }) => (
+  const JobsList = ({ jobs, tab }: { jobs: Job[], tab: string }) => (
     <div className="space-y-6">
       {jobs.length > 0 ? (
-        jobs.map(job => <JobCard key={job.id} job={job} />)
+        jobs.map(job => <JobCard key={job.id} job={job} activeTab={tab} />)
       ) : (
         <div className="text-center py-16">
           <h3 className="text-xl font-semibold">未找到职位</h3>
@@ -130,13 +138,13 @@ export default function JobsPage() {
                 </TabsTrigger>
             </TabsList>
             <TabsContent value="tech">
-                <JobsList key="tech" jobs={jobsByTab.tech} />
+                <JobsList key="tech" jobs={jobsByTab.tech} tab="tech" />
             </TabsContent>
             <TabsContent value="performance">
-                <JobsList key="performance" jobs={jobsByTab.performance} />
+                <JobsList key="performance" jobs={jobsByTab.performance} tab="performance" />
             </TabsContent>
             <TabsContent value="functional">
-                <JobsList key="functional" jobs={jobsByTab.functional} />
+                <JobsList key="functional" jobs={jobsByTab.functional} tab="functional" />
             </TabsContent>
         </Tabs>
       </div>

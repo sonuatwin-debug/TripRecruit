@@ -40,6 +40,23 @@ export default function ContactPage() {
             ))}
           </div>
         </section>
+
+        <section className="mt-20 max-w-3xl mx-auto text-center">
+          <div className="space-y-4 text-muted-foreground">
+            <p className="flex items-start justify-center">
+              <span className="mr-2">📩</span>
+              <span>如果您在使用过程中遇到任何问题或有疑问，欢迎随时与我们联系。</span>
+            </p>
+            <p className="flex items-start justify-center">
+              <span className="mr-2">📩</span>
+              <span>您可以通过以上任意联系方式与我们取得沟通，我们的团队将第一时间为您解答并提供支持。</span>
+            </p>
+            <p className="flex items-start justify-center">
+              <span className="mr-2">📩</span>
+              <span>我们致力于为您提供快速、专业、贴心的服务，让您的体验更加顺畅。</span>
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );

@@ -142,7 +142,7 @@ export default function AboutPage() {
               <Card className="text-center bg-primary/10 border-primary/30">
                   <CardContent className="p-6">
                       <Star className="h-10 w-10 text-primary mx-auto mb-2" />
-                      <p className="text-3xl font-bold">25年</p>
+                      <p className="text-3xl font-bold">10年</p>
                       <p className="text-sm text-muted-foreground">行业经验</p>
                   </CardContent>
               </Card>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <Card className="text-center bg-accent/10 border-accent/30">
                   <CardContent className="p-6">
                       <Users className="h-10 w-10 text-accent mx-auto mb-2" />
-                      <p className="text-3xl font-bold">45,000+</p>
+                      <p className="text-3xl font-bold">10000+</p>
                       <p className="text-sm text-muted-foreground">全球员工</p>
                   </CardContent>
               </Card>

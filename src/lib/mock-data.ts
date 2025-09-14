@@ -221,7 +221,7 @@ export const MOCK_JOBS = [
       responsibilities: [
         '负责核实员工入职、签证费用账单；',
         '对接财务，处理相关款项问题；',
-        '记录和核对账本，确保数据准确。'
+        '记录和核对账本，确保数据准确无误。'
       ]
     }
   },
@@ -882,7 +882,7 @@ export const MOCK_JOBS = [
   { id: '203', title: '招聘主管', department: '职能部', location: '菲律宾', keywords: '招聘, 主管' },
   { id: '204', title: 'HRBP', department: '职能部', location: '菲律宾', keywords: 'hrbp, 人力资源' },
   { id: '205', title: '菲华行政', department: '职能部', location: '菲律宾', keywords: '行政' },
-  { id: '206', title: '数据分析师', department: '数据科学', location: '菲律宾', keywords: '数据分析' },
+  { id: '206', title: '数据分析师', department: '职能部', location: '菲律宾', keywords: '数据分析' },
   { id: '207', title: '三方专员/出入款专员', department: '职能部', location: '菲律宾', keywords: '三方, 出入款' },
   { id: '208', title: '极速专员', department: '职能部', location: '菲律宾', keywords: '极速' },
   { id: '209', title: '客服专员', department: '职能部', location: '菲律宾', keywords: '客服' },
@@ -1003,6 +1003,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

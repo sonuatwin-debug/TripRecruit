@@ -10,36 +10,46 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Search, Code, TrendingUp, Briefcase } from 'lucide-react';
 import { MOCK_JOBS } from '@/lib/mock-data';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 type Job = typeof MOCK_JOBS[0];
 
 const jobCategories = {
-  tech: ['工程部', '产品部', '设计部', '数据科学'],
-  performance: ['市场部'],
-  functional: ['职能部'],
+  tech: {
+    title: '技术岗位',
+    departments: ['工程部', '产品部', '设计部', '数据科学'],
+    icon: Code,
+  },
+  performance: {
+    title: '业绩岗位',
+    departments: ['市场部'],
+    icon: TrendingUp,
+  },
+  functional: {
+    title: '职能岗位',
+    departments: ['职能部'],
+    icon: Briefcase,
+  },
 };
 
 const getCategoryFromDepartment = (department: string) => {
-  if (jobCategories.tech.includes(department)) return 'tech';
-  if (jobCategories.performance.includes(department)) return 'performance';
-  if (jobCategories.functional.includes(department)) return 'functional';
+  if (jobCategories.tech.departments.includes(department)) return 'tech';
+  if (jobCategories.performance.departments.includes(department)) return 'performance';
+  if (jobCategories.functional.departments.includes(department)) return 'functional';
   return 'tech';
 };
 
-const JobCard = ({ job, activeTab }: { job: Job, activeTab: string }) => {
+const JobCard = ({ job }: { job: Job }) => {
   const detailUrl = job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`;
-  const urlWithTab = `${detailUrl}${detailUrl.includes('?') ? '&' : '?'}fromTab=${activeTab}`;
   
   return (
-    <Card className="hover:shadow-lg transition-shadow">
-        <CardContent className="p-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <Card className="hover:shadow-md transition-shadow hover:border-primary/50">
+        <CardContent className="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
         <div className="flex-grow">
-            <h3 className="font-headline text-xl font-semibold mb-1">{job.title}</h3>
-            <p className="text-muted-foreground">{job.location}</p>
+            <h3 className="font-headline text-lg font-semibold mb-1">{job.title}</h3>
+            <p className="text-muted-foreground text-sm">{job.location}</p>
         </div>
-        <Button asChild className="mt-4 md:mt-0 md:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white animate-pulse-glow">
-            <Link href={urlWithTab}>
+        <Button asChild className="mt-3 sm:mt-0 sm:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white text-xs px-3 h-8 animate-pulse-glow">
+            <Link href={detailUrl}>
               查看简章
             </Link>
         </Button>
@@ -50,10 +60,9 @@ const JobCard = ({ job, activeTab }: { job: Job, activeTab: string }) => {
 
 export default function JobsPage() {
   const searchParams = useSearchParams();
-  const fromTab = searchParams.get('fromTab');
-  const [activeTab, setActiveTab] = useState(fromTab || 'tech');
   const [searchTerm, setSearchTerm] = useState('');
   const locationParam = searchParams.get('location');
+  const [activeTab, setActiveTab] = useState('tech');
 
   useEffect(() => {
     const departmentParam = searchParams.get('department');
@@ -69,6 +78,7 @@ export default function JobsPage() {
     }
   }, [searchParams]);
 
+
   const filteredJobs = useMemo(() => {
     return MOCK_JOBS.filter(job => {
       const matchesSearch = searchTerm === '' || 
@@ -81,72 +91,60 @@ export default function JobsPage() {
     });
   }, [searchTerm, locationParam]);
   
-  const jobsByTab = useMemo(() => ({
-      tech: filteredJobs.filter(job => jobCategories.tech.includes(job.department)),
-      performance: filteredJobs.filter(job => jobCategories.performance.includes(job.department)),
-      functional: filteredJobs.filter(job => jobCategories.functional.includes(job.department)),
+  const jobsByColumn = useMemo(() => ({
+      tech: filteredJobs.filter(job => jobCategories.tech.departments.includes(job.department)),
+      performance: filteredJobs.filter(job => jobCategories.performance.departments.includes(job.department)),
+      functional: filteredJobs.filter(job => jobCategories.functional.departments.includes(job.department)),
   }), [filteredJobs]);
 
-  const JobsList = ({ jobs, tab }: { jobs: Job[], tab: string }) => (
-    <div className="space-y-6">
-      {jobs.length > 0 ? (
-        jobs.map(job => <JobCard key={job.id} job={job} activeTab={tab} />)
-      ) : (
-        <div className="text-center py-16">
-          <h3 className="text-xl font-semibold">未找到职位</h3>
-          <p className="text-muted-foreground mt-2">请尝试调整您的搜索或筛选条件。</p>
-        </div>
-      )}
+  const JobsColumn = ({ jobs, title, icon: Icon }: { jobs: Job[], title: string, icon: React.ElementType }) => (
+    <div className="w-full">
+      <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm py-4 mb-4">
+        <h2 className="text-xl font-bold font-headline flex items-center gap-2 px-2">
+          <Icon className="h-5 w-5 text-primary" />
+          {title}
+          <span className="text-sm font-normal text-muted-foreground ml-2">({jobs.length})</span>
+        </h2>
+      </div>
+      <div className="space-y-4 px-1 pb-4">
+        {jobs.length > 0 ? (
+          jobs.map(job => <JobCard key={job.id} job={job} />)
+        ) : (
+          <div className="text-center py-10 px-4 rounded-lg bg-muted/50">
+            <p className="text-muted-foreground text-sm">暂无该类别的职位</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 
   return (
     <div className="container">
-      <div className="py-12 md:py-20">
-        <div className="text-center mb-12">
+      <div className="py-12 md:py-20 flex flex-col h-full">
+        <div className="text-center mb-8">
           <h1 className="text-4xl font-bold font-headline mb-2">
             {locationParam ? `${locationParam} 职位` : '探索机会'}
           </h1>
           <p className="text-lg text-muted-foreground">找到适合您的角色。</p>
         </div>
 
-        <Card className="mb-8 p-4">
+        <Card className="mb-8 p-4 sticky top-[56px] z-20">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input 
               placeholder="按职位关键词搜索"
-              className="pl-10"
+              className="pl-10 text-base"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
         </Card>
         
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6">
-                <TabsTrigger value="tech" className="flex items-center gap-2">
-                    <Code className="h-4 w-4" />
-                    技术岗位
-                </TabsTrigger>
-                <TabsTrigger value="performance" className="flex items-center gap-2">
-                    <TrendingUp className="h-4 w-4" />
-                    业绩岗位
-                </TabsTrigger>
-                <TabsTrigger value="functional" className="flex items-center gap-2">
-                    <Briefcase className="h-4 w-4" />
-                    职能岗位
-                </TabsTrigger>
-            </TabsList>
-            <TabsContent value="tech">
-                <JobsList key="tech" jobs={jobsByTab.tech} tab="tech" />
-            </TabsContent>
-            <TabsContent value="performance">
-                <JobsList key="performance" jobs={jobsByTab.performance} tab="performance" />
-            </TabsContent>
-            <TabsContent value="functional">
-                <JobsList key="functional" jobs={jobsByTab.functional} tab="functional" />
-            </TabsContent>
-        </Tabs>
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-8">
+            <JobsColumn jobs={jobsByColumn.tech} title={jobCategories.tech.title} icon={jobCategories.tech.icon} />
+            <JobsColumn jobs={jobsByColumn.performance} title={jobCategories.performance.title} icon={jobCategories.performance.icon} />
+            <JobsColumn jobs={jobsByColumn.functional} title={jobCategories.functional.title} icon={jobCategories.functional.icon} />
+        </div>
       </div>
     </div>
   );

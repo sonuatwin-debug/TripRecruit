@@ -118,7 +118,7 @@ export const MOCK_JOBS = [
   { id: '93', title: '网管专员', department: '职能部', location: '斯里兰卡', keywords: '网管' },
   { id: '94', title: '电工', department: '职能部', location: '斯里兰卡', keywords: '电工' },
   { id: '95', title: '签证专员', department: '职能部', location: '斯里兰卡', keywords: '签证' },
-  { id: '96', title: '数据分析师', department: '数据科学', location: '斯里兰卡', keywords: '数据分析' },
+  { id: '96', title: '数据分析师', department: '职能部', location: '斯里兰卡', keywords: '数据分析' },
   { id: '97', title: '后端工程师（业务开发）', department: '工程部', location: '斯里兰卡', keywords: '后端' },
   { id: '98', title: '安卓工程师', department: '工程部', location: '斯里兰卡', keywords: '安卓' },
   { id: '99', title: 'IOS工程师', department: '工程部', location: '斯里兰卡', keywords: 'ios' },
@@ -882,28 +882,581 @@ export const MOCK_JOBS = [
   { id: '203', title: '招聘主管', department: '职能部', location: '菲律宾', keywords: '招聘, 主管' },
   { id: '204', title: 'HRBP', department: '职能部', location: '菲律宾', keywords: 'hrbp, 人力资源' },
   { id: '205', title: '菲华行政', department: '职能部', location: '菲律宾', keywords: '行政' },
-  { id: '206', title: '数据分析师', department: '职能部', location: '菲律宾', keywords: '数据分析' },
-  { id: '207', title: '三方专员/出入款专员', department: '职能部', location: '菲律宾', keywords: '三方, 出入款' },
-  { id: '208', title: '极速专员', department: '职能部', location: '菲律宾', keywords: '极速' },
-  { id: '209', title: '客服专员', department: '职能部', location: '菲律宾', keywords: '客服' },
-  { id: '210', title: '财务经理或主管', department: '职能部', location: '菲律宾', keywords: '财务, 经理, 主管' },
-  { id: '211', title: '财务副组长', department: '职能部', location: '菲律宾', keywords: '财务, 副组长' },
-  { id: '212', title: '报表管理', department: '职能部', location: '菲律宾', keywords: '报表' },
-  { id: '213', title: 'USDT支出专员', department: '职能部', location: '菲律宾', keywords: 'usdt, 支出' },
-  { id: '214', title: '督导专员', department: '职能部', location: '菲律宾', keywords: '督导' },
-  { id: '215', title: '资金审核专员', department: '职能部', location: '菲律宾', keywords: '资金, 审核' },
-  { id: '216', title: '单据专员', department: '职能部', location: '菲律宾', keywords: '单据' },
-  { id: '217', title: '运营客服', department: '职能部', location: '菲律宾', keywords: '运营, 客服' },
-  { id: '218', title: '投诉专员', department: '职能部', location: '菲律宾', keywords: '投诉' },
-  { id: '219', title: '渠道招商人员', department: '职能部', location: '菲律宾', keywords: '渠道, 招商' },
-  { id: '220', title: '总监助理', department: '职能部', location: '菲律宾', keywords: '总监, 助理' },
-  { id: '221', title: '资金专员', department: '职能部', location: '菲律宾', keywords: '资金' },
-  { id: '222', title: '审计专员', department: '职能部', location: '菲律宾', keywords: '审计' },
-  { id: '223', title: '资产调配专员', department: '职能部', location: '菲律宾', keywords: '资产, 调配' },
-  { id: '224', title: '公关经理', department: '职能部', location: '菲律宾', keywords: '公关, 经理' },
-  { id: '225', title: '财务主管', department: '职能部', location: '菲律宾', keywords: '财务, 主管' },
-  { id: '226', title: '财务主管/经理', department: '职能部', location: '菲律宾', keywords: '财务, 主管, 经理' },
-  { id: '227', title: '财务专员', department: '职能部', location: '菲律宾', keywords: '财务' },
+  { 
+    id: '206', 
+    title: '数据分析师', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '数据分析',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '外籍',
+      languages: '中文听说读写',
+      salary: '面议（20K-30K）+ 绩效 1K-5K + 全勤奖 500',
+      hours: '8休4（白班）',
+      requirements: [
+        '中文听说读写流利',
+        '有相关数据报表的经验',
+        '熟练操作 Word、Excel 等办公软件',
+        '细心认真，责任心强，具备团队精神，服从上级工作安排'
+      ],
+      responsibilities: [
+        '每日完成 BW 的固定数据，并与 CWZX 其他相关部门进行对比',
+        '每日进行财务数据分析',
+        '协助同事及上级完成相关工作'
+      ]
+    }
+  },
+  { 
+    id: '207', 
+    title: '三方专员/出入款专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '三方, 出入款',
+    details: {
+      gender: '不限',
+      age: '21-32岁',
+      nationality: '外籍',
+      languages: '中文听说读写',
+      salary: '10K-12K + 绩效 1K-5K + 全勤奖 500',
+      hours: '8休4（倒班）',
+      requirements: [
+        '中文口语流利，沟通交流无障碍',
+        '电脑操作与中文打字熟练',
+        '有相关客服或出入款经验者优先'
+      ],
+      responsibilities: [
+        '负责资金下发、资金监管、账目核对、报表制作及数据统计',
+        '协助提供银行卡信息给客户存款，并按要求完成游戏账号上分',
+        '回复并处理各个工作群中的问题'
+      ]
+    }
+  },
+  { 
+    id: '208', 
+    title: '极速专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '极速',
+    details: {
+      gender: '不限',
+      age: '21-33岁',
+      nationality: '台湾、马来、印尼、越南、泰国、缅甸等东南亚及华裔华人',
+      languages: '中文听说读写',
+      salary: '10K-12K + 绩效 1K-5K + 全勤奖 500',
+      hours: '8休4（倒班）',
+      requirements: [
+        '中文流利，打字速度快，熟悉办公室软件',
+        '口齿清晰，语音富有感染力',
+        '具备基础客服和客户维护经验，电脑办公能力良好',
+        '人际沟通能力强，喜欢学习并能长期稳定工作',
+        '工作细致认真，责任意识强，具备一定抗压能力'
+      ],
+      responsibilities: [
+        '对接会员与商户，提供热情周到的服务，积极响应客户需求',
+        '负责线上指导工作，引导客户和商户完成公司更多业绩目标'
+      ]
+    }
+  },
+  { 
+    id: '209', 
+    title: '客服专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '客服',
+    details: {
+      gender: '不限',
+      age: '35岁以下',
+      nationality: '外籍',
+      languages: '中文听说读写',
+      salary: '10K-12K + 加班费 3.5K',
+      hours: '12休4（倒班）',
+      requirements: [
+        '细心负责，具备责任心',
+        '熟悉基本电脑操作',
+        '能适应倒班工作'
+      ],
+      responsibilities: [
+        '负责日常转账及财务报表处理，工作简单易上手',
+        '确保数据准确无误，并严格按照流程执行操作'
+      ]
+    }
+  },
+  { 
+    id: '210', 
+    title: '财务经理或主管', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '财务, 经理, 主管',
+    details: {
+      gender: '不限',
+      age: '不限',
+      nationality: '不限',
+      languages: '不限',
+      salary: '面议',
+      hours: '面议',
+      requirements: [
+        '具备一定的金融学知识',
+        '有金融支付方面的工作经历与管理经验者优先',
+        '为人真诚，性格和善，服从性高',
+        '如在菲律宾工作，不可有签证问题',
+        '善于沟通交流'
+      ],
+      responsibilities: [
+        '负责财务部门的组织与管理',
+        '优化工作流程，培养并带领管理团队',
+        '处理和解决突发财务问题',
+        '完成上级交办的其他任务'
+      ]
+    }
+  },
+  { 
+    id: '211', 
+    title: '财务副组长', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '财务, 副组长',
+    details: {
+      gender: '不限',
+      age: '不限',
+      nationality: '不限',
+      languages: '不限',
+      salary: '2083-2500 美金 + 绩效 700-1050 美金',
+      hours: '不限',
+      requirements: [
+        '熟练使用办公软件（WPS、Excel、Word 等），具备良好的电脑操作能力',
+        '中文听说读写流利（外籍华侨 / 大学学历 / HSK6 以上）',
+        '有相关岗位经验，有管理经验者优先',
+        '能灵活处理问题，具备良好的沟通能力',
+        '能承受较大的工作压力'
+      ],
+      responsibilities: [
+        '负责组内值班及各岗位工作安排，处理工作中的上升问题',
+        '监督组内各岗位工作进度，负责绩效评比与排班表',
+        '日常监督业务情况，及时发现并处理问题',
+        '完成上级安排的其他事项'
+      ]
+    }
+  },
+  { 
+    id: '212', 
+    title: '报表管理', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '报表',
+    details: {
+      gender: '不限',
+      age: '28岁以上',
+      nationality: '不限',
+      languages: '中文 + 英文听说读写',
+      salary: '面议',
+      hours: '9休4（白班）',
+      requirements: [
+        '具备团队管理经验',
+        '熟悉并了解推广业务费用',
+        '能根据工作问题提出合理的管理建议'
+      ],
+      responsibilities: [
+        '负责月中推广渠道收益数据分析',
+        '编制月中报表账单',
+        '月底更新工资数据',
+        '负责各负责人账目费用的核对与确认',
+        '进行推广费用的审核与审计',
+        '完成其他临时安排的数据分析工作'
+      ]
+    }
+  },
+  { 
+    id: '213', 
+    title: 'USDT支出专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: 'usdt, 支出',
+    details: {
+      gender: '不限',
+      age: '不限',
+      nationality: '外籍',
+      languages: '中文听说读写',
+      salary: '试用期：10,000 RMB + 500 RMB 全勤奖\n转正后：12,000 RMB + 500 RMB 全勤奖 + 绩效（三档：1,000 / 3,000 / 5,000 RMB）\n每6个月考评级通过后，额外增加 1,000 RMB\n转正后每月均有绩效考核（三档：1,000 / 3,000 / 5,000 RMB）',
+      hours: '8休4（倒班制）',
+      requirements: [
+        '打字速度快，熟悉基本电脑办公工具',
+        '掌握区块链基础知识',
+        '中文听说读写流利',
+        '严格按照流程审核并操作打款'
+      ],
+      responsibilities: [
+        '负责USDT资金支出操作',
+        '严格执行审核与打款流程',
+        '确保资金操作的准确性与及时性'
+      ]
+    }
+  },
+  { 
+    id: '214', 
+    title: '督导专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '督导',
+    details: {
+      gender: '不限',
+      age: '30岁以下',
+      nationality: '缅甸籍 / 台湾籍 / 马来籍 / 越南华侨',
+      languages: '中英文听说读写',
+      salary: '10K-12K + 绩效 1K-5K + 全勤奖 500',
+      hours: '9休4（倒班制）',
+      requirements: [
+        '熟练电脑操作',
+        '具备会计类相关工作经验',
+        '掌握表格函数基本公式'
+      ],
+      responsibilities: [
+        '负责对接考勤',
+        '监督上班纪律',
+        '维护网络安全'
+      ]
+    }
+  },
+  { 
+    id: '215', 
+    title: '资金审核专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '资金, 审核',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '外籍（越南籍优先）',
+      languages: '中文听说读写',
+      salary: '人民币：10K-12K + 绩效 1K-5K + 全勤奖 500\n美金（试用期）：1390U + 全勤 70U + 补贴 490U\n美金（转正后）：1670U + 全勤 70U + 补贴 490U + 绩效（700U / 420U / 140U）',
+      hours: '8休4（倒班制）',
+      requirements: [
+        '精通 Excel 的基本技能'
+      ],
+      responsibilities: [
+        '每天跟进审核业务组操作是否按照流程规定执行'
+      ]
+    }
+  },
+  { 
+    id: '216', 
+    title: '单据专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '单据',
+    details: {
+      gender: '不限',
+      age: '30岁以下',
+      nationality: '外籍',
+      languages: '中文听说读写',
+      salary: '10K-12K + 绩效 1K-5K + 全勤奖 500',
+      hours: '9休4（一班制）',
+      requirements: [
+        '会计相关专业优先',
+        '做事细心，有责任感'
+      ],
+      responsibilities: [
+        '单据审核'
+      ]
+    }
+  },
+  { 
+    id: '217', 
+    title: '运营客服', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '运营, 客服',
+    details: {
+      gender: '不限',
+      age: '35岁以内',
+      nationality: '不限',
+      languages: '中文听说读写',
+      salary: '10K-12K + 绩效 1K-5K + 全勤奖 500',
+      hours: '8休4（倒班制）',
+      requirements: [
+        '具备虚拟币相关经验，并了解其他虚拟币基础知识',
+        '熟练使用 WPS、Excel 等办公软件',
+        '态度端正，学习能力强',
+        '有值班或相关管理工作经验者优先'
+      ],
+      responsibilities: [
+        '对接内外部商户，解答虚拟币相关问题',
+        '维护商户合作，确保持续跑量',
+        '根据订单笔数情况进行调整',
+        '完成领导安排的其他临时性工作'
+      ]
+    }
+  },
+  { 
+    id: '218', 
+    title: '投诉专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '投诉',
+    details: {
+      gender: '不限（女生需具备部门助理经验，熟悉办公文档及 PPT 制作）',
+      age: '21-30岁',
+      nationality: '中国 / 马来',
+      languages: '中文、英文',
+      salary: '12K-14K',
+      hours: '9小时 / 月休4（上班与休假时间由部门安排）',
+      requirements: [
+        '熟练使用 Office 办公软件，擅长 PPT 和表格应用',
+        '具备较强的逻辑思维能力、语言组织与应变能力',
+        '性格开朗活泼，文案编辑能力佳，有一定英文基础更优'
+      ],
+      responsibilities: [
+        '处理各部门日常投诉与反馈',
+        '监督并完善公司相关制度',
+        '加强信息安全的管理与监督',
+        '严查贪污、吸毒、暴力、赌博等行为',
+        '协调优化各部门改进方案，收集优秀建议'
+      ]
+    }
+  },
+  { 
+    id: '219', 
+    title: '渠道招商人员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '渠道, 招商',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '外籍（优先马来 / 香港 / 缅甸，不要台湾籍）',
+      languages: '中英文流利，需具备流利的英文书写及口语能力',
+      salary: '面议',
+      hours: '9小时 / 月休4',
+      requirements: [
+        '管理能力出色，具备魄力与执行力',
+        '沟通能力强，能独立完成报告制作',
+        '大专及以上学历，统计学相关专业优先',
+        '英文口语及书写能力需达到工作语言水平',
+        '具备敏锐的风控意识，对资金渠道安全有判断力',
+        '具备一定谈判、招商及社交能力',
+        '具备开拓意识，能在现有基础上开发新渠道'
+      ],
+      responsibilities: [
+        '负责渠道网站的信息发布及广告推广',
+        '专门负责开拓国际金流渠道',
+        '能够接受出差第三国，寻找资金渠道商',
+        '对资金渠道的安全进行判断与把控',
+        '承担渠道招商与商务谈判工作',
+        '在既有渠道基础上，积极开拓新的合作渠道'
+      ]
+    }
+  },
+  { 
+    id: '220', 
+    title: '总监助理', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '总监, 助理',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '外籍（优先马来 / 香港 / 缅甸，不要泰国籍 / 台湾籍）',
+      languages: '中英文流利',
+      salary: '面议',
+      hours: '9小时 / 月休4',
+      requirements: [
+        '具备总监助理相关经验',
+        '优先有商务洽谈经验',
+        '接受不定时出差',
+        '在菲律宾者优先'
+      ],
+      responsibilities: [
+        '协助领导进行相关商务活动及行程协调',
+        '协调领导制定并落实各项业务发展战略和工作计划',
+        '协助上级沟通，处理外部机构相关事宜',
+        '制作各类报表，协助上级处理各部门日常事务',
+        '完成上级安排的管理工作，落实下达的各项指令',
+        '跟进业务监督及整理工作，做好上传下达与汇报'
+      ]
+    }
+  },
+  { 
+    id: '221', 
+    title: '资金专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '资金',
+    details: {
+      gender: '不限',
+      age: '35岁以下',
+      nationality: '不限',
+      languages: '中英文流利',
+      salary: '约 2100U',
+      hours: '9小时',
+      requirements: [
+        '具备一定的金融学知识',
+        '有金融支付方面的工作经历者优先',
+        '为人真诚，性格和善，服从性高',
+        '善于沟通交流'
+      ],
+      responsibilities: [
+        '负责财务部门报表处理',
+        '负责资金管理与支付工作',
+        '完成上级安排的其他任务'
+      ]
+    }
+  },
+  { 
+    id: '222', 
+    title: '审计专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '审计',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '外籍（马来籍优先/会英文优先），中国籍也可',
+      languages: '中文流利，会英文优先',
+      salary: '10K-12K',
+      hours: '9小时，月休4（上班/休假时间根据部门安排）',
+      requirements: [
+        '具备优秀的跨部门沟通和协调能力',
+        '对账目分析有良好的逻辑思维能力',
+        '精通 Excel，熟悉函数公式并能熟练运用',
+        '中文理解无障碍，表达清晰，抗压能力强',
+        '未从事过业务岗位（推广、电销、招商等）',
+        '对招聘、推广的广告推送方式有一定了解',
+        '有财务审核经验者优先',
+        '接受返聘，但不考虑需特批的人员',
+        '具备高度保密意识'
+      ],
+      responsibilities: [
+        '协助上级对业务部门每月账目进行梳理与审查，从中发现问题，并与账目对接人沟通协调',
+        '及时跟进上级指派的任务，做好记录与汇报'
+      ]
+    }
+  },
+  { 
+    id: '223', 
+    title: '资产调配专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '资产, 调配',
+    details: {
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '不限',
+      languages: '中英文流利',
+      salary: '10K-12K',
+      hours: '9小时，月休4（上班/休假时间根据部门安排）',
+      requirements: [
+        '在菲必须签证无问题，能正常续签，若有需要可随时派驻第三国',
+        '熟悉数据录入、分析、比对及资产去向与库存状态的追查',
+        '熟练操作 Office 办公软件，尤其是 Excel',
+        '有仓库管理、仓储管理经验，长期数据分析、比对、总结经验优先',
+        '忠诚可靠，踏实能干，吃苦耐劳，身体强健，责任感强',
+        '具备良好的沟通能力，能积极与跨部门协作'
+      ],
+      responsibilities: [
+        '按照资产部要求及内部流程，配合部门安排支援各驻场资产工作（包括对接派发、回收、盘点各类资产）',
+        '对数据录入、比对及追踪敏锐，掌握所有资产去向，并及时更新资产数据',
+        '熟知并执行资产部各项流程与政策，确保工作规范落实',
+        '与跨部门保持良好沟通，积极乐观，推动协作顺利开展',
+        '对工作充满热情，责任心强，确保任务高效完成'
+      ]
+    }
+  },
+  { 
+    id: '224', 
+    title: '公关经理', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '公关, 经理',
+    details: {
+      gender: '不限',
+      age: '25-40岁',
+      nationality: '外籍（需具备可随时出境/出国出差的国籍，无需办理签证；不要台湾籍）',
+      languages: '英语、普通话流利（其他语言为加分项）',
+      salary: 'HKD 35,000 – HKD 100,000',
+      hours: '24小时 On Call（随时待命）',
+      requirements: [
+        '具备跨国沟通能力，可灵活出差并适应高强度工作节奏',
+        '熟悉公共关系与政策沟通，有与政府机构对接经验者优先',
+        '对公共政策、法律法规及拟议立法具备研究与分析能力',
+        '思维清晰，有较强的表达与谈判能力',
+        '责任心强，能代表公司在正式场合发声'
+      ],
+      responsibilities: [
+        '建立并维护公司与政府机构的良好关系',
+        '监督并影响地方、州和联邦各级的立法与监管动态',
+        '制定并实施与政府合作的战略计划，推动公司使命和目标',
+        '研究与分析公共政策、法律法规和拟议立法对公司的影响',
+        '代表公司出席与政府官员、行业代表及相关方的会议与公开听证会',
+        '协助公司与政府官员沟通，争取便利与资源，解决实际问题',
+        '在政府与公司内部保持有效联络渠道',
+        '向上级提供政策变动与政治议题的建议与简报'
+      ]
+    }
+  },
+  { 
+    id: '225', 
+    title: '财务主管', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '财务, 主管' 
+  },
+  { 
+    id: '226', 
+    title: '财务主管/经理', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '财务, 主管, 经理',
+    details: {
+      gender: '不限',
+      age: '45岁以下',
+      nationality: '马来籍',
+      languages: '中英文流利',
+      salary: '20K – 40K',
+      hours: '9小时',
+      requirements: [
+        '具备一定的金融学知识',
+        '有金融支付工作经历及管理经验者优先',
+        '善于沟通交流，为人真诚，性格和善，服从性高',
+        '在菲人员需无签证问题'
+      ],
+      responsibilities: [
+        '负责财务部门的整体组织与管理',
+        '优化财务工作流程，提升部门效率',
+        '培养并带领管理团队，提升团队综合能力',
+        '处理和解决突发的财务问题',
+        '完成上级交办的各类任务'
+      ]
+    }
+  },
+  { 
+    id: '227', 
+    title: '财务专员', 
+    department: '职能部', 
+    location: '菲律宾', 
+    keywords: '财务',
+    details: {
+      gender: '不限',
+      age: '不限',
+      nationality: '不限',
+      languages: '中文流利',
+      salary: '试用期 1390U，转正 1690U',
+      hours: '9小时',
+      requirements: [
+        '有财务相关工作背景者优先',
+        '擅长沟通，能与跨部门保持积极顺畅的交流',
+        '熟悉资产部流程及政策，能严格按规定执行',
+        '具备财务或数据统计相关经验，对数字敏感',
+        '工作细心负责，有责任心和上进心'
+      ],
+      responsibilities: [
+        '按照公司财务部及部门内部流程，处理财务相关工作',
+        '确保部门政策及上级要求有效传达并落实到位',
+        '执行财务数据统计及分析工作，确保数据准确',
+        '配合跨部门工作，提供支持与协调'
+      ]
+    }
+  },
   { id: '228', title: '大数据工程师', department: '工程部', location: '菲律宾', keywords: '大数据, hadoop, spark' },
   { id: '229', title: 'DBA工程师', department: '工程部', location: '菲律宾', keywords: 'dba, mysql, oracle' },
   { id: '230', title: '运维工程师', department: '工程部', location: '菲律宾', keywords: '运维, linux' },
@@ -1023,3 +1576,6 @@ export const MOCK_USER_PROFILE = `
 
 
 
+
+
+    

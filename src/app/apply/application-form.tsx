@@ -9,8 +9,6 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { MOCK_JOBS } from '@/lib/mock-data';
 import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Flag } from '../page';
@@ -32,7 +30,7 @@ const applicationSchema = z.object({
   wechat: z.string().optional(),
   qq: z.string().optional(),
   email: z.string().optional(),
-  jobId: z.string({ required_error: '请选择一个意向岗位' }).min(1, '请选择一个意向岗位'),
+  jobId: z.string().min(1, '意向岗位为必填项'),
   expectedSalary: z.string().min(1, '期望薪资为必填项'),
   resume: z.any().refine(files => files?.length > 0, '简历为必填项。'),
   workLocations: z.array(z.string()).refine(value => value.some(item => item), {
@@ -62,7 +60,7 @@ export default function ApplicationForm() {
       wechat: '',
       qq: '',
       email: '',
-      jobId: initialJobId || undefined,
+      jobId: initialJobId || '',
       expectedSalary: '',
       notes: '',
       resume: undefined,
@@ -171,18 +169,9 @@ export default function ApplicationForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>意向岗位</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="请选择您感兴趣的岗位" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {MOCK_JOBS.map(job => (
-                    <SelectItem key={job.id} value={job.id}>{job.title} - {job.location}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <FormControl>
+                <Input placeholder="请输入您意向的岗位" {...field} />
+              </FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -291,5 +280,3 @@ export default function ApplicationForm() {
     </Form>
   );
 }
-
-    

@@ -5,6 +5,8 @@ import { MOCK_JOBS } from '@/lib/mock-data';
 import ApplicationForm from './application-form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
+export const dynamic = 'force-dynamic';
+
 export default function ApplyPage() {
   const searchParams = useSearchParams();
   const jobId = searchParams.get('jobId');

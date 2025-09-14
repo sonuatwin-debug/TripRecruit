@@ -26,7 +26,6 @@ export default function ContactPage() {
 
       <div className="container py-12 md:py-20">
         <section>
-          <h2 className="text-3xl font-bold font-headline text-center mb-12">快捷联系方式</h2>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
             {contactMethods.map((method) => (
               <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">

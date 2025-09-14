@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Search, Code, TrendingUp, Briefcase } from 'lucide-react';
 import { MOCK_JOBS } from '@/lib/mock-data';
+import { Flag } from '../page';
 
 type Job = typeof MOCK_JOBS[0];
 
@@ -38,25 +39,32 @@ const getCategoryFromDepartment = (department: string) => {
   return 'tech';
 };
 
-const JobCard = ({ job }: { job: Job }) => {
-  const detailUrl = job.details ? `/jobs/details/${job.id}` : `/apply?jobId=${job.id}`;
+const JobCard = ({ job, activeTab }: { job: Job, activeTab: string }) => {
+  const detailUrl = job.details ? `/jobs/details/${job.id}?fromTab=${activeTab}` : `/apply?jobId=${job.id}&fromTab=${activeTab}`;
   
   return (
-    <Card className="hover:shadow-md transition-shadow hover:border-primary/50">
-        <CardContent className="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+    <Card className="hover:shadow-md transition-shadow hover:border-primary/50 overflow-hidden relative">
+      <div className="absolute inset-0 opacity-30">
+        <Flag country={job.location} className="w-full h-full object-cover" />
+      </div>
+      <CardContent className="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center relative z-10">
         <div className="flex-grow">
             <h3 className="font-headline text-lg font-semibold mb-1">{job.title}</h3>
-            <p className="text-muted-foreground text-sm">{job.location}</p>
+            <p className="text-muted-foreground text-sm flex items-center">
+              <Flag country={job.location} className="h-4 w-6 mr-2" />
+              {job.location}
+            </p>
         </div>
         <Button asChild className="mt-3 sm:mt-0 sm:ml-4 flex-shrink-0 bg-sky-500 hover:bg-sky-600 text-white text-xs px-3 h-8 animate-pulse-glow">
             <Link href={detailUrl}>
               查看简章
             </Link>
         </Button>
-        </CardContent>
+      </CardContent>
     </Card>
   );
 };
+
 
 export default function JobsPage() {
   const searchParams = useSearchParams();
@@ -108,7 +116,7 @@ export default function JobsPage() {
       </div>
       <div className="space-y-4 px-1 pb-4">
         {jobs.length > 0 ? (
-          jobs.map(job => <JobCard key={job.id} job={job} />)
+          jobs.map(job => <JobCard key={job.id} job={job} activeTab={activeTab} />)
         ) : (
           <div className="text-center py-10 px-4 rounded-lg bg-muted/50">
             <p className="text-muted-foreground text-sm">该类别职位即将上线，敬请期待</p>
@@ -149,3 +157,5 @@ export default function JobsPage() {
     </div>
   );
 }
+
+    

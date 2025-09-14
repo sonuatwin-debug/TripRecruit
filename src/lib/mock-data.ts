@@ -1574,7 +1574,7 @@ export const MOCK_JOBS = [
     keywords: '财务, 副组长',
     details: {
       gender: '不限',
-      age: '不限',
+      age: '28岁以上',
       nationality: '不限',
       languages: '不限',
       salary: '2083-2500 美金 + 绩效 700-1050 美金',
@@ -2308,7 +2308,7 @@ export const MOCK_JOBS = [
         '升级与补丁管理：管理数据库升级与补丁，保证系统稳定与安全；',
         '容量规划与扩展：根据增长趋势进行扩容与规划，确保可扩展性；',
         '自动化与脚本编写：开发自动化脚本（备份、清理日志等），提升运维效率；',
-        '高可用与复制：配置主从复制与集群，确保数据同步与高可用；',
+        '高可用与复制：配置主从复制与集群，确保数据同步与高可用性；',
         '团队协作：与开发沟通设计需求，与运维协作保障系统稳定。'
       ]
     }
@@ -2445,7 +2445,14 @@ export const MOCK_JOBS = [
         '编写和管理项目文档，包括项目计划、进度报告和项目总结。'
       ]
     }
-  }
+  },
+  { id: '248', title: '大数据工程师', department: '工程部', location: '迪拜', keywords: '大数据, hadoop, spark' },
+  { id: '249', title: 'DBA工程师', department: '工程部', location: '迪拜', keywords: 'dba, mysql, oracle' },
+  { id: '250', title: '安全工程师', department: '工程部', location: '迪拜', keywords: '安全, 网络安全' },
+  { id: '251', title: '运维工程师', department: '工程部', location: '迪拜', keywords: '运维, linux' },
+  { id: '252', title: '高级网络工程师', department: '工程部', location: '迪拜', keywords: '网络, ccnp, ccie' },
+  { id: '253', title: '运维域名工程师', department: '工程部', location: '迪拜', keywords: '运维, 域名' },
+  { id: '254', title: '桌面运维', department: '工程部', location: '迪拜', keywords: '桌面运维, it支持' }
 ];
 
 export const MOCK_STORIES = [

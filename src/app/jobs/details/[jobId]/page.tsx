@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Building, MapPin, Clock, Briefcase, Users, Languages, Wallet, FileText } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 export default function JobDetailsPage() {
   const params = useParams();
@@ -32,18 +33,22 @@ export default function JobDetailsPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-8">
+
+              <Separator />
+
               <div>
                 <h3 className="font-headline text-xl font-semibold mb-4">基本信息</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground">
-                  <p><strong className="font-semibold text-foreground">性别:</strong> {details.gender}</p>
-                  <p><strong className="font-semibold text-foreground">年龄:</strong> {details.age}</p>
-                  <p className="md:col-span-2"><strong className="font-semibold text-foreground">国籍:</strong> {details.nationality}</p>
-                  <p><strong className="font-semibold text-foreground">语言要求:</strong> {details.languages}</p>
-                  <p className="md:col-span-2"><strong className="font-semibold text-foreground">薪资待遇:</strong> {details.salary}</p>
-                  <p><strong className="font-semibold text-foreground">工作时间:</strong> {details.hours}</p>
-                  <p>{details.location}</p>
+                <div className="grid grid-cols-1 gap-y-3 gap-x-8 text-muted-foreground">
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">性别:</strong> {details.gender}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">年龄:</strong> {details.age}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">国籍:</strong> {details.nationality}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">语言要求:</strong> {details.languages}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">薪资待遇:</strong> {details.salary}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">工作时间:</strong> {details.hours}</p>
                 </div>
               </div>
+
+              <Separator />
 
               <div>
                 <h3 className="font-headline text-xl font-semibold mb-4">岗位需求</h3>
@@ -51,6 +56,8 @@ export default function JobDetailsPage() {
                   {details.requirements.map((req, index) => <li key={index}>{req}</li>)}
                 </ul>
               </div>
+
+              <Separator />
 
               <div>
                 <h3 className="font-headline text-xl font-semibold mb-4">岗位职责</h3>

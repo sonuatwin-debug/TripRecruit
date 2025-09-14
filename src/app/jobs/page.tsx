@@ -111,7 +111,7 @@ export default function JobsPage() {
           jobs.map(job => <JobCard key={job.id} job={job} />)
         ) : (
           <div className="text-center py-10 px-4 rounded-lg bg-muted/50">
-            <p className="text-muted-foreground text-sm">暂无该类别的职位</p>
+            <p className="text-muted-foreground text-sm">该类别职位即将上线，敬请期待</p>
           </div>
         )}
       </div>

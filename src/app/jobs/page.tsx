@@ -43,11 +43,8 @@ const JobCard = ({ job, activeTab }: { job: Job, activeTab: string }) => {
   const detailUrl = job.details ? `/jobs/details/${job.id}?fromTab=${activeTab}` : `/apply?jobId=${job.id}&fromTab=${activeTab}`;
   
   return (
-    <Card className="hover:shadow-md transition-shadow hover:border-primary/50 overflow-hidden relative">
-      <div className="absolute inset-0 opacity-30">
-        <Flag country={job.location} className="w-full h-full object-cover" />
-      </div>
-      <CardContent className="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center relative z-10">
+    <Card className="hover:shadow-md transition-shadow hover:border-primary/50">
+      <CardContent className="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
         <div className="flex-grow">
             <h3 className="font-headline text-lg font-semibold mb-1">{job.title}</h3>
             <p className="text-muted-foreground text-sm flex items-center">
@@ -157,5 +154,3 @@ export default function JobsPage() {
     </div>
   );
 }
-
-    

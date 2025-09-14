@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { MOCK_JOBS } from '@/lib/mock-data';
 import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Flag } from '../page';
@@ -30,7 +31,7 @@ const applicationSchema = z.object({
   wechat: z.string().optional(),
   qq: z.string().optional(),
   email: z.string().optional(),
-  jobId: z.string().min(1, '意向岗位为必填项'),
+  jobTitle: z.string().min(1, '意向岗位为必填项'),
   expectedSalary: z.string().min(1, '期望薪资为必填项'),
   resume: z.any().refine(files => files?.length > 0, '简历为必填项。'),
   workLocations: z.array(z.string()).refine(value => value.some(item => item), {
@@ -50,6 +51,7 @@ type ApplicationFormValues = z.infer<typeof applicationSchema>;
 export default function ApplicationForm() {
   const searchParams = useSearchParams();
   const initialJobId = searchParams.get('jobId');
+  const initialJob = MOCK_JOBS.find(job => job.id === initialJobId);
   const { toast } = useToast();
 
   const form = useForm<ApplicationFormValues>({
@@ -60,7 +62,7 @@ export default function ApplicationForm() {
       wechat: '',
       qq: '',
       email: '',
-      jobId: initialJobId || '',
+      jobTitle: initialJob ? `${initialJob.title} - ${initialJob.location}` : '',
       expectedSalary: '',
       notes: '',
       resume: undefined,
@@ -165,7 +167,7 @@ export default function ApplicationForm() {
 
         <FormField
           control={form.control}
-          name="jobId"
+          name="jobTitle"
           render={({ field }) => (
             <FormItem>
               <FormLabel>意向岗位</FormLabel>
@@ -280,3 +282,5 @@ export default function ApplicationForm() {
     </Form>
   );
 }
+
+    

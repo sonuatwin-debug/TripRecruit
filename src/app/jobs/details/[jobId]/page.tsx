@@ -41,7 +41,7 @@ export default function JobDetailsPage() {
                   <p><strong className="font-semibold text-foreground">语言要求:</strong> {details.languages}</p>
                   <p className="md:col-span-2"><strong className="font-semibold text-foreground">薪资待遇:</strong> {details.salary}</p>
                   <p><strong className="font-semibold text-foreground">工作时间:</strong> {details.hours}</p>
-                  <p><strong className="font-semibold text-foreground">工作地点:</strong> {details.location}</p>
+                  <p>{details.location}</p>
                 </div>
               </div>
 

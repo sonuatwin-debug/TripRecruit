@@ -96,7 +96,7 @@ export default function ApplicationForm() {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>姓名 (拼音)</FormLabel>
+                <FormLabel>✍️ 姓名 (拼音)</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的姓名" {...field} />
                 </FormControl>
@@ -106,7 +106,7 @@ export default function ApplicationForm() {
           />
 
         <FormItem>
-          <FormLabel>联系方式 (最少填两项)</FormLabel>
+          <FormLabel>📞 联系方式 (最少填两项)</FormLabel>
         </FormItem>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -115,7 +115,7 @@ export default function ApplicationForm() {
             name="telegram"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Telegram</FormLabel>
+                <FormLabel>📲 Telegram</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的 Telegram" {...field} />
                 </FormControl>
@@ -129,7 +129,7 @@ export default function ApplicationForm() {
             name="wechat"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>微信</FormLabel>
+                <FormLabel>💬 微信</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的微信号" {...field} />
                 </FormControl>
@@ -142,7 +142,7 @@ export default function ApplicationForm() {
             name="qq"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>QQ</FormLabel>
+                <FormLabel>🧑‍💻 QQ</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的QQ号" {...field} />
                 </FormControl>
@@ -155,7 +155,7 @@ export default function ApplicationForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>邮箱</FormLabel>
+                <FormLabel>📧 邮箱</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的邮箱" {...field} />
                 </FormControl>
@@ -170,7 +170,7 @@ export default function ApplicationForm() {
           name="jobTitle"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>意向岗位</FormLabel>
+              <FormLabel>🎯 意向岗位</FormLabel>
               <FormControl>
                 <Input placeholder="请输入您意向的岗位" {...field} />
               </FormControl>
@@ -184,7 +184,7 @@ export default function ApplicationForm() {
             name="expectedSalary"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>期望薪资</FormLabel>
+                <FormLabel>💰 期望薪资</FormLabel>
                 <FormControl>
                   <Input placeholder="例如：15k-20k" {...field} />
                 </FormControl>
@@ -198,7 +198,7 @@ export default function ApplicationForm() {
           name="resume"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>上传简历 (PDF/Word)</FormLabel>
+              <FormLabel>📄 上传简历 (PDF/Word)</FormLabel>
               <FormControl>
                 <Input type="file" accept=".pdf,.doc,.docx" {...form.register('resume')} />
               </FormControl>

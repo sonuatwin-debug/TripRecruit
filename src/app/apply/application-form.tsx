@@ -96,7 +96,7 @@ export default function ApplicationForm() {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>✍️ 姓名 (拼音)</FormLabel>
+                <FormLabel>👤 姓名 (拼音)</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的姓名" {...field} />
                 </FormControl>
@@ -106,7 +106,7 @@ export default function ApplicationForm() {
           />
 
         <FormItem>
-          <FormLabel>📞 联系方式 (最少填两项)</FormLabel>
+          <FormLabel>☎️ 联系方式 (最少填两项)</FormLabel>
         </FormItem>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -115,7 +115,7 @@ export default function ApplicationForm() {
             name="telegram"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>📲 Telegram</FormLabel>
+                <FormLabel>✈️ Telegram</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的 Telegram" {...field} />
                 </FormControl>
@@ -142,7 +142,7 @@ export default function ApplicationForm() {
             name="qq"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>🧑‍💻 QQ</FormLabel>
+                <FormLabel>🟦 QQ</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的QQ号" {...field} />
                 </FormControl>
@@ -198,7 +198,7 @@ export default function ApplicationForm() {
           name="resume"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>📄 上传简历 (PDF/Word)</FormLabel>
+              <FormLabel>📎 上传简历 (PDF/Word)</FormLabel>
               <FormControl>
                 <Input type="file" accept=".pdf,.doc,.docx" {...form.register('resume')} />
               </FormControl>
@@ -213,7 +213,7 @@ export default function ApplicationForm() {
           render={() => (
             <FormItem>
               <div className="mb-4">
-                <FormLabel className="text-base">📍 工作地点</FormLabel>
+                <FormLabel className="text-base">🌍 工作地点</FormLabel>
                 <FormDescription>
                   请选择您感兴趣的工作地点
                 </FormDescription>
@@ -264,7 +264,7 @@ export default function ApplicationForm() {
           name="notes"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>备注 (可选)</FormLabel>
+              <FormLabel>📝 备注 (可选)</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="您可以在此填写任何补充信息"
@@ -282,5 +282,3 @@ export default function ApplicationForm() {
     </Form>
   );
 }
-
-    

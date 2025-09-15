@@ -203,7 +203,7 @@ export const contactMethods = [
   },
   { 
     name: 'Messenger', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><linearGradient id="a" x1="12" x2="12" y1="2" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0099ff"/><stop offset="1" stop-color="#a033ff"/></linearGradient></defs><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="url(#a)"/><path d="m9.22 10.22-3.88 1.94 3.88 1.94 1.94 3.88 1.94-3.88 3.88-1.94-3.88-1.94-1.94-3.88z" fill="#fff"/></svg>, 
+    icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><linearGradient id="a" x1="12" x2="12" y1="2" y2="22" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#0099ff"/><stop offset="1" stopColor="#a033ff"/></linearGradient></defs><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="url(#a)"/><path d="m9.22 10.22-3.88 1.94 3.88 1.94 1.94 3.88 1.94-3.88 3.88-1.94-3.88-1.94-1.94-3.88z" fill="#fff"/></svg>, 
     href: 'https://www.messenger.com',
     color: '#0099FF'
   },

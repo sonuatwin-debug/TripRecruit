@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -60,10 +60,18 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <div className="flex flex-col space-y-4 p-6">
-                <Link href="/" className="mr-6 flex items-center space-x-2 mb-4">
-                  <span className="font-bold font-headline text-lg">携程集团</span>
-                </Link>
+              <SheetHeader className="mb-4 text-left">
+                <SheetTitle>
+                  <span className="sr-only">导航菜单</span>
+                  <Link href="/" className="flex items-center space-x-2">
+                     <span className="font-bold font-headline text-lg">携程集团</span>
+                  </Link>
+                </SheetTitle>
+                <SheetDescription>
+                   在这里浏览网站的主要页面。
+                </SheetDescription>
+              </SheetHeader>
+              <div className="flex flex-col space-y-4">
                 {renderNavLinks(true)}
                  <Button asChild className="bg-card hover:bg-muted text-card-foreground mt-4 animate-pulse-glow">
                     <Link href="/jobs">寻找职位</Link>

@@ -120,76 +120,64 @@ const jobCategories = [
 
 const benefitsData = [
   {
-    icon: DollarSign,
+    icon: '💰',
     title: '全勤奖',
     description: '500-1000 RMB，餐补 10-15U/天',
-    category: '薪酬与激励',
   },
   {
-    icon: TrendingUpIcon,
+    icon: '📈',
     title: '绩效奖金',
     description: '转正后每月享有绩效',
-    category: '薪酬与激励',
   },
   {
-    icon: Gift,
+    icon: '🎁',
     title: '年终奖',
     description: '13-17 薪 + 春节红包',
-    category: '薪酬与激励',
   },
   {
-    icon: TrendingUp,
+    icon: '🔄',
     title: '调薪机制',
     description: '转正后每半年调薪一次',
-    category: '薪酬与激励',
   },
   {
-    icon: Award,
+    icon: '🏅',
     title: '忠诚奖',
     description: '入职满2年20000 RMB，5年50000 RMB',
-    category: '薪酬与激励',
   },
   {
-    icon: HomeIcon,
+    icon: '🏠',
     title: '住宿',
     description: '提供2-3人间高级公寓，家电WIFI齐全，不住宿含可享房屋补助',
-    category: '福利与生活',
   },
   {
-    icon: Utensils,
+    icon: '🍲',
     title: '餐饮',
     description: '公司自聘厨师，提供川湘粤菜四餐，水果饮品无限畅饮',
-    category: '福利与生活',
   },
   {
-    icon: CalendarDays,
+    icon: '🎂',
     title: '节日礼金',
     description: '生日礼金，端午、中秋、元旦、春节假日三倍工资',
-    category: '福利与生活',
   },
   {
-    icon: Handshake,
+    icon: '🤝',
     title: '团建活动',
     description: '每月各部门组织团建活动',
-    category: '福利与生活',
   },
   {
-    icon: Plane,
+    icon: '✈️',
     title: '假期补贴',
     description: '满1年享15天带薪年假及机票报销，半年不休假补贴10500 RMB',
-    category: '职业发展与关怀',
   },
   {
-    icon: GraduationCap,
+    icon: '🎓',
     title: '培训体系',
     description: '完善的培训体系（新人岗前培训、岗中晋升培训）',
-    category: '职业发展与关怀',
   },
   {
-    icon: Laptop,
+    icon: '🛡️',
     title: '工作环境',
     description: '集团为所有员工提供安全、可靠的工作环境和设备',
-    category: '职业发展与关怀',
   },
 ];
 
@@ -330,8 +318,8 @@ export default function HomePage() {
             {benefitsData.map((benefit, index) => (
               <Card key={index} className="bg-muted/30 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 flex items-start">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full mr-4 flex-shrink-0">
-                    <benefit.icon className="h-6 w-6" />
+                  <div className="text-2xl mr-4 flex-shrink-0 mt-1">
+                    {benefit.icon}
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">{benefit.title}</h3>

@@ -1,6 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Award, Globe, Heart, Lightbulb, Users, Rocket, Smile, Star } from 'lucide-react';
+import { Users, Rocket, Smile, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -42,10 +43,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card className="text-center">
                 <CardHeader>
-                    <div className="mx-auto bg-accent/20 p-3 rounded-full w-fit">
-                    <Lightbulb className="h-8 w-8 text-accent" />
-                    </div>
-                    <CardTitle className="font-headline pt-2">愿景</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-2xl">💡 愿景</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>成为全球最值得信赖和最具创新精神的旅行平台。</p>
@@ -53,10 +51,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                 <CardHeader>
-                    <div className="mx-auto bg-primary/20 p-3 rounded-full w-fit">
-                    <Heart className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="font-headline pt-2">使命</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-2xl">💙 使命</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>让每一次旅行都成为完美的旅程，连接全球旅行者。</p>
@@ -71,7 +66,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2">客户中心</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-xl">👥 客户中心</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>我们所有工作的核心都以客户为中心，致力于超越客户期望。</p>
@@ -79,7 +74,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2">团队合作</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-xl">🤝 团队合作</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>我们营造一个多元、包容和充满活力的工作环境，鼓励合作与成长。</p>
@@ -87,7 +82,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2">诚信正直</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-xl">⚖️ 诚信正直</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>我们坚持最高的道德标准，对客户、合作伙伴和员工负责。</p>
@@ -95,7 +90,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2">创新精神</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-xl">🚀 创新精神</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>我们拥抱变化，不断探索新技术和新思路，推动行业发展。</p>

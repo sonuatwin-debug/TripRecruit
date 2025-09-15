@@ -1,8 +1,8 @@
 
 
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase, Gift, Utensils, Plane, Home as HomeIcon, GraduationCap, DollarSign } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, Mail, Send, TrendingUp, Handshake, ShieldCheck, Users, Globe, Award, Code, TrendingUp as TrendingUpIcon, Briefcase, Gift, Utensils, Plane, Home as HomeIcon, GraduationCap, DollarSign, PiggyBank, CalendarDays, Laptop } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { summarizeEmployeeStories } from '@/ai/flows/ai-summarize-employee-stories';
@@ -118,19 +118,27 @@ const jobCategories = [
   }
 ];
 
-const benefits = [
-    { icon: TrendingUpIcon, text: "所有岗位转正后每月享有绩效，部门负责人和自评绩效等级SABC" },
-    { icon: DollarSign, text: "全勤奖500-1000RMB，餐补10-15U/天" },
-    { icon: TrendingUp, text: "根据工作表现，转正后每半年调薪一次，1-6000RMB (除销售市场岗位)" },
-    { icon: Gift, text: "生日礼金，端午、中秋、元旦、春节假日三倍工资" },
-    { icon: HomeIcon, text: "提供2-3人间高级公寓，家电WIFI齐全，不住宿舍可享房屋补助(300-800U)" },
+const benefitsData = {
+  "薪酬与激励": [
+    { icon: DollarSign, text: "全勤奖 500-1000 RMB，餐补 10-15U/天" },
+    { icon: TrendingUpIcon, text: "所有岗位转正后每月享有绩效" },
+    { icon: Award, text: "年终 13-17 薪 + 春节红包" },
+    { icon: TrendingUp, text: "根据工作表现，转正后每半年调薪一次" },
+    { icon: Handshake, text: "入职满 2 年忠诚奖金 20000 RMB，5 年忠诚奖金 50000 RMB" },
+  ],
+  "福利与生活": [
+    { icon: HomeIcon, text: "提供 2-3 人间高级公寓，家电 WIFI 齐全，不住宿舍可享房屋补助" },
     { icon: Utensils, text: "公司自聘厨师，提供川湘粤菜四餐，水果饮品无限畅饮" },
-    { icon: Plane, text: "满1年享15天带薪年假及机票报销，半年不休假补贴10500RMB" },
+    { icon: Gift, text: "生日礼金，端午、中秋、元旦、春节假日三倍工资" },
     { icon: Users, text: "每月各部门组织团建活动" },
-    { icon: Award, text: "年终13-17薪 + 春节红包" },
-    { icon: Handshake, text: "入职满2年忠诚奖金20000RMB，5年忠诚奖金50000RMB" },
-    { icon: GraduationCap, text: "完善的培训体系(新人岗前培训，岗中晋升培训)" }
-];
+  ],
+  "职业发展与关怀": [
+    { icon: Plane, text: "满 1 年享 15 天带薪年假及机票报销，半年不休假补贴 10500 RMB" },
+    { icon: GraduationCap, text: "完善的培训体系 (新人岗前培训，岗中晋升培训)" },
+    { icon: Laptop, text: "集团为所有员工提供安全、可靠的工作环境和设备" },
+  ],
+};
+
 
 export const contactMethods = [
   { 
@@ -260,21 +268,31 @@ export default function HomePage() {
         {/* Benefits Section */}
         <section id="benefits" className="scroll-mt-20">
           <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
-              <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
+            <h2 className="text-3xl font-bold font-headline">福利待遇</h2>
+            <p className="text-lg text-muted-foreground mt-2">我们提供全面的福利，关爱每一位员工的成长与生活。</p>
+            <div className="w-24 h-1 bg-accent mx-auto mt-4"></div>
           </div>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 gap-y-8 justify-items-center">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 w-full max-w-2xl">
-                <div className="bg-primary/10 text-primary p-3 rounded-full">
-                  <benefit.icon className="h-6 w-6" />
+          <Card className="bg-muted/30">
+              <CardContent className="p-8 md:p-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {Object.entries(benefitsData).map(([category, items]) => (
+                    <div key={category}>
+                      <h3 className="font-headline text-xl font-semibold text-primary mb-4">{category}</h3>
+                      <ul className="space-y-4">
+                        {items.map((benefit, index) => (
+                          <li key={index} className="flex items-start">
+                            <div className="bg-primary/10 text-primary p-2 rounded-full mr-4 mt-1">
+                                <benefit.icon className="h-5 w-5" />
+                            </div>
+                            <span className="text-foreground/90 text-base flex-1">{benefit.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <p className="text-foreground leading-relaxed">{benefit.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              </CardContent>
+          </Card>
         </section>
 
         {/* Job Categories Section */}

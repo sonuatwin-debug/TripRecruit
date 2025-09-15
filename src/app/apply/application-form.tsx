@@ -213,7 +213,7 @@ export default function ApplicationForm() {
           render={() => (
             <FormItem>
               <div className="mb-4">
-                <FormLabel className="text-base">工作地点</FormLabel>
+                <FormLabel className="text-base">📍 工作地点</FormLabel>
                 <FormDescription>
                   请选择您感兴趣的工作地点
                 </FormDescription>
@@ -277,7 +277,7 @@ export default function ApplicationForm() {
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">提交申请</Button>
+        <Button type="submit" size="lg" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">🚀 提交申请</Button>
       </form>
     </Form>
   );

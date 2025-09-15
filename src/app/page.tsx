@@ -288,7 +288,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {popularRegions.map((region) => (
-              <Card key={region.name} className="overflow-hidden group hover:shadow-xl transition-all">
+              <Card key={region.name} className="overflow-hidden group transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg animate-card-pulse-glow">
                 <CardContent className="p-0">
                   <div className="p-6 pb-2 text-center">
                     <h3 className="font-semibold text-xl text-foreground flex items-center justify-center">
@@ -297,7 +297,7 @@ export default function HomePage() {
                     </h3>
                   </div>
                   <div className="px-6 pb-6">
-                    <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
+                    <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground">
                       <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                     </Button>
                   </div>

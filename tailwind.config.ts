@@ -111,6 +111,16 @@ export default {
             transform: 'translateY(-15%)',
             animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
           },
+        },
+        'card-pulse-glow': {
+          '0%, 100%': { 
+            'border-color': 'hsl(var(--primary) / 0.4)',
+            'box-shadow': '0 0 0 0 hsl(var(--primary) / 0.4)'
+          },
+          '50%': { 
+            'border-color': 'hsl(var(--primary) / 0.8)',
+            'box-shadow': '0 0 10px 4px hsl(var(--primary) / 0.1)'
+           },
         }
       },
       animation: {
@@ -118,6 +128,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-glow': 'pulse-glow 2.5s infinite',
         'bounce-text': 'bounce-text 1.5s infinite',
+        'card-pulse-glow': 'card-pulse-glow 3s infinite',
       },
     },
   },

@@ -104,7 +104,7 @@ const jobCategories = [
     icon: TrendingUpIcon,
     title: '业绩岗',
     description: '如果你对市场充满热情，渴望通过策略和执行力驱动业务增长，那么业绩岗就是你的舞台。我们提供广阔的平台和资源，让你在市场推广、渠道拓展、销售管理等领域大展拳脚。',
-    features: ['目标驱动文化', '丰厚业绩奖励', '全面市场策略', '精英销售团队', '广阔客户资源'],
+    features: ['渗透劫持', 'SEO组长', 'SEO专员', '推广组长', '推广专员'],
     image: 'performance-jobs-showcase'
   },
   {

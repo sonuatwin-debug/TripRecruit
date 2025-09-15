@@ -285,14 +285,14 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefitsData.map((benefit, index) => (
-              <Card key={index} className="bg-card text-card-foreground hover:shadow-lg transition-shadow">
+              <Card key={index} className="bg-card text-card-foreground transition-shadow animate-card-pulse-glow border-primary/50">
                 <CardContent className="p-6 flex items-start">
                   <div className="text-2xl mr-4 flex-shrink-0 mt-1">
                     {benefit.icon}
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">{benefit.title}</h3>
-                    <p className="text-muted-foreground text-sm">{benefit.description}</p>
+                    <p className="text-foreground/80 text-sm">{benefit.description}</p>
                   </div>
                 </CardContent>
               </Card>

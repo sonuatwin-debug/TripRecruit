@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-home",
-      "description": "一张现代化企业办公室背景图，画面中有年轻多元化的团队成员正在讨论和协作，氛围积极向上，整体偏蓝色调，并带有轻微模糊处理。",
+      "description": "现代化企业办公室背景图，多元化的专业人士共同协作，招聘主题，积极的蓝色调。",
       "imageUrl": "https://picsum.photos/seed/200/1200/800",
-      "imageHint": "modern office team collaboration"
+      "imageHint": "modern office team collaboration, diverse professionals working together, recruitment theme, positive blue tone"
     },
     {
       "id": "news-1",
@@ -21,15 +21,15 @@
     },
     {
       "id": "about-hero",
-      "description": "携程集团办公楼的现代建筑。",
+      "description": "专业的企业会议，多元文化团队讨论公司愿景与使命，充满信任和创新的氛围。",
       "imageUrl": "https://picsum.photos/seed/4/1200/600",
-      "imageHint": "办公楼"
+      "imageHint": "professional corporate meeting, multicultural team discussing company vision and mission, trust and innovation atmosphere"
     },
     {
       "id": "contact-hero",
-      "description": "一个人在呼叫中心通过电话提供客户支持。",
+      "description": "友好的客户支持团队在现代化办公室工作，体现沟通与信任的专业环境。",
       "imageUrl": "https://picsum.photos/seed/5/1200/600",
-      "imageHint": "客户 支持"
+      "imageHint": "friendly customer support team in modern office, communication and trust theme, professional environment"
     },
     {
       "id": "tech-jobs-showcase",

@@ -31,9 +31,8 @@ export default function ContactPage() {
               <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">
                 <div 
                   className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow"
-                  style={{ color: method.color }}
                 >
-                  <div className="w-8 h-8">{method.icon}</div>
+                  <div className="w-8 h-8 flex items-center justify-center" style={{ color: method.color }}>{method.icon}</div>
                 </div>
                 <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
               </a>

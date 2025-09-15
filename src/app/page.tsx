@@ -95,7 +95,7 @@ const jobCategories = [
     icon: Code,
     title: '技术岗',
     description: '我们正在寻找顶尖的技术人才，共同打造业界领先的旅游科技平台。在这里，你将有机会接触到大数据、人工智能、云计算等前沿技术，参与核心产品的研发，用代码改变世界。',
-    features: ['前沿技术挑战', '海量数据处理', '分布式系统架构', '敏捷开发流程', '快速职业成长'],
+    features: ['运维工程师', '安全工程师', '大数据工程师', '桌面运维', '中高级产品经理'],
     image: 'tech-jobs-showcase'
   },
   {
@@ -351,5 +351,3 @@ export default function HomePage() {
     </>
   );
 }
-
-    

@@ -288,7 +288,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {popularRegions.map((region) => (
-              <Card key={region.name} className="overflow-hidden group transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg animate-card-pulse-glow">
+              <Card key={region.name} className="overflow-hidden group transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-blue-glow animate-card-pulse-glow">
                 <CardContent className="p-0">
                   <div className="p-6 pb-2 text-center">
                     <h3 className="font-semibold text-xl text-foreground flex items-center justify-center">
@@ -316,7 +316,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefitsData.map((benefit, index) => (
-              <Card key={index} className="bg-muted/30 hover:shadow-lg transition-shadow">
+              <Card key={index} className="bg-card text-card-foreground hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 flex items-start">
                   <div className="text-2xl mr-4 flex-shrink-0 mt-1">
                     {benefit.icon}

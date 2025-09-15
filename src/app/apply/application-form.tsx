@@ -96,7 +96,7 @@ export default function ApplicationForm() {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>姓名</FormLabel>
+                <FormLabel>姓名 (拼音)</FormLabel>
                 <FormControl>
                   <Input placeholder="请输入您的姓名" {...field} />
                 </FormControl>

@@ -113,7 +113,7 @@ const jobCategories = [
     icon: Briefcase,
     title: '职能岗',
     description: '作为公司的坚实后盾，职能部门在人力资源、财务、法务、行政等领域为业务发展提供全方位支持。我们欢迎专业、高效、富有责任感的你加入，共同保障公司的稳健运营。',
-    features: ['专业化分工', '跨部门协作', '完善支持体系', '多样化发展路径', '人性化管理'],
+    features: ['客服维护', '数据分析师', '运营专员', '平台体验组长', '技术客服'],
     image: 'functional-jobs-showcase'
   }
 ];

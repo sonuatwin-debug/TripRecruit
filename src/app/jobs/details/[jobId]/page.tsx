@@ -20,6 +20,9 @@ export default function JobDetailsPage() {
 
   const { details } = job;
 
+  const hasRequirements = details.requirements && details.requirements.length > 0;
+  const hasResponsibilities = details.responsibilities && details.responsibilities.length > 0;
+
   return (
     <div className="container">
       <div className="py-12 md:py-20">
@@ -48,23 +51,29 @@ export default function JobDetailsPage() {
                 </div>
               </div>
 
-              <Separator />
+              {hasRequirements && (
+                <>
+                  <Separator />
+                  <div>
+                    <h3 className="font-headline text-xl font-semibold mb-4 flex items-center gap-2">🎯 岗位需求</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                      {details.requirements.map((req, index) => <li key={index}>{req}</li>)}
+                    </ul>
+                  </div>
+                </>
+              )}
 
-              <div>
-                <h3 className="font-headline text-xl font-semibold mb-4 flex items-center gap-2">🎯 岗位需求</h3>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  {details.requirements.map((req, index) => <li key={index}>{req}</li>)}
-                </ul>
-              </div>
-
-              <Separator />
-
-              <div>
-                <h3 className="font-headline text-xl font-semibold mb-4 flex items-center gap-2">🛠️ 岗位职责</h3>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  {details.responsibilities.map((res, index) => <li key={index}>{res}</li>)}
-                </ul>
-              </div>
+              {hasResponsibilities && (
+                <>
+                  <Separator />
+                  <div>
+                    <h3 className="font-headline text-xl font-semibold mb-4 flex items-center gap-2">🛠️ 岗位职责</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                      {details.responsibilities.map((res, index) => <li key={index}>{res}</li>)}
+                    </ul>
+                  </div>
+                </>
+              )}
 
               <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-8 animate-pulse-glow">
                 <Link href={`/apply?jobId=${job.id}`}>🚀 立即申请</Link>

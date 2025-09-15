@@ -66,7 +66,7 @@ export default function JobDetailsPage() {
                 </ul>
               </div>
 
-              <Button asChild size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground mt-8 animate-pulse-glow">
+              <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-8 animate-pulse-glow">
                 <Link href={`/apply?jobId=${job.id}`}>立即申请</Link>
               </Button>
             </CardContent>

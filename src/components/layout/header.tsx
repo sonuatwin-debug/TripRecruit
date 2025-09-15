@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -6,6 +7,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { useState } from 'react';
 
 const navLinks = [
   { href: '/', label: '首页' },
@@ -19,12 +21,18 @@ const navLinks = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   const renderNavLinks = (isMobile: boolean) =>
     navLinks.map((link) => (
       <Link
         key={link.href}
         href={link.href}
+        onClick={isMobile ? handleLinkClick : undefined}
         className={cn(
           'font-medium transition-colors hover:text-primary',
           pathname === link.href ? 'text-primary' : 'text-foreground/80',
@@ -52,7 +60,7 @@ export default function Header() {
             <Link href="/jobs">寻找职位</Link>
           </Button>
 
-          <Sheet>
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" className="md:hidden">
                 <Menu className="h-6 w-6" />
@@ -63,7 +71,7 @@ export default function Header() {
               <SheetHeader className="mb-4 text-left">
                 <SheetTitle>
                   <span className="sr-only">导航菜单</span>
-                  <Link href="/" className="flex items-center space-x-2">
+                  <Link href="/" onClick={handleLinkClick} className="flex items-center space-x-2">
                      <span className="font-bold font-headline text-lg">携程集团</span>
                   </Link>
                 </SheetTitle>
@@ -74,7 +82,7 @@ export default function Header() {
               <div className="flex flex-col space-y-4">
                 {renderNavLinks(true)}
                  <Button asChild className="bg-card hover:bg-muted text-card-foreground mt-4 animate-pulse-glow">
-                    <Link href="/jobs">寻找职位</Link>
+                    <Link href="/jobs" onClick={handleLinkClick}>寻找职位</Link>
                 </Button>
               </div>
             </SheetContent>

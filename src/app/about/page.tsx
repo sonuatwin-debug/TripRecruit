@@ -43,7 +43,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2 text-2xl">💡 愿景</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-2xl">🌍 愿景</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>成为全球最值得信赖和最具创新精神的旅行平台。</p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2 text-2xl">💙 使命</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-2xl">🎯 使命</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>让每一次旅行都成为完美的旅程，连接全球旅行者。</p>
@@ -66,7 +66,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2 text-xl">👥 客户中心</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-xl">🤝 客户中心</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>我们所有工作的核心都以客户为中心，致力于超越客户期望。</p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                 <CardHeader>
-                    <CardTitle className="font-headline pt-2 text-xl">🤝 团队合作</CardTitle>
+                    <CardTitle className="font-headline pt-2 text-xl">👥 团队合作</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>我们营造一个多元、包容和充满活力的工作环境，鼓励合作与成长。</p>
@@ -126,28 +126,28 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4 md:gap-6">
               <Card className="text-center bg-accent/10 border-accent/30">
                   <CardContent className="p-6">
-                      <Rocket className="h-10 w-10 text-accent mx-auto mb-2" />
+                      <div className="text-4xl mx-auto mb-2">🌐</div>
                       <p className="text-3xl font-bold">200+</p>
                       <p className="text-sm text-muted-foreground">业务覆盖国家</p>
                   </CardContent>
               </Card>
               <Card className="text-center bg-primary/10 border-primary/30">
                   <CardContent className="p-6">
-                      <Star className="h-10 w-10 text-primary mx-auto mb-2" />
+                      <div className="text-4xl mx-auto mb-2">⭐</div>
                       <p className="text-3xl font-bold">10年</p>
                       <p className="text-sm text-muted-foreground">行业经验</p>
                   </CardContent>
               </Card>
               <Card className="text-center bg-primary/10 border-primary/30">
                   <CardContent className="p-6">
-                       <Smile className="h-10 w-10 text-primary mx-auto mb-2" />
+                       <div className="text-4xl mx-auto mb-2">😊</div>
                       <p className="text-3xl font-bold">95%</p>
                       <p className="text-sm text-muted-foreground">用户满意度</p>
                   </CardContent>
               </Card>
               <Card className="text-center bg-accent/10 border-accent/30">
                   <CardContent className="p-6">
-                      <Users className="h-10 w-10 text-accent mx-auto mb-2" />
+                      <div className="text-4xl mx-auto mb-2">👨‍👩‍👧‍👦</div>
                       <p className="text-3xl font-bold">10000+</p>
                       <p className="text-sm text-muted-foreground">全球员工</p>
                   </CardContent>

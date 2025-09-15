@@ -274,17 +274,17 @@ export default function HomePage() {
           </div>
           <Card className="bg-muted/30">
               <CardContent className="p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
                   {Object.entries(benefitsData).map(([category, items]) => (
                     <div key={category}>
-                      <h3 className="font-headline text-xl font-semibold text-primary mb-4">{category}</h3>
-                      <ul className="space-y-4">
+                      <h3 className="font-headline text-xl font-semibold text-primary mb-6">{category}</h3>
+                      <ul>
                         {items.map((benefit, index) => (
-                          <li key={index} className="flex items-start">
-                            <div className="bg-primary/10 text-primary p-2 rounded-full mr-4 mt-1">
+                          <li key={index} className="flex items-start mb-6">
+                            <div className="bg-primary/10 text-primary p-2 rounded-full mr-3 flex-shrink-0">
                                 <benefit.icon className="h-5 w-5" />
                             </div>
-                            <span className="text-foreground/90 text-base flex-1">{benefit.text}</span>
+                            <span className="text-foreground/90 text-base mt-1">{benefit.text}</span>
                           </li>
                         ))}
                       </ul>

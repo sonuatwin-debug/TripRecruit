@@ -297,7 +297,7 @@ export default function HomePage() {
                     </h3>
                   </div>
                   <div className="px-6 pb-6">
-                    <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground">
+                    <Button asChild variant="outline" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
                       <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                     </Button>
                   </div>

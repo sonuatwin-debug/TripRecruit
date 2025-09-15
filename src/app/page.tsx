@@ -284,19 +284,22 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-accent mx-auto mt-4"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefitsData.map((benefit, index) => (
-              <Card key={index} className="bg-card text-card-foreground transition-shadow animate-card-pulse-glow border-primary/50">
-                <CardContent className="p-6 flex items-start">
-                  <div className="text-2xl mr-4 flex-shrink-0 mt-1">
-                    {benefit.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">{benefit.title}</h3>
-                    <p className="text-foreground/80 text-sm">{benefit.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          {benefitsData.map((benefit, index) => (
+            <Card 
+              key={index} 
+              className="bg-gradient-to-br from-card to-muted/30 shadow-lg border border-transparent hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-xl animate-card-pulse-glow"
+            >
+              <CardContent className="p-6 flex items-start">
+                <div className="text-3xl mr-5 flex-shrink-0 mt-1">
+                  {benefit.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-foreground mb-1">{benefit.title}</h3>
+                  <p className="text-foreground/90 text-sm">{benefit.description}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
           </div>
         </section>
 

@@ -57,32 +57,32 @@ const popularRegions = [
 
 const advantages = [
     {
-        icon: Globe,
+        icon: '🌍',
         title: "全球化平台",
         description: "加入全球领先的旅游集团，在国际化的舞台上施展才华，接触多元文化，拓展全球视野。"
     },
     {
-        icon: TrendingUp,
+        icon: '📈',
         title: "广阔发展空间",
         description: "我们提供清晰的职业路径和丰富的晋升机会，无论您是技术专家还是管理人才，都能找到自己的发展方向。"
     },
     {
-        icon: Award,
+        icon: '💵',
         title: "有竞争力的薪酬",
         description: "提供行业内富有竞争力的薪资和福利待遇，确保您的付出获得应有的回报。"
     },
     {
-        icon: Users,
+        icon: '🤝',
         title: "优秀团队文化",
         description: "与顶尖人才共事，在开放、协作的氛围中共同成长，我们鼓励创新，拥抱变化。"
     },
     {
-        icon: Handshake,
+        icon: '🎓',
         title: "完善的员工培训",
         description: "我们拥有健全的培训体系，从入职引导到专业技能提升，全方位支持您的个人成长和职业发展。"
     },
     {
-        icon: ShieldCheck,
+        icon: '🛡️',
         title: "全方位员工关怀",
         description: "我们关注每一位员工的福祉，提供全面的健康保障、舒适的工作环境和丰富的员工活动。"
     }
@@ -391,8 +391,8 @@ export default function HomePage() {
                 {advantages.map((advantage, index) => (
                     <Card key={index} className="text-center p-6">
                         <div className="flex justify-center mb-4">
-                            <div className="bg-primary/10 text-primary p-4 rounded-full">
-                                <advantage.icon className="h-8 w-8" />
+                            <div className="text-4xl">
+                                {advantage.icon}
                             </div>
                         </div>
                         <h3 className="font-headline text-xl font-semibold mb-2">{advantage.title}</h3>

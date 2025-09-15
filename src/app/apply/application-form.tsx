@@ -12,7 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Flag } from '../page';
+import { Flag } from '@/components/flag';
 
 const locations = [
     { id: 'philippines', label: '菲律宾' },

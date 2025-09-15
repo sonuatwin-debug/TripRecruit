@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Search } from 'lucide-react';
 import { MOCK_JOBS } from '@/lib/mock-data';
-import { Flag } from '../page';
+import { Flag } from '@/components/flag';
 
 type Job = typeof MOCK_JOBS[0];
 
@@ -127,7 +127,8 @@ export default function JobsPage() {
     <div className="container">
       <div className="py-12 md:py-20 flex flex-col h-full">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold font-headline mb-2">
+          <h1 className="text-4xl font-bold font-headline mb-2 flex items-center justify-center gap-3">
+            {locationParam && <Flag country={locationParam} className="h-8 w-12" />}
             {locationParam ? `${locationParam} 职位` : '探索机会'}
           </h1>
           <p className="text-lg text-muted-foreground">找到适合您的角色。</p>

@@ -118,26 +118,80 @@ const jobCategories = [
   }
 ];
 
-const benefitsData = {
-  "薪酬与激励": [
-    { icon: DollarSign, text: "全勤奖 500-1000 RMB，餐补 10-15U/天" },
-    { icon: TrendingUpIcon, text: "所有岗位转正后每月享有绩效" },
-    { icon: Award, text: "年终 13-17 薪 + 春节红包" },
-    { icon: TrendingUp, text: "根据工作表现，转正后每半年调薪一次" },
-    { icon: Handshake, text: "入职满 2 年忠诚奖金 20000 RMB，5 年忠诚奖金 50000 RMB" },
-  ],
-  "福利与生活": [
-    { icon: HomeIcon, text: "提供 2-3 人间高级公寓，家电 WIFI 齐全，不住宿舍可享房屋补助" },
-    { icon: Utensils, text: "公司自聘厨师，提供川湘粤菜四餐，水果饮品无限畅饮" },
-    { icon: Gift, text: "生日礼金，端午、中秋、元旦、春节假日三倍工资" },
-    { icon: Users, text: "每月各部门组织团建活动" },
-  ],
-  "职业发展与关怀": [
-    { icon: Plane, text: "满 1 年享 15 天带薪年假及机票报销，半年不休假补贴 10500 RMB" },
-    { icon: GraduationCap, text: "完善的培训体系 (新人岗前培训，岗中晋升培训)" },
-    { icon: Laptop, text: "集团为所有员工提供安全、可靠的工作环境和设备" },
-  ],
-};
+const benefitsData = [
+  {
+    icon: DollarSign,
+    title: '全勤奖',
+    description: '500-1000 RMB，餐补 10-15U/天',
+    category: '薪酬与激励',
+  },
+  {
+    icon: TrendingUpIcon,
+    title: '绩效奖金',
+    description: '转正后每月享有绩效',
+    category: '薪酬与激励',
+  },
+  {
+    icon: Gift,
+    title: '年终奖',
+    description: '13-17 薪 + 春节红包',
+    category: '薪酬与激励',
+  },
+  {
+    icon: TrendingUp,
+    title: '调薪机制',
+    description: '转正后每半年调薪一次',
+    category: '薪酬与激励',
+  },
+  {
+    icon: Award,
+    title: '忠诚奖',
+    description: '入职满2年20000 RMB，5年50000 RMB',
+    category: '薪酬与激励',
+  },
+  {
+    icon: HomeIcon,
+    title: '住宿',
+    description: '提供2-3人间高级公寓，家电WIFI齐全，不住宿含可享房屋补助',
+    category: '福利与生活',
+  },
+  {
+    icon: Utensils,
+    title: '餐饮',
+    description: '公司自聘厨师，提供川湘粤菜四餐，水果饮品无限畅饮',
+    category: '福利与生活',
+  },
+  {
+    icon: CalendarDays,
+    title: '节日礼金',
+    description: '生日礼金，端午、中秋、元旦、春节假日三倍工资',
+    category: '福利与生活',
+  },
+  {
+    icon: Handshake,
+    title: '团建活动',
+    description: '每月各部门组织团建活动',
+    category: '福利与生活',
+  },
+  {
+    icon: Plane,
+    title: '假期补贴',
+    description: '满1年享15天带薪年假及机票报销，半年不休假补贴10500 RMB',
+    category: '职业发展与关怀',
+  },
+  {
+    icon: GraduationCap,
+    title: '培训体系',
+    description: '完善的培训体系（新人岗前培训、岗中晋升培训）',
+    category: '职业发展与关怀',
+  },
+  {
+    icon: Laptop,
+    title: '工作环境',
+    description: '集团为所有员工提供安全、可靠的工作环境和设备',
+    category: '职业发展与关怀',
+  },
+];
 
 
 export const contactMethods = [
@@ -272,27 +326,21 @@ export default function HomePage() {
             <p className="text-lg text-muted-foreground mt-2">我们提供全面的福利，关爱每一位员工的成长与生活。</p>
             <div className="w-24 h-1 bg-accent mx-auto mt-4"></div>
           </div>
-          <Card className="bg-muted/30">
-              <CardContent className="p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
-                  {Object.entries(benefitsData).map(([category, items]) => (
-                    <div key={category}>
-                      <h3 className="font-headline text-xl font-semibold text-primary mb-6">{category}</h3>
-                      <ul>
-                        {items.map((benefit, index) => (
-                          <li key={index} className="flex items-start mb-6">
-                            <div className="bg-primary/10 text-primary p-2 rounded-full mr-3 flex-shrink-0">
-                                <benefit.icon className="h-5 w-5" />
-                            </div>
-                            <span className="text-foreground/90 text-base mt-1">{benefit.text}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-          </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefitsData.map((benefit, index) => (
+              <Card key={index} className="bg-muted/30 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 flex items-start">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full mr-4 flex-shrink-0">
+                    <benefit.icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">{benefit.title}</h3>
+                    <p className="text-muted-foreground text-sm">{benefit.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </section>
 
         {/* Job Categories Section */}

@@ -8,7 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Search, Code, TrendingUp, Briefcase } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { Flag } from '../page';
 
@@ -18,17 +18,17 @@ const jobCategories = {
   tech: {
     title: '技术岗位',
     departments: ['工程部', '产品部', '设计部', '数据科学'],
-    icon: Code,
+    icon: '👨‍💻',
   },
   performance: {
     title: '业绩岗位',
     departments: ['市场部'],
-    icon: TrendingUp,
+    icon: '📈',
   },
   functional: {
     title: '职能岗位',
     departments: ['职能部'],
-    icon: Briefcase,
+    icon: '🏢',
   },
 };
 
@@ -102,11 +102,11 @@ export default function JobsPage() {
       functional: filteredJobs.filter(job => jobCategories.functional.departments.includes(job.department)),
   }), [filteredJobs]);
 
-  const JobsColumn = ({ jobs, title, icon: Icon }: { jobs: Job[], title: string, icon: React.ElementType }) => (
+  const JobsColumn = ({ jobs, title, icon }: { jobs: Job[], title: string, icon: string }) => (
     <div className="w-full">
       <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm py-4 mb-4">
         <h2 className="text-xl font-bold font-headline flex items-center gap-2 px-2">
-          <Icon className="h-5 w-5 text-primary" />
+          <span className="text-2xl">{icon}</span>
           {title}
           <span className="text-sm font-normal text-muted-foreground ml-2">({jobs.length})</span>
         </h2>

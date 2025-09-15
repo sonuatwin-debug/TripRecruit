@@ -39,10 +39,10 @@ export default function JobDetailsPage() {
               <div>
                 <h3 className="font-headline text-xl font-semibold mb-4 flex items-center gap-2">📋 基本信息</h3>
                 <div className="grid grid-cols-1 gap-y-3 gap-x-8 text-muted-foreground">
-                  <p><strong className="font-semibold text-foreground w-24 inline-block">性别:</strong> {details.gender}</p>
-                  <p><strong className="font-semibold text-foreground w-24 inline-block">年龄:</strong> {details.age}</p>
-                  <p><strong className="font-semibold text-foreground w-24 inline-block">国籍:</strong> {details.nationality}</p>
-                  <p><strong className="font-semibold text-foreground w-24 inline-block">语言要求:</strong> {details.languages}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">⚧️ 性别:</strong> {details.gender}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">⌛ 年龄:</strong> {details.age}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">🌐 国籍:</strong> {details.nationality}</p>
+                  <p><strong className="font-semibold text-foreground w-24 inline-block">🗣️ 语言要求:</strong> {details.languages}</p>
                   <p><strong className="font-semibold text-foreground w-24 inline-block">💰 薪资待遇:</strong> {details.salary}</p>
                   <p><strong className="font-semibold text-foreground w-24 inline-block">⏰ 工作时间:</strong> {details.hours}</p>
                 </div>

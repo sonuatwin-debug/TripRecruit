@@ -271,12 +271,165 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '16', title: '招商专员', department: '市场部', location: '迪拜', keywords: '招商, 销售' },
-  { id: '17', title: '招商组长', department: '市场部', location: '迪拜', keywords: '招商, 管理' },
-  { id: '18', title: '代理发展专员', department: '市场部', location: '迪拜', keywords: '代理, 发展' },
-  { id: '19', title: '代理发展组长', department: '市场部', location: '迪拜', keywords: '代理, 管理' },
-  { id: '20', title: '代理部高管', department: '市场部', location: '迪拜', keywords: '代理, 高管' },
-  { id: '21', title: '业务专员（推广）', department: '市场部', location: '迪拜', keywords: '业务, 推广' },
+  { 
+    id: '16', 
+    title: '招商专员', 
+    department: '市场部', 
+    location: '迪拜', 
+    keywords: '招商, 销售',
+    details: {
+      salary: '10K-12K',
+      hours: '10:00 - 20:00，10休2-4',
+      gender: '男',
+      age: '20-38岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '配合团队工作，坚持不懈，遇到困难能迎刃而解，有交流、有担当；',
+        '有发展代理经验者优先，服从上级安排，性格开朗；',
+        '听话、有上进心，善于学习，有培养价值。'
+      ],
+      responsibilities: [
+        '利用各种平台、渠道和工具进行网络推广，获取潜在客户；',
+        '搜集并分析推广反馈数据，不断优化推广方法；',
+        '收集同行的推广信息进行对比，提出改善或调整方案；',
+        '完成上级下达的各项任务。'
+      ]
+    }
+  },
+  { 
+    id: '17', 
+    title: '招商组长', 
+    department: '市场部', 
+    location: '迪拜', 
+    keywords: '招商, 管理',
+    details: {
+      salary: '12K 转正后 15K',
+      hours: '09:00 - 19:00，10休2~4天',
+      gender: '不限',
+      age: '20-38岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '资深招商经验，具备管理能力，有冲劲和信心带领团队前进；',
+        '可接受团队加入，集团离职组长优先；',
+        '有渠道投放经验者优先考虑。'
+      ],
+      responsibilities: [
+        '在业务运营过程中，起到上传下达的作用，并能解决常规业务问题；',
+        '具备较强执行力，能有条理地规划和实施业务开展；',
+        '熟悉行业产品，能结合日常管理与运营，提升团队综合实力。'
+      ]
+    }
+  },
+  { 
+    id: '18', 
+    title: '代理发展专员', 
+    department: '市场部', 
+    location: '迪拜', 
+    keywords: '代理, 发展',
+    details: {
+      salary: '10K-12K + 业绩提成',
+      hours: '每日工作 10 小时，月休4天',
+      gender: '不限',
+      age: '20-38岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '有发展代理经验者优先；',
+        '配合团队工作，具备坚持精神，遇到困难能迎刃而解；',
+        '服从上级安排，性格开朗，善于交流；',
+        '有上进心，乐于学习，有培养潜力。'
+      ],
+      responsibilities: [
+        '利用各类平台、渠道和工具进行网络推广，获取潜在客户；',
+        '收集并分析推广反馈数据，不断优化推广方案；',
+        '日常维护代理关系，合理解决代理需求；',
+        '完成上级交办的各项任务。'
+      ]
+    }
+  },
+  { 
+    id: '19', 
+    title: '代理发展组长', 
+    department: '市场部', 
+    location: '迪拜', 
+    keywords: '代理, 管理',
+    details: {
+      salary: '12K 转 15K + 提成（具体面议）',
+      hours: '依部门排班，10休2-4',
+      gender: '不限',
+      age: '20-38岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '资深招商经验，具备团队管理经验；',
+        '有冲劲、有信心带领团队前进；',
+        '可接受团队，集团离职组长优先录用；',
+        '有投放渠道费经验者优先。'
+      ],
+      responsibilities: [
+        '在业务运营过程中，起到上传下达作用，并能解决常规业务问题；',
+        '具备较强执行力，能有条理地规划和实施业务工作；',
+        '熟悉行业产品，能够结合日常管理与运营，提高团队综合实力。'
+      ]
+    }
+  },
+  { 
+    id: '20', 
+    title: '代理部高管', 
+    department: '市场部', 
+    location: '迪拜', 
+    keywords: '代理, 高管',
+    details: {
+      salary: '面议',
+      hours: '09:00-19:00，依公司安排',
+      gender: '不限',
+      age: '20-38岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '1年以上平台代理维护 / 发展等管理经验；',
+        '有代理资源，市场拓展能力强；',
+        '具备较强的客户挖掘能力，熟悉市场；',
+        '拥有丰富的资源和人脉关系。'
+      ],
+      responsibilities: [
+        '具备大客户代理资源，利用定制活动挖掘大代理到平台，开发新大客户，并解决业务问题；',
+        '全面负责代理部业务工作，制定招商战略并组织实施，确保完成公司业绩指标；',
+        '负责团队建设与管理，包括招聘、培训、考核、激励及渠道管理，保障人力资源的有效配置；',
+        '组织市场调查与经营分析，掌握竞争对手动态，制定并执行代理活动，确保市场竞争优势。'
+      ]
+    }
+  },
+  { 
+    id: '21', 
+    title: '业务专员（推广）', 
+    department: '市场部', 
+    location: '迪拜', 
+    keywords: '业务, 推广',
+    details: {
+      salary: '10K 转正 12K + 20% 提成',
+      hours: '10:00-20:00，10休3/4',
+      gender: '男',
+      age: '20-38岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '认可并能够融入团队合作；',
+        '具备良好的沟通与交际能力；',
+        '熟悉行业数据，具备一定数据敏感度；',
+        '有用户资源 / 懂体育者优先考虑。'
+      ],
+      responsibilities: [
+        '负责推广引流与转化，维护新增用户，并对个人开拓的用户数据负责；',
+        '按团队计划完成每月个人新增代理 / 推广团队目标；',
+        '针对注册存款用户，进行每日数据汇总与汇报；',
+        '协助组长整理并分析用户周期数据，及时调整策略；',
+        '配合团队完成集团各阶段战略目标。'
+      ]
+    }
+  },
   { 
     id: '22', 
     title: '后台专员', 
@@ -846,31 +999,7 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { 
-    id: '179', 
-    title: '数据分析专员', 
-    department: '职能部', 
-    location: '菲律宾', 
-    keywords: '数据分析',
-    details: {
-      gender: '不限',
-      age: '21-33岁',
-      nationality: '外籍',
-      languages: '中文流利，汉语熟练',
-      salary: '10k-12k',
-      hours: '9小时工作制，月休4天',
-      requirements: [
-        '学历要求：大专及以上',
-        '技能要求：熟练运用 Excel 表格'
-      ],
-      responsibilities: [
-        '统计并整理业务部门的住宿费用；',
-        '核实住宿人员信息，并提出房间优化建议；',
-        '分析与统计内宿的空房率与空床率；',
-        '对接并解答有关费用计算方式的疑问。'
-      ]
-    }
-  },
+  { geo: '中国', title: '数据分析专员', department: '职能部', location: '菲律宾', keywords: '数据分析', id: '179' },
   { 
     id: '180', 
     title: '劳动关系专员', 
@@ -2192,36 +2321,7 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { 
-    id: '233', 
-    title: '桌面运维', 
-    department: '工程部', 
-    location: '迪拜', 
-    keywords: '桌面运维, it支持',
-    details: {
-      salary: '面议',
-      hours: '9小时 / 周休一',
-      age: '21–35岁',
-      nationality: '中国籍、外籍',
-      languages: '基本中文',
-      gender: '不限',
-      requirements: [
-        '计算机、网络相关专业毕业或有半年以上计算机/网络维护相关工作经验；',
-        '熟悉局域网、互联网维护工作；',
-        '熟悉电脑软硬件安装与维护；',
-        '熟练掌握 Windows、Mac OS 操作系统运维经验；',
-        '能够独立设计并部署中小型企业网络；',
-        '学习能力强，具备团队精神和吃苦耐劳精神；',
-        '了解 Cisco 防火墙、路由器、交换机等产品有限；',
-        '服从领导安排。'
-      ],
-      responsibilities: [
-        '负责公司局域网、互联网维护工作；',
-        '负责公司电脑软硬件安装与维护；',
-        '完成部门领导安排的工作。'
-      ]
-    }
-  },
+  { _id: '233', title: '桌面运维', department: '工程部', location: '迪拜', keywords: '桌面运维, it支持', id: '233' },
   { 
     id: '234', 
     title: '安全工程师', 
@@ -2648,39 +2748,7 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { 
-    id: '247', 
-    title: '项目经理', 
-    department: '工程部', 
-    location: '菲律宾', 
-    keywords: '项目, 管理, pmp',
-    details: {
-      salary: '35K-45K + 绩效（A:1.5 / B:1.2 / C:1.0）',
-      hours: '9小时 / 周休1',
-      gender: '不限',
-      nationality: '外籍',
-      languages: '中文听说读写',
-      requirements: [
-        '计算机科学、信息技术相关专业，熟悉 Linux/Unix/Windows 服务器操作系统；',
-        '了解常见数据库（MySQL、Oracle）及应用服务器（Nginx、Apache）；',
-        '3-5年以上 IT 运维管理或技术支持经验，至少 2 年以上项目管理经验；',
-        '熟悉 IT 基础架构、网络、服务器、虚拟化、云计算、数据库等相关技术；',
-        '具备管理多个并行项目的能力，能够协调资源并处理优先级冲突；',
-        '熟悉云平台（AWS、Azure、Aliyun）运维，掌握 CI/CD、DevOps 相关技术（Jenkins、Docker、Kubernetes）；',
-        '优秀的沟通能力，能与技术团队、业务部门及外部合作伙伴高效沟通；',
-        '善于协调内外部资源，确保项目按计划推进；',
-        '具备良好的文档编写能力，能够撰写运维计划、流程文档及问题报告。'
-      ],
-      responsibilities: [
-        '制定运维项目整体计划，包括时间表、资源需求、预算和风险管理；',
-        '协调各部门，确保项目资源合理分配，并与团队及外部供应商保持良好沟通；',
-        '跟踪项目进展，及时解决问题，确保项目按时交付；',
-        '与业务部门、开发团队、外部供应商等保持沟通，确保运维与业务需求一致；',
-        '统计日常运维工作，梳理各小组日、周、月度工作进度及核心工作；',
-        '编写和管理项目文档，包括项目计划、进度报告和项目总结。'
-      ]
-    }
-  }
+  { _id: '247', title: '项目经理', department: '工程部', location: '菲律宾', keywords: '项目, 管理, pmp', id: '247' }
 ];
 
 export const MOCK_STORIES = [
@@ -2760,3 +2828,4 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+

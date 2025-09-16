@@ -547,7 +547,34 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '35', title: '总监助理', department: '职能部', location: '香港', keywords: '助理, 行政' },
+  { 
+    id: '35', 
+    title: '总监助理', 
+    department: '职能部', 
+    location: '香港', 
+    keywords: '助理, 行政',
+    details: {
+      salary: '面议',
+      hours: '9小时，月休4',
+      gender: '不限',
+      age: '21-50岁',
+      nationality: '香港籍',
+      languages: '中文流利',
+      requirements: [
+        '形象气质佳；',
+        '持有驾照，会开车，熟悉本地路线；',
+        '熟悉本地银行业务，优先考虑具备金融、银行、理财相关背景；',
+        '5年以上相关工作经验；',
+        '具备强执行力和应变能力，有责任心。'
+      ],
+      responsibilities: [
+        '协助老板处理日常工作事务；',
+        '对接并处理外部机构相关事宜；',
+        '贯彻落实上级下达的各项指令；',
+        '在业务和管理中提供支持，确保工作高效推进。'
+      ]
+    } 
+  },
   { 
     id: '36', 
     title: '行政总务', 
@@ -1004,7 +1031,6 @@ export const MOCK_JOBS = [
     details: {
       salary: '面议',
       hours: '9休6',
-      location: '不限',
       nationality: '不限',
       languages: '中文',
       requirements: [
@@ -1028,7 +1054,6 @@ export const MOCK_JOBS = [
     details: {
       salary: '10K-18K',
       hours: '9休6（长白班）',
-      location: '不限',
       nationality: '不限',
       languages: '中文',
       requirements: [
@@ -1114,7 +1139,6 @@ export const MOCK_JOBS = [
     details: {
       salary: '15K-20K（面议）',
       hours: '10-12小时 / 月休2-4天（具体视情况而定）',
-      location: '中国',
       nationality: '不限',
       gender: '不限 / 35岁以下',
       age: '35岁以下',
@@ -1510,7 +1534,8 @@ export const MOCK_JOBS = [
         '精通体育推广或电竞推广者优先；',
         '熟悉贴吧、百度、微博及各类媒体推广渠道；',
         '需具备转化经验，懂体育。'
-      ]
+      ],
+      responsibilities: []
     } 
   },
   { 
@@ -1531,7 +1556,8 @@ export const MOCK_JOBS = [
         '在抖音、公众号、小红书等自媒体渠道寻找相关博主合作；',
         '善用各类网络资源与工具进行产品推广；',
         '具备出色的沟通与表达能力，能独立完成推广工作。'
-      ]
+      ],
+      responsibilities: []
     }
   },
   { id: '72', title: '电话专员', department: '职能部', location: '斯里兰卡', keywords: '电话' },
@@ -3153,10 +3179,10 @@ export const MOCK_JOBS = [
     details: {
       gender: '不限',
       age: '20-36',
-      nationality: '',
-      languages: '',
       salary: '',
       hours: '',
+      nationality: '',
+      languages: '',
       requirements: [],
       responsibilities: []
     }
@@ -3240,6 +3266,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

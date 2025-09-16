@@ -489,7 +489,7 @@ export const MOCK_JOBS = [
     }
   },
   { 
-    id: '24', _id: '31', title: '财务主管', department: '职能部', location: '迪拜', keywords: '财务, 主管', id: '31', details: { salary: '2500 - 3500 USD/月', hours: '9小时，周休1', gender: '不限', age: '21-35岁（经验丰富者可适当放宽）', nationality: '外籍（马来/印尼优先）/ 台湾籍', languages: '中文熟练，英语可基本沟通', requirements: ['独立负责财务工作小组，能根据公司制度对下属提供支持并监督日常财务工作；', '具备较强的成本管理、风险控制和财务数据分析能力，对数据敏感，发现问题及时上报；', '能执行并协调财务审核工作；', '熟悉预算管理，能统计、汇总月度预算并上报审批；', '熟练编制财务分析报表；', '具备良好的组织协调能力、表达能力及团队合作精神；', '有财务管理岗位经历。'], responsibilities: [] } },
+    id: '24', _id: '31', title: '财务主管', department: '职能部', location: '迪拜', keywords: '财务, 主管', details: { salary: '2500 - 3500 USD/月', hours: '9小时，周休1', gender: '不限', age: '21-35岁（经验丰富者可适当放宽）', nationality: '外籍（马来/印尼优先）/ 台湾籍', languages: '中文熟练，英语可基本沟通', requirements: ['独立负责财务工作小组，能根据公司制度对下属提供支持并监督日常财务工作；', '具备较强的成本管理、风险控制和财务数据分析能力，对数据敏感，发现问题及时上报；', '能执行并协调财务审核工作；', '熟悉预算管理，能统计、汇总月度预算并上报审批；', '熟练编制财务分析报表；', '具备良好的组织协调能力、表达能力及团队合作精神；', '有财务管理岗位经历。'], responsibilities: [] } },
   { _id: '32', title: '会计组长', department: '职能部', location: '迪拜', keywords: '会计, 组长', id: '32', details: { salary: '1200 - 1700 USD/月', hours: '9小时，周休1', gender: '不限', age: '21-35岁', nationality: '外籍（马来/印尼优先）/ 台湾籍', languages: '中文熟练，英语可基本沟通', requirements: [], responsibilities: ['负责公司全部日常账务处理及审查，编制各类管理报表；', '对数字敏感，具备数据分析能力，能发现并解决财务问题；', '负责应收账款与应付账款的管理与核算；', '熟练使用 Excel 及函数公式处理财务数据。'] } },
   { 
     id: '33', 
@@ -1025,7 +1025,7 @@ export const MOCK_JOBS = [
       salary: '10000-12000',
       hours: '12小时 / 月休2天',
       nationality: '不限',
-      gender: '不限',
+      gender: '不限 / 30岁以下',
       age: '30岁以下',
       languages: '中文',
       requirements: [
@@ -1059,7 +1059,7 @@ export const MOCK_JOBS = [
       hours: '10-12小时 / 月休2-4天（具体视情况而定）',
       location: '中国',
       nationality: '不限',
-      gender: '不限',
+      gender: '不限 / 35岁以下',
       age: '35岁以下',
       languages: '中文',
       requirements: [
@@ -1434,8 +1434,49 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '70', title: '转化专员', department: '市场部', location: '马来西亚', keywords: '转化, 运营' },
-  { id: '71', title: '自媒体运营', department: '市场部', location: '马来西亚', keywords: '自媒体, 运营' },
+  { 
+    id: '70', 
+    title: '转化专员', 
+    department: '市场部', 
+    location: '马来西亚', 
+    keywords: '转化, 运营',
+    details: {
+      salary: '1100-1400U',
+      hours: '10小时',
+      gender: '男',
+      age: '30岁以下',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '仅限男性，综合盘工作经验优先；',
+        '人品端正，思路清晰，责任感强；',
+        '精通体育推广或电竞推广者优先；',
+        '熟悉贴吧、百度、微博及各类媒体推广渠道；',
+        '需具备转化经验，懂体育。'
+      ]
+    } 
+  },
+  { 
+    id: '71', 
+    title: '自媒体运营', 
+    department: '市场部', 
+    location: '马来西亚', 
+    keywords: '自媒体, 运营',
+    details: {
+      salary: '面议',
+      hours: '10小时',
+      gender: '不限',
+      age: '不限',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '通过多种组合方式提升产品曝光度；',
+        '在抖音、公众号、小红书等自媒体渠道寻找相关博主合作；',
+        '善用各类网络资源与工具进行产品推广；',
+        '具备出色的沟通与表达能力，能独立完成推广工作。'
+      ]
+    }
+  },
   { id: '72', title: '电话专员', department: '职能部', location: '斯里兰卡', keywords: '电话' },
   { id: '73', title: '运营专员', department: '职能部', location: '斯里兰卡', keywords: '运营' },
   { id: '74', title: '活动运营专员', department: '职能部', location: '斯里兰卡', keywords: '活动, 运营' },
@@ -2619,36 +2660,6 @@ export const MOCK_JOBS = [
       responsibilities: []
     }
   },
-  { 
-    id: '232', 
-    title: '运维域名工程师', 
-    department: '工程部', 
-    location: '迪拜', 
-    keywords: '运维, 域名',
-    details: {
-      salary: '面议',
-      hours: '9小时 / 周休一',
-      age: '21–35岁',
-      nationality: '中国籍/外籍',
-      languages: '基本中文',
-      gender: '不限',
-      requirements: [
-        '计算机、网络相关专业毕业或有半年以上计算机/网络维护相关工作经验；',
-        '熟悉局域网、互联网维护工作；',
-        '熟悉电脑软硬件安装与维护；',
-        '熟练掌握 Windows、Mac OS 操作系统运维经验；',
-        '能够独立设计并部署中小型企业网络；',
-        '学习能力强，具备团队精神和吃苦耐劳精神；',
-        '了解 Cisco 防火墙、路由器、交换机等产品有限；',
-        '服从领导安排。'
-      ],
-      responsibilities: [
-        '负责公司局域网、互联网维护工作；',
-        '负责公司电脑软硬件安装与维护；',
-        '完成部门领导安排的工作。'
-      ]
-    }
-  },
   { _id: '233', title: '桌面运维', department: '工程部', location: '迪拜', keywords: '桌面运维, it支持', id: '233' },
   { 
     id: '234', 
@@ -3172,6 +3183,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

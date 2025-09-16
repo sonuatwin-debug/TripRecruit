@@ -2232,7 +2232,7 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '96', title: '数据分析师', department: '职能部', location: '斯里兰卡', keywords: '数据分析' },
+  { id: '96', title: '数据分析师', department: '数据科学', location: '斯里兰卡', keywords: '数据分析' },
   { id: '97', title: '后端工程师（业务开发）', department: '工程部', location: '斯里兰卡', keywords: '后端' },
   { id: '98', title: '安卓工程师', department: '工程部', location: '斯里兰卡', keywords: '安卓' },
   { id: '99', title: 'IOS工程师', department: '工程部', location: '斯里兰卡', keywords: 'ios' },
@@ -3914,6 +3914,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

@@ -2927,7 +2927,17 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { _id: '247', title: '项目经理', department: '工程部', location: '菲律宾', keywords: '项目, 管理, pmp', id: '247' }
+  { 
+    id: '247', 
+    title: '项目经理', 
+    department: '工程部', 
+    location: '菲律宾', 
+    keywords: '项目, 管理, pmp',
+    details: {
+      gender: '不限',
+      age: '20-36'
+    }
+  }
 ];
 
 export const MOCK_STORIES = [
@@ -3007,6 +3017,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

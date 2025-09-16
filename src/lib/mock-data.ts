@@ -279,7 +279,7 @@ export const MOCK_JOBS = [
     keywords: '招商, 销售',
     details: {
       salary: '10K-12K',
-      hours: '10:00 - 20:00，10休2-4',
+      hours: '10:00 - 20:00',
       gender: '男',
       age: '20-38岁',
       nationality: '中国籍',
@@ -330,7 +330,7 @@ export const MOCK_JOBS = [
     keywords: '代理, 发展',
     details: {
       salary: '10K-12K + 业绩提成',
-      hours: '每日工作 10 小时，月休4天',
+      hours: '每日工作 10 小时',
       gender: '不限',
       age: '20-38岁',
       nationality: '中国籍',
@@ -882,6 +882,7 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '每周工作 48 小时',
       gender: '不限',
+      age: '不限',
       nationality: '不限',
       languages: '中文流利',
       requirements: [
@@ -909,6 +910,7 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '9休6',
       gender: '不限',
+      age: '不限',
       nationality: '大专及以上',
       languages: '中文',
       requirements: [
@@ -938,6 +940,7 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '每周工作48小时',
       gender: '女生优先',
+      age: '不限',
       nationality: '外籍',
       languages: '会中英文优先',
       requirements: [
@@ -966,6 +969,7 @@ export const MOCK_JOBS = [
       salary: '面议',
       hours: '每周工作48小时',
       gender: '女生优先',
+      age: '不限',
       nationality: '外籍',
       languages: '会中英文优先',
       requirements: [
@@ -995,6 +999,8 @@ export const MOCK_JOBS = [
     details: {
       salary: '20K以上',
       hours: '9休6（长白班）',
+      gender: '不限',
+      age: '不限',
       nationality: '非中国大陆',
       languages: '中英文流利',
       requirements: [
@@ -1030,6 +1036,8 @@ export const MOCK_JOBS = [
     details: {
       salary: '专员：10K-15K，主管：面议',
       hours: '9休6（长白班）',
+      gender: '不限',
+      age: '不限',
       nationality: '非中国大陆',
       languages: '中英文流利',
       requirements: [
@@ -1064,6 +1072,8 @@ export const MOCK_JOBS = [
     details: {
       salary: '15K-22K',
       hours: '8小时（三班倒），周休1天',
+      gender: '不限',
+      age: '不限',
       nationality: '非中国大陆',
       languages: '中文',
       requirements: [
@@ -1086,6 +1096,8 @@ export const MOCK_JOBS = [
     details: {
       salary: '15K-22K',
       hours: '8小时（三班倒），周休1天',
+      gender: '不限',
+      age: '不限',
       nationality: '非中国大陆',
       languages: '精通中文 & 英文',
       requirements: [
@@ -1112,6 +1124,8 @@ export const MOCK_JOBS = [
     details: {
       salary: 'USD $500 - $800（视能力与经验而定）',
       hours: '9休6',
+      gender: '不限',
+      age: '不限',
       nationality: '不限',
       languages: '中英文流利，会柬埔寨文（基本听说读写）',
       requirements: [
@@ -1133,8 +1147,57 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '51', title: '平面设计', department: '设计部', location: '柬埔寨', keywords: '设计' },
-  { id: '52', title: 'UI影片剪辑专员', department: '设计部', location: '柬埔寨', keywords: 'ui, 影片剪辑' },
+  { 
+    id: '51', 
+    title: '平面设计', 
+    department: '设计部', 
+    location: '柬埔寨', 
+    keywords: '设计',
+    details: {
+      salary: '面议',
+      hours: '9休6',
+      location: '不限',
+      nationality: '不限',
+      languages: '中文',
+      requirements: [
+        '能研究设计简报并明确需求；',
+        '根据需求进行视觉概念构思；',
+        '熟练使用设计软件或手工绘制插图及其他设计；',
+        '能与文案人员及创意总监密切合作，完成最终设计；',
+        '确保最终图形与排版在视觉上吸引人并符合品牌要求。'
+      ],
+      responsibilities: [
+        '负责公司所有平面设计相关工作。'
+      ]
+    }
+  },
+  { 
+    id: '52', 
+    title: 'UI影片剪辑专员', 
+    department: '设计部', 
+    location: '柬埔寨', 
+    keywords: 'ui, 影片剪辑',
+    details: {
+      salary: '10K-18K',
+      hours: '9休6（长白班）',
+      location: '不限',
+      nationality: '不限',
+      languages: '中文',
+      requirements: [
+        '能研究设计简报并明确需求，合理安排项目及预算；',
+        '根据需求进行视觉概念构思，并能提出创意草稿；',
+        '熟练使用软件或手工绘制插图及其他设计；',
+        '能够为不同图形选用合适的颜色与排版；',
+        '善于与文案人员、创意总监配合，确保最终设计完成度；',
+        '能在多种媒介上进行图形测试，并根据反馈修改；',
+        '确保所有设计与排版符合品牌形象，具备视觉吸引力；',
+        '具备品牌相关短片剪辑与后期制作能力。'
+      ],
+      responsibilities: [
+        '负责公司所有影片剪辑及平面设计相关工作。'
+      ]
+    }
+  },
   { id: '53', title: '推广专员', department: '市场部', location: '柬埔寨', keywords: '推广' },
   { id: '54', title: '转化专员', department: '市场部', location: '柬埔寨', keywords: '转化' },
   { id: '55', title: 'SEO专员', department: '市场部', location: '柬埔寨', keywords: 'seo' },
@@ -2944,6 +3007,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

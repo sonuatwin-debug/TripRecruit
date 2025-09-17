@@ -2853,7 +2853,6 @@ export const MOCK_JOBS = [
         ]
     }
   },
-  { id: '121', title: '数据分析员', department: '职能部', location: '泰国', keywords: '数据分析', details: { salary: '面议', hours: '面议', gender: '女生优先', age: '21-35', nationality: '中国籍', languages: '中文', requirements: ['精通掌握 Excel 和 PPT；', '具备良好的数据分析能力；', '具有丰富的 BC产品相关知识；', '具备一定的 BC产品与策略设计逻辑。'], responsibilities: ['对数据进行分析并得出结论；', '根据结论提出相应的产品运营策略及解决方案。'] } },
   { id: '122', title: '游客客服专员', department: '职能部', location: '泰国', keywords: '客服, 游客',
     details: {
         salary: '10000',
@@ -5089,7 +5088,37 @@ export const MOCK_JOBS = [
       responsibilities: []
     }
   },
-  { _id: '233', title: '桌面运维', department: '工程部', location: '迪拜', keywords: '桌面运维, it支持', id: '233' },
+  { 
+    id: '233', 
+    title: '桌面运维', 
+    department: '工程部', 
+    location: '迪拜', 
+    keywords: '桌面运维, it支持',
+    details: {
+        salary: '面议',
+        hours: '9小时，周休一',
+        gender: '不限',
+        age: '21-35岁',
+        nationality: '不限',
+        languages: '基本中文',
+        requirements: [
+            '大专及以上学历，计算机、网络相关专业优先；',
+            '从事过计算机和网络维护相关工作半年以上，或应届毕业生；',
+            '熟悉局域网、互联网维护工作；',
+            '熟悉电脑软件、硬件的安装与维护；',
+            '熟练掌握 Windows / Mac OS 操作系统的业务运维；',
+            '能够设计并实施中小型企业网络部署；',
+            '具备团队精神，能吃苦耐劳，学习能力强；',
+            '了解 Cisco 防火墙、路由器、交换机产品者优先；',
+            '服从领导安排。'
+        ],
+        responsibilities: [
+            '负责公司局域网及互联网维护工作；',
+            '负责公司电脑软件、硬件的安装与维护；',
+            '完成部门领导安排的其他工作。'
+        ]
+    }
+  },
   { 
     id: '234', 
     title: '安全工程师', 
@@ -5540,26 +5569,14 @@ export const MOCK_JOBS = [
     location: '泰国',
     keywords: '数据分析, 数据',
     details: {
-      salary: '15K（面议）',
+      salary: '面议',
       hours: '面议',
-      gender: '不限',
-      age: '25-30岁',
+      gender: '女生优先',
+      age: '21-35',
       nationality: '中国籍',
       languages: '中文',
-      requirements: [
-        '本科及以上学历，数学、统计学、计算机或相关专业优先；',
-        '熟练掌握 Excel、SQL 等数据分析工具，能独立进行数据清洗与建模；',
-        '具备代理线市场数据分析相关经验；',
-        '对数据敏感，逻辑思维清晰，具备良好的分析与问题解决能力；',
-        '具备良好的沟通协调能力，能清晰表达数据结论并提出优化建议。'
-      ],
-      responsibilities: [
-        '负责代理线市场数据的采集、整理、建模与分析；',
-        '监控业务数据走势，定期输出分析报告，辅助决策；',
-        '挖掘潜在的市场趋势及用户行为规律，提出优化方案；',
-        '追踪业务转化率、留存率等核心指标，推动业务增长；',
-        '协助其他部门提供数据支持，优化运营策略。'
-      ]
+      requirements: ['精通掌握 Excel 和 PPT；', '具备良好的数据分析能力；', '具有丰富的 BC产品相关知识；', '具备一定的 BC产品与策略设计逻辑。'],
+      responsibilities: ['对数据进行分析并得出结论；', '根据结论提出相应的产品运营策略及解决方案。']
     }
   },
   {
@@ -5598,13 +5615,6 @@ export const MOCK_JOBS = [
     }
   },
   {
-    id: '251',
-    title: '数据分析员',
-    department: '职能部',
-    location: '泰国',
-    keywords: '数据分析, 数据'
-  },
-  {
     id: '252',
     title: '数据分析员',
     department: '职能部',
@@ -5632,6 +5642,13 @@ export const MOCK_JOBS = [
         '协助其他部门提供数据支持，优化运营策略。'
       ]
     }
+  },
+  {
+    id: '253',
+    title: '数据分析员',
+    department: '职能部',
+    location: '泰国',
+    keywords: '数据分析, 数据',
   }
 ];
 

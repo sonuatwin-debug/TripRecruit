@@ -4,6 +4,7 @@ import { contactMethods } from '../page';
 import { LineQrCode } from '@/components/line-qr-code';
 import { ZaloQrCode } from '@/components/zalo-qr-code';
 import { DingtalkQrCode } from '@/components/dingtalk-qr-code';
+import { WechatQrCode } from '@/components/wechat-qr-code';
 
 export default function ContactPage() {
   const contactHeroImage = PlaceHolderImages.find(p => p.id === 'contact-hero');
@@ -74,6 +75,17 @@ export default function ContactPage() {
                       {contactLabel}
                     </div>
                   </DingtalkQrCode>
+                );
+              }
+
+              if (method.name === 'WeChat' && method.isQrCode) {
+                return (
+                  <WechatQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </WechatQrCode>
                 );
               }
 

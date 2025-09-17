@@ -2853,6 +2853,7 @@ export const MOCK_JOBS = [
         ]
     }
   },
+  { id: '121', title: '数据分析员', department: '职能部', location: '泰国', keywords: '数据分析', details: { salary: '面议', hours: '面议', gender: '女生优先', age: '21-35', nationality: '中国籍', languages: '中文', requirements: ['精通掌握 Excel 和 PPT；', '具备良好的数据分析能力；', '具有丰富的 BC产品相关知识；', '具备一定的 BC产品与策略设计逻辑。'], responsibilities: ['对数据进行分析并得出结论；', '根据结论提出相应的产品运营策略及解决方案。'] } },
   { id: '122', title: '游客客服专员', department: '职能部', location: '泰国', keywords: '客服, 游客',
     details: {
         salary: '10000',
@@ -3332,10 +3333,38 @@ export const MOCK_JOBS = [
   },
   { 
     id: '140', 
-    title: '前端工程师', 
-    department: '工程部', 
+    title: '中高级产品经理', 
+    department: '产品部', 
     location: '斯里兰卡', 
-    keywords: '前端, react, vue'
+    keywords: '产品经理',
+    details: {
+      salary: '面议',
+      hours: '9小时 ｜ 周休一',
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '不限',
+      languages: '中文流利（HSK5及以上）',
+      responsibilities: [
+        '负责体育客户端产品设计，包括体育直播、资讯、竞猜等核心功能优化，推动业务创新，迭代优化用户体验；',
+        '挖掘和理解体育用户需求，与技术和运营团队高效合作，协调资源推进落地；',
+        '完成功能、流程、界面设计，协调设计资源落实交互与原型设计；',
+        '参与产品定位与决策，推动创新，收集用户反馈并优化体验；',
+        '跟踪APP端客户反馈，结合策略与规划落实改进计划，提升竞争力；',
+        '关注竞争对手与用户反馈，进行分析并提出优化方案；',
+        '对需求进行优先级排序，确保公司产品目标落地。'
+      ],
+      requirements: [
+        '5年以上互联网 Web、H5、APP 端产品策划经验；',
+        '高度自驱，能在压力和不确定性下灵活应对；',
+        '具备成熟产品方法论，善于通过数据分析和用户研究洞察需求并提供方案；',
+        '思维逻辑清晰，具备优秀的学习心态与学习能力；',
+        '独立负责过大中型产品功能策划，具备版本项目管理经验；',
+        '在支付类、金融类、直播类、资讯类等领域有产品经验者优先；',
+        '具备优秀的前后台产品设计能力者优先；',
+        '热爱体育运动，对篮球或足球有较深入了解者优先；',
+        '有国内一线互联网公司工作经验者优先。'
+      ]
+    }
   },
   { id: '141', title: '老板家庭助理', department: '职能部', location: '泰国', keywords: '助理, 家庭',
     details: {
@@ -4015,7 +4044,29 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { geo: '中国', title: '数据分析专员', department: '职能部', location: '菲律宾', keywords: '数据分析', id: '179' },
+  { geo: '中国', title: '数据分析专员', department: '职能部', location: '菲律宾', keywords: '数据分析', id: '179',
+    details: {
+        salary: '10K-12K',
+        hours: '9小时，月休4',
+        gender: '不限',
+        age: '21-33岁',
+        nationality: '外籍',
+        languages: '中文流利',
+        requirements: [
+            '大专及以上学历，统计学、经济学、数据分析相关专业优先；',
+            '熟练使用 Excel 表格，能进行数据统计、公式运用及分析；',
+            '中文听说读写熟练，具备良好的沟通能力；',
+            '思维逻辑清晰，数据敏感度高；',
+            '工作细心，有责任心，能独立完成数据分析任务。'
+        ],
+        responsibilities: [
+            '统计并整理业务部的住宿费用；',
+            '核实住宿人员信息，提出房间优化建议；',
+            '分析与统计内宿空房率、空床率，形成分析报告；',
+            '对接、解答与费用计算相关的问题，提供合理解释。'
+        ]
+    }
+   },
   { 
     id: '180', 
     title: '劳动关系专员', 
@@ -5513,7 +5564,7 @@ export const MOCK_JOBS = [
   },
   {
     id: '250',
-    title: '中高级产品经理',
+    title: '中高级产品经理（斯里兰卡）',
     department: '技术岗位',
     location: '斯里兰卡',
     keywords: '中高级产品经理, 产品, 经理',
@@ -5551,6 +5602,13 @@ export const MOCK_JOBS = [
     title: '数据分析员',
     department: '职能部',
     location: '泰国',
+    keywords: '数据分析, 数据'
+  },
+  {
+    id: '252',
+    title: '数据分析员',
+    department: '职能部',
+    location: '泰国',
     keywords: '数据分析, 数据',
     details: {
       salary: '15K（面议）',
@@ -5574,13 +5632,6 @@ export const MOCK_JOBS = [
         '协助其他部门提供数据支持，优化运营策略。'
       ]
     }
-  },
-  {
-    id: '252',
-    title: '数据分析员',
-    department: '职能部',
-    location: '泰国',
-    keywords: '数据分析, 数据'
   }
 ];
 

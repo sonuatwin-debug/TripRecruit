@@ -489,7 +489,23 @@ export const MOCK_JOBS = [
     }
   },
   { id: '24', _id: '31', title: '财务主管', department: '职能部', location: '迪拜', keywords: '财务, 主管', details: { salary: '2500 - 3500 USD/月', hours: '9小时，周休1', gender: '不限', age: '21-35岁（经验丰富者可适当放宽）', nationality: '外籍（马来/印尼优先）/ 台湾籍', languages: '中文熟练，英语可基本沟通', requirements: ['独立负责财务工作小组，能根据公司制度对下属提供支持并监督日常财务工作；', '具备较强的成本管理、风险控制和财务数据分析能力，对数据敏感，发现问题及时上报；', '能执行并协调财务审核工作；', '熟悉预算管理，能统计、汇总月度预算并上报审批；', '熟练编制财务分析报表；', '具备良好的组织协调能力、表达能力及团队合作精神；', '有财务管理岗位经历。'], responsibilities: [] } },
-  { _id: '32', title: '会计组长', department: '职能部', location: '迪拜', keywords: '会计, 组长', id: '32', details: { salary: '1200 - 1700 USD/月', hours: '9小时，周休1', gender: '不限', age: '21-35岁', nationality: '外籍（马来/印尼优先）/ 台湾籍', languages: '中文熟练，英语可基本沟通', requirements: [], responsibilities: ['负责公司全部日常账务处理及审查，编制各类管理报表；', '对数字敏感，具备数据分析能力，能发现并解决财务问题；', '负责应收账款与应付账款的管理与核算；', '熟练使用 Excel 及函数公式处理财务数据。'] } },
+  { 
+    id: '32',
+    title: '会计组长', 
+    department: '职能部', 
+    location: '迪拜', 
+    keywords: '会计, 组长', 
+    details: { 
+      salary: '1200 - 1700 USD/月', 
+      hours: '9小时，周休1', 
+      gender: '不限', 
+      age: '21-35岁', 
+      nationality: '外籍（马来/印尼优先）/ 台湾籍', 
+      languages: '中文熟练，英语可基本沟通', 
+      requirements: [], 
+      responsibilities: ['负责公司全部日常账务处理及审查，编制各类管理报表；', '对数字敏感，具备数据分析能力，能发现并解决财务问题；', '负责应收账款与应付账款的管理与核算；', '熟练使用 Excel 及函数公式处理财务数据。'] 
+    } 
+  },
   { 
     id: '33', 
     title: '资金专员', 
@@ -1034,6 +1050,8 @@ export const MOCK_JOBS = [
       location: '不限',
       nationality: '不限',
       languages: '中文',
+      gender: '不限',
+      age: '20-36',
       requirements: [
         '能研究设计简报并明确需求；',
         '根据需求进行视觉概念构思；',
@@ -1058,6 +1076,8 @@ export const MOCK_JOBS = [
       location: '不限',
       nationality: '不限',
       languages: '中文',
+      gender: '不限',
+      age: '20-36',
       requirements: [
         '能研究设计简报并明确需求，合理安排项目及预算；',
         '根据需求进行视觉概念构思，并能提出创意草稿；',
@@ -1464,7 +1484,7 @@ export const MOCK_JOBS = [
       responsibilities: []
     }
   },
-  {
+  { 
     id: '68', 
     title: '招商专员', 
     department: '市场部', 
@@ -1729,8 +1749,7 @@ export const MOCK_JOBS = [
         '熟练使用各类办公软件；',
         '细心、认真、负责，具备责任心与亲和力；',
         '态度积极，服从管理，善于沟通协调；',
-        '中英文沟通顺畅；',
-        '需提供照片/视频。'
+        '中英文沟通顺畅；'
       ],
       responsibilities: [
         '根据部门需求制作各类表格（考勤、入职、排班等）；',
@@ -3416,7 +3435,6 @@ export const MOCK_JOBS = [
         ]
     }
   },
-  { id: '148', title: '会计专员/组长', department: '职能部', location: '泰国', keywords: '会计, 组长' },
   { id: '149', title: 'UI/UX设计师-验收走查方向', department: '设计部', location: '泰国', keywords: 'ui, ux, 设计' },
   { id: '150', title: 'UI设计', department: '设计部', location: '泰国', keywords: 'ui, 设计' },
   { id: '151', title: '网络工程师', department: '工程部', location: '泰国', keywords: '网络, 工程' },
@@ -5006,6 +5024,41 @@ export const MOCK_JOBS = [
   },
   {
     id: '250',
+    title: '中高级产品经理',
+    department: '产品部',
+    location: '斯里兰卡',
+    keywords: '产品经理, product manager',
+    details: {
+      salary: '面议',
+      hours: '9小时 ｜ 周休一',
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '不限',
+      languages: '中文流利（HSK5及以上）',
+      responsibilities: [
+        '负责体育客户端产品设计，包括体育直播、资讯、竞猜等核心功能优化，推动业务创新，迭代优化用户体验；',
+        '挖掘和理解体育用户需求，与技术和运营团队高效合作，协调资源推进落地；',
+        '完成功能、流程、界面设计，协调设计资源落实交互与原型设计；',
+        '参与产品定位与决策，推动创新，收集用户反馈并优化体验；',
+        '跟踪APP端客户反馈，结合策略与规划落实改进计划，提升竞争力；',
+        '关注竞争对手与用户反馈，进行分析并提出优化方案；',
+        '对需求进行优先级排序，确保公司产品目标落地。'
+      ],
+      requirements: [
+        '5年以上互联网 Web、H5、APP 端产品策划经验；',
+        '高度自驱，能在压力和不确定性下灵活应对；',
+        '具备成熟产品方法论，善于通过数据分析和用户研究洞察需求并提供方案；',
+        '思维逻辑清晰，具备优秀的学习心态与学习能力；',
+        '独立负责过大中型产品功能策划，具备版本项目管理经验；',
+        '在支付类、金融类、直播类、资讯类等领域有产品经验者优先；',
+        '具备优秀的前后台产品设计能力者优先；',
+        '热爱体育运动，对篮球或足球有较深入了解者优先；',
+        '有国内一线互联网公司工作经验者优先。'
+      ]
+    }
+  },
+  {
+    id: '251',
     title: '中高级产品经理',
     department: '产品部',
     location: '斯里兰卡',

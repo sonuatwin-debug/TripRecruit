@@ -10,7 +10,7 @@ export default function AboutPage() {
   const aboutHeroImage = PlaceHolderImages.find(p => p.id === 'about-hero');
   const officeImage1 = { id: 'office-1', imageUrl: 'https://res.cloudinary.com/dtcqrybyo/image/upload/v1758113818/designing-offices-hybrid-article-overview_iq8kl9.jpg', description: '现代化办公区', imageHint: 'office space' };
   const officeImage2 = { id: 'office-2', imageUrl: 'https://res.cloudinary.com/dtcqrybyo/image/upload/v1758113830/OpenPlaneOffice-1024x576_rji1k8.jpg', description: '员工协作区', imageHint: 'team collaboration' };
-  const officeImage3 = { id: 'office-3', imageUrl: 'https://res.cloudinary.com/dtcqrybyo/image/upload/v1758113818/designing-offices-hybrid-article-overview_iq8kl9.jpg', description: '休闲区', imageHint: 'office lounge' };
+  const officeImage3 = { id: 'office-3', imageUrl: 'https://res.cloudinary.com/dtcqrybyo/image/upload/v1758114561/image_jraa8y.png', description: '休闲区', imageHint: 'office lounge' };
 
 
   return (

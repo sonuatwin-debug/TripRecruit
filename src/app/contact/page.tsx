@@ -2,6 +2,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { contactMethods } from '../page';
 import { LineQrCode } from '@/components/line-qr-code';
+import { ZaloQrCode } from '@/components/zalo-qr-code';
 
 export default function ContactPage() {
   const contactHeroImage = PlaceHolderImages.find(p => p.id === 'contact-hero');
@@ -42,7 +43,7 @@ export default function ContactPage() {
                 <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
               );
 
-              if (method.isQrCode) {
+              if (method.name === 'Line' && method.isQrCode) {
                 return (
                   <LineQrCode key={method.name}>
                     <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
@@ -50,6 +51,17 @@ export default function ContactPage() {
                       {contactLabel}
                     </div>
                   </LineQrCode>
+                );
+              }
+
+              if (method.name === 'Zalo' && method.isQrCode) {
+                return (
+                  <ZaloQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </ZaloQrCode>
                 );
               }
 

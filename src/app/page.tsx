@@ -12,6 +12,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Flag } from '@/components/flag';
 import { LineQrCode } from '@/components/line-qr-code';
+import { ZaloQrCode } from '@/components/zalo-qr-code';
 
 
 const popularRegions = [
@@ -181,7 +182,8 @@ export const contactMethods = [
   { 
     name: 'Zalo', 
     icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M100 50c0 27.6-22.4 50-50 50S0 77.6 0 50 22.4 0 50 0s50 22.4 50 50" fill="#0068ff"/><path d="M60.6 52.8H48.1v-9.1h12.5v-9.6H39.4c-4.4 0-7.9 3.5-7.9 7.9v21.3c0 .3.3.6.6.6h28.5c.3 0 .6-.3.6-.6V52.8h-1zM48.1 59.8h-7.1v-5.4h7.1v5.4z" fill="#fff"/></svg>,
-    href: 'https://zalo.me',
+    href: '#',
+    isQrCode: true,
     color: '#0068FF'
   },
   { 
@@ -242,7 +244,7 @@ export default function HomePage() {
                 <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
               );
 
-              if (method.isQrCode) {
+              if (method.name === 'Line' && method.isQrCode) {
                 return (
                   <LineQrCode key={method.name}>
                     <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
@@ -250,6 +252,17 @@ export default function HomePage() {
                       {contactLabel}
                     </div>
                   </LineQrCode>
+                );
+              }
+
+              if (method.name === 'Zalo' && method.isQrCode) {
+                return (
+                  <ZaloQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </ZaloQrCode>
                 );
               }
 

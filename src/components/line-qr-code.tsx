@@ -24,7 +24,7 @@ export function LineQrCode({ children }: { children: React.ReactNode }) {
         </DialogHeader>
         <div className="flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/dtcqrybyo/image/upload/v1758121655/line-qr_ax6wjo.jpg"
+            src="https://res.cloudinary.com/dz1oictdz/image/upload/v1758125629/photo_2025-09-17_22-31-40_mafvk4.jpg"
             alt="Line QR Code"
             width={250}
             height={250}

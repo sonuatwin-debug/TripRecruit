@@ -8,9 +8,9 @@ import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
   const aboutHeroImage = PlaceHolderImages.find(p => p.id === 'about-hero');
-  const officeImage1 = { id: 'office-1', imageUrl: 'https://picsum.photos/seed/101/600/400', description: '现代化办公区', imageHint: 'office space' };
-  const officeImage2 = { id: 'office-2', imageUrl: 'https://picsum.photos/seed/102/600/400', description: '员工协作区', imageHint: 'team collaboration' };
-  const officeImage3 = { id: 'office-3', imageUrl: 'https://picsum.photos/seed/103/600/400', description: '休闲区', imageHint: 'office lounge' };
+  const officeImage1 = { id: 'office-1', imageUrl: 'https://storage.googleapis.com/stedi-studio-upload/79508518-e390-4821-a3f2-1b12b591b61d.jpeg', description: '现代化办公区', imageHint: 'office space' };
+  const officeImage2 = { id: 'office-2', imageUrl: 'https://storage.googleapis.com/stedi-studio-upload/79508518-e390-4821-a3f2-1b12b591b61d.jpeg', description: '员工协作区', imageHint: 'team collaboration' };
+  const officeImage3 = { id: 'office-3', imageUrl: 'https://storage.googleapis.com/stedi-studio-upload/79508518-e390-4821-a3f2-1b12b591b61d.jpeg', description: '休闲区', imageHint: 'office lounge' };
 
 
   return (

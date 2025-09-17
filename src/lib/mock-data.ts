@@ -2232,13 +2232,240 @@ export const MOCK_JOBS = [
       ]
     }
   },
-  { id: '96', title: '数据分析师', department: '数据科学', location: '斯里兰卡', keywords: '数据分析' },
-  { id: '97', title: '后端工程师（业务开发）', department: '工程部', location: '斯里兰卡', keywords: '后端' },
-  { id: '98', title: '安卓工程师', department: '工程部', location: '斯里兰卡', keywords: '安卓' },
-  { id: '99', title: 'IOS工程师', department: '工程部', location: '斯里兰卡', keywords: 'ios' },
-  { id: '101', title: '桌面运维', department: '工程部', location: '斯里兰卡', keywords: '桌面运维' },
-  { id: '102', title: '测试工程师', department: '工程部', location: '斯里兰卡', keywords: '测试' },
-  { id: '104', title: '中高级产品经理（体育）', department: '产品部', location: '斯里兰卡', keywords: '产品经理, 体育' },
+  { 
+    id: '96', 
+    title: '数据分析师', 
+    department: '数据科学', 
+    location: '斯里兰卡', 
+    keywords: '数据分析',
+    details: {
+      salary: '50K 起（优秀者可面议）',
+      hours: '面议',
+      gender: '不限',
+      age: '30-40岁',
+      nationality: '不限',
+      languages: '不限',
+      requirements: [
+        '至少5年 体育博彩风险管理经验；',
+        '有著名博彩平台工作经历者优先；',
+        '拥有 数学学士学位 或 金融行业风险管理经验 者优先。',
+        '出色的数学技能和分析能力；',
+        '熟练运用 统计学与概率论 知识进行风险评估；',
+        '熟悉现有博彩游戏套利手段；',
+        '具备良好的沟通能力与团队合作精神。'
+      ],
+      responsibilities: [
+        '分析和评估体育博彩市场的风险；',
+        '制定和执行有效的风险管理策略；',
+        '监控博彩交易与活动，及时识别并解决潜在风险问题；',
+        '与其他部门合作，确保业务顺利开展。'
+      ]
+    }
+  },
+  { 
+    id: '97', 
+    title: '后端工程师（业务开发）', 
+    department: '工程部', 
+    location: '斯里兰卡', 
+    keywords: '后端',
+    details: {
+      salary: '面议',
+      hours: '9小时 / 周休一',
+      gender: '不限',
+      age: '21-38岁',
+      nationality: '中国籍 / 外籍',
+      languages: '中文',
+      requirements: [
+        '具有良好的协作沟通能力，高度责任心与职业道德；',
+        '至少3年以上 Golang / Java / PHP 任意一种语言开发经验；',
+        '至少熟悉以下任意一种：',
+        'Java（Spring-cloud 套件）',
+        'Golang（Gin, Fasthttp）',
+        'PHP（Laravel）',
+        '熟悉 MySQL、Redis 底层实现机制，并能在实际应用中利用原理解决问题（有真实案例为加分项）；',
+        '对 高并发高可用 有一定了解；',
+        '熟悉 TCP、HTTP、WebSocket 协议；',
+        '对 ES、Kafka、RabbitMQ 有一定使用经验。'
+      ],
+      responsibilities: [
+        '负责各模块业务的前后台开发；',
+        '负责 MySQL 表设计、Redis 缓存设计 等；',
+        '从技术层面对开发、产品、需求方提出合理建议。'
+      ]
+    }
+  },
+  { 
+    id: '98', 
+    title: '安卓工程师', 
+    department: '工程部', 
+    location: '斯里兰卡', 
+    keywords: '安卓',
+    details: {
+      salary: '面议',
+      hours: '9小时 / 周休一',
+      gender: '不限',
+      age: '24-35岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '4年以上工作经验，熟练掌握 Android Studio 使用，熟悉 Git、Fiddler 等工具；',
+        '熟悉 MVVM、Kotlin，具备项目经验，能够快速上手开发；',
+        '熟悉 LiveData、DataBinding，掌握常见数据绑定、事件绑定；',
+        '精通 RxJava 使用，包括常用函数及线程调度；',
+        '熟悉 HTTPS证书验证、HTTP协议、TCP/IP、线程池 等技术；',
+        '具备性能优化能力，能排查大内存块、内存泄漏问题，熟悉 Studio Profiler；',
+        '能独立开发项目，搭建项目框架，熟悉 MVP、MVVM 模式；',
+        '对体育有一定了解者优先；',
+        '有 Flutter 开发经验者优先；',
+        '成熟稳重、性格活泼、工作认真踏实，学习能力强。'
+      ],
+      responsibilities: []
+    }
+  },
+  { 
+    id: '99', 
+    title: 'IOS工程师', 
+    department: '工程部', 
+    location: '斯里兰卡', 
+    keywords: 'ios',
+    details: {
+      salary: '面议',
+      hours: '9小时 / 周休一',
+      gender: '不限',
+      age: '24-35岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '3-5年以上 iOS 平台软件开发经验，具备良好的编码规范；',
+        '熟练掌握 Swift 语言，拥有良好的 Objective-C 基础；',
+        '熟练掌握 CoreAnimation，能自定义各种动画；',
+        '扎实的 iOS 基础，熟悉 AutoLayout、内存管理、线程管理、数据存储 等；',
+        '熟悉 Runtime 消息派发 等原理；',
+        '熟练掌握 UIKit 各控件 的使用与自定义；',
+        '有 模块化、组件化、RAC 函数式编程 开发经验者优先；',
+        '有 RxSwift、Moya、PromiseKit 开发经验者优先；',
+        '有 应用优化（性能、内存、网络、电量等） 经验者优先；',
+        '具备强烈责任感与进取心，良好的团队合作精神与沟通能力。'
+      ],
+      responsibilities: [
+        '负责 iOS 客户端维护，编写高质量代码；',
+        '根据产品需求，进行合理的功能设计、编码实现及自测；',
+        '负责客户端 重难点技术攻关，以及流行技术的应用实施。'
+      ]
+    }
+  },
+  { 
+    id: '100', 
+    title: '前端工程师', 
+    department: '工程部', 
+    location: '斯里兰卡', 
+    keywords: '前端, react, vue',
+    details: {
+      salary: '面议',
+      hours: '9小时 / 周休一',
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '中国籍',
+      languages: '中文',
+      requirements: [
+        '拥有 3-5 年 JavaScript / TypeScript 构建响应式 / 自适应 Web 应用程序经验；',
+        '扎实的 React JS 开发经验；',
+        '能够编写 结构化、简洁高效 的代码；',
+        '熟悉 JavaScript 测试工具，具备测试经验；',
+        '拥有现代前端 构建管道和工具链 使用经验；',
+        '具备 定义和交付可扩展前端架构 的经验；',
+        '具备 独立工作能力 与 创新精神。'
+      ],
+      responsibilities: []
+    }
+  },
+  { 
+    id: '101', 
+    title: '桌面运维', 
+    department: '工程部', 
+    location: '斯里兰卡', 
+    keywords: '桌面运维',
+    details: {
+      salary: '面议',
+      hours: '9小时 / 周休一',
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '不限',
+      languages: '基本中文',
+      requirements: [
+        '从事过计算机和网络维护相关工作 半年以上，或应届 计算机/网络相关专业毕业生；',
+        '熟悉 局域网 / 互联网维护 工作；',
+        '熟悉 电脑软件、硬件安装与维护；',
+        '对 Windows / Mac OS 操作系统的运维有丰富经验；',
+        '能够 设计并实施中小型企业网络；',
+        '具备 团队合作精神，吃苦耐劳，学习能力强；',
+        '熟悉 Cisco 防火墙、路由器、交换机 产品优先；',
+        '服从领导安排。'
+      ],
+      responsibilities: [
+        '负责公司 局域网与互联网维护；',
+        '负责公司 电脑软硬件安装与维护；',
+        '完成部门领导安排的其他工作。'
+      ]
+    }
+  },
+  { 
+    id: '102', 
+    title: '测试工程师', 
+    department: '工程部', 
+    location: '斯里兰卡', 
+    keywords: '测试',
+    details: {
+      salary: '面议',
+      hours: '13-22',
+      gender: '不限',
+      age: '20～35岁',
+      nationality: '不限',
+      languages: '中文流利',
+      requirements: [
+        '统招大专及以上学历，3年以上功能测试经验；',
+        '掌握软件测试基本理论与方法，熟悉 测试需求分析 / 测试用例设计；',
+        '熟悉软件测试流程及行业规范，能熟练使用 JIRA / 禅道 等缺陷管理工具优先；',
+        '熟悉 抓包工具（Fiddler、Charles、Proxyman 等）；',
+        '熟练掌握至少一种大型数据库，能熟练运用 SQL 基本语句；',
+        '熟练使用 接口测试工具（Postman、JMeter 等）；',
+        '具备良好的沟通能力、责任心和团队合作精神，自驱性强、结果导向者优先。'
+      ],
+      responsibilities: [
+        '负责产品 全流程测试：需求分析、测试计划制定、测试方案与用例设计；',
+        '负责产品 功能、性能测试，执行测试用例，提交并跟踪 BUG，回归测试直至解决；',
+        '分析并推动解决测试问题，与 开发、产品团队紧密配合，提高产品上线效率。'
+      ]
+    }
+  },
+  { 
+    id: '104', 
+    title: '中高级产品经理（体育）', 
+    department: '产品部', 
+    location: '斯里兰卡', 
+    keywords: '产品经理, 体育',
+    details: {
+      salary: '面议',
+      hours: '9小时 / 周休一',
+      gender: '不限',
+      age: '21-35岁',
+      nationality: '不限',
+      languages: '中文流利（HSK5及以上）',
+      requirements: [
+        '2年以上体育类游戏产品经验，有独立产品设计经验者优先；',
+        '熟悉 足球、篮球业务及竞彩业务；',
+        '有较强的责任感，能良好沟通、协调团队资源完成目标；',
+        '国籍不限，工作地点可灵活选择。'
+      ],
+      responsibilities: [
+        '负责公司旗下 体育游戏APP / 体育资讯APP 前后台功能、交互与方案设计输出；',
+        '对接 开发、测试、设计、数据商，推进问题解决；',
+        '测试验证现有功能，监督新功能/新版本上线质检质量；',
+        '不断优化现有产品功能，分析竞品，提出优化建议；',
+        '沟通协调各需求方，输出完整、合理、可落地的需求方案，并推进需求全生命周期进度。'
+      ]
+    }
+  },
   { id: '105', title: '业务专员（推广）', department: '市场部', location: '斯里兰卡', keywords: '推广' },
   { id: '106', title: '推广专员', department: '市场部', location: '斯里兰卡', keywords: '推广' },
   { id: '107', title: '招商发展组长', department: '市场部', location: '斯里兰卡', keywords: '招商, 组长' },
@@ -3914,6 +4141,7 @@ export const MOCK_USER_PROFILE = `
 - 框架: Spring Boot, Django
 - 工具: Docker, Kubernetes, Git
 `;
+
 
 
 

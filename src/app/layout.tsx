@@ -31,7 +31,7 @@ export default function RootLayout({
         </main>
         {/* Floating Contact Buttons */}
         <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col space-y-4">
-            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
+            <a href="https://t.me/XCJT02" target="_blank" rel="noopener noreferrer" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
                 <Send className="h-6 w-6" />
             </a>
             <a href="https://im.qq.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow text-2xl">
@@ -42,7 +42,7 @@ export default function RootLayout({
             <a href="https://www.wechat.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow text-2xl">
                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12.4 3.1c-4.3 0-7.8 2.9-7.8 6.5 0 2.4 1.5 4.5 3.9 5.6-1.3 1.9-3.2 3.2-5.4 3.9v.1c.1-.1.7-1.1 1.7-2.1.8.2 1.6.3 2.5.3 4.3 0 7.8-2.9 7.8-6.5s-3.5-6.6-7.7-6.6zM7.7 11.2c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2zm4.1 0c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2zm8.3-2.9c0 2.9-2.6 5.2-5.8 5.2.3 0 .7-.1 1-.2 2.2-1 3.8-2.9 4.8-5zm-2.9 1.7c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2z"/></svg>
             </a>
-            <a href="mailto:contact@example.com" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
+            <a href="mailto:xiechengjituan@gmail.com" className="inline-block p-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/80 transition-colors animate-pulse-glow">
                 <Mail className="h-6 w-6" />
             </a>
         </div>

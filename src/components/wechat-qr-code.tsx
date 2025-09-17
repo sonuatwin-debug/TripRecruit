@@ -22,13 +22,16 @@ export function WechatQrCode({ children }: { children: React.ReactNode }) {
             使用微信应用扫描此二维码以添加我们。
           </DialogDescription>
         </DialogHeader>
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-4">
           <Image
             src="https://res.cloudinary.com/dz1oictdz/image/upload/v1758127139/photo_2025-09-17_23-21-45_ywuzep.jpg"
             alt="WeChat QR Code"
             width={250}
             height={250}
           />
+          <p className="font-semibold text-center text-foreground">
+            微信号：ROBINLAP
+          </p>
         </div>
       </DialogContent>
     </Dialog>

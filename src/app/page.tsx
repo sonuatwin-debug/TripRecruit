@@ -13,6 +13,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Flag } from '@/components/flag';
 import { LineQrCode } from '@/components/line-qr-code';
 import { ZaloQrCode } from '@/components/zalo-qr-code';
+import { DingtalkQrCode } from '@/components/dingtalk-qr-code';
 
 
 const popularRegions = [
@@ -176,6 +177,7 @@ export const contactMethods = [
     name: 'Line', 
     icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M83.33 16.67H16.67C9.25 16.67 3.33 22.58 3.33 30v40c0 7.42 5.92 13.33 13.34 13.33h5.21l1.56 2.34c1.25 1.88 3.44 3.75 5.31 3.75s4.06-1.88 5.31-3.75l1.56-2.34h16.67c7.42 0 13.33-5.92 13.33-13.33V30c0-7.42-5.92-13.33-13.33-13.33zm-56.25 40c-2.3 0-4.17-1.87-4.17-4.17s1.87-4.17 4.17-4.17 4.17 1.87 4.17 4.17-1.87 4.17-4.17 4.17zm14.58 0c-2.3 0-4.17-1.87-4.17-4.17s1.87-4.17 4.17-4.17 4.17 1.87 4.17 4.17-1.87 4.17-4.17 4.17zm14.59 0c-2.3 0-4.17-1.87-4.17-4.17s1.87-4.17 4.17-4.17 4.17 1.87 4.17 4.17-1.87 4.17-4.17 4.17z" fill="#00c300"/></svg>, 
     href: 'https://line.me/ti/p/xiechengzp',
+    isQrCode: false,
     color: '#00C300'
   },
   { 
@@ -188,8 +190,9 @@ export const contactMethods = [
   { 
     name: '钉钉', 
     icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.035 7.643l-3.21-3.21a.9.9 0 0 0-1.272 0L8.342 7.643a.9.9 0 0 0 .636 1.536h1.714v5.714a.9.9 0 1 0 1.8 0V9.179h1.714a.9.9 0 0 0 .636-1.536zM3 13.5c0-4.965 4.035-9 9-9s9 4.035 9 9-4.035 9-9 9-9-4.035-9-9zm1.8 0c0 3.972 3.228 7.2 7.2 7.2s7.2-3.228 7.2-7.2-3.228-7.2-7.2-7.2-7.2 3.228-7.2 7.2z" fill="#387cfa"/></svg>, 
-    href: 'https://www.dingtalk.com',
-    color: '#1296db'
+    href: '#',
+    isQrCode: true,
+    color: '#387cfa'
   },
   { 
     name: 'QQ', 
@@ -262,6 +265,17 @@ export default function HomePage() {
                       {contactLabel}
                     </div>
                   </ZaloQrCode>
+                );
+              }
+              
+              if (method.name === '钉钉' && method.isQrCode) {
+                return (
+                  <DingtalkQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </DingtalkQrCode>
                 );
               }
 

@@ -65,7 +65,7 @@ const jobCategories = [
   {
     value: 'tech',
     label: '技术岗',
-    icon: Code,
+    icon: '👨‍💻',
     title: '技术岗',
     description: '我们正在寻找顶尖的技术人才，共同打造业界领先的旅游科技平台。在这里，你将有机会接触到大数据、人工智能、云计算等前沿技术，参与核心产品的研发，用代码改变世界。',
     features: ['运维工程师', '安全工程师', '大数据工程师', '桌面运维', '中高级产品经理'],
@@ -74,7 +74,7 @@ const jobCategories = [
   {
     value: 'performance',
     label: '业绩岗',
-    icon: TrendingUpIcon,
+    icon: '📈',
     title: '业绩岗',
     description: '如果你对市场充满热情，渴望通过策略和执行力驱动业务增长，那么业绩岗就是你的舞台。我们提供广阔的平台和资源，让你在市场推广、渠道拓展、销售管理等领域大展拳脚。',
     features: ['渗透劫持', 'SEO组长', 'SEO专员', '推广组长', '推广专员'],
@@ -83,7 +83,7 @@ const jobCategories = [
   {
     value: 'functional',
     label: '职能岗',
-    icon: Briefcase,
+    icon: '🏢',
     title: '职能岗',
     description: '作为公司的坚实后盾，职能部门在人力资源、财务、法务、行政等领域为业务发展提供全方位支持。我们欢迎专业、高效、富有责任感的你加入，共同保障公司的稳健运营。',
     features: ['客服维护', '数据分析师', '运营专员', '平台体验组长', '技术客服'],
@@ -363,7 +363,7 @@ export default function HomePage() {
             <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-10 bg-muted">
               {jobCategories.map(cat => (
                 <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
-                  <cat.icon className="h-5 w-5 mr-2" />
+                  <span className="h-5 w-5 mr-2 flex items-center justify-center">{cat.icon}</span>
                   {cat.label}
                 </TabsTrigger>
               ))}

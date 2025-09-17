@@ -11,6 +11,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Flag } from '@/components/flag';
+import { LineQrCode } from '@/components/line-qr-code';
 
 
 const popularRegions = [
@@ -173,7 +174,8 @@ export const contactMethods = [
   { 
     name: 'Line', 
     icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M83.33 16.67H16.67C9.25 16.67 3.33 22.58 3.33 30v40c0 7.42 5.92 13.33 13.34 13.33h5.21l1.56 2.34c1.25 1.88 3.44 3.75 5.31 3.75s4.06-1.88 5.31-3.75l1.56-2.34h16.67c7.42 0 13.33-5.92 13.33-13.33V30c0-7.42-5.92-13.33-13.33-13.33zm-56.25 40c-2.3 0-4.17-1.87-4.17-4.17s1.87-4.17 4.17-4.17 4.17 1.87 4.17 4.17-1.87 4.17-4.17 4.17zm14.58 0c-2.3 0-4.17-1.87-4.17-4.17s1.87-4.17 4.17-4.17 4.17 1.87 4.17 4.17-1.87 4.17-4.17 4.17zm14.59 0c-2.3 0-4.17-1.87-4.17-4.17s1.87-4.17 4.17-4.17 4.17 1.87 4.17 4.17-1.87 4.17-4.17 4.17z" fill="#00c300"/></svg>, 
-    href: 'https://line.me',
+    href: '#',
+    isQrCode: true,
     color: '#00C300'
   },
   { 
@@ -226,17 +228,38 @@ export default function HomePage() {
         {/* Quick Contact Section */}
         <section>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
-            {contactMethods.map((method) => (
-              <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">
+            {contactMethods.map((method) => {
+              const contactIcon = (
                 <div 
                   className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow"
                   style={{ color: method.color }}
                 >
                   <div className="w-8 h-8">{method.icon}</div>
                 </div>
+              );
+
+              const contactLabel = (
                 <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
-              </a>
-            ))}
+              );
+
+              if (method.isQrCode) {
+                return (
+                  <LineQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </LineQrCode>
+                );
+              }
+
+              return (
+                <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">
+                  {contactIcon}
+                  {contactLabel}
+                </a>
+              );
+            })}
           </div>
         </section>
 

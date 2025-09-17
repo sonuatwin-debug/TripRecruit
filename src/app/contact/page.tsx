@@ -1,6 +1,7 @@
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { contactMethods } from '../page';
+import { LineQrCode } from '@/components/line-qr-code';
 
 export default function ContactPage() {
   const contactHeroImage = PlaceHolderImages.find(p => p.id === 'contact-hero');
@@ -27,16 +28,38 @@ export default function ContactPage() {
       <div className="container py-12 md:py-20">
         <section>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
-            {contactMethods.map((method) => (
-              <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">
+            {contactMethods.map((method) => {
+              const contactIcon = (
                 <div 
                   className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow"
+                  style={{ color: method.color }}
                 >
-                  <div className="w-8 h-8 flex items-center justify-center" style={{ color: method.color }}>{method.icon}</div>
+                  <div className="w-8 h-8 flex items-center justify-center">{method.icon}</div>
                 </div>
+              );
+
+              const contactLabel = (
                 <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
-              </a>
-            ))}
+              );
+
+              if (method.isQrCode) {
+                return (
+                  <LineQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </LineQrCode>
+                );
+              }
+
+              return (
+                <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">
+                  {contactIcon}
+                  {contactLabel}
+                </a>
+              );
+            })}
           </div>
         </section>
 

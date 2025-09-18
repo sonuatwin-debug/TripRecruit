@@ -24,9 +24,8 @@ export default function ContactPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        <div className="relative container h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">{contactHeroImage.description}</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl">{contactHeroImage.imageHint}</p>
+        <div className="relative container h-full flex flex-col justify-center items-center text-center">
+          <p className="text-lg md:text-xl max-w-3xl">{contactHeroImage.imageHint}</p>
         </div>
       </section>
 

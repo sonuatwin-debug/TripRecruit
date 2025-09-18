@@ -1,30 +1,32 @@
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Image from 'next/image';
+
 import { contactMethods } from '../page';
 import { LineQrCode } from '@/components/line-qr-code';
 import { ZaloQrCode } from '@/components/zalo-qr-code';
 import { DingtalkQrCode } from '@/components/dingtalk-qr-code';
 import { WechatQrCode } from '@/components/wechat-qr-code';
+import Image from 'next/image';
 
 export default function ContactPage() {
-  const contactHeroImage = PlaceHolderImages.find(p => p.id === 'contact-hero');
+  const contactHeroImage = {
+    imageUrl: "https://res.cloudinary.com/dz1oictdz/image/upload/v1758187447/20161226113199329551_madw33.jpg",
+    description: "联系我们",
+    imageHint: "我们随时准备为您提供帮助。请通过以下任何渠道与我们联系。"
+  };
 
   return (
     <div className="-mt-14">
       <section className="relative h-[50vh] text-white">
-        {contactHeroImage && (
-          <Image
-            src={contactHeroImage.imageUrl}
-            alt={contactHeroImage.description}
-            data-ai-hint={contactHeroImage.imageHint}
-            fill
-            className="object-cover"
-          />
-        )}
+        <Image
+          src={contactHeroImage.imageUrl}
+          alt={contactHeroImage.description}
+          data-ai-hint={contactHeroImage.imageHint}
+          fill
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative container h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">联系我们</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl">我们随时准备为您提供帮助。请通过以下任何渠道与我们联系。</p>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline">{contactHeroImage.description}</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-3xl">{contactHeroImage.imageHint}</p>
         </div>
       </section>
 

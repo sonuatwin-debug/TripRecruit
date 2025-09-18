@@ -27,9 +27,9 @@
     },
     {
       "id": "contact-hero",
-      "description": "友好的客户支持团队在现代化办公室工作，体现沟通与信任的专业环境。",
-      "imageUrl": "https://picsum.photos/seed/5/1200/600",
-      "imageHint": "friendly customer support team in modern office, communication and trust theme, professional environment"
+      "description": "联系我们",
+      "imageUrl": "https://res.cloudinary.com/dz1oictdz/image/upload/v1758187447/20161226113199329551_madw33.jpg",
+      "imageHint": "我们随时准备为您提供帮助。请通过以下任何渠道与我们联系。"
     },
     {
       "id": "tech-jobs-showcase",

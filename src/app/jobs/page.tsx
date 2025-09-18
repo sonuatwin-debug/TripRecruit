@@ -69,7 +69,7 @@ function JobsPageContent() {
   const [activeTab, setActiveTab] = useState('tech');
 
   useEffect(() => {
-    document.title = '携程集团招聘官网｜全球化人才招聘平台｜海外高薪职位';
+    document.title = '加入携程集团｜成就更高价值的自己';
     const description = document.querySelector('meta[name="description"]');
     if (description) {
       description.setAttribute('content', '携程集团招聘官网，专注于全球化人才发展，长期发布各类优质岗位，涵盖市场运营、数据分析、客户服务、技术研发、行政管理等多个方向。我们为求职者提供真实可靠的高薪机会，打造国际化职业发展平台，助力人才与企业共赢未来。');

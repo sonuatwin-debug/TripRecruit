@@ -2,6 +2,7 @@ import { MOCK_JOBS } from '@/lib/mock-data';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import JobDetailsClient from './job-details-client';
+import { Suspense } from 'react';
 
 type Props = {
   params: { jobId: string };
@@ -10,7 +11,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const job = MOCK_JOBS.find(j => j.id === params.jobId);
-  const title = job ? `${job.title} - 携程集团招聘` : '职位详情 - 携程集团招聘';
+  const title = job ? `${job.title} - 加入携程集团｜成就更高价值的自己` : '加入携程集团｜成就更高价值的自己';
   
   return {
     title: title,
@@ -29,6 +30,8 @@ export default function JobDetailsPage({ params, searchParams }: Props) {
   const fromTab = typeof searchParams.fromTab === 'string' ? searchParams.fromTab : null;
 
   return (
-    <JobDetailsClient job={job} fromTab={fromTab} />
+    <Suspense fallback={<div>Loading...</div>}>
+      <JobDetailsClient job={job} fromTab={fromTab} />
+    </Suspense>
   );
 }

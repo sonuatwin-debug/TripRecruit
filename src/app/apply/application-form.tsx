@@ -84,8 +84,13 @@ export default function ApplicationForm() {
       </div>
 
       <div className="space-y-2">
-        <Label>📎 上传简历 (PDF/Word)</Label>
-        <Input type="file" name="resume" accept=".pdf,.doc,.docx" required />
+        <Label>🎓 学历</Label>
+        <Input placeholder="请输入您的最高学历" name="education" required />
+      </div>
+
+      <div className="space-y-2">
+        <Label>📍 目前所在地</Label>
+        <Input placeholder="请输入您目前的所在地" name="currentLocation" required />
       </div>
 
       <div className="space-y-2">

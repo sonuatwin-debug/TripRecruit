@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -61,7 +61,7 @@ const JobCard = ({ job, activeTab }: { job: Job, activeTab: string }) => {
 };
 
 
-export default function JobsPage() {
+function JobsPageContent() {
   const searchParams = useSearchParams();
   const [searchTerm, setSearchTerm] = useState('');
   const locationParam = searchParams.get('location');
@@ -164,4 +164,12 @@ export default function JobsPage() {
       </div>
     </div>
   );
+}
+
+export default function JobsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <JobsPageContent />
+    </Suspense>
+  )
 }

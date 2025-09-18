@@ -25,7 +25,7 @@ export default function AboutPage() {
             className="object-cover"
           />
         )}
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="relative container h-full flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">关于携程集团</h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl">我们是全球领先的旅游服务提供商，致力于让每一次旅行都成为完美的旅程。</p>

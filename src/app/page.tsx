@@ -214,7 +214,7 @@ export const contactMethods = [
   },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
   
   return (

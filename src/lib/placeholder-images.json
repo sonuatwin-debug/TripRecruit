@@ -34,19 +34,19 @@
     {
       "id": "tech-jobs-showcase",
       "description": "一个团队的软件工程师在办公室协作开发项目。",
-      "imageUrl": "https://picsum.photos/seed/201/600/400",
+      "imageUrl": "https://res.cloudinary.com/dtcqrybyo/image/upload/v1758113818/designing-offices-hybrid-article-overview_iq8kl9.jpg",
       "imageHint": "software engineers"
     },
     {
       "id": "performance-jobs-showcase",
       "description": "市场团队在会议室讨论业务增长策略和图表。",
-      "imageUrl": "https://picsum.photos/seed/202/600/400",
+      "imageUrl": "https://res.cloudinary.com/dtcqrybyo/image/upload/v1758113830/OpenPlaneOffice-1024x576_rji1k8.jpg",
       "imageHint": "marketing team"
     },
     {
       "id": "functional-jobs-showcase",
       "description": "人力资源专家在友好的环境中进行面试。",
-      "imageUrl": "https://picsum.photos/seed/203/600/400",
+      "imageUrl": "https://res.cloudinary.com/dtcqrybyo/image/upload/v1758114561/image_jraa8y.png",
       "imageHint": "HR interview"
     }
   ]

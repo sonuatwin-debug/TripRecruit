@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
@@ -11,12 +9,6 @@ import Link from 'next/link';
 import { Search } from 'lucide-react';
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { Flag } from '@/components/flag';
-import type { Metadata } from 'next';
-
-// Although this is a client component, we can't add metadata here directly.
-// The metadata would be defined in a parent server component or in layout.tsx.
-// For the purpose of this request, we will assume the metadata is inherited
-// or we create a server component wrapper for this page if needed.
 
 type Job = typeof MOCK_JOBS[0];
 

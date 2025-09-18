@@ -26,7 +26,7 @@ export default function JobDetailsClient({ job, fromTab }: { job: Job, fromTab: 
       <div className="py-12 md:py-20">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
-            <Button variant="outline" onClick={() => router.back()} className="text-muted-foreground">
+            <Button variant="outline" onClick={() => router.back()} className="text-muted-foreground hover:bg-card hover:text-card-foreground">
               <ArrowLeft className="mr-2 h-4 w-4" />
               返回职位列表
             </Button>

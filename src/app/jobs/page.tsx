@@ -132,6 +132,18 @@ function JobsPageContent() {
       </div>
     </div>
   );
+  
+  const columnsToRender = useMemo(() => {
+    const allColumns = [
+      { key: 'tech', jobs: jobsByColumn.tech, title: jobCategories.tech.title, icon: jobCategories.tech.icon },
+      { key: 'performance', jobs: jobsByColumn.performance, title: jobCategories.performance.title, icon: jobCategories.performance.icon },
+      { key: 'functional', jobs: jobsByColumn.functional, title: jobCategories.functional.title, icon: jobCategories.functional.icon },
+    ];
+    if (searchTerm) {
+      return allColumns.filter(col => col.jobs.length > 0);
+    }
+    return allColumns;
+  }, [jobsByColumn, searchTerm]);
 
   return (
     <div className="container">
@@ -157,9 +169,9 @@ function JobsPageContent() {
         </Card>
         
         <div className="flex-grow grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-8">
-            <JobsColumn jobs={jobsByColumn.tech} title={jobCategories.tech.title} icon={jobCategories.tech.icon} />
-            <JobsColumn jobs={jobsByColumn.performance} title={jobCategories.performance.title} icon={jobCategories.performance.icon} />
-            <JobsColumn jobs={jobsByColumn.functional} title={jobCategories.functional.title} icon={jobCategories.functional.icon} />
+            {columnsToRender.map(col => (
+              <JobsColumn key={col.key} jobs={col.jobs} title={col.title} icon={col.icon} />
+            ))}
         </div>
       </div>
     </div>

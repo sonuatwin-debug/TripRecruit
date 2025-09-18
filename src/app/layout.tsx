@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import { Toaster } from "@/components/ui/toaster"
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -9,8 +9,9 @@ import BackToTopButton from '@/components/back-to-top-button';
 import { WechatQrCode } from '@/components/wechat-qr-code';
 
 export const metadata: Metadata = {
-  title: '程聘',
-  description: '加入携程集团大家庭，开启新的旅程。',
+  title: '携程集团招聘官网｜全球化人才招聘平台｜海外高薪职位',
+  description: '携程集团招聘官网，专注于全球化人才发展，长期发布各类优质岗位，涵盖市场运营、数据分析、客户服务、技术研发、行政管理等多个方向。我们为求-	者提供真实可靠的高薪机会，打造国际化职业发展平台，助力人才与企业共赢未来。',
+  keywords: '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信-息',
 };
 
 export default function RootLayout({

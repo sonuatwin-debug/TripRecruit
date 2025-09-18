@@ -11,6 +11,12 @@ import Link from 'next/link';
 import { Search } from 'lucide-react';
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { Flag } from '@/components/flag';
+import type { Metadata } from 'next';
+
+// Although this is a client component, we can't add metadata here directly.
+// The metadata would be defined in a parent server component or in layout.tsx.
+// For the purpose of this request, we will assume the metadata is inherited
+// or we create a server component wrapper for this page if needed.
 
 type Job = typeof MOCK_JOBS[0];
 
@@ -68,6 +74,18 @@ export default function JobsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const locationParam = searchParams.get('location');
   const [activeTab, setActiveTab] = useState('tech');
+
+  useEffect(() => {
+    document.title = '携程集团招聘官网｜全球化人才招聘平台｜海外高薪职位';
+    const description = document.querySelector('meta[name="description"]');
+    if (description) {
+      description.setAttribute('content', '携程集团招聘官网，专注于全球化人才发展，长期发布各类优质岗位，涵盖市场运营、数据分析、客户服务、技术研发、行政管理等多个方向。我们为求职者提供真实可靠的高薪机会，打造国际化职业发展平台，助力人才与企业共赢未来。');
+    }
+    const keywords = document.querySelector('meta[name="keywords"]');
+    if (keywords) {
+      keywords.setAttribute('content', '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信息');
+    }
+  }, []);
 
   useEffect(() => {
     const departmentParam = searchParams.get('department');

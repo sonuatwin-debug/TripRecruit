@@ -5,22 +5,32 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import type { MOCK_JOBS } from '@/lib/mock-data';
+import { ArrowLeft } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 type Job = (typeof MOCK_JOBS)[0];
 
 export default function JobDetailsClient({ job, fromTab }: { job: Job, fromTab: string | null }) {
-  
+  const router = useRouter();
   const { details } = job;
 
   const hasRequirements = details && details.requirements && details.requirements.length > 0;
   const hasResponsibilities = details && details.responsibilities && details.responsibilities.length > 0;
 
   const applyLink = `/apply?jobId=${job.id}${fromTab ? `&fromTab=${fromTab}` : ''}`;
+  
+  const backLink = fromTab ? `/jobs?fromTab=${fromTab}&fromDetails=true` : '/jobs?fromDetails=true';
 
   return (
     <div className="container">
       <div className="py-12 md:py-20">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-6">
+            <Button variant="ghost" onClick={() => router.back()} className="text-muted-foreground">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              返回职位列表
+            </Button>
+          </div>
           <Card>
             <CardHeader>
               <CardTitle className="text-3xl font-bold font-headline">{job.title}</CardTitle>

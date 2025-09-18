@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -63,6 +63,7 @@ const JobCard = ({ job, activeTab }: { job: Job, activeTab: string }) => {
 
 function JobsPageContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
   const locationParam = searchParams.get('location');
   const [activeTab, setActiveTab] = useState('tech');
@@ -77,7 +78,17 @@ function JobsPageContent() {
     if (keywords) {
       keywords.setAttribute('content', '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信息');
     }
-  }, []);
+    
+    // Clear search term on mount to ensure fresh state when navigating back
+    const currentUrl = new URL(window.location.href);
+    if (currentUrl.searchParams.get('fromDetails')) {
+        currentUrl.searchParams.delete('fromDetails');
+        router.replace(currentUrl.toString(), { scroll: false });
+    } else {
+        setSearchTerm('');
+    }
+
+  }, [router]);
 
   useEffect(() => {
     const departmentParam = searchParams.get('department');

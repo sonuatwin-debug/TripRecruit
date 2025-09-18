@@ -3,13 +3,13 @@
 
 import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MOCK_JOBS } from '@/lib/mock-data';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Flag } from '@/components/flag';
 import { useEffect, useState } from 'react';
+import { Label } from '@/components/ui/label';
 
 const locations = [
     { id: 'philippines', label: '菲律宾' },
@@ -39,77 +39,61 @@ export default function ApplicationForm() {
       <input type="hidden" name="_next" value="/apply/success" />
       <input type="hidden" name="_subject" value="新的职位申请!" />
 
-      <FormItem>
-        <FormLabel>👤 姓名 (拼音)</FormLabel>
-        <FormControl>
-          <Input placeholder="请输入您的姓名" name="fullName" required />
-        </FormControl>
-      </FormItem>
+      <div className="space-y-2">
+        <Label>👤 姓名 (拼音)</Label>
+        <Input placeholder="请输入您的姓名" name="fullName" required />
+      </div>
 
-      <FormItem>
-        <FormLabel>☎️ 联系方式 (最少填两项)</FormLabel>
-      </FormItem>
+      <div className="space-y-2">
+        <Label>☎️ 联系方式 (最少填两项)</Label>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <FormItem>
-          <FormLabel>✈️ Telegram</FormLabel>
-          <FormControl>
-            <Input placeholder="请输入您的 Telegram" name="telegram" />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel>💬 微信</FormLabel>
-          <FormControl>
-            <Input placeholder="请输入您的微信号" name="wechat" />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel>🟦 QQ</FormLabel>
-          <FormControl>
-            <Input placeholder="请输入您的QQ号" name="qq" />
-          </FormControl>
-        </FormItem>
-        <FormItem>
-          <FormLabel>📧 邮箱</FormLabel>
-          <FormControl>
-            <Input type="email" placeholder="请输入您的邮箱" name="email" />
-          </FormControl>
-        </FormItem>
+        <div className="space-y-2">
+          <Label>✈️ Telegram</Label>
+          <Input placeholder="请输入您的 Telegram" name="telegram" />
+        </div>
+        <div className="space-y-2">
+          <Label>💬 微信</Label>
+          <Input placeholder="请输入您的微信号" name="wechat" />
+        </div>
+        <div className="space-y-2">
+          <Label>🟦 QQ</Label>
+          <Input placeholder="请输入您的QQ号" name="qq" />
+        </div>
+        <div className="space-y-2">
+          <Label>📧 邮箱</Label>
+          <Input type="email" placeholder="请输入您的邮箱" name="email" />
+        </div>
       </div>
       
-      <FormItem>
-        <FormLabel>🎯 意向岗位</FormLabel>
-        <FormControl>
-          <Input 
-            placeholder="请输入您意向的岗位" 
-            name="jobTitle" 
-            value={jobTitle} 
-            onChange={(e) => setJobTitle(e.target.value)} 
-            required 
-          />
-        </FormControl>
-      </FormItem>
+      <div className="space-y-2">
+        <Label>🎯 意向岗位</Label>
+        <Input 
+          placeholder="请输入您意向的岗位" 
+          name="jobTitle" 
+          value={jobTitle} 
+          onChange={(e) => setJobTitle(e.target.value)} 
+          required 
+        />
+      </div>
       
-      <FormItem>
-        <FormLabel>💰 期望薪资</FormLabel>
-        <FormControl>
-          <Input placeholder="例如：15k-20k" name="expectedSalary" required />
-        </FormControl>
-      </FormItem>
+      <div className="space-y-2">
+        <Label>💰 期望薪资</Label>
+        <Input placeholder="例如：15k-20k" name="expectedSalary" required />
+      </div>
 
-      <FormItem>
-        <FormLabel>📎 上传简历 (PDF/Word)</FormLabel>
-        <FormControl>
-          <Input type="file" name="resume" accept=".pdf,.doc,.docx" required />
-        </FormControl>
-      </FormItem>
+      <div className="space-y-2">
+        <Label>📎 上传简历 (PDF/Word)</Label>
+        <Input type="file" name="resume" accept=".pdf,.doc,.docx" required />
+      </div>
 
-      <FormItem>
+      <div className="space-y-2">
         <div className="mb-4">
-          <FormLabel className="text-base">🌍 工作地点</FormLabel>
-          <FormDescription>
+          <Label className="text-base">🌍 工作地点</Label>
+          <p className="text-sm text-muted-foreground">
             请选择您感兴趣的工作地点
-          </FormDescription>
+          </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {locations.map((item) => (
@@ -122,18 +106,16 @@ export default function ApplicationForm() {
             </div>
         ))}
         </div>
-      </FormItem>
+      </div>
 
-      <FormItem>
-        <FormLabel>📝 备注 (可选)</FormLabel>
-        <FormControl>
-          <Textarea
-            placeholder="您可以在此填写任何补充信息"
-            rows={5}
-            name="notes"
-          />
-        </FormControl>
-      </FormItem>
+      <div className="space-y-2">
+        <Label>📝 备注 (可选)</Label>
+        <Textarea
+          placeholder="您可以在此填写任何补充信息"
+          rows={5}
+          name="notes"
+        />
+      </div>
 
       <Button type="submit" size="lg" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow">🚀 提交申请</Button>
     </form>

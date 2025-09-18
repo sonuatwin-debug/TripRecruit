@@ -213,7 +213,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[60vh] text-white -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24">
+      <section className="relative h-[50vh] md:h-[60vh] text-white -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -226,7 +226,7 @@ export default function HomePage() {
         )}
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative container h-full flex flex-col justify-center text-center items-center">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4">与我们一起寻找您的下一段旅程</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">与我们一起寻找您的下一段旅程</h1>
           <p className="text-lg md:text-xl max-w-3xl mb-8">
             在携程集团探索激动人心的职业机会，成为塑造旅游未来的全球团队的一员。
           </p>

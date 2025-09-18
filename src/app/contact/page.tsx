@@ -1,16 +1,18 @@
 
+
 import { contactMethods } from '../page';
 import { LineQrCode } from '@/components/line-qr-code';
 import { ZaloQrCode } from '@/components/zalo-qr-code';
 import { DingtalkQrCode } from '@/components/dingtalk-qr-code';
 import { WechatQrCode } from '@/components/wechat-qr-code';
+import { QqQrCode } from '@/components/qq-qr-code';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '携程集团招聘官网｜全球化人才招聘平台｜海外高薪职位',
   description: '携程集团招聘官网，专注于全球化人才发展，长期发布各类优质岗位，涵盖市场运营、数据分析、客户服务、技术研发、行政管理等多个方向。我们为求职-	者提供真实可靠的高薪机会，打造国际化职业发展平台，助力人才与企业共赢未来。',
-  keywords: '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信-息',
+  keywords: '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信-	息',
 };
 
 export default function ContactPage() {
@@ -94,6 +96,17 @@ export default function ContactPage() {
                       {contactLabel}
                     </div>
                   </WechatQrCode>
+                );
+              }
+
+              if (method.name === 'QQ' && method.isQrCode) {
+                return (
+                  <QqQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </QqQrCode>
                 );
               }
 

@@ -15,6 +15,7 @@ import { LineQrCode } from '@/components/line-qr-code';
 import { ZaloQrCode } from '@/components/zalo-qr-code';
 import { DingtalkQrCode } from '@/components/dingtalk-qr-code';
 import { WechatQrCode } from '@/components/wechat-qr-code';
+import { QqQrCode } from '@/components/qq-qr-code';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -207,8 +208,8 @@ export const contactMethods = [
   { 
     name: 'QQ', 
     icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z" fill="#000000"/></svg>,
-    href: 'https://im.qq.com',
-    isQrCode: false,
+    href: '#',
+    isQrCode: true,
     color: '#000000'
   },
 ];
@@ -298,6 +299,17 @@ export default function HomePage() {
                       {contactLabel}
                     </div>
                   </WechatQrCode>
+                );
+              }
+
+              if (method.name === 'QQ' && method.isQrCode) {
+                return (
+                  <QqQrCode key={method.name}>
+                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+                      {contactIcon}
+                      {contactLabel}
+                    </div>
+                  </QqQrCode>
                 );
               }
 

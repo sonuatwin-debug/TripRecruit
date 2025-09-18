@@ -7,11 +7,12 @@ import { Mail, Send } from 'lucide-react';
 import Link from 'next/link';
 import BackToTopButton from '@/components/back-to-top-button';
 import { WechatQrCode } from '@/components/wechat-qr-code';
+import { QqQrCode } from '@/components/qq-qr-code';
 
 export const metadata: Metadata = {
   title: '携程集团招聘官网｜全球化人才招聘平台｜海外高薪职位',
-  description: '携程集团招聘官网，专注于全球化人才发展，长期发布各类优质岗位，涵盖市场运营、数据分析、客户服务、技术研发、行政管理等多个方向。我们为求-	者提供真实可靠的高薪机会，打造国际化职业发展平台，助力人才与企业共赢未来。',
-  keywords: '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信-息',
+  description: '携程集团招聘官网，专注于全球化人才发展，长期发布各类优质岗位，涵盖市场运营、数据分析、客户服务、技术研发、行政管理等多个方向。我们为求职-	者提供真实可靠的高薪机会，打造国际化职业发展平台，助力人才与企业共赢未来。',
+  keywords: '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信-	息',
 };
 
 export default function RootLayout({
@@ -34,19 +35,21 @@ export default function RootLayout({
         {/* Floating Contact Buttons */}
         <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col space-y-4">
             <a href="https://t.me/XCJT02" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-2">
-                <div className="inline-block p-3 rounded-full bg-white text-[#0088cc] hover:bg-gray-100 transition-colors animate-pulse-glow border border-[#0088cc]">
-                    <Send className="h-6 w-6" />
+                <div className="inline-block p-3 rounded-full bg-white text-white hover:bg-gray-100 transition-colors animate-pulse-glow border border-[#0088cc]">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-6 w-6"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0z" fill="#27A0E7"/><path d="M5.44 12.032l11.232-4.384c.72-.288.432.072.144.648l-2.52 7.92c-.216.792-.72.936-1.44.576l-3.24-2.376-1.584 1.512c-.144.144-.288.288-.576.288l.216-3.24 6.048-5.616c.288-.288-.072-.432-.432-.144l-7.56 4.824-3.168-.936c-.72-.216-.72-.792.144-1.152z" fill="#fff"/></svg>
                 </div>
                 <span className="hidden group-hover:block bg-background p-2 rounded-md text-foreground text-sm font-medium">Telegram</span>
             </a>
-            <a href="https://im.qq.com" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-2">
-                <div className="inline-flex items-center justify-center p-3 rounded-full bg-white text-black hover:bg-gray-100 transition-colors animate-pulse-glow text-2xl border">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z"/>
-                    </svg>
-                </div>
-                <span className="hidden group-hover:block bg-background p-2 rounded-md text-foreground text-sm font-medium">QQ</span>
-            </a>
+            <QqQrCode>
+              <div className="group flex items-center space-x-2 cursor-pointer">
+                  <div className="inline-flex items-center justify-center p-3 rounded-full bg-white text-black hover:bg-gray-100 transition-colors animate-pulse-glow text-2xl border">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z"/>
+                      </svg>
+                  </div>
+                  <span className="hidden group-hover:block bg-background p-2 rounded-md text-foreground text-sm font-medium">QQ</span>
+              </div>
+            </QqQrCode>
             <WechatQrCode>
               <div className="group flex items-center space-x-2 cursor-pointer">
                   <div className="inline-flex items-center justify-center p-3 rounded-full bg-white text-[#07C160] hover:bg-gray-100 transition-colors animate-pulse-glow text-2xl border">

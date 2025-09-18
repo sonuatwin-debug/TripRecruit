@@ -224,7 +224,7 @@ export default function HomePage() {
             priority
           />
         )}
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative container h-full flex flex-col justify-center text-center items-center">
           <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4">与我们一起寻找您的下一段旅程</h1>
           <p className="text-lg md:text-xl max-w-3xl mb-8">

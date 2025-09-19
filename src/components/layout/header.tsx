@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
@@ -21,21 +21,41 @@ const navLinks = [
 
 export default function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    const isAnchorLink = href.startsWith('/#');
-    
-    if (isAnchorLink && pathname === '/') {
+    const isAnchorLinkOnHome = href.startsWith('/#') && pathname === '/';
+
+    if (isAnchorLinkOnHome) {
       e.preventDefault();
       const elementId = href.substring(2);
       const element = document.getElementById(elementId);
+      
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+      // Close the menu after a short delay to allow scrolling to start
+      setTimeout(() => {
+        setIsMobileMenuOpen(false);
+      }, 100);
+
+    } else if (href.startsWith('/#')) {
+      // If on another page, navigate to home and then scroll
+      e.preventDefault();
+      const elementId = href.substring(2);
+      router.push('/');
+      // We can't immediately scroll, as the page is just navigating.
+      // A more robust solution might involve context or query params
+      // but for now, we just navigate and let the user scroll manually
+      // or handle it on the homepage with useEffect.
+      // For simplicity, we just close the menu.
+      setIsMobileMenuOpen(false);
+
+    } else {
+      // For regular links, just close the menu
+      setIsMobileMenuOpen(false);
     }
-    
-    setIsMobileMenuOpen(false);
   };
 
   const renderNavLinks = (isMobile: boolean) =>
@@ -43,7 +63,7 @@ export default function Header() {
       <Link
         key={link.href}
         href={link.href}
-        onClick={(e) => isMobile && handleLinkClick(e, link.href)}
+        onClick={(e) => handleLinkClick(e, link.href)}
         className={cn(
           'font-medium transition-colors hover:text-primary',
           pathname === link.href ? 'text-primary' : 'text-foreground/80',
@@ -62,7 +82,29 @@ export default function Header() {
             <span className="font-bold font-headline text-lg">携程集团</span>
           </Link>
           <nav className="hidden space-x-6 md:flex">
-            {renderNavLinks(false)}
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={(e) => {
+                  if (link.href.startsWith('/#') && pathname === '/') {
+                    e.preventDefault();
+                    const elementId = link.href.substring(2);
+                    const element = document.getElementById(elementId);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }
+                }}
+                className={cn(
+                  'font-medium transition-colors hover:text-primary',
+                  pathname === link.href ? 'text-primary' : 'text-foreground/80',
+                  'text-sm'
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
         </div>
 
@@ -81,7 +123,6 @@ export default function Header() {
             <SheetContent side="right">
               <SheetHeader className="mb-4 text-left">
                 <SheetTitle>
-                  <span className="sr-only">导航菜单</span>
                   <Link href="/" onClick={(e) => handleLinkClick(e, '/')}>
                      <span className="font-bold font-headline text-lg">携程集团</span>
                   </Link>
@@ -92,7 +133,7 @@ export default function Header() {
               </SheetHeader>
               <div className="flex flex-col space-y-4">
                 {renderNavLinks(true)}
-                 <Button asChild className="bg-card hover:bg-muted text-card-foreground mt-4 animate-pulse-glow">
+                 <Button asChild>
                     <Link href="/jobs" onClick={(e) => handleLinkClick(e, '/jobs')}>寻找职位</Link>
                 </Button>
               </div>

@@ -1,96 +1,130 @@
-{
-  "HomePage": {
-    "heroTitle": "ค้นหาการเดินทางครั้งต่อไปของคุณกับเรา",
-    "heroSubtitle": "สำรวจโอกาสในการทำงานที่น่าตื่นเต้นที่ Trip.com Group และเป็นส่วนหนึ่งของทีมระดับโลกที่สร้างอนาคตของการเดินทาง",
-    "popularRegionsTitle": "สถานที่รับสมัครงานยอดนิยม",
-    "regionPhilippines": "ฟิลิปปินส์",
-    "regionDubai": "ดูไบ",
-    "regionThailand": "ประเทศไทย",
-    "regionCambodia": "กัมพูชา",
-    "regionJapan": "ญี่ปุ่น",
-    "regionMalaysia": "มาเลเซีย",
-    "regionHongkong": "ฮ่องกง",
-    "regionSrilanka": "ศรีลังกา",
-    "viewJobsButton": "ดูตำแหน่งงาน",
-    "benefitsTitle": "สวัสดิการและผลประโยชน์",
-    "benefitsSubtitle": "เรามอบสวัสดิการที่ครอบคลุม ดูแลการเติบโตและชีวิตของพนักงานทุกคน",
-    "benefitAttendance": "เบี้ยขยัน",
-    "benefitAttendanceDesc": "500-1000 หยวน, ค่าอาหาร 10-15U/วัน",
-    "benefitPerformance": "โบนัสตามผลงาน",
-    "benefitPerformanceDesc": "รับโบนัสตามผลงานทุกเดือนหลังผ่านการทดลองงาน",
-    "benefitYearEnd": "โบนัสสิ้นปี",
-    "benefitYearEndDesc": "เงินเดือน 13-17 เดือน + อั่งเปาตรุษจีน",
-    "benefitSalaryReview": "การพิจารณาปรับเงินเดือน",
-    "benefitSalaryReviewDesc": "พิจารณาปรับเงินเดือนทุกครึ่งปีหลังผ่านการทดลองงาน",
-    "benefitLoyalty": "รางวัลความภักดี",
-    "benefitLoyaltyDesc": "20,000 หยวนเมื่อทำงานครบ 2 ปี, 50,000 หยวนเมื่อครบ 5 ปี",
-    "benefitAccommodation": "ที่พัก",
-    "benefitAccommodationDesc": "จัดหาอพาร์ตเมนต์หรูสำหรับ 2-3 คน พร้อมเครื่องใช้ไฟฟ้าและ WIFI หากไม่ต้องการที่พักจะได้รับค่าช่วยเหลือค่าที่พัก",
-    "benefitDining": "อาหาร",
-    "benefitDiningDesc": "บริษัทมีเชฟส่วนตัวให้บริการอาหาร 4 มื้อสไตล์เสฉวน หูหนาน และกวางตุ้ง พร้อมผลไม้และเครื่องดื่มไม่อั้น",
-    "benefitHolidayBonus": "โบนัสวันหยุด",
-    "benefitHolidayBonusDesc": "โบนัสวันเกิด, เงินเดือน 3 เท่าในวันหยุดเทศกาลไหว้บ๊ะจ่าง, ไหว้พระจันทร์, ปีใหม่ และตรุษจีน",
-    "benefitTeamBuilding": "กิจกรรมสร้างทีม",
-    "benefitTeamBuildingDesc": "แต่ละแผนกจัดกิจกรรมสร้างทีมทุกเดือน",
-    "benefitVacation": "เงินช่วยเหลือวันหยุด",
-    "benefitVacationDesc": "ทำงานครบ 1 ปีได้รับวันหยุดพักผ่อนประจำปี 15 วันพร้อมค่าตั๋วเครื่องบิน, หากไม่หยุดครึ่งปีจะได้รับเงินช่วยเหลือ 10,500 หยวน",
-    "benefitTraining": "ระบบการฝึกอบรม",
-    "benefitTrainingDesc": "ระบบการฝึกอบรมที่สมบูรณ์ (การฝึกอบรมก่อนเริ่มงาน, การฝึกอบรมเพื่อเลื่อนตำแหน่ง)",
-    "benefitWorkEnv": "สภาพแวดล้อมการทำงาน",
-    "benefitWorkEnvDesc": "กลุ่มบริษัทมอบสภาพแวดล้อมและอุปกรณ์การทำงานที่ปลอดภัยและเชื่อถือได้ให้กับพนักงานทุกคน",
-    "jobCategoriesTitle": "ประเภทตำแหน่งงานยอดนิยม",
-    "techJobs": "ตำแหน่งด้านเทคนิค",
-    "performanceJobs": "ตำแหน่งด้านผลงาน",
-    "functionalJobs": "ตำแหน่งด้านฟังก์ชัน",
-    "techJobsDesc": "เรากำลังมองหาบุคลากรด้านเทคนิคชั้นนำเพื่อร่วมกันสร้างแพลตฟอร์มเทคโนโลยีการท่องเที่ยวชั้นนำของอุตสาหกรรม ที่นี่คุณจะมีโอกาสได้สัมผัสกับเทคโนโลยีล้ำสมัย เช่น บิ๊กดาต้า ปัญญาประดิษฐ์ และคลาวด์คอมพิวติ้ง และมีส่วนร่วมในการพัฒนาผลิตภัณฑ์หลัก เพื่อเปลี่ยนแปลงโลกด้วยโค้ด",
-    "techJobFeature1": "วิศวกรปฏิบัติการ",
-    "techJobFeature2": "วิศวกรความปลอดภัย",
-    "techJobFeature3": "วิศวกรบิ๊กดาต้า",
-    "techJobFeature4": "การบำรุงรักษาเดสก์ท็อป",
-    "techJobFeature5": "ผู้จัดการผลิตภัณฑ์ระดับกลางและอาวุโส",
-    "performanceJobsDesc": "หากคุณมีความกระตือรือร้นในตลาดและต้องการขับเคลื่อนการเติบโตทางธุรกิจผ่านกลยุทธ์และการปฏิบัติงาน ตำแหน่งด้านผลงานคือเวทีสำหรับคุณ เรามีแพลตฟอร์มและทรัพยากรที่กว้างขวางเพื่อให้คุณได้แสดงความสามารถในด้านการส่งเสริมการตลาด การขยายช่องทาง และการจัดการการขาย",
-    "performanceJobFeature1": "การแฮ็กและการแทรกซึม",
-    "performanceJobFeature2": "หัวหน้าทีม SEO",
-    "performanceJobFeature3": "ผู้เชี่ยวชาญ SEO",
-    "performanceJobFeature4": "หัวหน้าทีมส่งเสริมการขาย",
-    "performanceJobFeature5": "ผู้เชี่ยวชาญด้านการส่งเสริมการขาย",
-    "functionalJobsDesc": "ในฐานะที่เป็นหน่วยสนับสนุนที่แข็งแกร่งของบริษัท แผนกฟังก์ชันให้การสนับสนุนการพัฒนาธุรกิจอย่างรอบด้านในด้านทรัพยากรบุคคล การเงิน กฎหมาย และธุรการ เรายินดีต้อนรับคุณ ผู้ที่มีความเป็นมืออาชีพ ประสิทธิภาพ และความรับผิดชอบ เพื่อร่วมกันรับประกันการดำเนินงานที่มั่นคงของบริษัท",
-    "functionalJobFeature1": "การบำรุงรักษาบริการลูกค้า",
-    "functionalJobFeature2": "นักวิเคราะห์ข้อมูล",
-    "functionalJobFeature3": "ผู้เชี่ยวชาญด้านการปฏิบัติการ",
-    "functionalJobFeature4": "หัวหน้าทีมประสบการณ์แพลตฟอร์ม",
-    "functionalJobFeature5": "ฝ่ายบริการลูกค้าด้านเทคนิค",
-    "viewMoreButton": "ดูเพิ่มเติม",
-    "advantagesTitle": "ข้อดีของเรา",
-    "advantageGlobal": "แพลตฟอร์มระดับโลก",
-    "advantageGlobalDesc": "เข้าร่วมกลุ่มบริษัทท่องเที่ยวชั้นนำของโลก แสดงความสามารถของคุณบนเวทีระดับนานาชาติ สัมผัสวัฒนธรรมที่หลากหลาย และขยายมุมมองในระดับโลก",
-    "advantageGrowth": "โอกาสในการเติบโตที่กว้างขวาง",
-    "advantageGrowthDesc": "เรามีเส้นทางอาชีพที่ชัดเจนและโอกาสในการเลื่อนตำแหน่งมากมาย ไม่ว่าคุณจะเป็นผู้เชี่ยวชาญด้านเทคนิคหรือผู้มีความสามารถด้านการจัดการ คุณจะพบเส้นทางการเติบโตของคุณที่นี่",
-    "advantageSalary": "ค่าตอบแทนที่แข่งขันได้",
-    "advantageSalaryDesc": "เราเสนอเงินเดือนและสวัสดิการที่แข่งขันได้ในอุตสาหกรรม เพื่อให้แน่ใจว่าการทำงานหนักของคุณจะได้รับการตอบแทนอย่างคุ้มค่า",
-    "advantageCulture": "วัฒนธรรมทีมที่ยอดเยี่ยม",
-    "advantageCultureDesc": "ทำงานร่วมกับบุคลากรชั้นนำ เติบโตไปด้วยกันในบรรยากาศที่เปิดกว้างและร่วมมือกัน เราสนับสนุนนวัตกรรมและเปิดรับการเปลี่ยนแปลง",
-    "advantageTraining": "การฝึกอบรมพนักงานที่สมบูรณ์แบบ",
-    "advantageTrainingDesc": "เรามีระบบการฝึกอบรมที่ครอบคลุม ตั้งแต่การปฐมนิเทศพนักงานใหม่ไปจนถึงการพัฒนาทักษะเฉพาะทาง เพื่อสนับสนุนการเติบโตส่วนบุคคลและอาชีพของคุณอย่างเต็มที่",
-    "advantageCare": "การดูแลพนักงานอย่างรอบด้าน",
-    "advantageCareDesc": "เราใส่ใจในสวัสดิภาพของพนักงานทุกคน โดยมอบการดูแลสุขภาพที่ครอบคลุม สภาพแวดล้อมการทำงานที่สะดวกสบาย และกิจกรรมพนักงานที่หลากหลาย"
-  },
-  "Header": {
-    "home": "หน้าแรก",
-    "popularRegions": "สถานที่รับสมัครงาน",
-    "benefits": "สวัสดิการ",
-    "applyOnline": "สมัครออนไลน์",
-    "aboutUs": "เกี่ยวกับเรา",
-    "contactUs": "ติดต่อเรา",
-    "faq": "คำถามที่พบบ่อย",
-    "findJobs": "หางาน",
-    "languageSwitch": "เปลี่ยนภาษา",
-    "langSwitched": "เปลี่ยนภาษาเป็น {langName} แล้ว",
-    "langZh": "简体中文",
-    "langVi": "Tiếng Việt",
-    "langTh": "ภาษาไทย",
-    "companyName": "Trip.com Group",
-    "toggleMenu": "สลับเมนู",
-    "mobileMenuDesc": "เรียกดูหน้าหลักของเว็บไซต์ที่นี่"
-  }
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Globe, Menu } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useToast } from "@/hooks/use-toast"
+
+export default function Header() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { toast } = useToast();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    if (href.startsWith('/#')) {
+      const elementId = href.substring(2);
+      if (pathname === '/') {
+        const targetElement = document.getElementById(elementId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        router.push('/' + href.substring(1));
+      }
+    } else {
+      router.push(href);
+    }
+    setIsMobileMenuOpen(false);
+  };
+  
+  useEffect(() => {
+    const handleAnchorLink = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+    handleAnchorLink();
+    window.addEventListener('hashchange', handleAnchorLink, false);
+    return () => {
+      window.removeEventListener('hashchange', handleAnchorLink, false);
+    };
+  }, []);
+
+  const navLinks = [
+    { href: '/', label: '首页' },
+    { href: '/#popular-regions', label: '热门招聘地点' },
+    { href: '/#benefits', label: '福利待遇' },
+    { href: '/apply', label: '在线申请' },
+    { href: '/about', label: '关于我们' },
+    { href: '/contact', label: '联系我们' },
+    { href: '/faq', label: '常见问题' },
+  ];
+
+  const renderNavLinks = (isMobile: boolean) =>
+    navLinks.map((link) => (
+      <Link
+        key={link.href}
+        href={link.href}
+        onClick={(e) => handleLinkClick(e, link.href)}
+        className={cn(
+          'font-medium transition-colors hover:text-primary',
+          pathname === link.href && !link.href.includes('#') ? 'text-primary' : 'text-foreground/80',
+          isMobile ? 'block py-2 text-lg' : 'text-sm'
+        )}
+      >
+        {link.label}
+      </Link>
+    ));
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center">
+        <div className="mr-4 flex items-center">
+          <Link href="/" className="mr-6 flex items-center space-x-2">
+            <span className="font-bold font-headline text-lg">携程集团</span>
+          </Link>
+          <nav className="hidden space-x-6 md:flex">
+            {renderNavLinks(false)}
+          </nav>
+        </div>
+
+        <div className="flex flex-1 items-center justify-end space-x-2 md:space-x-4">
+          <Button asChild className="hidden md:flex bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
+            <Link href="/jobs">寻找职位</Link>
+          </Button>
+
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" className="md:hidden bg-background hover:bg-muted text-foreground h-9 w-9 px-0">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">切换菜单</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <SheetHeader className="mb-4 text-left">
+                <SheetTitle>
+                  <Link href="/" onClick={(e) => handleLinkClick(e, '/')}>
+                     <span className="font-bold font-headline text-lg">携程集团</span>
+                  </Link>
+                </SheetTitle>
+                <SheetDescription>
+                   在这里浏览网站的主要页面。
+                </SheetDescription>
+              </SheetHeader>
+              <div className="flex flex-col space-y-4">
+                {renderNavLinks(true)}
+                 <Button asChild>
+                    <Link href="/jobs" onClick={(e) => handleLinkClick(e, '/jobs')}>寻找职位</Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
 }

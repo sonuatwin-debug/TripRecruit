@@ -21,7 +21,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '加入携程集团｜成就更高价值的自己',
   description: '携程集团招聘官网，专注于全球化人才发展，长期发布各类优质岗位，涵盖市场运营、数据分析、客户服务、技术研发、行政管理等多个方向。我们为求职-	者提供真实可靠的高薪机会，打造国际化职业发展平台，助力人才与企业共赢未来。',
-  keywords: '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信-	息',
+  keywords: '携程集团招聘, 携程招聘官网, 携程人才网, 携程海外工作, 携程集团高薪职位, 携程直招, 携程集团招聘平台, 携程国际人才, 携程工作机会, 携程招聘信-	信息',
 };
 
 const popularRegions = [
@@ -367,7 +367,7 @@ export default async function HomePage() {
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
           <Tabs defaultValue="tech" className="w-full">
             <div className="flex justify-center">
-              <TabsList className="h-auto flex-wrap bg-muted mb-10 inline-flex">
+              <TabsList className="h-auto flex-wrap justify-center bg-muted mb-10 inline-flex">
                 {jobCategories.map(cat => (
                   <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
                     <span className="h-5 w-5 mr-2 flex items-center justify-center">{cat.icon}</span>

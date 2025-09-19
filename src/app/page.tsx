@@ -330,9 +330,9 @@ export default async function HomePage() {
             {popularRegions.map((region) => (
               <Card key={region.name} className="overflow-hidden group transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-blue-glow animate-card-pulse-glow">
                 <CardContent className="p-0">
-                  <div className="p-6 pb-2 text-center">
-                    <h3 className="font-semibold text-lg md:text-xl text-foreground flex items-center justify-center">
-                      <Flag country={region.name} className="h-6 w-8 mr-3" />
+                  <div className="p-6 pb-4 flex flex-col items-center text-center">
+                    <Flag country={region.name} className="h-10 w-16 mb-4" />
+                    <h3 className="font-semibold text-lg text-foreground">
                       <span>{region.name}</span>
                     </h3>
                   </div>

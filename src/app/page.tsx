@@ -198,20 +198,8 @@ export const contactMethods = [
     isQrCode: true,
     color: '#0068FF'
   },
-  { 
-    name: '钉钉', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.035 7.643l-3.21-3.21a.9.9 0 0 0-1.272 0L8.342 7.643a.9.9 0 0 0 .636 1.536h1.714v5.714a.9.9 0 1 0 1.8 0V9.179h1.714a.9.9 0 0 0 .636-1.536zM3 13.5c0-4.965 4.035-9 9-9s9 4.035 9 9-4.035 9-9 9-9-4.035-9-9zm1.8 0c0 3.972 3.228 7.2 7.2 7.2s7.2-3.228 7.2-7.2-3.228-7.2-7.2-7.2-7.2 3.228-7.2 7.2z" fill="#387cfa"/></svg>, 
-    href: '#',
-    isQrCode: true,
-    color: '#387cfa'
-  },
-  { 
-    name: 'QQ', 
-    icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z" fill="#000000"/></svg>,
-    href: '#',
-    isQrCode: true,
-    color: '#000000'
-  },
+  { _id: '154', name: '钉钉', icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.035 7.643l-3.21-3.21a.9.9 0 0 0-1.272 0L8.342 7.643a.9.9 0 0 0 .636 1.536h1.714v5.714a.9.9 0 1 0 1.8 0V9.179h1.714a.9.9 0 0 0 .636-1.536zM3 13.5c0-4.965 4.035-9 9-9s9 4.035 9 9-4.035 9-9 9-9-4.035-9-9zm1.8 0c0 3.972 3.228 7.2 7.2 7.2s7.2-3.228 7.2-7.2-3.228-7.2-7.2-7.2-7.2 3.228-7.2 7.2z" fill="#387cfa"/></svg>, href: '#', isQrCode: true, color: '#387cfa' },
+  { _id: '155', name: 'QQ', icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.072 2.224c-5.46 0-9.876 3.96-9.876 8.848 0 2.45.966 4.716 2.616 6.444-1.164 2.856-4.26 3.036-4.26 3.036s.48.084 1.764-.78c.852.312 1.764.492 2.7.492 5.46 0 9.876-3.96 9.876-8.848 0-4.888-4.416-8.848-9.876-8.848zM7.818 13.38a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2zm4.32-4.32c-.96 0-1.74.78-1.74 1.74s.78 1.74 1.74 1.74 1.74-.78 1.74-1.74-.78-1.74-1.74-1.74zm3.036 4.32a1.2 1.2 0 0 1-1.2-1.2c0-.66.54-1.2 1.2-1.2s1.2.54 1.2 1.2c0 .66-.54 1.2-1.2 1.2z" fill="#000000"/></svg>, href: '#', isQrCode: true, color: '#000000' },
 ];
 
 export default async function HomePage() {
@@ -380,7 +368,7 @@ export default async function HomePage() {
           <Tabs defaultValue="tech" className="w-full">
             <TabsList className="h-auto flex-wrap justify-center bg-muted mb-10">
               {jobCategories.map(cat => (
-                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5 flex-grow">
+                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
                   <span className="h-5 w-5 mr-2 flex items-center justify-center">{cat.icon}</span>
                   {cat.label}
                 </TabsTrigger>

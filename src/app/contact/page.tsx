@@ -34,7 +34,7 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="relative container h-full flex flex-col justify-end items-center text-center pb-16 md:pb-24">
-          <p className="text-lg md:text-xl max-w-3xl text-foreground drop-shadow-md">{contactHeroImage.imageHint}</p>
+          <p className="text-lg md:text-xl max-w-3xl text-white drop-shadow-md">{contactHeroImage.imageHint}</p>
         </div>
       </section>
 

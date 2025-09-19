@@ -329,14 +329,14 @@ export default async function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             {popularRegions.map((region) => (
               <Card key={region.name} className="overflow-hidden group transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-blue-glow animate-card-pulse-glow">
-                <CardContent className="p-0">
-                  <div className="p-2 flex flex-col items-center text-center">
+                <CardContent className="p-2">
+                  <div className="flex flex-col items-center text-center">
                     <Flag country={region.name} className="h-8 w-14 mb-2" />
-                    <h3 className="font-semibold text-sm text-foreground">
+                    <h3 className="font-semibold text-base text-foreground">
                       <span>{region.name}</span>
                     </h3>
                   </div>
-                  <div className="px-2 pb-2">
+                  <div className="px-2 pb-1 mt-1">
                     <Button asChild variant="outline" size="sm" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow text-xs h-7">
                       <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                     </Button>
@@ -448,4 +448,3 @@ export default async function HomePage() {
     </>
   );
 }
-

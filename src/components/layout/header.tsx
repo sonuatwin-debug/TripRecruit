@@ -4,10 +4,16 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Globe, Menu } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const navLinks = [
   { href: '/', label: '首页' },
@@ -25,37 +31,34 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    const isAnchorLinkOnHome = href.startsWith('/#') && pathname === '/';
-
-    if (isAnchorLinkOnHome) {
-      e.preventDefault();
-      const elementId = href.substring(2);
-      const element = document.getElementById(elementId);
-      
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-      // Close the menu after a short delay to allow scrolling to start
-      setTimeout(() => {
-        setIsMobileMenuOpen(false);
-      }, 100);
-
-    } else if (href.startsWith('/#')) {
-      // If on another page, navigate to home and then scroll
-      e.preventDefault();
-      const elementId = href.substring(2);
-      router.push('/');
-      // We can't immediately scroll, as the page is just navigating.
-      // A more robust solution might involve context or query params
-      // but for now, we just navigate and let the user scroll manually
-      // or handle it on the homepage with useEffect.
-      // For simplicity, we just close the menu.
-      setIsMobileMenuOpen(false);
-
-    } else {
-      // For regular links, just close the menu
-      setIsMobileMenuOpen(false);
+    e.preventDefault(); 
+    const isExternal = href.startsWith('http');
+    const isAnchorLink = href.startsWith('/#');
+    const isOnHomePage = pathname === '/';
+    
+    if (isExternal) {
+      window.open(href, '_blank', 'noopener,noreferrer');
+      return;
     }
+
+    if (isAnchorLink) {
+      const elementId = href.substring(2); 
+
+      if (isOnHomePage) {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        router.push('/' + href.substring(1)); 
+      }
+    } else {
+      router.push(href);
+    }
+    
+    setTimeout(() => {
+      setIsMobileMenuOpen(false);
+    }, 150);
   };
 
   const renderNavLinks = (isMobile: boolean) =>
@@ -66,7 +69,7 @@ export default function Header() {
         onClick={(e) => handleLinkClick(e, link.href)}
         className={cn(
           'font-medium transition-colors hover:text-primary',
-          pathname === link.href ? 'text-primary' : 'text-foreground/80',
+          pathname === link.href && !link.href.includes('#') ? 'text-primary' : 'text-foreground/80',
           isMobile ? 'block py-2 text-lg' : 'text-sm'
         )}
       >
@@ -82,40 +85,38 @@ export default function Header() {
             <span className="font-bold font-headline text-lg">携程集团</span>
           </Link>
           <nav className="hidden space-x-6 md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={(e) => {
-                  if (link.href.startsWith('/#') && pathname === '/') {
-                    e.preventDefault();
-                    const elementId = link.href.substring(2);
-                    const element = document.getElementById(elementId);
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }
-                }}
-                className={cn(
-                  'font-medium transition-colors hover:text-primary',
-                  pathname === link.href ? 'text-primary' : 'text-foreground/80',
-                  'text-sm'
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {renderNavLinks(false)}
           </nav>
         </div>
 
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-2 md:space-x-4">
+           <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon" className="h-9 w-9">
+                <Globe className="h-[1.2rem] w-[1.2rem]" />
+                <span className="sr-only">切换语言</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>
+                简体中文
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                Tiếng Việt
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                ภาษาไทย
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Button asChild className="hidden md:flex bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
             <Link href="/jobs">寻找职位</Link>
           </Button>
 
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" className="md:hidden bg-background hover:bg-muted text-foreground">
+              <Button variant="outline" className="md:hidden bg-background hover:bg-muted text-foreground h-9 w-9 px-0">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">切换菜单</span>
               </Button>

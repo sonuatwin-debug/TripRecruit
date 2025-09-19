@@ -100,7 +100,7 @@ export default function ApplicationForm() {
             请选择您感兴趣的工作地点
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {locations.map((item) => (
             <div key={item.id} className="flex flex-row items-center space-x-3 space-y-0">
                 <Checkbox id={item.id} name="workLocations" value={item.label} />

@@ -326,18 +326,18 @@ export default async function HomePage() {
         {/* Popular Regions Section */}
         <section id="popular-regions" className="scroll-mt-20">
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门招聘地点</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             {popularRegions.map((region) => (
               <Card key={region.name} className="overflow-hidden group transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-blue-glow animate-card-pulse-glow">
                 <CardContent className="p-0">
-                  <div className="p-4 flex flex-col items-center text-center">
-                    <Flag country={region.name} className="h-8 w-14 mb-3" />
-                    <h3 className="font-semibold text-base text-foreground">
+                  <div className="p-2 flex flex-col items-center text-center">
+                    <Flag country={region.name} className="h-8 w-14 mb-2" />
+                    <h3 className="font-semibold text-sm text-foreground">
                       <span>{region.name}</span>
                     </h3>
                   </div>
-                  <div className="px-4 pb-4">
-                    <Button asChild variant="outline" size="sm" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow text-xs h-8">
+                  <div className="px-2 pb-2">
+                    <Button asChild variant="outline" size="sm" className="w-full bg-card hover:bg-muted text-card-foreground animate-pulse-glow text-xs h-7">
                       <Link href={`/jobs?location=${region.name}`}>查看岗位</Link>
                     </Button>
                   </div>
@@ -378,9 +378,9 @@ export default async function HomePage() {
         <section className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
           <Tabs defaultValue="tech" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-10 bg-muted">
+            <TabsList className="h-auto flex-wrap justify-center bg-muted mb-10">
               {jobCategories.map(cat => (
-                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
+                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5 flex-grow">
                   <span className="h-5 w-5 mr-2 flex items-center justify-center">{cat.icon}</span>
                   {cat.label}
                 </TabsTrigger>
@@ -448,3 +448,4 @@ export default async function HomePage() {
     </>
   );
 }
+

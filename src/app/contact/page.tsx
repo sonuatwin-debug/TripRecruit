@@ -1,5 +1,4 @@
 
-
 import { contactMethods } from '../page';
 import { LineQrCode } from '@/components/line-qr-code';
 import { ZaloQrCode } from '@/components/zalo-qr-code';
@@ -22,6 +21,35 @@ export default function ContactPage() {
     imageHint: "我们随时准备为您提供帮助。请通过以下任何渠道与我们联系。"
   };
 
+  const renderContactMethod = (method: typeof contactMethods[0]) => {
+    const ContactIcon = method.icon;
+    
+    const content = (
+      <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
+        <div 
+          className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow"
+        >
+          <ContactIcon style={{ color: method.color }} className="w-8 h-8" />
+        </div>
+        <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
+      </div>
+    );
+
+    if (method.isQrCode) {
+      if (method.name === 'Line') return <LineQrCode key={method.name}>{content}</LineQrCode>;
+      if (method.name === 'Zalo') return <ZaloQrCode key={method.name}>{content}</ZaloQrCode>;
+      if (method.name === '钉钉') return <DingtalkQrCode key={method.name}>{content}</DingtalkQrCode>;
+      if (method.name === 'WeChat') return <WechatQrCode key={method.name}>{content}</WechatQrCode>;
+      if (method.name === 'QQ') return <QqQrCode key={method.name}>{content}</QqQrCode>;
+    }
+
+    return (
+      <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
+    );
+  };
+
   return (
     <div className="-mt-14">
       <section className="relative h-[50vh]">
@@ -41,82 +69,7 @@ export default function ContactPage() {
       <div className="container py-12 md:py-20">
         <section>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
-            {contactMethods.map((method) => {
-              const ContactIcon = method.icon;
-              const contactIcon = (
-                <div 
-                  className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow"
-                >
-                  <ContactIcon style={{ color: method.color }} className="w-8 h-8" />
-                </div>
-              );
-
-              const contactLabel = (
-                <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{method.name}</span>
-              );
-
-              if (method.name === 'Line' && method.isQrCode) {
-                return (
-                  <LineQrCode key={method.name}>
-                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
-                      {contactIcon}
-                      {contactLabel}
-                    </div>
-                  </LineQrCode>
-                );
-              }
-
-              if (method.name === 'Zalo' && method.isQrCode) {
-                return (
-                  <ZaloQrCode key={method.name}>
-                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
-                      {contactIcon}
-                      {contactLabel}
-                    </div>
-                  </ZaloQrCode>
-                );
-              }
-              
-              if (method.name === '钉钉' && method.isQrCode) {
-                return (
-                  <DingtalkQrCode key={method.name}>
-                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
-                      {contactIcon}
-                      {contactLabel}
-                    </div>
-                  </DingtalkQrCode>
-                );
-              }
-
-              if (method.name === 'WeChat' && method.isQrCode) {
-                return (
-                  <WechatQrCode key={method.name}>
-                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
-                      {contactIcon}
-                      {contactLabel}
-                    </div>
-                  </WechatQrCode>
-                );
-              }
-
-              if (method.name === 'QQ' && method.isQrCode) {
-                return (
-                  <QqQrCode key={method.name}>
-                    <div className="flex flex-col items-center space-y-2 group w-20 cursor-pointer">
-                      {contactIcon}
-                      {contactLabel}
-                    </div>
-                  </QqQrCode>
-                );
-              }
-
-              return (
-                <a key={method.name} href={method.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-2 group w-20">
-                  {contactIcon}
-                  {contactLabel}
-                </a>
-              );
-            })}
+            {contactMethods.map(renderContactMethod)}
           </div>
         </section>
 

@@ -7,7 +7,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { Globe, Menu } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -31,36 +31,42 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault(); 
-    const isExternal = href.startsWith('http');
-    const isAnchorLink = href.startsWith('/#');
-    
-    if (isExternal) {
-      window.open(href, '_blank', 'noopener,noreferrer');
-      setIsMobileMenuOpen(false);
-      return;
-    }
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
 
-    if (isAnchorLink) {
-      const elementId = href.substring(2); 
-      const targetElement = document.getElementById(elementId);
-
+    if (href.startsWith('/#')) {
       if (pathname === '/') {
+        const elementId = href.substring(2);
+        const targetElement = document.getElementById(elementId);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
         }
       } else {
-        router.push('/' + href.substring(1)); 
+        router.push('/' + href.substring(1));
       }
     } else {
       router.push(href);
     }
-    
-    // Use a short delay to ensure navigation completes before closing the menu
-    setTimeout(() => {
-      setIsMobileMenuOpen(false);
-    }, 150);
   };
+  
+  useEffect(() => {
+    const handleAnchorLink = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+    handleAnchorLink();
+    window.addEventListener('hashchange', handleAnchorLink, false);
+    return () => {
+      window.removeEventListener('hashchange', handleAnchorLink, false);
+    };
+  }, []);
 
   const renderNavLinks = (isMobile: boolean) =>
     navLinks.map((link) => (
@@ -99,13 +105,13 @@ export default function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>
+              <DropdownMenuItem className="focus:bg-muted">
                 简体中文
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem className="focus:bg-muted">
                 Tiếng Việt
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem className="focus:bg-muted">
                 ภาษาไทย
               </DropdownMenuItem>
             </DropdownMenuContent>

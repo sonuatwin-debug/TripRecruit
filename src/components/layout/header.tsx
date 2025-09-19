@@ -1,13 +1,12 @@
 
 'use client';
 
-import Link from 'next/link';
+import { Link, usePathname, useRouter } from '@/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Globe, Menu } from 'lucide-react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useTransition } from 'react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,26 +14,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useToast } from "@/hooks/use-toast"
-
-const navLinks = [
-  { href: '/', label: '首页' },
-  { href: '/#popular-regions', label: '热门招聘地点' },
-  { href: '/#benefits', label: '福利待遇' },
-  { href: '/apply', label: '在线申请' },
-  { href: '/about', label: '关于我们' },
-  { href: '/contact', label: '联系我们' },
-  { href: '/faq', label: '常见问题' },
-];
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Header() {
+  const t = useTranslations('Header');
   const pathname = usePathname();
   const router = useRouter();
+  const locale = useLocale();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    setIsMobileMenuOpen(false);
     
     if (href.startsWith('/#')) {
       const elementId = href.substring(2);
@@ -49,6 +41,7 @@ export default function Header() {
     } else {
       router.push(href);
     }
+    setIsMobileMenuOpen(false);
   };
   
   useEffect(() => {
@@ -70,15 +63,28 @@ export default function Header() {
     };
   }, []);
 
-  const handleLanguageChange = (langCode: string, langName: string) => {
-    const currentUrl = new URL(window.location.href);
-    currentUrl.searchParams.set('lang', langCode);
-    router.replace(currentUrl.toString(), { scroll: false });
+  const handleLanguageChange = (nextLocale: string) => {
+    startTransition(() => {
+      router.replace(pathname, {locale: nextLocale});
+    });
+    let langName = '简体中文';
+    if (nextLocale === 'vi') langName = 'Tiếng Việt';
+    if (nextLocale === 'th') langName = 'ภาษาไทย';
     toast({
-      title: '语言切换',
-      description: `语言已切换至 ${langName}`,
+      title: t('languageSwitch'),
+      description: t('langSwitched', {langName}),
     })
   };
+
+  const navLinks = [
+    { href: '/', label: t('home') },
+    { href: '/#popular-regions', label: t('popularRegions') },
+    { href: '/#benefits', label: t('benefits') },
+    { href: '/apply', label: t('applyOnline') },
+    { href: '/about', label: t('aboutUs') },
+    { href: '/contact', label: t('contactUs') },
+    { href: '/faq', label: t('faq') },
+  ];
 
   const renderNavLinks = (isMobile: boolean) =>
     navLinks.map((link) => (
@@ -101,7 +107,7 @@ export default function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold font-headline text-lg">携程集团</span>
+            <span className="font-bold font-headline text-lg">{t('companyName')}</span>
           </Link>
           <nav className="hidden space-x-6 md:flex">
             {renderNavLinks(false)}
@@ -113,57 +119,60 @@ export default function Header() {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="icon" className="h-9 w-9 hover:bg-muted">
                 <Globe className="h-[1.2rem] w-[1.2rem]" />
-                <span className="sr-only">切换语言</span>
+                <span className="sr-only">{t('languageSwitch')}</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem 
                 className="focus:bg-muted" 
-                onClick={() => handleLanguageChange('zh', '简体中文')}
+                onClick={() => handleLanguageChange('zh')}
+                disabled={locale === 'zh'}
               >
-                简体中文
+                {t('langZh')}
               </DropdownMenuItem>
               <DropdownMenuItem 
                 className="focus:bg-muted"
-                onClick={() => handleLanguageChange('vi', 'Tiếng Việt')}
+                onClick={() => handleLanguageChange('vi')}
+                disabled={locale === 'vi'}
               >
-                Tiếng Việt
+                {t('langVi')}
               </DropdownMenuItem>
               <DropdownMenuItem 
                 className="focus:bg-muted"
-                onClick={() => handleLanguageChange('th', 'ภาษาไทย')}
+                onClick={() => handleLanguageChange('th')}
+                disabled={locale === 'th'}
               >
-                ภาษาไทย
+                {t('langTh')}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
           <Button asChild className="hidden md:flex bg-card hover:bg-muted text-card-foreground animate-pulse-glow">
-            <Link href="/jobs">寻找职位</Link>
+            <Link href="/jobs">{t('findJobs')}</Link>
           </Button>
 
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" className="md:hidden bg-background hover:bg-muted text-foreground h-9 w-9 px-0">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">切换菜单</span>
+                <span className="sr-only">{t('toggleMenu')}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader className="mb-4 text-left">
                 <SheetTitle>
                   <Link href="/" onClick={(e) => handleLinkClick(e, '/')}>
-                     <span className="font-bold font-headline text-lg">携程集团</span>
+                     <span className="font-bold font-headline text-lg">{t('companyName')}</span>
                   </Link>
                 </SheetTitle>
                 <SheetDescription>
-                   在这里浏览网站的主要页面。
+                   {t('mobileMenuDesc')}
                 </SheetDescription>
               </SheetHeader>
               <div className="flex flex-col space-y-4">
                 {renderNavLinks(true)}
                  <Button asChild>
-                    <Link href="/jobs" onClick={(e) => handleLinkClick(e, '/jobs')}>寻找职位</Link>
+                    <Link href="/jobs" onClick={(e) => handleLinkClick(e, '/jobs')}>{t('findJobs')}</Link>
                 </Button>
               </div>
             </SheetContent>

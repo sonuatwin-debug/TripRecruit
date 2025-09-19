@@ -366,14 +366,16 @@ export default async function HomePage() {
         <section className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
           <h2 className="text-3xl font-bold font-headline text-center mb-8">热门职位类别</h2>
           <Tabs defaultValue="tech" className="w-full">
-            <TabsList className="h-auto flex-wrap justify-center bg-muted mb-10">
-              {jobCategories.map(cat => (
-                <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
-                  <span className="h-5 w-5 mr-2 flex items-center justify-center">{cat.icon}</span>
-                  {cat.label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <div className="flex justify-center">
+              <TabsList className="h-auto flex-wrap bg-muted mb-10 inline-flex">
+                {jobCategories.map(cat => (
+                  <TabsTrigger key={cat.value} value={cat.value} className="text-base py-2.5">
+                    <span className="h-5 w-5 mr-2 flex items-center justify-center">{cat.icon}</span>
+                    {cat.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
             {jobCategories.map(cat => {
               const image = PlaceHolderImages.find(p => p.id === cat.image);
               return (

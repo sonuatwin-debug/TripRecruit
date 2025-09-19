@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Globe, Menu } from 'lucide-react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 import {
@@ -14,6 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useToast } from "@/hooks/use-toast"
 
 const navLinks = [
   { href: '/', label: '首页' },
@@ -29,14 +30,15 @@ export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { toast } = useToast();
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-
+    
     if (href.startsWith('/#')) {
+      const elementId = href.substring(2);
       if (pathname === '/') {
-        const elementId = href.substring(2);
         const targetElement = document.getElementById(elementId);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
@@ -67,6 +69,16 @@ export default function Header() {
       window.removeEventListener('hashchange', handleAnchorLink, false);
     };
   }, []);
+
+  const handleLanguageChange = (langCode: string, langName: string) => {
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('lang', langCode);
+    router.replace(currentUrl.toString(), { scroll: false });
+    toast({
+      title: '语言切换',
+      description: `语言已切换至 ${langName}`,
+    })
+  };
 
   const renderNavLinks = (isMobile: boolean) =>
     navLinks.map((link) => (
@@ -105,13 +117,22 @@ export default function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem className="focus:bg-muted">
+              <DropdownMenuItem 
+                className="focus:bg-muted" 
+                onClick={() => handleLanguageChange('zh', '简体中文')}
+              >
                 简体中文
               </DropdownMenuItem>
-              <DropdownMenuItem className="focus:bg-muted">
+              <DropdownMenuItem 
+                className="focus:bg-muted"
+                onClick={() => handleLanguageChange('vi', 'Tiếng Việt')}
+              >
                 Tiếng Việt
               </DropdownMenuItem>
-              <DropdownMenuItem className="focus:bg-muted">
+              <DropdownMenuItem 
+                className="focus:bg-muted"
+                onClick={() => handleLanguageChange('th', 'ภาษาไทย')}
+              >
                 ภาษาไทย
               </DropdownMenuItem>
             </DropdownMenuContent>

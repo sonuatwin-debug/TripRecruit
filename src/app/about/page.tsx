@@ -22,7 +22,7 @@ export default function AboutPage() {
 
   return (
     <div className="container">
-      <section className="relative h-[50vh] text-white -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24">
+      <section className="relative h-[50vh] -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24">
         {aboutHeroImage && (
           <Image
             src={aboutHeroImage.imageUrl}
@@ -33,8 +33,8 @@ export default function AboutPage() {
           />
         )}
         <div className="relative container h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">关于携程集团</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl">我们是全球领先的旅游服务提供商，致力于让每一次旅行都成为完美的旅程。</p>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground drop-shadow-lg">关于携程集团</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-3xl text-foreground/90 drop-shadow-md">我们是全球领先的旅游服务提供商，致力于让每一次旅行都成为完美的旅程。</p>
         </div>
       </section>
 

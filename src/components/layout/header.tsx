@@ -62,7 +62,7 @@ export default function Header() {
 
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="md:hidden">
+              <Button variant="outline" className="md:hidden bg-background hover:bg-muted text-foreground">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">切换菜单</span>
               </Button>

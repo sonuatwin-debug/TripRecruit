@@ -42,12 +42,12 @@ export default function ContactPage() {
         <section>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
             {contactMethods.map((method) => {
+              const ContactIcon = method.icon;
               const contactIcon = (
                 <div 
                   className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors animate-pulse-glow"
-                  style={{ color: method.color }}
                 >
-                  <div className="w-8 h-8 flex items-center justify-center">{method.icon}</div>
+                  <ContactIcon style={{ color: method.color }} className="w-8 h-8" />
                 </div>
               );
 

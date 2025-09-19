@@ -34,20 +34,20 @@ export default function Header() {
     e.preventDefault(); 
     const isExternal = href.startsWith('http');
     const isAnchorLink = href.startsWith('/#');
-    const isOnHomePage = pathname === '/';
     
     if (isExternal) {
       window.open(href, '_blank', 'noopener,noreferrer');
+      setIsMobileMenuOpen(false);
       return;
     }
 
     if (isAnchorLink) {
       const elementId = href.substring(2); 
+      const targetElement = document.getElementById(elementId);
 
-      if (isOnHomePage) {
-        const element = document.getElementById(elementId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+      if (pathname === '/') {
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
         }
       } else {
         router.push('/' + href.substring(1)); 
@@ -56,6 +56,7 @@ export default function Header() {
       router.push(href);
     }
     
+    // Use a short delay to ensure navigation completes before closing the menu
     setTimeout(() => {
       setIsMobileMenuOpen(false);
     }, 150);
@@ -92,7 +93,7 @@ export default function Header() {
         <div className="flex flex-1 items-center justify-end space-x-2 md:space-x-4">
            <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon" className="h-9 w-9">
+              <Button variant="outline" size="icon" className="h-9 w-9 hover:bg-muted">
                 <Globe className="h-[1.2rem] w-[1.2rem]" />
                 <span className="sr-only">切换语言</span>
               </Button>

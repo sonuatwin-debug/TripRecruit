@@ -331,7 +331,7 @@ export default async function HomePage() {
               <Card key={region.name} className="overflow-hidden group transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-blue-glow animate-card-pulse-glow">
                 <CardContent className="p-0">
                   <div className="p-6 pb-2 text-center">
-                    <h3 className="font-semibold text-xl text-foreground flex items-center justify-center">
+                    <h3 className="font-semibold text-lg md:text-xl text-foreground flex items-center justify-center">
                       <Flag country={region.name} className="h-6 w-8 mr-3" />
                       <span>{region.name}</span>
                     </h3>

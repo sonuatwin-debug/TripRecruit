@@ -1,8 +1,7 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp, getApps } from "firebase/app";
-import { getAnalytics, isSupported } from "firebase/analytics";
+import { initializeApp, getApps, getApp } from "firebase/app";
+import { getAnalytics, isSupported, Analytics } from "firebase/analytics";
 import type { FirebaseApp } from "firebase/app";
-import type { Analytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -20,9 +19,16 @@ const firebaseConfig = {
 let app: FirebaseApp;
 let analytics: Analytics | undefined;
 
-if (getApps().length === 0) {
-  app = initializeApp(firebaseConfig);
-  if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {
+  if (getApps().length === 0) {
+    app = initializeApp(firebaseConfig);
+    isSupported().then((supported) => {
+      if (supported) {
+        analytics = getAnalytics(app);
+      }
+    });
+  } else {
+    app = getApp();
     isSupported().then((supported) => {
       if (supported) {
         analytics = getAnalytics(app);
@@ -30,14 +36,12 @@ if (getApps().length === 0) {
     });
   }
 } else {
-  app = getApps()[0];
-  if (typeof window !== 'undefined') {
-    isSupported().then((supported) => {
-      if (supported) {
-        analytics = getAnalytics(app);
-      }
-    });
-  }
+    if (getApps().length === 0) {
+        app = initializeApp(firebaseConfig);
+    } else {
+        app = getApp();
+    }
 }
+
 
 export { app, analytics };

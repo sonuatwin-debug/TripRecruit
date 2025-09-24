@@ -3,16 +3,15 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAnalytics, isSupported, Analytics } from "firebase/analytics";
 import type { FirebaseApp } from "firebase/app";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Your web app's Firebase configuration from environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyB7IW11tIuX1rk1o8KZjv4UmUTawrfQKB4",
-  authDomain: "triprecruit.firebaseapp.com",
-  projectId: "triprecruit",
-  storageBucket: "triprecruit.firebasestorage.app",
-  messagingSenderId: "947885197929",
-  appId: "1:947885197929:web:f1d1e77654495877a5b0f8",
-  measurementId: "G-NYZXL0V3H2"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -26,7 +25,7 @@ if (getApps().length === 0) {
 let analytics: Analytics | undefined;
 if (typeof window !== 'undefined') {
   isSupported().then((supported) => {
-    if (supported) {
+    if (supported && firebaseConfig.measurementId) {
       analytics = getAnalytics(app);
     }
   });

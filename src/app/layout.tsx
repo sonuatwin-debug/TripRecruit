@@ -8,8 +8,8 @@ import Link from 'next/link';
 import BackToTopButton from '@/components/back-to-top-button';
 import { WechatQrCode } from '@/components/wechat-qr-code';
 import { QqQrCode } from '@/components/qq-qr-code';
-import FirebaseAnalytics from '@/components/firebase-analytics';
 import { Suspense } from 'react';
+import Script from 'next/script';
 
 
 export const metadata: Metadata = {
@@ -29,14 +29,21 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-        <Suspense fallback={null}>
-          <FirebaseAnalytics />
-        </Suspense>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NYZXL0V3H2" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-NYZXL0V3H2');
+          `}
+        </Script>
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow w-full">
-          {children}
+            {children}
         </main>
         {/* Floating Contact Buttons */}
         <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col space-y-4">

@@ -17,30 +17,19 @@ const firebaseConfig = {
 
 // Initialize Firebase
 let app: FirebaseApp;
-let analytics: Analytics | undefined;
-
-if (typeof window !== 'undefined') {
-  if (getApps().length === 0) {
+if (getApps().length === 0) {
     app = initializeApp(firebaseConfig);
-    isSupported().then((supported) => {
-      if (supported) {
-        analytics = getAnalytics(app);
-      }
-    });
-  } else {
-    app = getApp();
-    isSupported().then((supported) => {
-      if (supported) {
-        analytics = getAnalytics(app);
-      }
-    });
-  }
 } else {
-    if (getApps().length === 0) {
-        app = initializeApp(firebaseConfig);
-    } else {
-        app = getApp();
+    app = getApp();
+}
+
+let analytics: Analytics | undefined;
+if (typeof window !== 'undefined') {
+  isSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
     }
+  });
 }
 
 

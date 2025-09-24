@@ -23,8 +23,9 @@ if (getApps().length === 0) {
 }
 
 let analytics: Analytics | undefined;
+
 if (typeof window !== 'undefined') {
-  isSupported().then((supported) => {
+  isSupported().then(supported => {
     if (supported && firebaseConfig.measurementId) {
       analytics = getAnalytics(app);
     }

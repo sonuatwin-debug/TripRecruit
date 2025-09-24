@@ -17,24 +17,24 @@ const firebaseConfig = {
 function FirebaseAnalytics() {
   useEffect(() => {
     if (
-        firebaseConfig.apiKey &&
-        firebaseConfig.projectId &&
-        firebaseConfig.appId &&
-        firebaseConfig.measurementId
+      firebaseConfig.apiKey &&
+      firebaseConfig.projectId &&
+      firebaseConfig.appId &&
+      firebaseConfig.measurementId
     ) {
-        if (getApps().length === 0) {
-            const app = initializeApp(firebaseConfig);
-            isSupported().then((supported) => {
-                if (supported) {
-                    getAnalytics(app);
-                    console.log('Firebase Analytics initialized successfully.');
-                } else {
-                    console.log('Firebase Analytics is not supported in this environment.');
-                }
-            });
-        }
+      if (getApps().length === 0) {
+        const app = initializeApp(firebaseConfig);
+        isSupported().then((supported) => {
+          if (supported) {
+            getAnalytics(app);
+            console.log('Firebase Analytics initialized successfully.');
+          } else {
+            console.log('Firebase Analytics is not supported in this environment.');
+          }
+        });
+      }
     } else {
-        console.error('Firebase config is missing. Analytics not initialized.');
+      console.error('Firebase config is missing or incomplete. Analytics not initialized.');
     }
   }, []);
 

@@ -9,5 +9,6 @@ export const ai = genkit({
     }),
     genkitFirebase(),
   ],
-  model: 'googleai/gemini-2.5-flash',
+  logLevel: 'debug',
+  enableTracingAndMetrics: true,
 });

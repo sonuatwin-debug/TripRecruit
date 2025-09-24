@@ -8,6 +8,9 @@ import Link from 'next/link';
 import BackToTopButton from '@/components/back-to-top-button';
 import { WechatQrCode } from '@/components/wechat-qr-code';
 import { QqQrCode } from '@/components/qq-qr-code';
+import FirebaseAnalytics from '@/components/firebase-analytics';
+import { Suspense } from 'react';
+
 
 export const metadata: Metadata = {
   title: '加入携程集团｜成就更高价值的自己',
@@ -26,6 +29,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+        <Suspense fallback={null}>
+          <FirebaseAnalytics />
+        </Suspense>
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <Header />

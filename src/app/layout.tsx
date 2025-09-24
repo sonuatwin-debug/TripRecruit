@@ -8,7 +8,6 @@ import Link from 'next/link';
 import BackToTopButton from '@/components/back-to-top-button';
 import { WechatQrCode } from '@/components/wechat-qr-code';
 import { QqQrCode } from '@/components/qq-qr-code';
-import { app } from '@/lib/firebase'; // Import Firebase to initialize it
 
 export const metadata: Metadata = {
   title: '加入携程集团｜成就更高价值的自己',
